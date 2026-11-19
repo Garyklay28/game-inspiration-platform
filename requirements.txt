@@ -1,0 +1,2 @@
+# 총괄 + 빌리빌리 (YouTube 파트는 표준 라이브러리 + pytest 만 사용, 외부 실행 파일 ffmpeg/ffprobe 필요)
+-r bilibili/requirements.txt
