@@ -1,0 +1,25 @@
+{
+  "_comment": "trend-analyst 출력 예시 (샘플 데이터 기준). 숫자는 04_evidence.json 에서 옮겨 오고 경로를 evidence_refs 에 적는다.",
+  "selected_topic_id": "steal_a_brainrot",
+  "summary": "샘플 풀 기준 브레인롯 훔치기가 점수 1위다. 수요는 최대지만 같은 주제 영상도 가장 많아 경쟁도가 높다. 45–60초 쇼츠의 아웃라이어 배수 중앙값이 가장 높고, 기지 방어 공략 영상이 채널 평균의 5.44배로 가장 크게 터졌다. 그래서 '방어 공략'을 50초 안팎 쇼츠로 다른 각도에서 다루는 쪽을 고른다.",
+  "claims": [
+    {"topic_id": "steal_a_brainrot", "claim": "점수 1위이고 수요 항목이 1.0으로 최대, 경쟁도도 1.0으로 최대",
+     "evidence_refs": ["evidence.topics.steal_a_brainrot.components"]},
+    {"topic_id": "steal_a_brainrot", "claim": "45–60초 구간 4개 영상의 아웃라이어 배수 중앙값 1.73배로 다른 길이보다 높음",
+     "evidence_refs": ["evidence.topics.steal_a_brainrot.duration_buckets"]},
+    {"topic_id": "steal_a_brainrot", "claim": "가장 크게 터진 영상은 기지 방어 공략(채널 평균의 5.44배, 58초)",
+     "evidence_refs": ["video:SAMPLE010", "evidence.topics.steal_a_brainrot.top_videos.0"]},
+    {"topic_id": "steal_a_brainrot", "claim": "주제 영상 제목 중앙값 23.5자, 숫자가 들어간 제목은 12%",
+     "evidence_refs": ["evidence.topics.steal_a_brainrot.title_features"]}
+  ],
+  "angle_candidates": [
+    "기지 방어를 '실패 → 원인 → 고친 배치' 순서로 보여 주는 공략",
+    "친구 배신 상황극(밈) — 다만 같은 각도 영상이 이미 있음"
+  ],
+  "recommended_content_type": "공략",
+  "recommended_duration_sec": 50,
+  "risks": [
+    "경쟁도가 최대라 같은 제목·같은 구성은 묻힐 수 있다 → 각도 차별화 필요",
+    "샘플 데이터라 실제 수치가 아님 — 실데이터로 다시 수집해야 함"
+  ]
+}
