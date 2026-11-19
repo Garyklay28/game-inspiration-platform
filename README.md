@@ -4,6 +4,37 @@
 
 플랫폼별 서브 슈퍼바이저 두 개와, 이를 묶는 팀 총괄 슈퍼바이저로 구성된 멀티 에이전트 Proof of Concept입니다.
 
+## 기말프로젝트 제출 안내 — 에이전트 아키텍처 · 코드 · 프롬프트
+
+| 요구 사항 | 위치 |
+|---|---|
+| 에이전트 아키텍처 (Figma 기획서 추가분) | [docs/figma/](docs/figma/) — 기획서 12·13쪽 (16 팀 에이전트 아키텍처, 17 빌리빌리 서브 슈퍼바이저), [docs/architecture.md](docs/architecture.md) |
+| 구조 선택: Supervisor vs 수평형 | 아래 「구조 선택」 |
+| 코드 (Python, Proof of Concept) | [`team_supervisor/`](team_supervisor/) · [`bilibili/bili_agent/`](bilibili/bili_agent/) · [`youtube/yt_pipeline/`](youtube/yt_pipeline/) |
+| 시스템 프롬프트 | 빌리빌리 8개 [`bilibili/bili_agent/prompts/`](bilibili/bili_agent/prompts/) · YouTube 6개 [`youtube/.claude/agents/`](youtube/.claude/agents/) |
+| 실제 실행 결과 | [`bilibili/docs/example_*`](bilibili/docs/) (Claude API 실제 호출 보고서·기획안) |
+
+### 구조 선택: 계층형 Supervisor
+
+**Supervisor 구조(계층형)**를 선택했습니다. 수평형(에이전트끼리 대등하게 메시지를 주고받는 구조)이 아닙니다.
+
+```
+팀 총괄 슈퍼바이저 ─┬─ 빌리빌리 서브 슈퍼바이저 ─ 워커 7 (collector · trend_radar · engagement_analyst ·
+                   │                                    title_doctor · localizer · plan_writer · validator)
+                   └─ YouTube 파이프라인 ──── 서브에이전트 6 (trend-analyst · plan-writer · plan-validator ·
+                                                           script-writer · qa-reviewer · performance-analyst)
+```
+
+| 기준 | Supervisor (선택) | 수평형 |
+|---|---|---|
+| 작업 순서 | 수집 → 분석 → 기획안 → 검증 순서가 분명해 한 곳에서 통제하기 쉬움 | 에이전트끼리 순서를 합의해야 해 흐름이 흔들림 |
+| 안전장치 | 슈퍼바이저 단계에서 코드로 강제: 수집 전 분석 금지, 검증 전 제출 금지, 예측 표현 차단, 수정 횟수 상한 | 지킬 지점이 여러 에이전트에 흩어짐 |
+| 맥락 관리 | 워커는 자기 도구와 지시만 받음. 원본 데이터는 공유 작업 공간에 두고 요약만 전달 | 대화가 에이전트 사이를 오가며 길어짐 |
+| 팀 작업 | 플랫폼별로 서브 슈퍼바이저를 나눠 각자 개발, 계약(XxxTask → XxxReport)만 맞추면 합쳐짐 | 경계가 흐려 분담이 어려움 |
+| 단점 | 슈퍼바이저가 병목·단일 실패 지점 → 플랫폼별 장애 격리, 최대 단계 수 제한으로 완화 | — |
+
+수평형 요소는 한 곳만 둡니다: 빌리빌리 → YouTube 로 '해외 트렌드 소재 카드'를 넘기는 연결(총괄을 거쳐 전달).
+
 | 폴더 | 담당 | 원본 저장소 | 실행 방식 |
 |---|---|---|---|
 | [`bilibili/`](bilibili/) | 곽우화 | [Garyklay28/bilibili-supervisor-agent](https://github.com/Garyklay28/bilibili-supervisor-agent) | Python + Anthropic SDK (슈퍼바이저 1 + 워커 7) |
