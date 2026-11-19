@@ -1,0 +1,584 @@
+{
+  "task_id": "local-demo",
+  "intent": "game_deep_dive",
+  "summary_ko": "BLG S16 우승이 핫서치 30개 중 12개를 차지해 화제성은 매우 높지만 경쟁도 1.0으로 포화 상태입니다. 입력하신 제목 \"BLG夺冠了！S16决赛全程回顾\"는 16자(풀 중앙값 29자)에 【】·《》가 없고 단순 회고형이라 반응이 중앙값의 1.3~1.9배 수준에 그칠 가능성이 큽니다. 제목은 \"【S16决赛复盘】BLG一穿四击败GEN夺冠，4局关键节点回顾\"처럼 바꾸고, 3–10분 길이로 만들어 공식 활동 4071515 태그를 달아 올리세요. 반응률이 높았던 쪽은 헌정곡·창작물이었습니다(《仰望星空》 중앙값 대비 3.63배, 《十年人间》 3.26배). 이번 주에는 BLG 우승 헌정곡 3편 비교나 한국 커뮤니티·선수 리액션 번역 영상을 함께 준비해 보세요. 후자는 4071336 활동 태그를 쓰면 됩니다.",
+  "opportunities": [
+    {
+      "game_zh": "明日方舟",
+      "game_ko": "명일방주",
+      "reason_ko": "Score_bili 1.237로 1위입니다. 신선도 1.0, 경쟁도 0.2105로 낮은 편입니다(수요는 0.0165). 풀 내 영상은 8개뿐이라 확신도는 낮습니다. 전체 풀 반응률 1위가 명일방주 7th 여름 활동 애니메이션으로, 반응률 50.89%(중앙값 대비 7.21배), 코인율 15.64%(18.3배)였습니다. 시청 수요보다 반응 밀도가 높은 틈새 소재입니다.",
+      "score": 1.237,
+      "components": {
+        "demand": 0.0165,
+        "outlier": 0.4311,
+        "freshness": 1.0,
+        "competition": 0.2105
+      }
+    },
+    {
+      "game_zh": "英雄联盟",
+      "game_ko": "리그 오브 레전드",
+      "reason_ko": "Score_bili 1.236으로 2위입니다. 수요 1.0, 신선도 0.9622, 아웃라이어 0.2739이지만 경쟁도도 1.0이고 풀 내 영상이 38개입니다. 반응률 중앙값은 5.80%(전체 풀 7.06%)입니다. 반응이 좋은 쪽은 헌정곡·감성 창작물(《仰望星空》 21.06%, 《十年人间》 18.91%, 《春庭雪》 9.74%)이고, 단순 속보·축하 영상은 《恭喜BLG夺冠！》 7.66%(1.32배)처럼 낮습니다. 단순 우승 회고보다 음악·헌정형이나 영상이 적은 핫키워드 각도, 공식 활동 태그(4071515 등) 활용이 유리합니다.",
+      "score": 1.236,
+      "components": {
+        "demand": 1.0,
+        "outlier": 0.2739,
+        "freshness": 0.9622,
+        "competition": 1.0
+      }
+    }
+  ],
+  "events": [
+    {
+      "game_zh": "英雄联盟",
+      "game_ko": "리그 오브 레전드",
+      "kind": "official_activity",
+      "evidence": "mission_id 4071515: LoL 매칭 영상 21개, 총 조회 17,462,072 (미매칭 영상 7개, 조회 5,539,664 별도). 샘플: 'BLG决战GEN！全4局2万字复盘', '一穿四LCK捧杯夺冠…'. 활동 참여 영상 비중 0.667.",
+      "recommendation_ko": "사용자 제목 'BLG夺冠了！S16决赛全程回顾' 영상을 공식 활동 4071515 태그를 달아 업로드하고, 4세트 복기나 '一穿四' 서사로 기존 영상과 차별화하세요."
+    },
+    {
+      "game_zh": "英雄联盟",
+      "game_ko": "리그 오브 레전드",
+      "kind": "official_activity",
+      "evidence": "mission_id 4074201: LoL 매칭 영상 5개, 총 조회 5,312,740 (미매칭 4개, 조회 3,998,812 별도). 샘플: 'BLG S16夺冠赞歌《仰望星空》', 'Bin武器大师生涯全纪录'.",
+      "recommendation_ko": "음악·헌정 영상이나 Bin·Chovy 선수 스토리 영상을 만들 수 있다면 영상이 적은 활동 4074201에 참여하세요."
+    },
+    {
+      "game_zh": "英雄联盟",
+      "game_ko": "리그 오브 레전드",
+      "kind": "hot_keyword",
+      "evidence": "핫서치 1위 'BLG Knight 开播', LoL 풀 영상 38개, leading_signal=false. 같은 풀에서 6위 'BLG夺冠UP主开启抽奖团建', 7위 'BLG庆功宴Vlog'도 확인됨.",
+      "recommendation_ko": "Knight 방송 반응·하이라이트 클립이나 우승 축하 Vlog·팬 이벤트 영상을 방송 직후 빠르게 올려 검색 유입을 노리세요."
+    },
+    {
+      "game_zh": "英雄联盟",
+      "game_ko": "리그 오브 레전드",
+      "kind": "hot_keyword",
+      "evidence": "핫서치 23위 '韩网绝望韩国人怎么看BLG夺冠', 18위 'BLG夺冠双方选手反应', 19위 'BLG夺冠过程中的热梗'. 활동 4071336에도 한국 반응 영상 포함(LoL 영상 2개, 조회 2,353,201).",
+      "recommendation_ko": "한국 커뮤니티 반응, 양 팀 선수 리액션, 대회 밈을 번역·편집한 반응형 영상을 만들어 활동 4071336이나 4071515 태그와 함께 올리세요."
+    },
+    {
+      "game_zh": "英雄联盟",
+      "game_ko": "리그 오브 레전드",
+      "kind": "hot_keyword",
+      "evidence": "핫서치 29위 '复盘BLG战胜GEN夺冠之战', 24위 '高燃回顾BLG一穿四夺冠之路', 12위 '管泽元和Ming米勒一起回味S16决赛', 13위 '米勒给今年的S赛打100分'. 모두 영상 수 38개, leading_signal=false.",
+      "recommendation_ko": "핫서치 문구를 제목에 그대로 쓰는 대신 BLG vs GEN 결승 전술 분석이나 '一穿四' 하이라이트 타임라인처럼 구조가 뚜렷한 영상을 올리세요."
+    }
+  ],
+  "title_diagnosis": {
+    "title": "BLG夺冠了！S16决赛全程回顾",
+    "features": {
+      "length": 16,
+      "square_brackets": 0,
+      "book_brackets": 0,
+      "has_question_or_exclaim": true,
+      "has_number": true
+    },
+    "benchmark": {
+      "pool_size": 38,
+      "median_length": 29.0,
+      "pct_square_brackets": 0.4211,
+      "pct_book_brackets": 0.1053,
+      "pct_question_or_exclaim": 0.6579,
+      "pct_number": 0.5
+    },
+    "length_gap_vs_median": -13.0,
+    "detected_type": "e스포츠",
+    "issues_ko": [
+      "글자 수 16자로 풀 중앙값 29자보다 13자 짧아 정보량이 부족함(도구 진단 기준).",
+      "【】 미사용: 풀의 42.1%가 사용하며, 상위 제목도 【BLG夺冠吧】·【BLG夺冠精彩时刻】처럼 태그를 활용함.",
+      "《》 미사용: 풀의 10.5%가 사용. 게임 정식 명칭(《英雄联盟》)이 없어 게임 식별이 약함.",
+      "'夺冠了！全程回顾'는 단순 회고·속보형이라 상위 반응(1.3~1.9배) 구간과 비슷해 차별점이 없음. 핫서치에 BLG 夺冠 관련이 12개 있어 경쟁이 매우 치열함.",
+      "공식 활동(4071515) 소재인 对阵GEN、4局复盘、一穿四 등 구체 각도가 제목에 없음.",
+      "'全程回顾'가 영상 길이 3–10분 추천과 맞지 않을 수 있음. 전체 경기 풀버전으로 오해할 수 있어 '4局关键复盘'처럼 범위를 명시하는 편이 좋음.",
+      "느낌표·숫자(S16)는 이미 포함되어 풀 비율(느낌표/물음표 65.8%, 숫자 50.0%)에 부합하므로 유지해도 됨."
+    ],
+    "rewrite_suggestions_zh": [
+      "【S16决赛复盘】BLG一穿四击败GEN夺冠，4局关键节点回顾",
+      "【BLG夺冠】《英雄联盟》S16总决赛4局复盘：一穿四是怎么做到的",
+      "《英雄联盟》S16总决赛：BLG夺冠！决赛4局关键回合回顾"
+    ]
+  },
+  "duration_advice": {
+    "recommended_bucket": "3–10분",
+    "reason_ko": "LoL에서 3–10분이 19개로 표본이 가장 크고 조회수 중앙값은 857,445입니다. 1–3분은 중앙값이 1,264,287로 더 높지만 5개뿐이라 보조 후보로 보세요. 60분 이상은 2개에 중앙값 12,958,196으로 가장 높게 나오지만, 공식 중계·전체 경기 영상 같은 특수 사례일 가능성이 있어 일반 제작 기준으로 삼기 어렵습니다. 30–60분은 1개뿐이라 신뢰할 수 없습니다. 유형은 e스포츠가 35개로 대부분이라 유형 간 비교는 어렵고, 반응률 상위는 헌정곡·창작물이었습니다. 이 분석은 38개 표본 기준이며, 제목에 게임명이 없는 영상은 누락됐을 수 있습니다.",
+    "distribution": {
+      "duration_buckets": [
+        {
+          "bucket": "1분 미만",
+          "count": 2,
+          "median_view": 608340
+        },
+        {
+          "bucket": "1–3분",
+          "count": 5,
+          "median_view": 1264287
+        },
+        {
+          "bucket": "3–10분",
+          "count": 19,
+          "median_view": 857445
+        },
+        {
+          "bucket": "10–30분",
+          "count": 9,
+          "median_view": 447510
+        },
+        {
+          "bucket": "30–60분",
+          "count": 1,
+          "median_view": 235322
+        },
+        {
+          "bucket": "60분 이상",
+          "count": 2,
+          "median_view": 12958196
+        }
+      ],
+      "type_distribution": [
+        {
+          "type": "e스포츠",
+          "count": 35,
+          "median_view": 844702
+        },
+        {
+          "type": "기타",
+          "count": 2,
+          "median_view": 479643
+        },
+        {
+          "type": "PV·공식",
+          "count": 1,
+          "median_view": 723376
+        }
+      ],
+      "most_common_bucket": "3–10분",
+      "best_median_bucket(count>=2)": "60분 이상"
+    }
+  },
+  "overseas_trend_cards": [
+    {
+      "source_bvid": "BV14VsJ6aEJd",
+      "title_zh": "BLG S16夺冠赞歌《仰望星空》",
+      "title_ko": "BLG S16 우승 헌정곡 《仰望星空(별을 올려다보며)》",
+      "why_ko": "반응률 중앙값 대비 3.63배로 LoL 상위 1위입니다. 조회수 약 254만이고 공식 활동 태그가 붙어 있습니다. 같은 우승 소재 중 헌정곡·창작물 유형이 단순 회고보다 반응이 높았습니다.",
+      "slang_note_ko": "赞歌: 찬가·헌정곡이라는 뜻입니다.",
+      "adapt_tip_ko": "우승 장면 하이라이트에 곡의 분위기를 살린 60초 안팎 Shorts 뮤직 편집으로 만들고, 곡과 영상은 직접 제작한 것을 쓰세요."
+    },
+    {
+      "source_bvid": "BV1Cvsj6SENy",
+      "title_zh": "BLG夺冠单曲《十年人间》——“旧时梦魇，今日高声唱！”",
+      "title_ko": "BLG 우승 기념 싱글 《十年人间(십 년의 인간세상)》 – \"옛 악몽을 오늘 큰 소리로 노래하자\"",
+      "why_ko": "반응률 3.26배, 조회수 약 122만으로 헌정곡 계열 2위입니다. 공식 활동 태그가 붙어 있습니다. '옛 악몽'이라는 서사 문구가 제목에 들어 있어 감정 훅이 됩니다.",
+      "slang_note_ko": "",
+      "adapt_tip_ko": "'10년 묵은 한을 푼 우승'이라는 서사를 앞세운 롱폼 팬 헌정 영상으로 풀되, 가사나 음원은 그대로 쓰지 말고 자막 번역과 해설 중심으로 구성하세요."
+    },
+    {
+      "source_bvid": "BV1qrsG6FExW",
+      "title_zh": "耗时七天六夜，终于在决赛前剪出了这期视频！【BLG夺冠吧】",
+      "title_ko": "【BLG 우승하자】 7일 6박 밤새워 결승 전에 완성한 팬 영상",
+      "why_ko": "반응률 2.67배, 조회수 약 81만으로 회고·속보형(1.3~1.9배)보다 높습니다. 제작 과정 스토리와 【】 태그를 함께 쓴 제목이 특징입니다. 공식 활동 태그도 붙어 있습니다.",
+      "slang_note_ko": "夺冠吧: 우승하라는 응원 문구입니다. 직역하면 '우승하자/우승해라' 정도입니다.",
+      "adapt_tip_ko": "'며칠 걸려 만들었다'는 제작기 훅을 제목에 넣고, 결과 발표 전에 올리는 응원 편집 형식을 참고하세요."
+    },
+    {
+      "source_bvid": "BV1Gbsn63EcU",
+      "title_zh": "天呐！英雄联盟历史上含金量最高的冠军！BLG传奇1穿4LCK修成正果！【1酱短评】",
+      "title_ko": "【짧은 평】 롤 역사상 가치가 가장 높은 우승? BLG, LCK 팀 4개를 연달아 꺾다",
+      "why_ko": "조회수 약 103만으로 LoL 상위권에서 조회수가 높은 편입니다. 다만 반응률은 1.49배로 회고·해설형의 한계가 보입니다. 같은 우승 회고라도 '一穿四' 서사를 제목 앞에 내세우면 구체성이 생깁니다.",
+      "slang_note_ko": "1穿4(一穿四): 한 팀이 상대 네 팀을 연달아 '뚫고' 이겼다는 뜻으로, 제목 문맥(LCK 팀 상대)에서 추정했습니다. 含金量: 우승의 '가치·무게'를 뜻합니다. 修成正果: 오래 노력해 결실을 얻었다는 뜻의 관용구입니다.",
+      "adapt_tip_ko": "해설형은 반응률이 낮으므로, 한국 팬이 궁금해할 대 LCK 경기의 핵심 교전 3장면으로 좁혀 Shorts 분석을 만들어 보세요."
+    },
+    {
+      "source_bvid": "BV1bGsJ6AEFb",
+      "title_zh": "BLG一穿四夺冠单曲《春庭雪》",
+      "title_ko": "BLG '一穿四' 우승 기념 싱글 《春庭雪(봄뜰의 눈)》",
+      "why_ko": "조회수 약 49.9만, 반응률 1.68배입니다. 공식 활동 태그가 없는 헌정곡이라 공식 활동 쏠림을 피하는 대안 각도가 될 수 있습니다. 헌정곡이 여러 편 나오고 있다는 점이 흐름을 보여 줍니다.",
+      "slang_note_ko": "",
+      "adapt_tip_ko": "《仰望星空》·《十年人间》·《春庭雪》를 묶어 'BLG 우승 헌정곡 3편 비교' 롱폼으로 만들면 경쟁이 적은 각도가 됩니다."
+    }
+  ],
+  "alias_candidates": [],
+  "data_sources": [
+    {
+      "name": "종합 인기(게임 카테고리)",
+      "origin": "live",
+      "endpoint": "x/web-interface/popular",
+      "fetched_at": "2026-11-16T07:08:31+00:00"
+    },
+    {
+      "name": "실시간 핫서치",
+      "origin": "live",
+      "endpoint": "x/web-interface/wbi/search/square",
+      "fetched_at": "2026-11-16T07:08:32+00:00"
+    }
+  ],
+  "agent_trace": [
+    {
+      "t": 0.0,
+      "agent": "supervisor",
+      "event": "task",
+      "detail": "[BiliTask] | task_id: local-demo | intent: game_deep_dive | period_days: 7 | game: 英雄联盟 | user_title: BLG夺冠了！S16决赛全程回顾",
+      "ok": true
+    },
+    {
+      "t": 2.6,
+      "agent": "supervisor",
+      "event": "llm_turn",
+      "detail": "step=1 stop=tool_use 2.6s",
+      "ok": true
+    },
+    {
+      "t": 2.6,
+      "agent": "supervisor",
+      "event": "delegate→collector",
+      "detail": "BiliTask: intent=game_deep_dive, period_days=7, game=英雄联盟(영웅연맹/리그 오브 레전드). 빌리빌리 게임 카테고리 종합 인기, 실시간 핫서치, 랭킹 스냅샷을 수집하고 게임명 별칭(LOL, 英雄联盟, 联盟 등)을 통일해 주세요. 스냅샷 데이터를 ",
+      "ok": true
+    },
+    {
+      "t": 4.4,
+      "agent": "collector",
+      "event": "llm_turn",
+      "detail": "step=1 stop=tool_use 1.8s",
+      "ok": true
+    },
+    {
+      "t": 9.7,
+      "agent": "collector",
+      "event": "tool:collect_popular_games",
+      "detail": "{}",
+      "ok": true
+    },
+    {
+      "t": 10.8,
+      "agent": "collector",
+      "event": "tool:collect_trending",
+      "detail": "{}",
+      "ok": true
+    },
+    {
+      "t": 10.8,
+      "agent": "collector",
+      "event": "tool:load_ranking_snapshot",
+      "detail": "{}",
+      "ok": true
+    },
+    {
+      "t": 10.8,
+      "agent": "collector",
+      "event": "tool:resolve_game",
+      "detail": "{\"name\": \"英雄联盟\"}",
+      "ok": true
+    },
+    {
+      "t": 12.3,
+      "agent": "collector",
+      "event": "llm_turn",
+      "detail": "step=2 stop=tool_use 1.4s",
+      "ok": true
+    },
+    {
+      "t": 12.3,
+      "agent": "collector",
+      "event": "tool:list_unmatched_titles",
+      "detail": "{\"n\": 30}",
+      "ok": true
+    },
+    {
+      "t": 21.9,
+      "agent": "collector",
+      "event": "llm_turn",
+      "detail": "step=3 stop=tool_use 9.6s",
+      "ok": true
+    },
+    {
+      "t": 21.9,
+      "agent": "collector",
+      "event": "submit",
+      "detail": "submit_findings",
+      "ok": true
+    },
+    {
+      "t": 21.9,
+      "agent": "supervisor",
+      "event": "tool:delegate",
+      "detail": "{\"worker\": \"collector\", \"instruction\": \"BiliTask: intent=game_deep_dive, period_days=7, game=英雄联盟(영웅연맹/리그 오브 레전드). 빌리빌리 게임 카테고리 종합 인기, 실시간 핫서치, 랭킹 스냅샷을 수집하고 게임명",
+      "ok": true
+    },
+    {
+      "t": 24.4,
+      "agent": "supervisor",
+      "event": "llm_turn",
+      "detail": "step=2 stop=tool_use 2.5s",
+      "ok": true
+    },
+    {
+      "t": 24.4,
+      "agent": "supervisor",
+      "event": "delegate→trend_radar",
+      "detail": "BiliTask: intent=game_deep_dive, game=英雄联盟(리그 오브 레전드), period 7일. collector 결과: 게임 카테고리 96개 영상 중 LoL 38개(실제는 더 많을 수 있음: 제목에 게임명 없이 BLG/Knight/Chovy/Faker/Bin 등 ",
+      "ok": true
+    },
+    {
+      "t": 26.2,
+      "agent": "trend_radar",
+      "event": "llm_turn",
+      "detail": "step=1 stop=tool_use 1.8s",
+      "ok": true
+    },
+    {
+      "t": 26.2,
+      "agent": "trend_radar",
+      "event": "tool:get_hot_keyword_signals",
+      "detail": "{}",
+      "ok": true
+    },
+    {
+      "t": 26.2,
+      "agent": "trend_radar",
+      "event": "tool:get_event_signals",
+      "detail": "{}",
+      "ok": true
+    },
+    {
+      "t": 26.2,
+      "agent": "trend_radar",
+      "event": "tool:get_game_scores",
+      "detail": "{\"top\": 8}",
+      "ok": true
+    },
+    {
+      "t": 40.2,
+      "agent": "trend_radar",
+      "event": "llm_turn",
+      "detail": "step=2 stop=tool_use 14.0s",
+      "ok": true
+    },
+    {
+      "t": 40.2,
+      "agent": "trend_radar",
+      "event": "submit",
+      "detail": "submit_findings",
+      "ok": true
+    },
+    {
+      "t": 40.2,
+      "agent": "supervisor",
+      "event": "tool:delegate",
+      "detail": "{\"worker\": \"trend_radar\", \"instruction\": \"BiliTask: intent=game_deep_dive, game=英雄联盟(리그 오브 레전드), period 7일. collector 결과: 게임 카테고리 96개 영상 중 LoL 38개(실제는 더 많을 수 있음",
+      "ok": true
+    },
+    {
+      "t": 42.7,
+      "agent": "supervisor",
+      "event": "llm_turn",
+      "detail": "step=3 stop=tool_use 2.5s",
+      "ok": true
+    },
+    {
+      "t": 42.7,
+      "agent": "supervisor",
+      "event": "delegate→engagement_analyst",
+      "detail": "BiliTask: intent=game_deep_dive, game=英雄联盟(리그 오브 레전드), 7일. 앞선 결과: 게임 풀 96개 중 LoL 38개(제목에 게임명 없는 선수·팀명 영상은 누락됐을 수 있음), 공식 활동 4071515에 LoL 21개, 4074201에 5개, trend",
+      "ok": true
+    },
+    {
+      "t": 44.6,
+      "agent": "engagement_analyst",
+      "event": "llm_turn",
+      "detail": "step=1 stop=tool_use 1.9s",
+      "ok": true
+    },
+    {
+      "t": 44.6,
+      "agent": "engagement_analyst",
+      "event": "tool:get_engagement_ranking",
+      "detail": "{}",
+      "ok": true
+    },
+    {
+      "t": 44.6,
+      "agent": "engagement_analyst",
+      "event": "tool:get_engagement_ranking",
+      "detail": "{\"game_id\": \"league_of_legends\"}",
+      "ok": true
+    },
+    {
+      "t": 44.6,
+      "agent": "engagement_analyst",
+      "event": "tool:get_duration_type_distribution",
+      "detail": "{}",
+      "ok": true
+    },
+    {
+      "t": 44.6,
+      "agent": "engagement_analyst",
+      "event": "tool:get_duration_type_distribution",
+      "detail": "{\"game_id\": \"league_of_legends\"}",
+      "ok": true
+    },
+    {
+      "t": 44.6,
+      "agent": "engagement_analyst",
+      "event": "tool:get_game_scores",
+      "detail": "{\"top\": 5}",
+      "ok": true
+    },
+    {
+      "t": 57.7,
+      "agent": "engagement_analyst",
+      "event": "llm_turn",
+      "detail": "step=2 stop=tool_use 13.1s",
+      "ok": true
+    },
+    {
+      "t": 57.7,
+      "agent": "engagement_analyst",
+      "event": "submit",
+      "detail": "submit_findings",
+      "ok": true
+    },
+    {
+      "t": 57.7,
+      "agent": "supervisor",
+      "event": "tool:delegate",
+      "detail": "{\"worker\": \"engagement_analyst\", \"instruction\": \"BiliTask: intent=game_deep_dive, game=英雄联盟(리그 오브 레전드), 7일. 앞선 결과: 게임 풀 96개 중 LoL 38개(제목에 게임명 없는 선수·팀명 영상은 누락됐을 ",
+      "ok": true
+    },
+    {
+      "t": 61.6,
+      "agent": "supervisor",
+      "event": "llm_turn",
+      "detail": "step=4 stop=tool_use 3.9s",
+      "ok": true
+    },
+    {
+      "t": 61.6,
+      "agent": "supervisor",
+      "event": "delegate→title_doctor",
+      "detail": "BiliTask: intent=game_deep_dive, game=英雄联盟, user_title=\"BLG夺冠了！S16决赛全程回顾\". 인기 제목과 글자 수·【】《》 사용·키워드를 비교하고 제목 수정안을 제시해 주세요. 참고: 핫서치에 'BLG夺冠' 관련 다수, 공식 활동 4071515(",
+      "ok": true
+    },
+    {
+      "t": 63.2,
+      "agent": "title_doctor",
+      "event": "llm_turn",
+      "detail": "step=1 stop=tool_use 1.6s",
+      "ok": true
+    },
+    {
+      "t": 63.3,
+      "agent": "title_doctor",
+      "event": "tool:get_title_benchmark",
+      "detail": "{\"game_id\": \"league_of_legends\"}",
+      "ok": true
+    },
+    {
+      "t": 63.3,
+      "agent": "title_doctor",
+      "event": "tool:diagnose_title",
+      "detail": "{\"title\": \"BLG夺冠了！S16决赛全程回顾\"}",
+      "ok": true
+    },
+    {
+      "t": 63.3,
+      "agent": "title_doctor",
+      "event": "tool:get_top_titles",
+      "detail": "{\"game_id\": \"league_of_legends\", \"n\": 10}",
+      "ok": true
+    },
+    {
+      "t": 74.4,
+      "agent": "title_doctor",
+      "event": "llm_turn",
+      "detail": "step=2 stop=tool_use 11.2s",
+      "ok": true
+    },
+    {
+      "t": 74.4,
+      "agent": "title_doctor",
+      "event": "submit",
+      "detail": "submit_findings",
+      "ok": true
+    },
+    {
+      "t": 74.4,
+      "agent": "supervisor",
+      "event": "tool:delegate",
+      "detail": "{\"worker\": \"title_doctor\", \"instruction\": \"BiliTask: intent=game_deep_dive, game=英雄联盟, user_title=\\\"BLG夺冠了！S16决赛全程回顾\\\". 인기 제목과 글자 수·【】《》 사용·키워드를 비교하고 제목 수정안을 제시",
+      "ok": true
+    },
+    {
+      "t": 74.4,
+      "agent": "supervisor",
+      "event": "delegate→localizer",
+      "detail": "BiliTask: intent=game_deep_dive, game=英雄联盟(리그 오브 레전드). YouTube·TikTok 모드에 넘길 한국어 '해외 트렌드 소재' 카드를 만들어 주세요. 소재 예: BLG S16 우승 헌정곡 《仰望星空》(반응률 21.06%), 《十年人间》, BLG v",
+      "ok": true
+    },
+    {
+      "t": 75.6,
+      "agent": "localizer",
+      "event": "llm_turn",
+      "detail": "step=1 stop=tool_use 1.2s",
+      "ok": true
+    },
+    {
+      "t": 75.6,
+      "agent": "localizer",
+      "event": "tool:get_top_titles",
+      "detail": "{\"game_id\": \"league_of_legends\", \"n\": 10}",
+      "ok": true
+    },
+    {
+      "t": 96.8,
+      "agent": "localizer",
+      "event": "llm_turn",
+      "detail": "step=2 stop=tool_use 21.2s",
+      "ok": true
+    },
+    {
+      "t": 96.8,
+      "agent": "localizer",
+      "event": "submit",
+      "detail": "submit_findings",
+      "ok": true
+    },
+    {
+      "t": 96.8,
+      "agent": "supervisor",
+      "event": "tool:delegate",
+      "detail": "{\"worker\": \"localizer\", \"instruction\": \"BiliTask: intent=game_deep_dive, game=英雄联盟(리그 오브 레전드). YouTube·TikTok 모드에 넘길 한국어 '해외 트렌드 소재' 카드를 만들어 주세요. 소재 예: BLG S16 ",
+      "ok": true
+    },
+    {
+      "t": 105.2,
+      "agent": "supervisor",
+      "event": "llm_turn",
+      "detail": "step=5 stop=tool_use 8.4s",
+      "ok": true
+    },
+    {
+      "t": 105.2,
+      "agent": "supervisor",
+      "event": "submit",
+      "detail": "submit_report",
+      "ok": true
+    }
+  ],
+  "warnings": [
+    "랭킹 스냅샷 파일이 없고 랭킹 API가 봇 차단(-352)이라 랭킹 데이터는 쓰지 못했습니다. 인기 영상과 핫서치는 실시간(live) 데이터입니다.",
+    "게임 풀 96개 중 50개는 제목에 게임명이 없어 별칭 사전에 매칭되지 않았습니다. 대부분 BLG, Knight, Chovy 같은 선수·팀명이 들어간 MOBA游戏 영상이라 LoL 영상 38개는 실제보다 적게 잡혔을 수 있습니다.",
+    "핫키워드는 모두 선행 신호(leading_signal)가 없는 이미 확산된 소재입니다. 공식 이벤트 날짜는 도구에서 제공하지 않아 적지 않았습니다.",
+    "1–3분(5개), 30–60분(1개), 60분 이상(2개) 구간은 표본이 작거나 특수 사례(공식 중계 등)일 수 있어 일반 기준으로 삼기 어렵습니다.",
+    "'一穿四'를 '한 팀이 상대 네 팀을 연달아 꺾음'으로 푼 것은 제목 문맥에서 추정한 해석입니다.",
+    "한국 커뮤니티 반응·대회 밈 영상은 상위 목록에서 확인되지 않아 카드로 만들지 않았습니다. 핫서치에는 관련 키워드가 있습니다.",
+    "collector: collect_popular_games: origin=live (snapshot_file=null, live_error=null). 게임 풀 96개, videos_for_requested_game(league_of_legends/英雄联盟)=38개.",
+    "collector: collect_trending: origin=live, 키워드 30개 수집. 게임 관련 키워드는 12개이며 대부분 BLG S16 우승 관련.",
+    "collector: load_ranking_snapshot: available=false. data/snapshots/ranking_game_*.json 파일이 없습니다. 랭킹 API가 봇 차단(-352)이라 자동 수집하지 않으며, 랭킹 데이터는 사용하지 못했습니다. 스냅샷으로 대체된 데이터는 없습니다.",
+    "collector: resolve_game('英雄联盟') 결과: game_id=league_of_legends, zh=英雄联盟, ko=리그 오브 레전드, en=League of Legends. 사전에 있습니다.",
+    "collector: LoL 영상 38개는 30개 이상이라 표본이 작다는 경고 대상은 아닙니다. 다만 전체 게임 풀이 96개라 다른 게임의 표본은 작을 수 있습니다.",
+    "collector: 별칭 사전에서 찾지 못한 제목이 96개 중 50개입니다. 이 중 상당수는 tname이 MOBA游戏이고 BLG, Knight, Chovy, Faker, Bin 같은 선수·팀 이름이 보이지만 제목에 게임 이름은 없습니다. 예: '我们是冠军🏆！！！', '楚钧：Knight你绝对FMVP啊！', '绝望！第一视角带入Chovy战败...'. LoL 영상 수 38개는 실제보다 적게 잡힌 값일 수 있습니다. 이 점은 해석하지 않고 사실만 보고합니다.",
+    "collector: 미매칭 제목 중 게임 이름이 명확히 드러난 것이 없어 alias_candidates는 제안하지 않았습니다. 'Team Spirit 上海Major'나 '岩浆岛' 같은 제목은 게임 이름이 직접 나오지 않아 추측하지 않았습니다."
+  ],
+  "platform": "bilibili"
+}

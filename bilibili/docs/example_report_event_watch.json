@@ -1,0 +1,220 @@
+{
+  "task_id": "local-demo",
+  "intent": "event_watch",
+  "summary_ko": "이번 주 빌리빌리의 중심은 리그 오브 레전드 S16 BLG 우승 이슈입니다. 실시간 핫서치 30개 중 12개가 LoL이고, 공식 활동 4071515·4074201에 영상이 몰려 있어 경쟁이 매우 치열합니다. LoL 영상을 만든다면 활동 태그를 달고, 'LCK 含金量', '韩网 반응', '夺冠之战 복기'처럼 한국 시청자 관점이 들어가는 각도로 차별화하세요. 경쟁이 낮은 쪽을 노린다면 명일방주 활동 4072804(TL-S-1~4 저난도 공략, 첫 클리어)가 좋습니다. 영상이 1개 이하인 블루오션 핫키워드는 없었으니, 빠르게 업로드하는 것이 중요합니다.",
+  "opportunities": [],
+  "events": [
+    {
+      "game_zh": "英雄联盟",
+      "game_ko": "리그 오브 레전드",
+      "kind": "official_activity",
+      "evidence": "활동 mission_id 4071515: 영상 22개, 총 조회수 17,795,341 (미매칭 7개 추가, 5,549,032뷰). 활동 4074201: 영상 5개, 5,318,133뷰 (미매칭 4개 추가). 활동 4071336: 영상 2개, 2,354,112뷰. 활동 4071496: 영상 1개, 1,780,808뷰. 전체 활동 영상 비중 0.67. Score_bili 1.239 (경쟁도 1.0, 영상 풀 39개).",
+      "recommendation_ko": "활동 4071515·4074201 태그를 달고 BLG S16 우승 복기·반응·응원가 영상을 올리되, 경쟁이 매우 심하니 한국/LCK 반응이나 경기 복기처럼 차별화된 각도를 택하세요."
+    },
+    {
+      "game_zh": "英雄联盟",
+      "game_ko": "리그 오브 레전드",
+      "kind": "hot_keyword",
+      "evidence": "핫서치 12개 전부 LoL 관련: 1위 'BLG Knight 开播', 6위 'BLG夺冠UP主开启抽奖团建', 7위 'BLG庆功宴Vlog', 11위 '管泽元和Ming米勒一起回味S16决赛', 12위 '米勒给今年的S赛打100分', 18위 'BLG夺冠双方选手反应', 19위 '王多多赛后挥泪点评BLG夺冠', 22위 'BLG一穿四LCK含金量有多高', 23위 'BLG夺冠过程中的热梗', 27위 '韩网绝望韩国人怎么看BLG夺冠', 28위 '复盘BLG战胜GEN夺冠之战', 30위 '黄龄恭喜BLG夺冠'. 모두 영상 풀 39개, leading_signal=false.",
+      "recommendation_ko": "22위 'LCK 含金量', 27위 '韩网反应', 28위 '夺冠之战复盘'처럼 영상이 이미 많은 주제는 제목·썸네일에 해당 키워드를 넣고, 해설가 총평이나 열 밈 정리 같은 새로운 시각을 더해 업로드하세요."
+    },
+    {
+      "game_zh": "明日方舟",
+      "game_ko": "명일방주",
+      "kind": "official_activity",
+      "evidence": "활동 mission_id 4072804: 명일방주 영상 7개, 총 1,676,689뷰 (미매칭 4개가 같은 활동에 있고 제목에 TL-S-4, 2,543,016뷰). 샘플 제목: 'TL-S-1~4 摆完挂机 全关卡攻略', 'TL-S-4平民单核攻略'. Score_bili 1.239 (수요 0.0164, 아웃라이어 0.4281, 신선도 1.0, 경쟁도 0.2051, 영상 풀 8개).",
+      "recommendation_ko": "활동 4072804 태그를 달고 TL-S-1~4 저난도 공략과 첫 클리어 영상을 올리면 LoL보다 경쟁이 낮은 상태에서 활동 노출 지원을 받을 수 있습니다."
+    }
+  ],
+  "title_diagnosis": null,
+  "duration_advice": null,
+  "overseas_trend_cards": [],
+  "alias_candidates": [],
+  "data_sources": [
+    {
+      "name": "종합 인기(게임 카테고리)",
+      "origin": "live",
+      "endpoint": "x/web-interface/popular",
+      "fetched_at": "2026-11-16T07:13:06+00:00"
+    },
+    {
+      "name": "실시간 핫서치",
+      "origin": "live",
+      "endpoint": "x/web-interface/wbi/search/square",
+      "fetched_at": "2026-11-16T07:13:07+00:00"
+    }
+  ],
+  "agent_trace": [
+    {
+      "t": 0.0,
+      "agent": "supervisor",
+      "event": "task",
+      "detail": "[BiliTask] | task_id: local-demo | intent: event_watch | period_days: 7",
+      "ok": true
+    },
+    {
+      "t": 2.5,
+      "agent": "supervisor",
+      "event": "llm_turn",
+      "detail": "step=1 stop=tool_use 2.5s in=2220 out=222",
+      "ok": true
+    },
+    {
+      "t": 2.5,
+      "agent": "supervisor",
+      "event": "delegate→collector",
+      "detail": "BiliTask: task_id=local-demo, intent=event_watch, period_days=7, game=지정 없음(전체 게임 카테고리). 빌리빌리 종합 인기(게임 카테고리)·실시간 핫서치·랭킹 스냅샷을 수집하고 게임명 별칭을 통일해 주세요. 스냅샷 데이터를 썼거나 ",
+      "ok": true
+    },
+    {
+      "t": 4.7,
+      "agent": "collector",
+      "event": "llm_turn",
+      "detail": "step=1 stop=tool_use 2.2s in=2092 out=114",
+      "ok": true
+    },
+    {
+      "t": 9.9,
+      "agent": "collector",
+      "event": "tool:collect_popular_games",
+      "detail": "{}",
+      "ok": true
+    },
+    {
+      "t": 11.1,
+      "agent": "collector",
+      "event": "tool:collect_trending",
+      "detail": "{}",
+      "ok": true
+    },
+    {
+      "t": 11.1,
+      "agent": "collector",
+      "event": "tool:load_ranking_snapshot",
+      "detail": "{}",
+      "ok": true
+    },
+    {
+      "t": 11.1,
+      "agent": "collector",
+      "event": "tool:list_unmatched_titles",
+      "detail": "{}",
+      "ok": true
+    },
+    {
+      "t": 18.1,
+      "agent": "collector",
+      "event": "llm_turn",
+      "detail": "step=2 stop=tool_use 7.0s in=4125 out=860",
+      "ok": true
+    },
+    {
+      "t": 18.1,
+      "agent": "collector",
+      "event": "submit",
+      "detail": "submit_findings",
+      "ok": true
+    },
+    {
+      "t": 18.1,
+      "agent": "supervisor",
+      "event": "tool:delegate",
+      "detail": "{\"worker\": \"collector\", \"instruction\": \"BiliTask: task_id=local-demo, intent=event_watch, period_days=7, game=지정 없음(전체 게임 카테고리). 빌리빌리 종합 인기(게임 카테고리)·실시간 핫서치·랭킹 ",
+      "ok": true
+    },
+    {
+      "t": 20.5,
+      "agent": "supervisor",
+      "event": "llm_turn",
+      "detail": "step=2 stop=tool_use 2.4s in=2851 out=285",
+      "ok": true
+    },
+    {
+      "t": 20.5,
+      "agent": "supervisor",
+      "event": "delegate→trend_radar",
+      "detail": "BiliTask: task_id=local-demo, intent=event_watch, period_days=7, 게임 지정 없음(전체). collector 결과: 종합 인기 게임 영상 97개(live), 실시간 핫서치 30개(live), 랭킹 스냅샷 없음(봇 차단 -352), 97개",
+      "ok": true
+    },
+    {
+      "t": 21.7,
+      "agent": "trend_radar",
+      "event": "llm_turn",
+      "detail": "step=1 stop=tool_use 1.2s in=2127 out=107",
+      "ok": true
+    },
+    {
+      "t": 21.7,
+      "agent": "trend_radar",
+      "event": "tool:get_hot_keyword_signals",
+      "detail": "{}",
+      "ok": true
+    },
+    {
+      "t": 21.7,
+      "agent": "trend_radar",
+      "event": "tool:get_event_signals",
+      "detail": "{}",
+      "ok": true
+    },
+    {
+      "t": 21.7,
+      "agent": "trend_radar",
+      "event": "tool:get_game_scores",
+      "detail": "{\"top\": 5}",
+      "ok": true
+    },
+    {
+      "t": 32.3,
+      "agent": "trend_radar",
+      "event": "llm_turn",
+      "detail": "step=2 stop=tool_use 10.7s in=5238 out=1574",
+      "ok": true
+    },
+    {
+      "t": 32.3,
+      "agent": "trend_radar",
+      "event": "submit",
+      "detail": "submit_findings",
+      "ok": true
+    },
+    {
+      "t": 32.3,
+      "agent": "supervisor",
+      "event": "tool:delegate",
+      "detail": "{\"worker\": \"trend_radar\", \"instruction\": \"BiliTask: task_id=local-demo, intent=event_watch, period_days=7, 게임 지정 없음(전체). collector 결과: 종합 인기 게임 영상 97개(live), 실시",
+      "ok": true
+    },
+    {
+      "t": 38.5,
+      "agent": "supervisor",
+      "event": "llm_turn",
+      "detail": "step=3 stop=tool_use 6.1s in=4584 out=867",
+      "ok": true
+    },
+    {
+      "t": 38.5,
+      "agent": "supervisor",
+      "event": "submit",
+      "detail": "submit_report",
+      "ok": true
+    }
+  ],
+  "usage": {
+    "llm_calls": 7,
+    "input_tokens": 23237,
+    "output_tokens": 4029,
+    "model": "claude-sonnet-5-5",
+    "estimated_cost_usd": 0.0868
+  },
+  "warnings": [
+    "랭킹 스냅샷은 사용하지 않았습니다. 랭킹 API가 봇 차단(-352)으로 수집되지 않았고, 저장된 스냅샷 파일도 없었습니다. 종합 인기 97개와 핫서치 30개는 모두 실시간 수집입니다.",
+    "종합 인기 영상 97개 중 50개(약 52%)는 제목에 게임명이 없어 게임을 매칭하지 못했습니다. 게임별 집계가 실제보다 작게 나왔을 수 있습니다.",
+    "이벤트 날짜는 도구가 제공하지 않아 적지 않았습니다. 마감일과 일정은 공식 활동 페이지에서 직접 확인해야 합니다.",
+    "LoL과 명일방주의 Score_bili가 모두 1.239로 같습니다. 우연일 수 있으니 점수 비교에는 신중하게 접근하세요.",
+    "핫서치 LoL 키워드 12개는 모두 영상 풀 39개를 공유합니다. 키워드별 경쟁도를 따로 구분하기는 어렵습니다.",
+    "collector: 게임을 찾지 못한 영상이 97개 중 50개(약 52%)이며, 제목에 게임 이름 없이 밈·선수명(예: Knight, Chovy)·부제만 있는 경우가 많기 때문입니다.",
+    "collector: 사람이 저장한 랭킹 스냅샷(data/snapshots/ranking_game_*.json)이 없고 랭킹 API는 봇 차단(-352)으로 자동 수집되지 않아 랭킹 데이터는 포함되지 않았습니다."
+  ],
+  "platform": "bilibili"
+}

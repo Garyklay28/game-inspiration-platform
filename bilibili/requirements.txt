@@ -1,0 +1,4 @@
+# Python 3.9 호환 (3.9 에서는 anthropic 0.x 최신판이 설치됨)
+anthropic>=0.125,<2
+python-dotenv>=1.0
+pytest>=8.0

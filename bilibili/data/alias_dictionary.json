@@ -1,0 +1,193 @@
+{
+  "_comment": "게임 별칭 사전(로컬 대체본). Supabase 의 game_alias 테이블과 같은 구조. 실제 서비스에서는 A(데이터·백엔드) 담당이 관리. LoL 의 S16/LPL/LCK/BLG 는 게임명이 아닌 대회·리그·팀명이지만, 빌리빌리 e스포츠 영상 제목에 게임명이 생략되는 경우가 많아 추가.",
+  "games": [
+    {
+      "game_id": "genshin_impact",
+      "zh": "原神",
+      "ko": "원신",
+      "en": "Genshin Impact",
+      "aliases": [
+        "原神",
+        "genshin",
+        "원신",
+        "Genshin Impact"
+      ]
+    },
+    {
+      "game_id": "honkai_star_rail",
+      "zh": "崩坏：星穹铁道",
+      "ko": "붕괴: 스타레일",
+      "en": "Honkai: Star Rail",
+      "aliases": [
+        "星穹铁道",
+        "崩铁",
+        "崩坏星穹铁道",
+        "스타레일",
+        "붕괴 스타레일",
+        "Star Rail",
+        "HSR"
+      ]
+    },
+    {
+      "game_id": "zenless_zone_zero",
+      "zh": "绝区零",
+      "ko": "젠레스 존 제로",
+      "en": "Zenless Zone Zero",
+      "aliases": [
+        "绝区零",
+        "ZZZ",
+        "젠레스",
+        "젠레스 존 제로"
+      ]
+    },
+    {
+      "game_id": "wuthering_waves",
+      "zh": "鸣潮",
+      "ko": "명조: 워더링 웨이브",
+      "en": "Wuthering Waves",
+      "aliases": [
+        "鸣潮",
+        "명조",
+        "Wuthering Waves"
+      ]
+    },
+    {
+      "game_id": "arknights",
+      "zh": "明日方舟",
+      "ko": "명일방주",
+      "en": "Arknights",
+      "aliases": [
+        "明日方舟",
+        "方舟",
+        "명일방주",
+        "Arknights"
+      ]
+    },
+    {
+      "game_id": "minecraft",
+      "zh": "我的世界",
+      "ko": "마인크래프트",
+      "en": "Minecraft",
+      "aliases": [
+        "我的世界",
+        "MC",
+        "minecraft",
+        "마인크래프트",
+        "마크"
+      ]
+    },
+    {
+      "game_id": "league_of_legends",
+      "zh": "英雄联盟",
+      "ko": "리그 오브 레전드",
+      "en": "League of Legends",
+      "aliases": [
+        "英雄联盟",
+        "LOL",
+        "lol",
+        "롤",
+        "리그 오브 레전드",
+        "S赛",
+        "全球总决赛",
+        "S16",
+        "LPL",
+        "LCK",
+        "BLG"
+      ]
+    },
+    {
+      "game_id": "honor_of_kings",
+      "zh": "王者荣耀",
+      "ko": "왕자영요",
+      "en": "Honor of Kings",
+      "aliases": [
+        "王者荣耀",
+        "王者",
+        "왕자영요",
+        "Honor of Kings"
+      ]
+    },
+    {
+      "game_id": "black_myth_wukong",
+      "zh": "黑神话：悟空",
+      "ko": "검은 신화: 오공",
+      "en": "Black Myth: Wukong",
+      "aliases": [
+        "黑神话",
+        "黑神话悟空",
+        "오공",
+        "검은 신화",
+        "Black Myth"
+      ]
+    },
+    {
+      "game_id": "naraka_bladepoint",
+      "zh": "永劫无间",
+      "ko": "나라카: 블레이드포인트",
+      "en": "Naraka: Bladepoint",
+      "aliases": [
+        "永劫无间",
+        "永劫",
+        "나라카",
+        "Naraka"
+      ]
+    },
+    {
+      "game_id": "valorant",
+      "zh": "无畏契约",
+      "ko": "발로란트",
+      "en": "VALORANT",
+      "aliases": [
+        "无畏契约",
+        "瓦罗兰特",
+        "발로란트",
+        "valorant"
+      ]
+    },
+    {
+      "game_id": "delta_force",
+      "zh": "三角洲行动",
+      "ko": "델타포스",
+      "en": "Delta Force",
+      "aliases": [
+        "三角洲行动",
+        "三角洲",
+        "델타포스",
+        "Delta Force"
+      ]
+    },
+    {
+      "game_id": "identity_v",
+      "zh": "第五人格",
+      "ko": "제5인격",
+      "en": "Identity V",
+      "aliases": [
+        "第五人格",
+        "제5인격",
+        "Identity V"
+      ]
+    },
+    {
+      "game_id": "eggy_party",
+      "zh": "蛋仔派对",
+      "ko": "에그파티",
+      "en": "Eggy Party",
+      "aliases": [
+        "蛋仔派对",
+        "蛋仔",
+        "Eggy Party"
+      ]
+    },
+    {
+      "game_id": "game_for_peace",
+      "zh": "和平精英",
+      "ko": "화평정영",
+      "en": "Game for Peace",
+      "aliases": [
+        "和平精英",
+        "吃鸡",
+        "Game for Peace"
+      ]
+    }
+  ]
+}

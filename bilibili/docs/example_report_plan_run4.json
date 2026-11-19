@@ -1,0 +1,1097 @@
+{
+  "task_id": "local-demo",
+  "intent": "game_deep_dive",
+  "summary_ko": "리그 오브 레전드는 S16 BLG 우승 이슈가 풀 40개 중 37개를 차지하고, 소재 점수는 1.238로 2위입니다. 수요와 경쟁도가 모두 1.0이고 게임 반응률은 풀 중앙값의 0.84배라, 단순 우승 축하 영상은 겹치기 쉽습니다. 음악·헌정 계열인 《仰望星空》(반응률 21.0%), 《十年人间》(18.9%)은 반응이 높았지만 음원 권리 부담이 커서 이번 기획안에서는 뺐습니다. 이번 주에는 3–10분 길이로 '含金量 분석'과 '한국 반응 정리'를 관점별로 묶은 분석형 영상을 만들어 보세요. 공식 활동 mission_id 4071336 태그로 올리고, 선동적인 표현은 피하며 출처를 표기하세요. 기획안은 검증을 통과하지 못해 needs_review 상태이니, 저작권 체크리스트를 고친 뒤 사용하세요.",
+  "opportunities": [
+    {
+      "game_zh": "英雄联盟",
+      "game_ko": "리그 오브 레전드",
+      "reason_ko": "점수 1.238(수요 1.0, 아웃라이어 0.2801, 신선도 0.9576, 경쟁도 1.0)이고 풀 안 영상은 40개, trending_weight는 5.67입니다. 수요는 최대치지만 경쟁도도 최대치라 레드오션입니다. 게임 단위 engagement_multiple은 0.84로 평균 반응은 풀 중앙값보다 낮습니다. 그래도 음악·헌정 계열은 반응이 뚜렷하게 높습니다. 「仰望星空」은 반응률 21.0%(3.54배)에 조회수 2,556,499이고, 「十年人间」은 18.9%(3.18배)에 조회수 1,232,707이며, 「耗时七天六夜…BLG夺冠吧」는 15.5%(2.60배)에 조회수 812,860입니다. 반면 「锐评」, 「精彩时刻」 같은 일반 요약·평론은 1.45~1.87배 수준입니다. 따라서 단순 우승 축하보다 음악·헌정처럼 즐겨찾기와 코인을 유도하는 각도가 유리합니다.",
+      "score": 1.238,
+      "components": {
+        "demand": 1.0,
+        "outlier": 0.2801,
+        "freshness": 0.9576,
+        "competition": 1.0
+      }
+    },
+    {
+      "game_zh": "明日方舟",
+      "game_ko": "명일방주",
+      "reason_ko": "점수 1.287로 1위입니다(수요 0.0143, 아웃라이어 0.4228, 신선도 0.9995, 경쟁도 0.15). 경쟁이 낮고 신선도가 높은 점이 강점입니다. 다만 풀 안 영상이 6개뿐이라 확신도는 낮게 봐야 합니다. 전체 풀 반응률 1위가 명일방주 7th 여름 활동 영상(반응률 50.9%, 7.20배, 코인율 15.64%, 코인 18.63배)이라 반응 잠재력은 큽니다. 수요 점수는 0.0143으로 매우 낮습니다. 이 영상은 단일 사례일 수 있습니다.",
+      "score": 1.287,
+      "components": {
+        "demand": 0.0143,
+        "outlier": 0.4228,
+        "freshness": 0.9995,
+        "competition": 0.15
+      }
+    }
+  ],
+  "events": [
+    {
+      "game_zh": "英雄联盟",
+      "game_ko": "리그 오브 레전드",
+      "kind": "official_activity",
+      "evidence": "mission_id 4071515: 리그 오브 레전드 영상 22개, 조회수 합계 17,910,800 (샘플: '一穿四LCK捧杯夺冠，含金量最高的一集', 'BLG决战GEN！全4局2万字复盘'). 같은 mission_id에 미매칭 영상 7개(조회수 합계 5,616,790)도 있음. 전체 activity_video_share 0.657.",
+      "recommendation_ko": "mission_id 4071515 공식 활동 태그를 달아 BLG S16 우승 복기·하이라이트 영상을 올려 노출 지원을 받으세요."
+    },
+    {
+      "game_zh": "英雄联盟",
+      "game_ko": "리그 오브 레전드",
+      "kind": "official_activity",
+      "evidence": "mission_id 4074201: 리그 오브 레전드 영상 5개, 조회수 합계 5,361,508 (샘플: 'BLG S16夺冠赞歌《仰望星空》', 'BLG夺冠单曲《十年人间》'). 미매칭 영상 4개(조회수 합계 4,049,373)도 같은 활동에 참여.",
+      "recommendation_ko": "mission_id 4074201 활동에 맞춰 BLG 우승 헌정 음악·팬 창작(MV, 편집) 영상을 제작해 투고하세요."
+    },
+    {
+      "game_zh": "英雄联盟",
+      "game_ko": "리그 오브 레전드",
+      "kind": "official_activity",
+      "evidence": "mission_id 4071336: 영상 2개, 조회수 합계 2,360,680 (샘플: '韩网气疯了！BLG你要干什么！韩国人怎么评价BLG战胜T1'). mission_id 4071496: 영상 1개, 조회수 1,786,180 ('最怕BLG夺冠之人是什么梗【梗指南】'). 참여 영상 수가 적음.",
+      "recommendation_ko": "참여 영상이 적은 mission_id 4071336·4071496에 한국 반응 번역 영상이나 밈 해설 영상으로 참여하는 것을 검토하세요."
+    },
+    {
+      "game_zh": "英雄联盟",
+      "game_ko": "리그 오브 레전드",
+      "kind": "hot_keyword",
+      "evidence": "핫서치 상위: 2위 'BLG Knight 开播', 6위 'BLG夺冠UP主开启抽奖团建', 8위 'BLG庆功宴Vlog', 12위 '米勒给今年的S赛打100分', 13위 '管泽元和Ming米勒一起回味S16决赛'. 모두 videos_in_pool=40, leading_signal=false.",
+      "recommendation_ko": "핫서치 2위 Knight 방송 이슈와 8위 우승 축하 Vlog 주제를 빠르게 따라가되, 풀에 영상이 이미 많으니 독자적인 각도를 넣으세요."
+    },
+    {
+      "game_zh": "英雄联盟",
+      "game_ko": "리그 오브 레전드",
+      "kind": "hot_keyword",
+      "evidence": "핫서치 17위 '韩网绝望韩国人怎么看BLG夺冠', 18위 'BLG一穿四LCK含金量有多高', 19위 '王多多赛后挥泪点评BLG夺冠', 20위 'BLG夺冠双方选手反应', 28위 '高燃回顾BLG一穿四夺冠之路', 29위 'BLG夺冠过程中的热梗', 30위 '黄龄恭喜BLG夺冠'. 모두 videos_in_pool=40, leading_signal=false.",
+      "recommendation_ko": "LCK 팀 상대 '일천사' 우승의 가치 분석과 한국·선수 반응 모음처럼 핫서치 키워드와 맞는 제목으로 영상을 구성하세요."
+    },
+    {
+      "game_zh": "明日方舟",
+      "game_ko": "명일방주",
+      "kind": "official_activity",
+      "evidence": "mission_id 4072804: 명일방주 영상 5개, 조회수 합계 1,440,934 (샘플: 'TL-S1~4摆完挂机全关卡攻略'). 미매칭 영상 4개(조회수 합계 2,583,794)도 같은 활동에 참여. 소재 점수 1.287로 1위, 경쟁도 0.15.",
+      "recommendation_ko": "리그 오브 레전드 외 대안으로, 경쟁도가 낮은 명일방주 TL-S 돌파 공략 영상을 mission_id 4072804 태그로 올리는 것을 검토하세요."
+    }
+  ],
+  "title_diagnosis": {
+    "benchmark": {
+      "pool_size": 40,
+      "median_length": 28.5,
+      "pct_square_brackets": 0.4,
+      "pct_book_brackets": 0.1,
+      "pct_question_or_exclaim": 0.65,
+      "pct_number": 0.525
+    },
+    "issues_ko": [
+      "진단할 사용자 제목이 없어 벤치마크와 상위 10개 제목만 분석했습니다.",
+      "이 풀에서 《》는 게임 정식 명칭이 아니라 곡명에 쓰입니다. 상위 3개(《仰望星空》《十年人间》《春庭雪》)가 이 방식이며, 기획안의 '《》=게임 정식 명칭' 규칙과 다릅니다.",
+      "【】는 풀 전체의 40%인데 상위 10개 중에는 3개뿐입니다(【BLG夺冠吧】【BLG夺冠精彩时刻】【1酱短评】). 쓰임새는 시리즈명·유형 태그입니다. 이 표본에서는 【】가 반응률 상승 요인이라고 단정할 수 없습니다.",
+      "상위 제목 대부분이 'BLG夺冠', '一穿四', 'S16' 같은 같은 키워드를 씁니다. 단순 축하형 제목은 서로 구분되지 않습니다.",
+      "「独断万古」「电竞历史最夸张的表演」「天呐！」처럼 과장 톤인 제목이 있습니다. 수정안에는 이런 표현을 쓰지 않는 편이 안전합니다.",
+      "일부 제목은 50자를 넘고 한 문장에 감정 표현이 여러 개 들어 있어 핵심이 흐려집니다. 풀 중앙값 28.5자 안팎으로 맞추고 핵심 키워드는 앞쪽에 두는 편이 좋습니다.",
+      "'LCK含金量', '韩网反应' 같은 핫서치 키워드는 상위 제목에 거의 보이지 않아 아직 빈 각도입니다. 다만 영상 내용이 실제로 이를 다룰 때만 제목에 써야 합니다.",
+      "수정안은 영상의 실제 내용을 모르는 상태에서 쓴 틀이므로, 내용과 맞는지 제작자가 확인해야 합니다."
+    ],
+    "rewrite_suggestions_zh": [
+      "【S16总决赛】BLG一穿四夺冠，这个冠军的含金量体现在哪？",
+      "【BLG夺冠】韩网评论区的反应整理｜S16总决赛",
+      "《英雄联盟》S16：BLG夺冠之路的关键节点回顾"
+    ]
+  },
+  "duration_advice": {
+    "recommended_bucket": "3–10분",
+    "reason_ko": "리그 오브 레전드는 3–10분이 20개로 가장 많고 중앙값 조회수는 837,364입니다. 표본이 충분해 가장 믿을 만합니다. 1–3분은 5개에 중앙값 1,273,118로 더 높아 쇼츠형 하이라이트나 음악 편집의 보조 선택지가 됩니다. 60분 이상은 중앙값이 13,019,491로 가장 높지만 2개뿐이라 극단값 영향이 클 수 있습니다. 기준(2개 이상)은 넘지만 일반화는 피하세요. 30–60분은 1개라 신뢰할 수 없습니다. 10–30분은 9개에 중앙값 452,840으로 낮습니다. 전체 풀은 3–10분이 40개로 가장 많고 1분 미만이 중앙값 838,708로 최고입니다. 이 값은 게임 구성 차이도 반영하므로 LoL 단독 데이터를 우선하세요.",
+    "distribution": {
+      "duration_buckets": [
+        {
+          "bucket": "1분 미만",
+          "count": 3,
+          "median_view": 416090
+        },
+        {
+          "bucket": "1–3분",
+          "count": 5,
+          "median_view": 1273118
+        },
+        {
+          "bucket": "3–10분",
+          "count": 20,
+          "median_view": 837364
+        },
+        {
+          "bucket": "10–30분",
+          "count": 9,
+          "median_view": 452840
+        },
+        {
+          "bucket": "30–60분",
+          "count": 1,
+          "median_view": 247961
+        },
+        {
+          "bucket": "60분 이상",
+          "count": 2,
+          "median_view": 13019491
+        }
+      ],
+      "type_distribution": [
+        {
+          "type": "e스포츠",
+          "count": 37,
+          "median_view": 812860
+        },
+        {
+          "type": "기타",
+          "count": 2,
+          "median_view": 482391
+        },
+        {
+          "type": "PV·공식",
+          "count": 1,
+          "median_view": 728449
+        }
+      ],
+      "most_common_bucket": "3–10분",
+      "best_median_bucket(count>=2)": "60분 이상"
+    }
+  },
+  "overseas_trend_cards": [
+    {
+      "source_bvid": "BV14VsJ6aEJd",
+      "title_zh": "BLG S16夺冠赞歌《仰望星空》",
+      "title_ko": "BLG S16 우승 헌정곡 《仰望星空(별을 우러러보며)》",
+      "why_ko": "반응률 3.54배로 리그 오브 레전드 풀 1위입니다. 조회수는 약 255만이고 공식 활동 참여 영상입니다. 분석 요약상 코인율은 7.73%로 코인 중앙값의 8.99배입니다. 음악·헌정 계열이 우승 소재 중 가장 강합니다.",
+      "slang_note_ko": "",
+      "adapt_tip_ko": "원곡을 그대로 쓰지 말고 가사 의미와 우승 서사를 한국어 자막으로 풀어 주는 '중국 팬 헌정곡 리액션·해설' Shorts나 롱폼으로 바꿔 보세요. 음원·영상은 직접 사용하지 말고 라이선스를 확인하세요."
+    },
+    {
+      "source_bvid": "BV1Cvsj6SENy",
+      "title_zh": "BLG夺冠单曲《十年人间》——“旧时梦魇，今日高声唱！”",
+      "title_ko": "BLG 우승 기념 싱글 《十年人间》 — \"옛 악몽을 딛고 오늘 목청껏 부른다\"",
+      "why_ko": "반응률 3.18배로 2위입니다. 조회수는 약 123만이고 공식 활동에 참여 중입니다. 부제가 '과거의 악몽을 극복한다'는 서사라 감정 몰입도가 높습니다.",
+      "slang_note_ko": "旧时梦魇는 직역하면 '옛 악몽'입니다. 이 영상 맥락에서 구체적으로 무엇을 가리키는지는 뜻 불명확합니다.",
+      "adapt_tip_ko": "곡의 배경 서사(왜 '악몽'이라 부르는지)를 한국 팬 시점에서 3분 안팎으로 정리한 설명형 영상으로 만들되, 가사 번역은 요약 수준으로 하고 원곡은 직접 쓰지 마세요."
+    },
+    {
+      "source_bvid": "BV1qrsG6FExW",
+      "title_zh": "耗时七天六夜，终于在决赛前剪出了这期视频！【BLG夺冠吧】",
+      "title_ko": "7일 6밤 걸려 결승 전에 겨우 완성한 영상 【BLG 우승하자】",
+      "why_ko": "반응률 2.6배(조회수 약 81만)로 3위입니다. 결승 전에 올린 응원 영상이 우승이라는 결과와 맞물려 반응을 얻은 것으로 보입니다. 제작 과정을 드러내는 팬 제작 영상 형식입니다.",
+      "slang_note_ko": "",
+      "adapt_tip_ko": "'결승 전에 올린 예측·응원 영상'이나 '제작 비하인드' 포맷으로 응용할 수 있습니다. 한국 크리에이터는 다음 대회 전에 같은 구조로 응원 편집을 올려 보세요."
+    },
+    {
+      "source_bvid": "BV1Gbsn63EcU",
+      "title_zh": "天呐！英雄联盟历史上含金量最高的冠军！BLG传奇1穿4LCK修成正果！【1酱短评】",
+      "title_ko": "세상에! 롤 역사상 가장 값진 우승! BLG, LCK 팀 4곳을 연달아 꺾고 전설을 쓰다 【단평】",
+      "why_ko": "조회수 약 103만으로 상위권 중 조회수가 큰 편이고 반응률은 1.45배입니다. 한국 팀(LCK)을 모두 꺾었다는 점이 한국 시청자에게 직접 와닿는 소재입니다. 단순 축하와 달리 '왜 값진가'를 논증하는 해설형이라 차별화가 가능합니다.",
+      "slang_note_ko": "一穿四는 직역하면 '혼자서 넷을 뚫다'입니다. 여기서는 LCK 팀 네 팀을 연달아 꺾었다는 뜻으로 보이며, 정확한 대진은 도구에서 확인되지 않았습니다. 含金量은 '금 함량', 즉 '값어치·진정성'이고 修成正果는 '노력 끝에 결실을 맺다'입니다. 1酱短评은 채널 이름 표기이며 뜻 불명확입니다.",
+      "adapt_tip_ko": "한국 팬 시각에서 '중국 커뮤니티는 이 우승을 왜 가장 값지다고 보나'를 정리하는 반응 분석 롱폼으로 만들고, 상대 팀을 비하하는 표현은 피하세요."
+    },
+    {
+      "source_bvid": "BV1vyWB6FE9W",
+      "title_zh": "【S16整活】Bin哥LCK攻略实况",
+      "title_ko": "【S16 밈 영상】Bin의 'LCK 공략' 실황",
+      "why_ko": "조회수 약 99.8만으로 높지만 반응률은 1.19배입니다. 음악·헌정 계열보다 낮고 우승 과정을 밈으로 푸는 계열입니다. 공식 활동 참여 영상이며 '우승 과정 밈' 각도의 참고 사례입니다.",
+      "slang_note_ko": "整活은 '웃기게 판을 벌이다·밈성 콘텐츠를 만들다'라는 뜻입니다. 攻略는 '공략'이지만, 여기서 Bin의 실황이 구체적으로 어떤 내용인지는 제목만으로는 뜻 불명확합니다.",
+      "adapt_tip_ko": "선수 밈·명장면을 게임 공략집 형식으로 패러디하는 포맷은 Shorts에 적합합니다. 한국 대회 장면에 맞게 새로 편집하고 원본 영상은 복제하지 마세요."
+    }
+  ],
+  "alias_candidates": [],
+  "plan": {
+    "content_type": "分析",
+    "target_duration_sec": 360,
+    "hooks": [
+      {
+        "type": "先看结果",
+        "line_zh": "先放这期的整理结果：我把韩网对BLG夺冠的评论按观点分了类，每一类都标明出处，结论你看完自己判断。"
+      },
+      {
+        "type": "提问",
+        "line_zh": "BLG拿下S16冠军之后，韩国网友的评论到底在说什么？是一边倒，还是有不同的声音？"
+      },
+      {
+        "type": "挑战/反转",
+        "line_zh": "都说这座冠军含金量很高，但换到韩网的评论区，大家的看法真的一致吗？我们逐条看原评论。"
+      }
+    ],
+    "selected_hook": "提问",
+    "script_sections": [
+      {
+        "section": "开场",
+        "start_sec": 0,
+        "end_sec": 20,
+        "points_zh": "抛出问题：BLG夺得S16冠军后，韩网评论在聊什么？说明本期做法：只整理、不拱火，每条评论标注来源，评论内容以制作时实际查到的为准，不预设结论。"
+      },
+      {
+        "section": "问题",
+        "start_sec": 20,
+        "end_sec": 55,
+        "points_zh": "交代选题缘由：BLG S16夺冠相关视频很多，单纯庆祝容易雷同。说明本期角度是“按观点分类整理韩网评论＋讨论冠军含金量”，并简要说明如何筛选评论来源、如何翻译、如何避免断章取义。"
+      },
+      {
+        "section": "正文",
+        "start_sec": 55,
+        "end_sec": 320,
+        "points_zh": "分三个板块：①评论整理（约100秒）：把制作时收集到的韩网评论按观点归类，每类选取有代表性的原帖截图，标注来源并做匿名处理，翻译尽量贴近原意；对无法核实的内容明确标注“未核实”。②含金量板块（约100秒）：结合公开比赛信息，分析“一穿四”这一赛程说法的依据，对比韩网评论与国内讨论的关注点异同。③小结（约65秒）：回到评论本身，概括不同观点的分布，不替观众下结论，不攻击任何战队、选手或网友。"
+      },
+      {
+        "section": "CTA",
+        "start_sec": 320,
+        "end_sec": 345,
+        "points_zh": "请观众一键三连（点赞、投币、收藏）并关注；提示本期已参与官方活动并带上活动标签；邀请在弹幕或评论区说出自己最认同哪一类观点，以及还想看哪类评论整理。"
+      },
+      {
+        "section": "结尾",
+        "start_sec": 345,
+        "end_sec": 360,
+        "points_zh": "总结本期整理方式与信息来源，提醒评论仅代表个别网友观点；预告下期可按观众弹幕反馈继续整理。"
+      }
+    ],
+    "titles": [
+      "【S16】韩网评论怎么看BLG夺冠？按观点分类整理，再聊含金量",
+      "BLG夺冠后韩国社区在聊什么？评论分类整理＋含金量讨论（标注来源）",
+      "【BLG夺冠】不拱火只整理：韩网评论分观点梳理，聊聊这座冠军的分量"
+    ],
+    "thumbnail_brief": {
+      "aspect_ratio": "16:9",
+      "text_zh": "韩网怎么看BLG夺冠？",
+      "style_zh": "左右分屏构图：左侧为BLG夺冠庆祝画面（使用有授权或自制素材），右侧为打码、匿名处理的评论气泡拼贴；主色用深蓝配金色，大字白底描边，突出“韩网”二字；人物表情以平静、认真为主，不使用夸张或挑衅表情；角落加小字“按观点整理·标注来源”。"
+    },
+    "copyright_checklist": [
+      "游戏与赛事画面：使用英雄联盟官方允许范围内的二次创作素材，赛事转播画面只做少量、必要的片段引用，并确认赛事方/转播方的使用规则，不整段搬运。",
+      "BGM：只使用已获授权或平台可商用曲库的音乐，不使用《仰望星空》《十年人间》《春庭雪》等他人原创歌曲作为配乐，除非取得音源授权。",
+      "他人素材：韩网评论截图需标注来源平台并对用户ID打码；翻译忠实原意，不断章取义；不直接搬运同角度已有视频（如BV1rjW86jEbX、BV1xnsH6vEBW）的画面、解说或翻译。",
+      "本企划特有风险：评论整理容易引发地域或粉丝对立，需删除辱骂性言论，不使用“气疯了”“绝望”之类拱火标题；无法核实的评论标注“未核实”，不对战队、选手或网友作人身评价。",
+      "含金量板块只引用公开比赛信息和可核实的赛程事实，数据与说法在画面中标明出处。"
+    ],
+    "rationale_zh": "①选题：英雄联盟素材分1.238排第2（来源：get_plan_context.score），但竞争度为1.0，游戏中位反应率5.94%，约为池中位7.07%的0.84倍（来源：get_plan_context.score.engagement_multiple）。40个视频中37个为电竞类（来源：get_plan_context.type_distribution），单纯庆祝夺冠容易雷同，所以需要区别化角度并参与官方活动。\n②倍数基准（本节与下一节统一使用“相对池中位反应率7.07%”）：音乐/制作过程类视频反应率较高：《BLG S16夺冠赞歌《仰望星空》》反应率21.02%，2.97倍（来源：lookup_evidence）；《BLG夺冠单曲《十年人间》》反应率18.89%，2.67倍（来源：lookup_evidence）；《耗时七天六夜，终于在决赛前剪出了这期视频！【BLG夺冠吧】》反应率15.45%，2.18倍（来源：lookup_evidence）。注：get_plan_context.top_titles里的3.54、3.18、2.6是相对游戏中位5.94%的倍数，本文不与池中位倍数混用。音乐类涉及音源授权，本期不采用，只借鉴“有明确主题与叙事”的思路。\n③含金量角度（同样相对池中位7.07%）：标题带“含金量”的4个视频，反应率与倍数分别为：6.60%、0.93倍；8.61%、1.22倍；5.35%、0.76倍；6.04%、0.85倍（来源：lookup_evidence，均属活动4071515）。在同一基准下，这4个视频中只有1个高于池中位，整体低于上述音乐/制作过程类视频，因此含金量只作为本期的一个板块，不作为主打。\n④角度与已有同类视频：活动4071336下英雄联盟视频有2个（来源：get_plan_context.official_activities），属于活动内视频数较少，不代表更容易成功。这2个中已有同角度视频：《韩网气疯了！BLG你要干什么！…韩国乐评人在线读评论！》（BV1rjW86jEbX，播放1,547,820，反应率3.27%，相对池中位0.46倍，来源：lookup_evidence）；另有《韩网绝望！所有韩国队全被BLG淘汰…乐评人在线读评论！》（BV1xnsH6vEBW，活动4072303，播放721,702，反应率6.01%，相对池中位0.85倍，来源：lookup_evidence）。可见“韩网评论”并非空白角度，且这两个同类视频的反应率都低于池中位数。本期的区别是：按观点分类而非挑情绪；不拱火、标题不用“气疯了/绝望”；每条评论标注来源并匿名；增加含金量板块。这些只是做法上的差异，不构成效果保证。\n⑤时长：3–10分有20个视频，中位播放837,364（来源：get_plan_context.duration_distribution），样本充足，选360秒。\n⑥钩子：选“提问”，因为评论内容要到制作时才能确认，所以不先下结论；“先看结果”和“挑战/反转”都容易预设观点，故不选。本期不引用任何热搜词条作为依据。\n⑦活动与标签：参与活动4071336并带活动标签（来源：get_plan_context.official_activities）。不写活动日期，也不预测播放或互动数据。",
+    "platform_extras": {
+      "activity_mission_id": 4071336,
+      "tags_zh": [
+        "英雄联盟",
+        "S16",
+        "BLG",
+        "全球总决赛",
+        "电子竞技",
+        "韩网评论"
+      ]
+    },
+    "schema": "plan-v1",
+    "plan_id": "bili-local-demo-league_of_legends-v2",
+    "platform": "bilibili",
+    "game": "英雄联盟",
+    "game_id": "league_of_legends",
+    "score_reference": {
+      "score": 1.238,
+      "components": {
+        "demand": 1.0,
+        "outlier": 0.2801,
+        "freshness": 0.9576,
+        "competition": 1.0
+      },
+      "note": "仅供排序参考，非播放量预测"
+    },
+    "data_sources": [
+      {
+        "name": "종합 인기(게임 카테고리)",
+        "origin": "live",
+        "endpoint": "x/web-interface/popular",
+        "fetched_at": "2026-11-16T07:46:09+00:00"
+      },
+      {
+        "name": "실시간 핫서치",
+        "origin": "live",
+        "endpoint": "x/web-interface/wbi/search/square",
+        "fetched_at": "2026-11-16T07:46:11+00:00"
+      }
+    ],
+    "status": "needs_review"
+  },
+  "plan_validation": {
+    "plan_id": "bili-local-demo-league_of_legends-v2",
+    "passed": false,
+    "rule_check": {
+      "passed": false,
+      "errors": [
+        {
+          "field": "copyright_checklist",
+          "problem": "缺少「游戏画面」相关检查项"
+        }
+      ],
+      "warnings": []
+    },
+    "reviewer": {
+      "passed": false,
+      "issues": [
+        {
+          "field": "copyright_checklist",
+          "problem": "规则检查报错：缺少「游戏画面」相关检查项。现有第1条写的是“游戏与赛事画面”，规则按“游戏画面”这一关键词匹配，没有识别到。内容上已经覆盖了赛事转播画面的风险，所以只是措辞不匹配。",
+          "fix_hint": "把第1条改成以“游戏画面：”开头，例如“游戏画面：使用英雄联盟官方允许范围内的二次创作素材；赛事转播画面只做少量必要片段引用，并确认赛事方/转播方使用规则，不整段搬运。”保留其余内容不变，再重新提交检查。"
+        }
+      ]
+    },
+    "next": "수정 횟수 소진: submit_report 하고 warnings 에 미통과 사실을 남기세요"
+  },
+  "data_sources": [
+    {
+      "name": "종합 인기(게임 카테고리)",
+      "origin": "live",
+      "endpoint": "x/web-interface/popular",
+      "fetched_at": "2026-11-16T07:46:09+00:00"
+    },
+    {
+      "name": "실시간 핫서치",
+      "origin": "live",
+      "endpoint": "x/web-interface/wbi/search/square",
+      "fetched_at": "2026-11-16T07:46:11+00:00"
+    }
+  ],
+  "agent_trace": [
+    {
+      "t": 0.0,
+      "agent": "supervisor",
+      "event": "task",
+      "detail": "[BiliTask] | task_id: local-demo | intent: game_deep_dive | period_days: 7 | game: 英雄联盟",
+      "ok": true
+    },
+    {
+      "t": 2.8,
+      "agent": "supervisor",
+      "event": "llm_turn",
+      "detail": "step=1 stop=tool_use 2.8s in=3009 out=236",
+      "ok": true
+    },
+    {
+      "t": 2.8,
+      "agent": "supervisor",
+      "event": "delegate→collector",
+      "detail": "BiliTask(task_id: local-demo, intent: game_deep_dive, period_days: 7, game: 英雄联盟). 빌리빌리 게임 카테고리 종합 인기, 실시간 핫서치, 랭킹 스냅샷을 수집하고 게임명 별칭을 통일해 주세요(英雄联盟 / LOL / League",
+      "ok": true
+    },
+    {
+      "t": 5.0,
+      "agent": "collector",
+      "event": "llm_turn",
+      "detail": "step=1 stop=tool_use 2.2s in=2156 out=165",
+      "ok": true
+    },
+    {
+      "t": 10.3,
+      "agent": "collector",
+      "event": "tool:collect_popular_games",
+      "detail": "{}",
+      "ok": true
+    },
+    {
+      "t": 11.4,
+      "agent": "collector",
+      "event": "tool:collect_trending",
+      "detail": "{}",
+      "ok": true
+    },
+    {
+      "t": 11.4,
+      "agent": "collector",
+      "event": "tool:load_ranking_snapshot",
+      "detail": "{}",
+      "ok": true
+    },
+    {
+      "t": 11.4,
+      "agent": "collector",
+      "event": "tool:resolve_game",
+      "detail": "{\"name\": \"英雄联盟\"}",
+      "ok": true
+    },
+    {
+      "t": 11.4,
+      "agent": "collector",
+      "event": "tool:list_unmatched_titles",
+      "detail": "{}",
+      "ok": true
+    },
+    {
+      "t": 17.9,
+      "agent": "collector",
+      "event": "llm_turn",
+      "detail": "step=2 stop=tool_use 6.5s in=4224 out=745",
+      "ok": true
+    },
+    {
+      "t": 17.9,
+      "agent": "collector",
+      "event": "submit",
+      "detail": "submit_findings",
+      "ok": true
+    },
+    {
+      "t": 17.9,
+      "agent": "supervisor",
+      "event": "tool:delegate",
+      "detail": "{\"worker\": \"collector\", \"instruction\": \"BiliTask(task_id: local-demo, intent: game_deep_dive, period_days: 7, game: 英雄联盟). 빌리빌리 게임 카테고리 종합 인기, 실시간 핫서치, 랭킹 스냅샷을 ",
+      "ok": true
+    },
+    {
+      "t": 20.5,
+      "agent": "supervisor",
+      "event": "llm_turn",
+      "detail": "step=2 stop=tool_use 2.6s in=3656 out=399",
+      "ok": true
+    },
+    {
+      "t": 20.5,
+      "agent": "supervisor",
+      "event": "delegate→trend_radar",
+      "detail": "game_deep_dive, 대상 게임: 英雄联盟 (7일). collector 결과: 종합 인기 99개 중 英雄联盟 40개, 핫서치 30개 중 게임 관련 12개(BLG, S16 등). 英雄联盟 관련 이벤트 레이더, 핫키워드 선행 신호, 공식 이벤트(활동) 태그를 분석해 주세요.",
+      "ok": true
+    },
+    {
+      "t": 21.9,
+      "agent": "trend_radar",
+      "event": "llm_turn",
+      "detail": "step=1 stop=tool_use 1.4s in=2135 out=107",
+      "ok": true
+    },
+    {
+      "t": 21.9,
+      "agent": "trend_radar",
+      "event": "tool:get_hot_keyword_signals",
+      "detail": "{}",
+      "ok": true
+    },
+    {
+      "t": 21.9,
+      "agent": "trend_radar",
+      "event": "tool:get_event_signals",
+      "detail": "{}",
+      "ok": true
+    },
+    {
+      "t": 21.9,
+      "agent": "trend_radar",
+      "event": "tool:get_game_scores",
+      "detail": "{\"top\": 5}",
+      "ok": true
+    },
+    {
+      "t": 35.9,
+      "agent": "trend_radar",
+      "event": "llm_turn",
+      "detail": "step=2 stop=tool_use 13.9s in=5155 out=2216",
+      "ok": true
+    },
+    {
+      "t": 35.9,
+      "agent": "trend_radar",
+      "event": "submit",
+      "detail": "submit_findings",
+      "ok": true
+    },
+    {
+      "t": 35.9,
+      "agent": "supervisor",
+      "event": "tool:delegate",
+      "detail": "{\"worker\": \"trend_radar\", \"instruction\": \"game_deep_dive, 대상 게임: 英雄联盟 (7일). collector 결과: 종합 인기 99개 중 英雄联盟 40개, 핫서치 30개 중 게임 관련 12개(BLG, S16 등). 英雄联盟 관련 이벤트 레이더",
+      "ok": true
+    },
+    {
+      "t": 35.9,
+      "agent": "supervisor",
+      "event": "delegate→engagement_analyst",
+      "detail": "game_deep_dive, 대상 게임: 英雄联盟 (7일). collector 결과: 종합 인기 99개 중 英雄联盟 40개. 반응률 정렬(Top 풀 중앙값 대비 배수), 영상 길이·유형 분포, 소재 점수를 분석해 주세요.",
+      "ok": true
+    },
+    {
+      "t": 38.4,
+      "agent": "engagement_analyst",
+      "event": "llm_turn",
+      "detail": "step=1 stop=tool_use 2.5s in=2595 out=224",
+      "ok": true
+    },
+    {
+      "t": 38.4,
+      "agent": "engagement_analyst",
+      "event": "tool:get_engagement_ranking",
+      "detail": "{}",
+      "ok": true
+    },
+    {
+      "t": 38.4,
+      "agent": "engagement_analyst",
+      "event": "tool:get_engagement_ranking",
+      "detail": "{\"game_id\": \"league_of_legends\"}",
+      "ok": true
+    },
+    {
+      "t": 38.4,
+      "agent": "engagement_analyst",
+      "event": "tool:get_duration_type_distribution",
+      "detail": "{}",
+      "ok": true
+    },
+    {
+      "t": 38.4,
+      "agent": "engagement_analyst",
+      "event": "tool:get_duration_type_distribution",
+      "detail": "{\"game_id\": \"league_of_legends\"}",
+      "ok": true
+    },
+    {
+      "t": 38.4,
+      "agent": "engagement_analyst",
+      "event": "tool:get_game_scores",
+      "detail": "{\"top\": 8}",
+      "ok": true
+    },
+    {
+      "t": 53.0,
+      "agent": "engagement_analyst",
+      "event": "llm_turn",
+      "detail": "step=2 stop=tool_use 14.6s in=7393 out=1933",
+      "ok": true
+    },
+    {
+      "t": 53.0,
+      "agent": "engagement_analyst",
+      "event": "submit",
+      "detail": "submit_findings",
+      "ok": true
+    },
+    {
+      "t": 53.0,
+      "agent": "supervisor",
+      "event": "tool:delegate",
+      "detail": "{\"worker\": \"engagement_analyst\", \"instruction\": \"game_deep_dive, 대상 게임: 英雄联盟 (7일). collector 결과: 종합 인기 99개 중 英雄联盟 40개. 반응률 정렬(Top 풀 중앙값 대비 배수), 영상 길이·유형 분포, 소재 ",
+      "ok": true
+    },
+    {
+      "t": 56.9,
+      "agent": "supervisor",
+      "event": "llm_turn",
+      "detail": "step=3 stop=tool_use 4.0s in=7597 out=551",
+      "ok": true
+    },
+    {
+      "t": 56.9,
+      "agent": "supervisor",
+      "event": "delegate→title_doctor",
+      "detail": "game_deep_dive, 대상 게임: 英雄联盟 (7일). 사용자 제목은 없음 → 제목 전략 모드. 英雄联盟 인기 제목의 글자 수·【】《》 사용·키워드 패턴을 정리해 주세요. 배경: BLG S16 우승 이슈가 40개 중 37개, 음악·헌정 계열(《仰望星空》, 《十年人间》)이 반응률 높",
+      "ok": true
+    },
+    {
+      "t": 58.7,
+      "agent": "title_doctor",
+      "event": "llm_turn",
+      "detail": "step=1 stop=tool_use 1.8s in=2735 out=134",
+      "ok": true
+    },
+    {
+      "t": 58.7,
+      "agent": "title_doctor",
+      "event": "tool:get_title_benchmark",
+      "detail": "{\"game_id\": \"league_of_legends\"}",
+      "ok": true
+    },
+    {
+      "t": 58.7,
+      "agent": "title_doctor",
+      "event": "tool:get_top_titles",
+      "detail": "{\"game_id\": \"league_of_legends\", \"n\": 10}",
+      "ok": true
+    },
+    {
+      "t": 71.3,
+      "agent": "title_doctor",
+      "event": "llm_turn",
+      "detail": "step=2 stop=tool_use 12.6s in=4281 out=1667",
+      "ok": true
+    },
+    {
+      "t": 71.3,
+      "agent": "title_doctor",
+      "event": "submit",
+      "detail": "submit_findings",
+      "ok": true
+    },
+    {
+      "t": 71.3,
+      "agent": "supervisor",
+      "event": "tool:delegate",
+      "detail": "{\"worker\": \"title_doctor\", \"instruction\": \"game_deep_dive, 대상 게임: 英雄联盟 (7일). 사용자 제목은 없음 → 제목 전략 모드. 英雄联盟 인기 제목의 글자 수·【】《》 사용·키워드 패턴을 정리해 주세요. 배경: BLG S16 우승 이슈가",
+      "ok": true
+    },
+    {
+      "t": 71.3,
+      "agent": "supervisor",
+      "event": "delegate→localizer",
+      "detail": "game_deep_dive, 대상 게임: 英雄联盟 (리그 오브 레전드). YouTube·TikTok 모드에 넘길 '해외 트렌드 소재' 카드를 한국어로 만들어 주세요. 배경: BLG S16 우승 관련 이슈(一穿四 LCK 우승, 한국 반응, 우승 헌정곡 《仰望星空》《十年人间》, 우승 과정 ",
+      "ok": true
+    },
+    {
+      "t": 72.4,
+      "agent": "localizer",
+      "event": "llm_turn",
+      "detail": "step=1 stop=tool_use 1.1s in=2891 out=78",
+      "ok": true
+    },
+    {
+      "t": 72.4,
+      "agent": "localizer",
+      "event": "tool:get_top_titles",
+      "detail": "{\"game_id\": \"league_of_legends\", \"n\": 15}",
+      "ok": true
+    },
+    {
+      "t": 94.3,
+      "agent": "localizer",
+      "event": "llm_turn",
+      "detail": "step=2 stop=tool_use 21.9s in=4813 out=2821",
+      "ok": true
+    },
+    {
+      "t": 94.3,
+      "agent": "localizer",
+      "event": "submit",
+      "detail": "submit_findings",
+      "ok": true
+    },
+    {
+      "t": 94.3,
+      "agent": "supervisor",
+      "event": "tool:delegate",
+      "detail": "{\"worker\": \"localizer\", \"instruction\": \"game_deep_dive, 대상 게임: 英雄联盟 (리그 오브 레전드). YouTube·TikTok 모드에 넘길 '해외 트렌드 소재' 카드를 한국어로 만들어 주세요. 배경: BLG S16 우승 관련 이슈(一穿四 LC",
+      "ok": true
+    },
+    {
+      "t": 100.7,
+      "agent": "supervisor",
+      "event": "llm_turn",
+      "detail": "step=4 stop=tool_use 6.3s in=11766 out=849",
+      "ok": true
+    },
+    {
+      "t": 100.7,
+      "agent": "supervisor",
+      "event": "delegate→plan_writer",
+      "detail": "game_deep_dive 策划案 작성 (중국어). 대상 game_id: 英雄联盟 (리그 오브 레전드), 기간 7일. 핵심 사실(워커 보고값만 사용): 풀 40개 중 37개가 BLG S16 우승 소재. 소재 점수 1.238(2위), 수요 1.0, 경쟁도 1.0(레드오션), 게임 enga",
+      "ok": true
+    },
+    {
+      "t": 101.8,
+      "agent": "plan_writer",
+      "event": "llm_turn",
+      "detail": "step=1 stop=tool_use 1.1s in=5550 out=57",
+      "ok": true
+    },
+    {
+      "t": 101.8,
+      "agent": "plan_writer",
+      "event": "tool:get_plan_context",
+      "detail": "{\"game_id\": \"league_of_legends\"}",
+      "ok": true
+    },
+    {
+      "t": 104.1,
+      "agent": "plan_writer",
+      "event": "llm_turn",
+      "detail": "step=2 stop=tool_use 2.2s in=9803 out=289",
+      "ok": true
+    },
+    {
+      "t": 104.1,
+      "agent": "plan_writer",
+      "event": "tool:lookup_evidence",
+      "detail": "{\"mission_id\": 4071496}",
+      "ok": true
+    },
+    {
+      "t": 104.1,
+      "agent": "plan_writer",
+      "event": "tool:lookup_evidence",
+      "detail": "{\"keyword\": \"十年人间\"}",
+      "ok": true
+    },
+    {
+      "t": 104.1,
+      "agent": "plan_writer",
+      "event": "tool:lookup_evidence",
+      "detail": "{\"keyword\": \"七天六夜\"}",
+      "ok": true
+    },
+    {
+      "t": 104.1,
+      "agent": "plan_writer",
+      "event": "tool:lookup_evidence",
+      "detail": "{\"keyword\": \"含金量\"}",
+      "ok": true
+    },
+    {
+      "t": 143.5,
+      "agent": "plan_writer",
+      "event": "llm_turn",
+      "detail": "step=3 stop=tool_use 39.4s in=11240 out=4770",
+      "ok": true
+    },
+    {
+      "t": 143.5,
+      "agent": "plan_writer",
+      "event": "submit",
+      "detail": "submit_findings",
+      "ok": true
+    },
+    {
+      "t": 143.5,
+      "agent": "supervisor",
+      "event": "tool:delegate",
+      "detail": "{\"worker\": \"plan_writer\", \"instruction\": \"game_deep_dive 策划案 작성 (중국어). 대상 game_id: 英雄联盟 (리그 오브 레전드), 기간 7일. 핵심 사실(워커 보고값만 사용): 풀 40개 중 37개가 BLG S16 우승 소재. 소재 점수",
+      "ok": true
+    },
+    {
+      "t": 145.5,
+      "agent": "supervisor",
+      "event": "llm_turn",
+      "detail": "step=5 stop=tool_use 2.0s in=12908 out=192",
+      "ok": true
+    },
+    {
+      "t": 145.5,
+      "agent": "supervisor",
+      "event": "delegate→validator",
+      "detail": "plan_id bili-local-demo-league_of_legends-v1 (game_deep_dive, 英雄联盟) 策划案을 검증하세요. 규칙 검사(예측 표현, 근거 없는 숫자, 저작권 체크리스트 누락)와 의미 검토를 수행해 passed 여부와 issues를 알려 주세요.",
+      "ok": true
+    },
+    {
+      "t": 147.2,
+      "agent": "validator",
+      "event": "llm_turn",
+      "detail": "step=1 stop=tool_use 1.6s in=3889 out=54",
+      "ok": true
+    },
+    {
+      "t": 147.2,
+      "agent": "validator",
+      "event": "tool:run_rule_checks",
+      "detail": "{}",
+      "ok": true
+    },
+    {
+      "t": 147.2,
+      "agent": "validator",
+      "event": "tool:get_plan",
+      "detail": "{}",
+      "ok": true
+    },
+    {
+      "t": 150.4,
+      "agent": "validator",
+      "event": "llm_turn",
+      "detail": "step=2 stop=tool_use 3.3s in=6847 out=461",
+      "ok": true
+    },
+    {
+      "t": 150.4,
+      "agent": "validator",
+      "event": "tool:lookup_evidence",
+      "detail": "{\"mission_id\": 4071336}",
+      "ok": true
+    },
+    {
+      "t": 150.4,
+      "agent": "validator",
+      "event": "tool:lookup_evidence",
+      "detail": "{\"keyword\": \"韩网\"}",
+      "ok": true
+    },
+    {
+      "t": 150.4,
+      "agent": "validator",
+      "event": "tool:lookup_evidence",
+      "detail": "{\"keyword\": \"十年人间\"}",
+      "ok": true
+    },
+    {
+      "t": 150.4,
+      "agent": "validator",
+      "event": "tool:lookup_evidence",
+      "detail": "{\"keyword\": \"耗时七天六夜\"}",
+      "ok": true
+    },
+    {
+      "t": 150.4,
+      "agent": "validator",
+      "event": "tool:lookup_evidence",
+      "detail": "{\"keyword\": \"含金量\"}",
+      "ok": true
+    },
+    {
+      "t": 150.4,
+      "agent": "validator",
+      "event": "tool:lookup_evidence",
+      "detail": "{\"keyword\": \"仰望星空\"}",
+      "ok": true
+    },
+    {
+      "t": 166.1,
+      "agent": "validator",
+      "event": "llm_turn",
+      "detail": "step=3 stop=tool_use 15.7s in=9160 out=1993",
+      "ok": true
+    },
+    {
+      "t": 166.1,
+      "agent": "validator",
+      "event": "submit",
+      "detail": "submit_findings",
+      "ok": true
+    },
+    {
+      "t": 166.1,
+      "agent": "supervisor",
+      "event": "tool:delegate",
+      "detail": "{\"worker\": \"validator\", \"instruction\": \"plan_id bili-local-demo-league_of_legends-v1 (game_deep_dive, 英雄联盟) 策划案을 검증하세요. 규칙 검사(예측 표현, 근거 없는 숫자, 저작권 체크리스트 누락)와 의미",
+      "ok": true
+    },
+    {
+      "t": 172.6,
+      "agent": "supervisor",
+      "event": "llm_turn",
+      "detail": "step=6 stop=tool_use 6.5s in=14251 out=993",
+      "ok": true
+    },
+    {
+      "t": 172.6,
+      "agent": "supervisor",
+      "event": "delegate→plan_writer",
+      "detail": "plan_id bili-local-demo-league_of_legends-v1 (英雄联盟 game_deep_dive) 策划案을 수정해 주세요. validator 가 지적한 issues 를 그대로 전달합니다:\n1) field rationale_zh ④/⑥(热搜依据): rationale_",
+      "ok": true
+    },
+    {
+      "t": 178.4,
+      "agent": "plan_writer",
+      "event": "llm_turn",
+      "detail": "step=1 stop=tool_use 5.8s in=6086 out=252",
+      "ok": true
+    },
+    {
+      "t": 178.4,
+      "agent": "plan_writer",
+      "event": "tool:get_plan_context",
+      "detail": "{\"game_id\": \"league_of_legends\"}",
+      "ok": true
+    },
+    {
+      "t": 178.4,
+      "agent": "plan_writer",
+      "event": "tool:lookup_evidence",
+      "detail": "{\"keyword\": \"韩网\"}",
+      "ok": true
+    },
+    {
+      "t": 178.4,
+      "agent": "plan_writer",
+      "event": "tool:lookup_evidence",
+      "detail": "{\"keyword\": \"含金量\"}",
+      "ok": true
+    },
+    {
+      "t": 178.4,
+      "agent": "plan_writer",
+      "event": "tool:lookup_evidence",
+      "detail": "{\"mission_id\": 4071336}",
+      "ok": true
+    },
+    {
+      "t": 181.6,
+      "agent": "plan_writer",
+      "event": "llm_turn",
+      "detail": "step=2 stop=tool_use 3.2s in=13358 out=251",
+      "ok": true
+    },
+    {
+      "t": 181.6,
+      "agent": "plan_writer",
+      "event": "tool:lookup_evidence",
+      "detail": "{\"keyword\": \"仰望星空\"}",
+      "ok": true
+    },
+    {
+      "t": 181.6,
+      "agent": "plan_writer",
+      "event": "tool:lookup_evidence",
+      "detail": "{\"keyword\": \"十年人间\"}",
+      "ok": true
+    },
+    {
+      "t": 181.6,
+      "agent": "plan_writer",
+      "event": "tool:lookup_evidence",
+      "detail": "{\"keyword\": \"七天六夜\"}",
+      "ok": true
+    },
+    {
+      "t": 218.6,
+      "agent": "plan_writer",
+      "event": "llm_turn",
+      "detail": "step=3 stop=tool_use 37.0s in=14195 out=4702",
+      "ok": true
+    },
+    {
+      "t": 218.6,
+      "agent": "plan_writer",
+      "event": "submit",
+      "detail": "submit_findings",
+      "ok": true
+    },
+    {
+      "t": 218.6,
+      "agent": "supervisor",
+      "event": "tool:delegate",
+      "detail": "{\"worker\": \"plan_writer\", \"instruction\": \"plan_id bili-local-demo-league_of_legends-v1 (英雄联盟 game_deep_dive) 策划案을 수정해 주세요. validator 가 지적한 issues 를 그대로 전달합니다:\\n",
+      "ok": true
+    },
+    {
+      "t": 220.8,
+      "agent": "supervisor",
+      "event": "llm_turn",
+      "detail": "step=7 stop=tool_use 2.2s in=15853 out=211",
+      "ok": true
+    },
+    {
+      "t": 220.8,
+      "agent": "supervisor",
+      "event": "delegate→validator",
+      "detail": "plan_id bili-local-demo-league_of_legends-v2 (game_deep_dive, 英雄联盟) 수정본 策划案을 재검증하세요. 이전 지적(热搜 근거 없음, 4071336 동일 각도 영상 미언급, 배수 기준 혼용)이 해결되었는지 포함해 규칙 검사와 의미 검토 결과",
+      "ok": true
+    },
+    {
+      "t": 221.7,
+      "agent": "validator",
+      "event": "llm_turn",
+      "detail": "step=1 stop=tool_use 1.0s in=4384 out=54",
+      "ok": true
+    },
+    {
+      "t": 221.7,
+      "agent": "validator",
+      "event": "tool:run_rule_checks",
+      "detail": "{}",
+      "ok": true
+    },
+    {
+      "t": 221.7,
+      "agent": "validator",
+      "event": "tool:get_plan",
+      "detail": "{}",
+      "ok": true
+    },
+    {
+      "t": 224.8,
+      "agent": "validator",
+      "event": "llm_turn",
+      "detail": "step=2 stop=tool_use 3.1s in=7792 out=461",
+      "ok": true
+    },
+    {
+      "t": 224.8,
+      "agent": "validator",
+      "event": "tool:lookup_evidence",
+      "detail": "{\"keyword\": \"韩网\"}",
+      "ok": true
+    },
+    {
+      "t": 224.8,
+      "agent": "validator",
+      "event": "tool:lookup_evidence",
+      "detail": "{\"keyword\": \"含金量\"}",
+      "ok": true
+    },
+    {
+      "t": 224.8,
+      "agent": "validator",
+      "event": "tool:lookup_evidence",
+      "detail": "{\"keyword\": \"仰望星空\"}",
+      "ok": true
+    },
+    {
+      "t": 224.8,
+      "agent": "validator",
+      "event": "tool:lookup_evidence",
+      "detail": "{\"keyword\": \"十年人间\"}",
+      "ok": true
+    },
+    {
+      "t": 224.8,
+      "agent": "validator",
+      "event": "tool:lookup_evidence",
+      "detail": "{\"keyword\": \"七天六夜\"}",
+      "ok": true
+    },
+    {
+      "t": 224.8,
+      "agent": "validator",
+      "event": "tool:lookup_evidence",
+      "detail": "{\"mission_id\": 4071336}",
+      "ok": true
+    },
+    {
+      "t": 224.8,
+      "agent": "validator",
+      "event": "tool:lookup_evidence",
+      "detail": "{\"keyword\": \"一穿四\"}",
+      "ok": true
+    },
+    {
+      "t": 232.2,
+      "agent": "validator",
+      "event": "llm_turn",
+      "detail": "step=3 stop=tool_use 7.3s in=11258 out=926",
+      "ok": true
+    },
+    {
+      "t": 232.2,
+      "agent": "validator",
+      "event": "submit",
+      "detail": "submit_findings",
+      "ok": true
+    },
+    {
+      "t": 232.2,
+      "agent": "supervisor",
+      "event": "tool:delegate",
+      "detail": "{\"worker\": \"validator\", \"instruction\": \"plan_id bili-local-demo-league_of_legends-v2 (game_deep_dive, 英雄联盟) 수정본 策划案을 재검증하세요. 이전 지적(热搜 근거 없음, 4071336 동일 각도 영상 미언",
+      "ok": true
+    },
+    {
+      "t": 240.3,
+      "agent": "supervisor",
+      "event": "llm_turn",
+      "detail": "step=8 stop=tool_use 8.2s in=16479 out=1098",
+      "ok": true
+    },
+    {
+      "t": 240.3,
+      "agent": "supervisor",
+      "event": "submit",
+      "detail": "submit_report",
+      "ok": true
+    }
+  ],
+  "usage": {
+    "llm_calls": 30,
+    "input_tokens": 227459,
+    "output_tokens": 28889,
+    "model": "claude-sonnet-5-5",
+    "estimated_cost_usd": 0.7438
+  },
+  "warnings": [
+    "策划案(bili-local-demo-league_of_legends-v2)이 두 번째 검증도 통과하지 못했습니다. 남은 문제는 copyright_checklist에 '游戏画面' 항목이 없다는 규칙 오류 1건입니다. 현재 1번 항목은 '游戏与赛事画面'로 적혀 있어 키워드가 맞지 않습니다. 내용은 이미 포함돼 있어 문구 문제입니다. 제작 전에 1번 항목을 '游戏画面：'으로 시작하도록 고쳐야 합니다.",
+    "첫 검증에서 지적된 3건(근거 없는 핫서치 주장, 4071336 내 같은 각도 영상 미언급, 배수 기준 혼용)은 v2에서 수정됐고, 재검증에서 다시 지적되지 않았습니다.",
+    "'한국 반응 정리' 각도는 빈 영역이 아닙니다. mission 4071336의 BV1rjW86jEbX는 반응률 3.27%(풀 중앙값의 0.46배), BV1xnsH6vEBW는 6.01%(0.85배)로 풀 중앙값보다 낮습니다. 이 각도를 쓰려면 含金量 파트 같은 차별화가 필요합니다.",
+    "서로 다른 배수 기준이 있습니다. 소재 분석의 3.54배는 게임 중앙값(5.94%) 대비이고, 策划案의 2.97배는 풀 중앙값(7.07%) 대비입니다. 같은 영상(《仰望星空》)을 가리켜도 수치가 다릅니다.",
+    "title_doctor가 제안한 제목 수정안은 영상의 실제 내용을 모르는 상태에서 쓴 틀입니다. 제작자가 내용과 맞는지 직접 확인해야 합니다.",
+    "collector: 랭킹 스냅샷(data/snapshots/ranking_game_*.json)이 없습니다. 랭킹 API가 봇 차단(-352)으로 막혀 자동 수집하지 않기 때문입니다.",
+    "collector: 게임을 찾지 못한 영상이 99개 중 53개(약 54%)입니다. 제목에 게임 이름이 없고 별칭 사전에도 걸리지 않는 제목이 많기 때문입니다.",
+    "策划案 bili-local-demo-league_of_legends-v2 未通过校验，需要人工审核"
+  ],
+  "platform": "bilibili"
+}
