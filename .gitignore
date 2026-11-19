@@ -1,0 +1,13 @@
+.env
+__pycache__/
+.pytest_cache/
+runs/*
+!runs/.gitkeep
+clips/*
+!clips/.gitkeep
+audio/*
+!audio/.gitkeep
+performance/*
+!performance/.gitkeep
+config/weights.proposed.json
+data/raw/

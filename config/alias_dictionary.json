@@ -1,0 +1,26 @@
+{
+  "_comment": "주제(게임) 별칭 사전. 제목·태그에 별칭이 들어 있으면 같은 topic_id로 묶는다. 시작용 목록이므로 normalize 단계가 제안하는 alias_candidates를 사람이 검토해 추가한다. 대소문자·공백은 무시한다.",
+  "topics": [
+    {"topic_id": "grow_a_garden", "name_en": "Grow a Garden", "name_ko": "그로우 어 가든",
+     "aliases": ["grow a garden", "growagarden", "그로우어가든", "그로우 어 가든", "정원 키우기"]},
+    {"topic_id": "steal_a_brainrot", "name_en": "Steal a Brainrot", "name_ko": "브레인롯 훔치기",
+     "aliases": ["steal a brainrot", "stealabrainrot", "브레인롯 훔치기", "브레인롯훔치기", "스틸 어 브레인롯"]},
+    {"topic_id": "99_nights", "name_en": "99 Nights in the Forest", "name_ko": "숲속의 99밤",
+     "aliases": ["99 nights", "99nights", "숲속의 99밤", "숲속의99밤", "99밤"]},
+    {"topic_id": "dead_rails", "name_en": "Dead Rails", "name_ko": "데드 레일즈",
+     "aliases": ["dead rails", "deadrails", "데드레일즈", "데드 레일즈", "데드레일"]},
+    {"topic_id": "blox_fruits", "name_en": "Blox Fruits", "name_ko": "블록스 피스",
+     "aliases": ["blox fruits", "bloxfruits", "블록스피스", "블록스 피스", "블피"]},
+    {"topic_id": "brookhaven", "name_en": "Brookhaven RP", "name_ko": "브룩헤이븐",
+     "aliases": ["brookhaven", "브룩헤이븐", "브룩"]},
+    {"topic_id": "doors", "name_en": "DOORS", "name_ko": "도어즈",
+     "aliases": ["doors", "도어즈", "도어스"]},
+    {"topic_id": "adopt_me", "name_en": "Adopt Me!", "name_ko": "입양하세요",
+     "aliases": ["adopt me", "adoptme", "입양하세요", "어돕트미"]},
+    {"topic_id": "pressure", "name_en": "Pressure", "name_ko": "프레셔",
+     "aliases": ["pressure roblox", "프레셔"]},
+    {"topic_id": "build_a_boat", "name_en": "Build A Boat For Treasure", "name_ko": "보물을 위해 배를 만드세요",
+     "aliases": ["build a boat", "buildaboat", "배 만들기", "보물을 위해 배를"]}
+  ],
+  "generic_words": ["roblox", "로블록스", "로블", "shorts", "쇼츠", "숏츠", "게임", "game", "funny", "meme", "밈"]
+}

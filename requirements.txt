@@ -1,0 +1,3 @@
+# 표준 라이브러리만으로 동작합니다. 테스트용으로만 pytest 가 필요합니다.
+# 외부 실행 파일: ffmpeg / ffprobe (macOS: brew install ffmpeg, Windows: winget install ffmpeg)
+pytest>=8.0

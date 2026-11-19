@@ -1,0 +1,794 @@
+{
+ "_comment": "연습용 가짜 데이터입니다. 영상 ID·채널·수치는 모두 지어낸 값이며 실제 YouTube 데이터가 아닙니다.",
+ "collected_at": "2026-11-18T12:00:00+00:00",
+ "reference_now": "2026-11-18T12:00:00+00:00",
+ "source": "sample",
+ "is_sample": true,
+ "items": [
+  {
+   "video_id": "SAMPLE001",
+   "title": "그로우 어 가든 씨앗 꿀팁 3가지",
+   "channel_id": "SAMPLECH01",
+   "channel_title": "샘플채널01",
+   "published_at": "2026-11-16T04:07:47Z",
+   "views": 9443,
+   "likes": 224,
+   "comments": 36,
+   "duration_sec": 420,
+   "tags": [
+    "roblox",
+    "로블록스"
+   ],
+   "channel_avg_views": 8000
+  },
+  {
+   "video_id": "SAMPLE002",
+   "title": "그로우 어 가든 씨앗 꿀팁 3가지 #shorts",
+   "channel_id": "SAMPLECH02",
+   "channel_title": "샘플채널02",
+   "published_at": "2026-11-12T09:54:20Z",
+   "views": 3174,
+   "likes": 94,
+   "comments": 11,
+   "duration_sec": 25,
+   "tags": [
+    "roblox",
+    "로블록스",
+    "shorts"
+   ],
+   "channel_avg_views": 8000
+  },
+  {
+   "video_id": "SAMPLE003",
+   "title": "Grow a Garden 무지개 작물 나왔다",
+   "channel_id": "SAMPLECH03",
+   "channel_title": "샘플채널03",
+   "published_at": "2026-11-17T20:53:49Z",
+   "views": 99418,
+   "likes": 4283,
+   "comments": 296,
+   "duration_sec": 18,
+   "tags": [
+    "roblox",
+    "로블록스",
+    "shorts"
+   ],
+   "channel_avg_views": 150000
+  },
+  {
+   "video_id": "SAMPLE004",
+   "title": "Grow a Garden 무지개 작물 나왔다 #shorts",
+   "channel_id": "SAMPLECH04",
+   "channel_title": "샘플채널04",
+   "published_at": "2026-11-11T23:39:24Z",
+   "views": 4646,
+   "likes": 119,
+   "comments": 7,
+   "duration_sec": 75,
+   "tags": [
+    "roblox",
+    "로블록스"
+   ],
+   "channel_avg_views": 3000
+  },
+  {
+   "video_id": "SAMPLE005",
+   "title": "그로우어가든 펫 뽑기 100번 해봄",
+   "channel_id": "SAMPLECH05",
+   "channel_title": "샘플채널05",
+   "published_at": "2026-11-16T06:29:37Z",
+   "views": 2682,
+   "likes": 93,
+   "comments": 10,
+   "duration_sec": 41,
+   "tags": [
+    "roblox",
+    "로블록스",
+    "shorts"
+   ],
+   "channel_avg_views": 8000
+  },
+  {
+   "video_id": "SAMPLE006",
+   "title": "그로우어가든 펫 뽑기 100번 해봄 #shorts",
+   "channel_id": "SAMPLECH06",
+   "channel_title": "샘플채널06",
+   "published_at": "2026-11-17T20:19:49Z",
+   "views": 6049,
+   "likes": 224,
+   "comments": 15,
+   "duration_sec": 420,
+   "tags": [
+    "roblox",
+    "로블록스"
+   ],
+   "channel_avg_views": 3000
+  },
+  {
+   "video_id": "SAMPLE007",
+   "title": "정원 키우기 초보가 1시간 만에 부자 되는 법",
+   "channel_id": "SAMPLECH07",
+   "channel_title": "샘플채널07",
+   "published_at": "2026-11-14T11:49:24Z",
+   "views": 63209,
+   "likes": 3031,
+   "comments": 140,
+   "duration_sec": 32,
+   "tags": [
+    "roblox",
+    "로블록스",
+    "shorts"
+   ],
+   "channel_avg_views": 60000
+  },
+  {
+   "video_id": "SAMPLE008",
+   "title": "정원 키우기 초보가 1시간 만에 부자 되는 법 2탄",
+   "channel_id": "SAMPLECH08",
+   "channel_title": "샘플채널08",
+   "published_at": "2026-11-14T13:32:19Z",
+   "views": 207601,
+   "likes": 6543,
+   "comments": 1225,
+   "duration_sec": 140,
+   "tags": [
+    "roblox",
+    "로블록스"
+   ],
+   "channel_avg_views": 150000
+  },
+  {
+   "video_id": "SAMPLE009",
+   "title": "브레인롯 훔치기 최강 기지 방어법",
+   "channel_id": "SAMPLECH09",
+   "channel_title": "샘플채널09",
+   "published_at": "2026-11-17T11:49:04Z",
+   "views": 60134,
+   "likes": 2217,
+   "comments": 349,
+   "duration_sec": 140,
+   "tags": [
+    "roblox",
+    "로블록스"
+   ],
+   "channel_avg_views": 60000
+  },
+  {
+   "video_id": "SAMPLE010",
+   "title": "브레인롯 훔치기 최강 기지 방어법 2탄",
+   "channel_id": "SAMPLECH10",
+   "channel_title": "샘플채널10",
+   "published_at": "2026-11-17T18:02:47Z",
+   "views": 816115,
+   "likes": 27425,
+   "comments": 2245,
+   "duration_sec": 58,
+   "tags": [
+    "roblox",
+    "로블록스",
+    "shorts"
+   ],
+   "channel_avg_views": 150000
+  },
+  {
+   "video_id": "SAMPLE011",
+   "title": "Steal a Brainrot 시크릿 브레인롯 훔침",
+   "channel_id": "SAMPLECH11",
+   "channel_title": "샘플채널11",
+   "published_at": "2026-11-15T01:30:43Z",
+   "views": 40867,
+   "likes": 916,
+   "comments": 184,
+   "duration_sec": 25,
+   "tags": [
+    "roblox",
+    "로블록스",
+    "shorts"
+   ],
+   "channel_avg_views": 60000
+  },
+  {
+   "video_id": "SAMPLE012",
+   "title": "Steal a Brainrot 시크릿 브레인롯 훔침 #shorts",
+   "channel_id": "SAMPLECH12",
+   "channel_title": "샘플채널12",
+   "published_at": "2026-11-14T02:20:31Z",
+   "views": 76809,
+   "likes": 1605,
+   "comments": 254,
+   "duration_sec": 58,
+   "tags": [
+    "roblox",
+    "로블록스",
+    "shorts"
+   ],
+   "channel_avg_views": 60000
+  },
+  {
+   "video_id": "SAMPLE013",
+   "title": "브레인롯 훔치기 친구 배신했습니다",
+   "channel_id": "SAMPLECH13",
+   "channel_title": "샘플채널13",
+   "published_at": "2026-11-17T04:07:13Z",
+   "views": 6518,
+   "likes": 164,
+   "comments": 14,
+   "duration_sec": 52,
+   "tags": [
+    "roblox",
+    "로블록스",
+    "shorts"
+   ],
+   "channel_avg_views": 3000
+  },
+  {
+   "video_id": "SAMPLE014",
+   "title": "브레인롯 훔치기 친구 배신했습니다 #shorts",
+   "channel_id": "SAMPLECH14",
+   "channel_title": "샘플채널14",
+   "published_at": "2026-11-15T17:47:37Z",
+   "views": 40736,
+   "likes": 1267,
+   "comments": 68,
+   "duration_sec": 420,
+   "tags": [
+    "roblox",
+    "로블록스"
+   ],
+   "channel_avg_views": 60000
+  },
+  {
+   "video_id": "SAMPLE015",
+   "title": "스틸 어 브레인롯 새 업데이트 정리",
+   "channel_id": "SAMPLECH15",
+   "channel_title": "샘플채널15",
+   "published_at": "2026-11-15T11:41:58Z",
+   "views": 183825,
+   "likes": 8696,
+   "comments": 533,
+   "duration_sec": 58,
+   "tags": [
+    "roblox",
+    "로블록스",
+    "shorts"
+   ],
+   "channel_avg_views": 150000
+  },
+  {
+   "video_id": "SAMPLE016",
+   "title": "스틸 어 브레인롯 새 업데이트 정리 #shorts",
+   "channel_id": "SAMPLECH16",
+   "channel_title": "샘플채널16",
+   "published_at": "2026-11-16T18:27:51Z",
+   "views": 3442,
+   "likes": 70,
+   "comments": 17,
+   "duration_sec": 41,
+   "tags": [
+    "roblox",
+    "로블록스",
+    "shorts"
+   ],
+   "channel_avg_views": 3000
+  },
+  {
+   "video_id": "SAMPLE017",
+   "title": "숲속의 99밤 99일차 생존 성공",
+   "channel_id": "SAMPLECH00",
+   "channel_title": "샘플채널00",
+   "published_at": "2026-11-17T01:55:09Z",
+   "views": 9638,
+   "likes": 427,
+   "comments": 24,
+   "duration_sec": 58,
+   "tags": [
+    "roblox",
+    "로블록스",
+    "shorts"
+   ],
+   "channel_avg_views": 20000
+  },
+  {
+   "video_id": "SAMPLE018",
+   "title": "숲속의 99밤 99일차 생존 성공 #shorts",
+   "channel_id": "SAMPLECH01",
+   "channel_title": "샘플채널01",
+   "published_at": "2026-11-17T10:40:27Z",
+   "views": 533672,
+   "likes": 19049,
+   "comments": 1598,
+   "duration_sec": 420,
+   "tags": [
+    "roblox",
+    "로블록스"
+   ],
+   "channel_avg_views": 150000
+  },
+  {
+   "video_id": "SAMPLE019",
+   "title": "99 Nights 사슴 괴물 피하는 법",
+   "channel_id": "SAMPLECH02",
+   "channel_title": "샘플채널02",
+   "published_at": "2026-11-17T14:03:19Z",
+   "views": 63139,
+   "likes": 2779,
+   "comments": 95,
+   "duration_sec": 58,
+   "tags": [
+    "roblox",
+    "로블록스",
+    "shorts"
+   ],
+   "channel_avg_views": 60000
+  },
+  {
+   "video_id": "SAMPLE020",
+   "title": "99 Nights 사슴 괴물 피하는 법 2탄",
+   "channel_id": "SAMPLECH03",
+   "channel_title": "샘플채널03",
+   "published_at": "2026-11-14T14:42:55Z",
+   "views": 102669,
+   "likes": 2342,
+   "comments": 209,
+   "duration_sec": 18,
+   "tags": [
+    "roblox",
+    "로블록스",
+    "shorts"
+   ],
+   "channel_avg_views": 150000
+  },
+  {
+   "video_id": "SAMPLE021",
+   "title": "숲속의 99밤 혼자 하면 생기는 일",
+   "channel_id": "SAMPLECH04",
+   "channel_title": "샘플채널04",
+   "published_at": "2026-11-15T20:03:38Z",
+   "views": 34412,
+   "likes": 2055,
+   "comments": 114,
+   "duration_sec": 140,
+   "tags": [
+    "roblox",
+    "로블록스"
+   ],
+   "channel_avg_views": 20000
+  },
+  {
+   "video_id": "SAMPLE022",
+   "title": "숲속의 99밤 혼자 하면 생기는 일 #shorts",
+   "channel_id": "SAMPLECH05",
+   "channel_title": "샘플채널05",
+   "published_at": "2026-11-15T03:29:22Z",
+   "views": 11002,
+   "likes": 447,
+   "comments": 22,
+   "duration_sec": 32,
+   "tags": [
+    "roblox",
+    "로블록스",
+    "shorts"
+   ],
+   "channel_avg_views": 3000
+  },
+  {
+   "video_id": "SAMPLE023",
+   "title": "99밤 아이 구출 전부 해봄",
+   "channel_id": "SAMPLECH06",
+   "channel_title": "샘플채널06",
+   "published_at": "2026-11-12T03:23:19Z",
+   "views": 10903,
+   "likes": 548,
+   "comments": 27,
+   "duration_sec": 18,
+   "tags": [
+    "roblox",
+    "로블록스",
+    "shorts"
+   ],
+   "channel_avg_views": 20000
+  },
+  {
+   "video_id": "SAMPLE024",
+   "title": "99밤 아이 구출 전부 해봄 #shorts",
+   "channel_id": "SAMPLECH07",
+   "channel_title": "샘플채널07",
+   "published_at": "2026-11-14T02:59:26Z",
+   "views": 8136,
+   "likes": 458,
+   "comments": 22,
+   "duration_sec": 58,
+   "tags": [
+    "roblox",
+    "로블록스",
+    "shorts"
+   ],
+   "channel_avg_views": 3000
+  },
+  {
+   "video_id": "SAMPLE025",
+   "title": "데드 레일즈 기차 끝까지 가봄",
+   "channel_id": "SAMPLECH08",
+   "channel_title": "샘플채널08",
+   "published_at": "2026-11-16T19:41:23Z",
+   "views": 285253,
+   "likes": 12702,
+   "comments": 1409,
+   "duration_sec": 41,
+   "tags": [
+    "roblox",
+    "로블록스",
+    "shorts"
+   ],
+   "channel_avg_views": 150000
+  },
+  {
+   "video_id": "SAMPLE026",
+   "title": "데드 레일즈 기차 끝까지 가봄 #shorts",
+   "channel_id": "SAMPLECH09",
+   "channel_title": "샘플채널09",
+   "published_at": "2026-11-13T09:13:06Z",
+   "views": 12915,
+   "likes": 512,
+   "comments": 60,
+   "duration_sec": 420,
+   "tags": [
+    "roblox",
+    "로블록스"
+   ],
+   "channel_avg_views": 8000
+  },
+  {
+   "video_id": "SAMPLE027",
+   "title": "Dead Rails 뱀파이어 성 공략",
+   "channel_id": "SAMPLECH10",
+   "channel_title": "샘플채널10",
+   "published_at": "2026-11-11T21:36:03Z",
+   "views": 18964,
+   "likes": 718,
+   "comments": 107,
+   "duration_sec": 58,
+   "tags": [
+    "roblox",
+    "로블록스",
+    "shorts"
+   ],
+   "channel_avg_views": 20000
+  },
+  {
+   "video_id": "SAMPLE028",
+   "title": "Dead Rails 뱀파이어 성 공략 #shorts",
+   "channel_id": "SAMPLECH11",
+   "channel_title": "샘플채널11",
+   "published_at": "2026-11-11T21:50:31Z",
+   "views": 18652,
+   "likes": 838,
+   "comments": 102,
+   "duration_sec": 140,
+   "tags": [
+    "roblox",
+    "로블록스"
+   ],
+   "channel_avg_views": 20000
+  },
+  {
+   "video_id": "SAMPLE029",
+   "title": "도어즈 100번 문 노데스",
+   "channel_id": "SAMPLECH12",
+   "channel_title": "샘플채널12",
+   "published_at": "2026-11-12T20:34:22Z",
+   "views": 125751,
+   "likes": 6713,
+   "comments": 201,
+   "duration_sec": 25,
+   "tags": [
+    "roblox",
+    "로블록스",
+    "shorts"
+   ],
+   "channel_avg_views": 60000
+  },
+  {
+   "video_id": "SAMPLE030",
+   "title": "도어즈 100번 문 노데스 #shorts",
+   "channel_id": "SAMPLECH13",
+   "channel_title": "샘플채널13",
+   "published_at": "2026-11-15T18:09:55Z",
+   "views": 6141,
+   "likes": 144,
+   "comments": 35,
+   "duration_sec": 58,
+   "tags": [
+    "roblox",
+    "로블록스",
+    "shorts"
+   ],
+   "channel_avg_views": 8000
+  },
+  {
+   "video_id": "SAMPLE031",
+   "title": "DOORS 새 층 업데이트 반응",
+   "channel_id": "SAMPLECH14",
+   "channel_title": "샘플채널14",
+   "published_at": "2026-11-13T14:50:20Z",
+   "views": 2743,
+   "likes": 73,
+   "comments": 4,
+   "duration_sec": 32,
+   "tags": [
+    "roblox",
+    "로블록스",
+    "shorts"
+   ],
+   "channel_avg_views": 60000
+  },
+  {
+   "video_id": "SAMPLE032",
+   "title": "DOORS 새 층 업데이트 반응 #shorts",
+   "channel_id": "SAMPLECH15",
+   "channel_title": "샘플채널15",
+   "published_at": "2026-11-17T06:43:22Z",
+   "views": 83550,
+   "likes": 3867,
+   "comments": 229,
+   "duration_sec": 140,
+   "tags": [
+    "roblox",
+    "로블록스"
+   ],
+   "channel_avg_views": 60000
+  },
+  {
+   "video_id": "SAMPLE033",
+   "title": "블록스 피스 최강 열매 순위",
+   "channel_id": "SAMPLECH16",
+   "channel_title": "샘플채널16",
+   "published_at": "2026-11-14T17:30:22Z",
+   "views": 8267,
+   "likes": 308,
+   "comments": 44,
+   "duration_sec": 32,
+   "tags": [
+    "roblox",
+    "로블록스",
+    "shorts"
+   ],
+   "channel_avg_views": 8000
+  },
+  {
+   "video_id": "SAMPLE034",
+   "title": "블록스 피스 최강 열매 순위 #shorts",
+   "channel_id": "SAMPLECH00",
+   "channel_title": "샘플채널00",
+   "published_at": "2026-11-12T22:46:19Z",
+   "views": 5642,
+   "likes": 171,
+   "comments": 17,
+   "duration_sec": 58,
+   "tags": [
+    "roblox",
+    "로블록스",
+    "shorts"
+   ],
+   "channel_avg_views": 8000
+  },
+  {
+   "video_id": "SAMPLE035",
+   "title": "블피 레이드 혼자 깨기",
+   "channel_id": "SAMPLECH01",
+   "channel_title": "샘플채널01",
+   "published_at": "2026-11-17T09:48:52Z",
+   "views": 86341,
+   "likes": 3179,
+   "comments": 482,
+   "duration_sec": 420,
+   "tags": [
+    "roblox",
+    "로블록스"
+   ],
+   "channel_avg_views": 20000
+  },
+  {
+   "video_id": "SAMPLE036",
+   "title": "블피 레이드 혼자 깨기 #shorts",
+   "channel_id": "SAMPLECH02",
+   "channel_title": "샘플채널02",
+   "published_at": "2026-11-15T00:44:45Z",
+   "views": 35011,
+   "likes": 1787,
+   "comments": 141,
+   "duration_sec": 140,
+   "tags": [
+    "roblox",
+    "로블록스"
+   ],
+   "channel_avg_views": 150000
+  },
+  {
+   "video_id": "SAMPLE037",
+   "title": "Forsaken 킬러로 전원 잡기",
+   "channel_id": "SAMPLECH03",
+   "channel_title": "샘플채널03",
+   "published_at": "2026-11-13T06:29:23Z",
+   "views": 3060,
+   "likes": 129,
+   "comments": 8,
+   "duration_sec": 25,
+   "tags": [
+    "roblox",
+    "로블록스",
+    "shorts"
+   ],
+   "channel_avg_views": 8000
+  },
+  {
+   "video_id": "SAMPLE038",
+   "title": "Forsaken 생존자 꿀팁",
+   "channel_id": "SAMPLECH04",
+   "channel_title": "샘플채널04",
+   "published_at": "2026-11-14T22:10:27Z",
+   "views": 132908,
+   "likes": 2960,
+   "comments": 260,
+   "duration_sec": 420,
+   "tags": [
+    "roblox",
+    "로블록스"
+   ],
+   "channel_avg_views": 150000
+  },
+  {
+   "video_id": "SAMPLE039",
+   "title": "로블록스 웃긴 순간 모음",
+   "channel_id": "SAMPLECH05",
+   "channel_title": "샘플채널05",
+   "published_at": "2026-11-17T23:30:04Z",
+   "views": 3082,
+   "likes": 116,
+   "comments": 12,
+   "duration_sec": 25,
+   "tags": [
+    "roblox",
+    "로블록스",
+    "shorts"
+   ],
+   "channel_avg_views": 3000
+  },
+  {
+   "video_id": "SAMPLE040",
+   "title": "Forsaken 신캐 리뷰",
+   "channel_id": "SAMPLECH06",
+   "channel_title": "샘플채널06",
+   "published_at": "2026-11-15T00:08:41Z",
+   "views": 78928,
+   "likes": 3262,
+   "comments": 267,
+   "duration_sec": 420,
+   "tags": [
+    "roblox",
+    "로블록스"
+   ],
+   "channel_avg_views": 150000
+  },
+  {
+   "video_id": "SAMPLE041",
+   "title": "로블록스 무서운 게임 3개",
+   "channel_id": "SAMPLECH07",
+   "channel_title": "샘플채널07",
+   "published_at": "2026-11-12T05:00:31Z",
+   "views": 64584,
+   "likes": 3461,
+   "comments": 108,
+   "duration_sec": 41,
+   "tags": [
+    "roblox",
+    "로블록스",
+    "shorts"
+   ],
+   "channel_avg_views": 150000
+  }
+ ],
+ "channels": {},
+ "list_signals": [
+  {
+   "video_id": "SAMPLE010",
+   "list": "mostPopular",
+   "rank": 1
+  },
+  {
+   "video_id": "SAMPLE018",
+   "list": "mostPopular",
+   "rank": 2
+  },
+  {
+   "video_id": "SAMPLE025",
+   "list": "mostPopular",
+   "rank": 3
+  },
+  {
+   "video_id": "SAMPLE008",
+   "list": "mostPopular",
+   "rank": 4
+  },
+  {
+   "video_id": "SAMPLE015",
+   "list": "mostPopular",
+   "rank": 5
+  },
+  {
+   "video_id": "SAMPLE038",
+   "list": "mostPopular",
+   "rank": 6
+  },
+  {
+   "video_id": "SAMPLE029",
+   "list": "mostPopular",
+   "rank": 7
+  },
+  {
+   "video_id": "SAMPLE020",
+   "list": "mostPopular",
+   "rank": 8
+  },
+  {
+   "video_id": "SAMPLE003",
+   "list": "mostPopular",
+   "rank": 9
+  },
+  {
+   "video_id": "SAMPLE035",
+   "list": "mostPopular",
+   "rank": 10
+  },
+  {
+   "video_id": "SAMPLE032",
+   "list": "mostPopular",
+   "rank": 11
+  },
+  {
+   "video_id": "SAMPLE040",
+   "list": "mostPopular",
+   "rank": 12
+  },
+  {
+   "video_id": "SAMPLE012",
+   "list": "mostPopular",
+   "rank": 13
+  },
+  {
+   "video_id": "SAMPLE041",
+   "list": "mostPopular",
+   "rank": 14
+  },
+  {
+   "video_id": "SAMPLE007",
+   "list": "mostPopular",
+   "rank": 15
+  },
+  {
+   "video_id": "SAMPLE019",
+   "list": "mostPopular",
+   "rank": 16
+  },
+  {
+   "video_id": "SAMPLE009",
+   "list": "mostPopular",
+   "rank": 17
+  },
+  {
+   "video_id": "SAMPLE011",
+   "list": "mostPopular",
+   "rank": 18
+  },
+  {
+   "video_id": "SAMPLE014",
+   "list": "mostPopular",
+   "rank": 19
+  },
+  {
+   "video_id": "SAMPLE036",
+   "list": "mostPopular",
+   "rank": 20
+  }
+ ]
+}

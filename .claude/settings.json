@@ -1,0 +1,37 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python -m yt_pipeline status*)",
+      "Bash(python -m yt_pipeline data --source sample*)",
+      "Bash(python -m yt_pipeline normalize*)",
+      "Bash(python -m yt_pipeline score*)",
+      "Bash(python -m yt_pipeline analyze*)",
+      "Bash(python -m yt_pipeline validate*)",
+      "Bash(python -m yt_pipeline review*)",
+      "Bash(python -m yt_pipeline report*)",
+      "Bash(python -m yt_pipeline video timing*)",
+      "Bash(python -m yt_pipeline video check*)",
+      "Bash(python -m yt_pipeline video render --run * --plan-only*)",
+      "Bash(python -m yt_pipeline qa*)",
+      "Bash(python -m yt_pipeline perf summary*)",
+      "Bash(python -m pytest*)",
+      "Bash(ffprobe *)"
+    ],
+    "ask": [
+      "Bash(python -m yt_pipeline data --source api*)",
+      "Bash(python -m yt_pipeline collect*)",
+      "Bash(python -m yt_pipeline video render*)",
+      "Bash(python -m yt_pipeline perf fetch*)",
+      "Bash(python -m yt_pipeline perf calibrate*)",
+      "Bash(python -m yt_pipeline perf apply*)",
+      "Bash(python -m yt_pipeline perf register*)"
+    ],
+    "deny": [
+      "Read(./.env)",
+      "Edit(./clips/**)",
+      "Write(./clips/**)",
+      "Bash(rm -rf clips*)",
+      "Bash(python -m yt_pipeline video render * --force*)"
+    ]
+  }
+}
