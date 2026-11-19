@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="1414" viewBox="0 0 1000 1414"><rect x="0.0" y="0.0" width="1000.0" height="1414.0" fill="#ffffff"/>
+<rect x="0.0" y="0.0" width="64.0" height="1414.0" fill="#1f2b4d"/>
+<text font-family="Inter" font-size="11" font-weight="400" fill="#737885"><tspan x="120.0" y="67.9">인스피레이션 플랫폼 · 기획안</tspan></text>
+<text font-family="Inter" font-size="11" font-weight="600" fill="#1f2b4d"><tspan x="930.6" y="67.9">13</tspan></text>
+<rect x="120.0" y="93.0" width="37.1" height="33.0" fill="#1f2b4d" rx="8"/>
+<text font-family="Inter" font-size="14" font-weight="700" fill="#ffffff"><tspan x="130.0" y="115.1">17</tspan></text>
+<text font-family="Inter" font-size="24" font-weight="700" fill="#1f1f26"><tspan x="169.1" y="119.9">빌리빌리 서브 슈퍼바이저 (곽우화)</tspan></text>
+<rect x="120.0" y="150.0" width="824.0" height="2.0" fill="#1f2b4d"/>
+<text font-family="Inter" font-size="13" font-weight="400" fill="#1f1f26"><tspan x="120.0" y="188.0">08장의 빌리빌리 모드 기능을 워커 7개로 나누고, 서브 슈퍼바이저(Claude)가 호출 순서를 정합니다. 팀 流水线设计 A(수집 → 정규화 → 점수</tspan><tspan x="120.0" y="206.9">→ 분석 → 기획안 → 검증)를 따릅니다.</tspan></text>
+<rect x="120.0" y="229.7" width="147.2" height="112.6" fill="#f4f5f7" rx="8" stroke="#e3e5ea" stroke-width="1"/>
+<rect x="130.0" y="237.7" width="127.2" height="3.0" fill="#00a1d6" rx="1.5"/>
+<text font-family="Inter" font-size="13" font-weight="700" fill="#1f1f26"><tspan x="130.0" y="259.7">① 수집·정규화</tspan></text>
+<text font-family="Inter" font-size="11" font-weight="400" fill="#1f2b4d"><tspan x="130.0" y="278.4">collector</tspan></text>
+<path d="M270.2 286.0H285.2" stroke="#1f2b4d" stroke-width="2" fill="none" stroke-linejoin="round"/>
+<path d="M280.2 281.0L286.2 286.0L280.2 291.0" stroke="#1f2b4d" stroke-width="2" fill="none" stroke-linejoin="round"/>
+<rect x="289.2" y="229.7" width="147.2" height="112.6" fill="#1f2b4d" rx="8"/>
+<text font-family="Inter" font-size="13" font-weight="700" fill="#ffffff"><tspan x="299.2" y="259.7">② 점수 (코드)</tspan></text>
+<text font-family="Inter" font-size="11" font-weight="400" fill="#c9d0e3"><tspan x="299.2" y="278.4">Score_bili</tspan></text>
+<path d="M439.4 286.0H454.4" stroke="#1f2b4d" stroke-width="2" fill="none" stroke-linejoin="round"/>
+<path d="M449.4 281.0L455.4 286.0L449.4 291.0" stroke="#1f2b4d" stroke-width="2" fill="none" stroke-linejoin="round"/>
+<rect x="458.4" y="229.7" width="147.2" height="112.6" fill="#f4f5f7" rx="8" stroke="#e3e5ea" stroke-width="1"/>
+<rect x="468.4" y="237.7" width="127.2" height="3.0" fill="#00a1d6" rx="1.5"/>
+<text font-family="Inter" font-size="13" font-weight="700" fill="#1f1f26"><tspan x="468.4" y="259.7">③ 분석</tspan></text>
+<text font-family="Inter" font-size="11" font-weight="400" fill="#1f2b4d"><tspan x="468.4" y="278.4">trend_radar ·</tspan><tspan x="468.4" y="294.4">engagement ·</tspan><tspan x="468.4" y="310.3">title_doctor ·</tspan><tspan x="468.4" y="326.3">localizer</tspan></text>
+<path d="M608.6 286.0H623.6" stroke="#1f2b4d" stroke-width="2" fill="none" stroke-linejoin="round"/>
+<path d="M618.6 281.0L624.6 286.0L618.6 291.0" stroke="#1f2b4d" stroke-width="2" fill="none" stroke-linejoin="round"/>
+<rect x="627.6" y="229.7" width="147.2" height="112.6" fill="#f4f5f7" rx="8" stroke="#e3e5ea" stroke-width="1"/>
+<rect x="637.6" y="237.7" width="127.2" height="3.0" fill="#00a1d6" rx="1.5"/>
+<text font-family="Inter" font-size="13" font-weight="700" fill="#1f1f26"><tspan x="637.6" y="259.7">④ 策划案 생성</tspan></text>
+<text font-family="Inter" font-size="11" font-weight="400" fill="#1f2b4d"><tspan x="637.6" y="278.4">plan_writer</tspan></text>
+<path d="M777.8 286.0H792.8" stroke="#1f2b4d" stroke-width="2" fill="none" stroke-linejoin="round"/>
+<path d="M787.8 281.0L793.8 286.0L787.8 291.0" stroke="#1f2b4d" stroke-width="2" fill="none" stroke-linejoin="round"/>
+<rect x="796.8" y="229.7" width="147.2" height="112.6" fill="#f4f5f7" rx="8" stroke="#e3e5ea" stroke-width="1"/>
+<rect x="806.8" y="237.7" width="127.2" height="3.0" fill="#00a1d6" rx="1.5"/>
+<text font-family="Inter" font-size="13" font-weight="700" fill="#1f1f26"><tspan x="806.8" y="259.7">⑤ 검증</tspan></text>
+<text font-family="Inter" font-size="11" font-weight="400" fill="#1f2b4d"><tspan x="806.8" y="278.4">validator</tspan></text>
+<path d="M870.4 342.3V358.3H701.2V345.3" stroke="#1f2b4d" stroke-width="2" fill="none" stroke-linejoin="round"/>
+<path d="M696.2 351.3L701.2 344.3L706.2 351.3" stroke="#1f2b4d" stroke-width="2" fill="none" stroke-linejoin="round"/>
+<text font-family="Inter" font-size="11" font-weight="600" fill="#1f2b4d"><tspan x="744.5" y="374.2">실패 시 1회 수정</tspan></text>
+<rect x="423.5" y="388.3" width="520.5" height="34.0" fill="#ffffff" rx="6" stroke="#00a1d6" stroke-width="1"/>
+<text font-family="Inter" font-size="12" font-weight="600" fill="#1f1f26"><tspan x="439.5" y="410.3">출력: 策划案 JSON (영상 파이프라인 B 입력) + Markdown 문서 + BiliReport → 팀 총괄</tspan></text>
+<text font-family="Inter" font-size="16" font-weight="700" fill="#1f1f26"><tspan x="120.0" y="463.6">워커 7개</tspan></text>
+<rect x="120.0" y="479.5" width="824.0" height="351.3" fill="#ffffff" rx="8" stroke="#e3e5ea" stroke-width="1"/>
+<path d="M128.0 479.5H936.0V511.4H128.0Z" fill="#1f2b4d"/>
+<rect x="120.0" y="479.5" width="824.0" height="31.9" fill="#1f2b4d" rx="8"/>
+<rect x="120.0" y="487.5" width="824.0" height="23.9" fill="#1f2b4d"/>
+<text font-family="Inter" font-size="11" font-weight="600" fill="#ffffff"><tspan x="132.0" y="499.4">워커</tspan></text>
+<text font-family="Inter" font-size="11" font-weight="600" fill="#ffffff"><tspan x="282.0" y="499.4">하는 일</tspan></text>
+<text font-family="Inter" font-size="11" font-weight="600" fill="#ffffff"><tspan x="582.0" y="499.4">코드 도구</tspan></text>
+<text font-family="Inter" font-size="11" font-weight="600" fill="#ffffff"><tspan x="796.0" y="499.4">08장 기능</tspan></text>
+<text font-family="Inter" font-size="11" font-weight="600" fill="#1f1f26"><tspan x="132.0" y="531.3">collector</tspan></text>
+<text font-family="Inter" font-size="11" font-weight="400" fill="#1f1f26"><tspan x="282.0" y="531.3">종합 인기·핫서치·랭킹 스냅샷 수집, 한·중·영 별칭 통일,</tspan><tspan x="282.0" y="547.3">새 별칭 후보 제안</tspan></text>
+<text font-family="Inter" font-size="11" font-weight="400" fill="#1f1f26"><tspan x="582.0" y="531.3">collect_popular_games,</tspan><tspan x="582.0" y="547.3">collect_trending</tspan></text>
+<text font-family="Inter" font-size="11" font-weight="400" fill="#1f1f26"><tspan x="796.0" y="531.3">트렌드 수집</tspan></text>
+<rect x="121.0" y="559.3" width="822.0" height="47.9" fill="#f4f5f7"/>
+<text font-family="Inter" font-size="11" font-weight="600" fill="#1f1f26"><tspan x="132.0" y="579.2">trend_radar</tspan></text>
+<text font-family="Inter" font-size="11" font-weight="400" fill="#1f1f26"><tspan x="282.0" y="579.2">이벤트 레이더, 핫키워드 선행 신호, 공식</tspan><tspan x="282.0" y="595.2">활동(mission_id)</tspan></text>
+<text font-family="Inter" font-size="11" font-weight="400" fill="#1f1f26"><tspan x="582.0" y="579.2">get_event_signals,</tspan><tspan x="582.0" y="595.2">get_hot_keyword_signals</tspan></text>
+<text font-family="Inter" font-size="11" font-weight="400" fill="#1f1f26"><tspan x="796.0" y="579.2">이벤트 레이더 · 핫키워드 ·</tspan><tspan x="796.0" y="595.2">공식 태그</tspan></text>
+<text font-family="Inter" font-size="11" font-weight="600" fill="#1f1f26"><tspan x="132.0" y="627.1">engagement_analyst</tspan></text>
+<text font-family="Inter" font-size="11" font-weight="400" fill="#1f1f26"><tspan x="282.0" y="627.1">반응률 배수, 길이·유형 분포, 소재 점수 해석</tspan></text>
+<text font-family="Inter" font-size="11" font-weight="400" fill="#1f1f26"><tspan x="582.0" y="627.1">get_engagement_ranking,</tspan><tspan x="582.0" y="643.1">score_games</tspan></text>
+<text font-family="Inter" font-size="11" font-weight="400" fill="#1f1f26"><tspan x="796.0" y="627.1">반응률 정렬 · 길이 제안</tspan></text>
+<rect x="121.0" y="655.1" width="822.0" height="47.9" fill="#f4f5f7"/>
+<text font-family="Inter" font-size="11" font-weight="600" fill="#1f1f26"><tspan x="132.0" y="675.0">title_doctor</tspan></text>
+<text font-family="Inter" font-size="11" font-weight="400" fill="#1f1f26"><tspan x="282.0" y="675.0">제목 진단(글자 수·【】·《》), 중국어 수정안</tspan></text>
+<text font-family="Inter" font-size="11" font-weight="400" fill="#1f1f26"><tspan x="582.0" y="675.0">diagnose_title,</tspan><tspan x="582.0" y="691.0">get_title_benchmark</tspan></text>
+<text font-family="Inter" font-size="11" font-weight="400" fill="#1f1f26"><tspan x="796.0" y="675.0">제목 진단</tspan></text>
+<text font-family="Inter" font-size="11" font-weight="600" fill="#1f1f26"><tspan x="132.0" y="722.9">localizer</tspan></text>
+<text font-family="Inter" font-size="11" font-weight="400" fill="#1f1f26"><tspan x="282.0" y="722.9">중국어 제목 → 한국어 해외 트렌드 소재 카드</tspan></text>
+<text font-family="Inter" font-size="11" font-weight="400" fill="#1f1f26"><tspan x="582.0" y="722.9">get_top_titles</tspan></text>
+<text font-family="Inter" font-size="11" font-weight="400" fill="#1f1f26"><tspan x="796.0" y="722.9">YouTube 모드 연결</tspan></text>
+<rect x="121.0" y="735.0" width="822.0" height="47.9" fill="#f4f5f7"/>
+<text font-family="Inter" font-size="11" font-weight="600" fill="#1f1f26"><tspan x="132.0" y="754.9">plan_writer</tspan></text>
+<text font-family="Inter" font-size="11" font-weight="400" fill="#1f1f26"><tspan x="282.0" y="754.9">策划案: 훅 3종 · 구간 스크립트 · 제목 3개 · 썸네일 ·</tspan><tspan x="282.0" y="770.8">저작권</tspan></text>
+<text font-family="Inter" font-size="11" font-weight="400" fill="#1f1f26"><tspan x="582.0" y="754.9">get_plan_context,</tspan><tspan x="582.0" y="770.8">lookup_evidence</tspan></text>
+<text font-family="Inter" font-size="11" font-weight="400" fill="#1f1f26"><tspan x="796.0" y="754.9">기획안 생성</tspan></text>
+<text font-family="Inter" font-size="11" font-weight="600" fill="#1f1f26"><tspan x="132.0" y="802.8">validator</tspan></text>
+<text font-family="Inter" font-size="11" font-weight="400" fill="#1f1f26"><tspan x="282.0" y="802.8">규칙 검사 + 의미 검토, 근거를 원본 데이터에서 직접</tspan><tspan x="282.0" y="818.7">확인</tspan></text>
+<text font-family="Inter" font-size="11" font-weight="400" fill="#1f1f26"><tspan x="582.0" y="802.8">run_rule_checks, lookup_evidence</tspan></text>
+<text font-family="Inter" font-size="11" font-weight="400" fill="#1f1f26"><tspan x="796.0" y="802.8">검증</tspan></text>
+<text font-family="Inter" font-size="16" font-weight="700" fill="#1f1f26"><tspan x="120.0" y="868.1">코드가 막는 것 · 데이터 · 실행 결과</tspan></text>
+<rect x="120.0" y="884.0" width="406.0" height="105.0" fill="#f4f5f7" rx="8"/>
+<text font-family="Inter" font-size="13" font-weight="700" fill="#1f2b4d"><tspan x="136.0" y="912.0">코드 가드레일</tspan></text>
+<text font-family="Inter" font-size="12" font-weight="400" fill="#1f1f26"><tspan x="136.0" y="935.8">수집 전 분석 · 기획안 없이 검증 · 검증 없이 최종 제출 · 조회수 예측</tspan><tspan x="136.0" y="953.2">표현이 든 제출 · 기획안 수정 1회 초과 → 모두 코드가 거부합니다.</tspan></text>
+<rect x="538.0" y="884.0" width="406.0" height="105.0" fill="#f4f5f7" rx="8"/>
+<text font-family="Inter" font-size="13" font-weight="700" fill="#1f2b4d"><tspan x="554.0" y="912.0">데이터 수집</tspan></text>
+<text font-family="Inter" font-size="12" font-weight="400" fill="#1f1f26"><tspan x="554.0" y="935.8">종합 인기(게임 카테고리)와 실시간 핫서치는 공개 API, 요청 간 1초.</tspan><tspan x="554.0" y="953.2">랭킹 API(ranking/v2)는 봇 차단(-352)이라 자동 수집하지 않고</tspan><tspan x="554.0" y="970.6">사람이 저장한 스냅샷만 씁니다.</tspan></text>
+<rect x="120.0" y="1001.0" width="406.0" height="105.0" fill="#f4f5f7" rx="8"/>
+<text font-family="Inter" font-size="13" font-weight="700" fill="#1f2b4d"><tspan x="136.0" y="1029.1">실제 실행 (2026-11-16)</tspan></text>
+<text font-family="Inter" font-size="12" font-weight="400" fill="#1f1f26"><tspan x="136.0" y="1052.9">game_deep_dive 1회 약 $0.60–0.74, LLM 호출 26–30회. 4차</tspan><tspan x="136.0" y="1070.3">실행에서 검증 워커가 원본 데이터를 13회 조회했고, 1차 기획안의</tspan><tspan x="136.0" y="1087.7">문제 3건이 수정본에서 해결됐습니다.</tspan></text>
+<rect x="538.0" y="1001.0" width="406.0" height="105.0" fill="#f4f5f7" rx="8"/>
+<text font-family="Inter" font-size="13" font-weight="700" fill="#1f2b4d"><tspan x="554.0" y="1029.1">모델 · 언어</tspan></text>
+<text font-family="Inter" font-size="12" font-weight="400" fill="#1f1f26"><tspan x="554.0" y="1052.9">전 에이전트 claude-sonnet-5-5. 시스템 프롬프트 8개는 한국어,</tspan><tspan x="554.0" y="1070.3">策划案 본문은 간체 중국어. 오프라인 테스트 22개(가짜 LLM 포함).</tspan></text>
+<rect x="120.0" y="1126.1" width="824.0" height="41.4" fill="#f4f5f7" rx="8"/>
+<text font-family="Inter" font-size="12" font-weight="400" fill="#1f1f26"><tspan x="136.0" y="1151.1">코드: github.com/Garyklay28/game-inspiration-platform/tree/main/bilibili</tspan></text></svg>
