@@ -26,6 +26,21 @@ def test_normalize_bilibili_plan():
     assert "platform_extras" in v["extras"]
 
 
+def test_normalize_bilibili_six_agent_plan():
+    # 빌리빌리 수직 구조(에이전트 6개) 실제 실행 보고서도 같은 공통 보기로 바뀌어야 한다
+    rep = json.loads((ROOT / "bilibili/docs/example_report_six_agents.json").read_text(encoding="utf-8"))
+    v, w = normalize_plan(rep["plan"], rep["plan_validation"])
+    assert w == [] and v["status"] == "validated" and v["language"] == "zh"
+    assert [s["id"] for s in v["sections"]] == SECTION_IDS
+    assert set(rep["agent_stages"]) == {"collector", "normalizer", "scorer", "analyst", "planner"}
+
+
+def test_performance_review_routes_to_both():
+    rep = TeamSupervisor(fake_bili, fake_yt).run(TeamTask(intent="performance_review")).to_dict()
+    assert rep["platforms"]["bilibili"]["sub_intent"] == "performance_review"
+    assert rep["platforms"]["youtube"]["sub_intent"] == "performance_review"
+
+
 def test_normalize_youtube_plan():
     v, w = normalize_plan(YT_PLAN)
     assert w == []

@@ -12,7 +12,7 @@ INTENT_MAP = {
     "title_check":        {"bilibili": "title_check",    "youtube": None},
     "event_watch":        {"bilibili": "event_watch",    "youtube": None},
     "make_video":         {"bilibili": None,             "youtube": "make_video"},
-    "performance_review": {"bilibili": None,             "youtube": "performance_review"},
+    "performance_review": {"bilibili": "performance_review", "youtube": "performance_review"},  # 빌리빌리 6 성과 기록
 }
 
 

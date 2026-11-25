@@ -7,7 +7,8 @@ flowchart TD
     U[크리에이터 / Next.js 화면] -->|TeamTask| TS[팀 총괄 슈퍼바이저<br/>team_supervisor · 코드 라우터]
     TS -->|BiliTask| BS[빌리빌리 서브 슈퍼바이저<br/>bilibili/ · Claude API]
     TS -->|YouTubeTask 대응 intent| YT[YouTube 파이프라인<br/>youtube/ · Claude Code]
-    BS --> BW[collector · trend_radar · engagement_analyst ·<br/>title_doctor · localizer · plan_writer · validator]
+    BS --> BW["1 수집 · 2 정규화 · 3 점수화 코드만 ·<br/>4 분석 · 5 기획안 작성+검토 · 6 성과 기록"]
+    ASIDE["Aside 브라우저 수집 JSON·CSV"] --> BS
     YT --> YW[trend-analyst · plan-writer · plan-validator ·<br/>script-writer · qa-reviewer · performance-analyst]
     BS -->|BiliReport| TS
     YT -->|runs/id/report.json| TS

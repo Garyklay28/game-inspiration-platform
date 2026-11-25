@@ -11,7 +11,7 @@
 | 에이전트 아키텍처 (Figma 기획서 추가분) | [docs/figma/](docs/figma/) — 기획서 12·13쪽 (16 팀 에이전트 아키텍처, 17 빌리빌리 서브 슈퍼바이저), [docs/architecture.md](docs/architecture.md) |
 | 구조 선택: Supervisor vs 수평형 | 아래 「구조 선택」 |
 | 코드 (Python, Proof of Concept) | [`team_supervisor/`](team_supervisor/) · [`bilibili/bili_agent/`](bilibili/bili_agent/) · [`youtube/yt_pipeline/`](youtube/yt_pipeline/) |
-| 시스템 프롬프트 | 빌리빌리 8개 [`bilibili/bili_agent/prompts/`](bilibili/bili_agent/prompts/) · YouTube 6개 [`youtube/.claude/agents/`](youtube/.claude/agents/) |
+| 시스템 프롬프트 | 빌리빌리 7개 [`bilibili/bili_agent/prompts/`](bilibili/bili_agent/prompts/) · YouTube 6개 [`youtube/.claude/agents/`](youtube/.claude/agents/) |
 | 실제 실행 결과 | [`bilibili/docs/example_*`](bilibili/docs/) (Claude API 실제 호출 보고서·기획안) |
 
 ### 구조 선택: 계층형 Supervisor
@@ -19,8 +19,8 @@
 **Supervisor 구조(계층형)**를 선택했습니다. 수평형(에이전트끼리 대등하게 메시지를 주고받는 구조)이 아닙니다.
 
 ```
-팀 총괄 슈퍼바이저 ─┬─ 빌리빌리 서브 슈퍼바이저 ─ 워커 7 (collector · trend_radar · engagement_analyst ·
-                   │                                    title_doctor · localizer · plan_writer · validator)
+팀 총괄 슈퍼바이저 ─┬─ 빌리빌리 서브 슈퍼바이저 ─ 에이전트 6 (기획안 12장: 1 수집 · 2 정규화 · 3 점수화(코드) ·
+                   │                                       4 분석 · 5 기획안(작성+검토) · 6 성과 기록)
                    └─ YouTube 파이프라인 ──── 서브에이전트 6 (trend-analyst · plan-writer · plan-validator ·
                                                            script-writer · qa-reviewer · performance-analyst)
 ```
@@ -37,7 +37,7 @@
 
 | 폴더 | 담당 | 원본 저장소 | 실행 방식 |
 |---|---|---|---|
-| [`bilibili/`](bilibili/) | 곽우화 | [Garyklay28/bilibili-supervisor-agent](https://github.com/Garyklay28/bilibili-supervisor-agent) | Python + Anthropic SDK (슈퍼바이저 1 + 워커 7) |
+| [`bilibili/`](bilibili/) | 곽우화 | [Garyklay28/bilibili-supervisor-agent](https://github.com/Garyklay28/bilibili-supervisor-agent) | Python + Anthropic SDK (슈퍼바이저 1 + 에이전트 6, 데이터는 Aside 브라우저 1순위) |
 | [`youtube/`](youtube/) | 장유림 | [JangYurim0607/youtube-agent-pipeline](https://github.com/JangYurim0607/youtube-agent-pipeline) | Claude Code 스킬·서브에이전트 + Python 코드 단계 |
 | [`team_supervisor/`](team_supervisor/) | 팀 공통 | (이 저장소) | 코드 라우터 + 보고서 병합 + 기획안 어댑터 |
 
@@ -99,7 +99,7 @@ python -m pytest -q tests_team                 # 총괄: 라우팅·어댑터 (9
 | `title_check` | title_check | — |
 | `event_watch` | event_watch | — |
 | `make_video` | — | make_video |
-| `performance_review` | — | performance_review |
+| `performance_review` | performance_review | performance_review |
 
 ## 한계
 
