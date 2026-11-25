@@ -13,6 +13,7 @@
 | 코드 (Python, Proof of Concept) | [`team_supervisor/`](team_supervisor/) · [`bilibili/bili_agent/`](bilibili/bili_agent/) · [`youtube/yt_pipeline/`](youtube/yt_pipeline/) |
 | 시스템 프롬프트 | 빌리빌리 7개 [`bilibili/bili_agent/prompts/`](bilibili/bili_agent/prompts/) · YouTube 6개 [`youtube/.claude/agents/`](youtube/.claude/agents/) |
 | 실제 실행 결과 | [`bilibili/docs/example_*`](bilibili/docs/) (Claude API 실제 호출 보고서·기획안) |
+| 에이전트별 PoC 데모 · 1차 결과물 | 빌리빌리 [`bilibili/docs/agent_outputs.md`](bilibili/docs/agent_outputs.md) (`cd bilibili && python demo_agents.py --agent <이름>`) |
 
 ### 구조 선택: 계층형 Supervisor
 
