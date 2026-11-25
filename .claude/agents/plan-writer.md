@@ -22,6 +22,7 @@ thumbnail_brief, shot_list, copyright_checklist, score_reference, evidence_refs,
 - hooks: `결과 먼저` / `질문` / `도전/반전` 각 1개. 3초 안에 말할 수 있는 한 문장.
 - script_sections 순서: `훅` → `문제` → `본문` → `CTA` → `엔딩`. 시간은 0초부터 빈틈·겹침 없이 이어지고 마지막 end_sec = target_duration_sec. 훅은 3초 이내. 각 구간에 `points`(말할 내용)와 `visual`(화면) 작성.
 - 엔딩은 첫 장면으로 자연스럽게 이어지게(루프) 만든다.
+- thumbnail_brief: `aspect_ratio`(9:16 또는 16:9), `text`(썸네일에 얹을 짧은 문구, 10자 안팎), `style`, `image_prompt`(배경 그림 설명, 영어). image_prompt 에는 글자, 게임 로고, 실존 인물, 저작권 있는 캐릭터를 넣지 않는다. 이 값으로 `thumbnail` 명령이 이미지를 만든다.
 - titles: 서로 다른 3개, 40자 이내 권장. 낚시성 거짓 제목 금지.
 - shot_list: 각 샷의 `source` 는 `직접 녹화` / `AI 생성` / `자체 제작 그래픽` / `라이선스 소재` 중 하나.
 - copyright_checklist: 게임 화면, 음악(BGM), 타인 소재 항목을 반드시 넣고, 이 기획에만 있는 위험도 적는다.
