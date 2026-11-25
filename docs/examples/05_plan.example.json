@@ -10,17 +10,56 @@
   "angle": "털린 기지를 다시 짜서 막아 내는 과정 — 실패 원인 → 고친 배치 → 결과 순서",
   "target_duration_sec": 50,
   "hooks": [
-    {"type": "결과 먼저", "line": "이 배치로 바꾸고 나서 한 번도 안 털렸어요."},
-    {"type": "질문", "line": "브레인롯, 왜 맨날 내 것만 털릴까요?"},
-    {"type": "도전/반전", "line": "제일 비싼 브레인롯을 일부러 문 앞에 둬 봤습니다."}
+    {
+      "type": "결과 먼저",
+      "line": "이 배치로 바꾸고 나서 한 번도 안 털렸어요."
+    },
+    {
+      "type": "질문",
+      "line": "브레인롯, 왜 맨날 내 것만 털릴까요?"
+    },
+    {
+      "type": "도전/반전",
+      "line": "제일 비싼 브레인롯을 일부러 문 앞에 둬 봤습니다."
+    }
   ],
   "selected_hook": "질문",
   "script_sections": [
-    {"section": "훅", "start_sec": 0, "end_sec": 3, "points": "털리는 장면 위에 질문 자막", "visual": "shot_01 털리는 순간"},
-    {"section": "문제", "start_sec": 3, "end_sec": 12, "points": "털린 이유 2가지: 문이 하나뿐, 비싼 걸 입구에 둠", "visual": "shot_02 기존 기지 구조, X표"},
-    {"section": "본문", "start_sec": 12, "end_sec": 40, "points": "고친 배치 3단계를 하나씩 보여 주고, 실제로 막아 내는 장면", "visual": "shot_03 배치 변경, shot_04 방어 장면"},
-    {"section": "CTA", "start_sec": 40, "end_sec": 46, "points": "다음엔 어떤 배치를 시험해 볼지 댓글로", "visual": "shot_05 완성 기지 전경"},
-    {"section": "엔딩", "start_sec": 46, "end_sec": 50, "points": "첫 장면과 이어지는 마지막 컷(루프)", "visual": "shot_01 재사용"}
+    {
+      "section": "훅",
+      "start_sec": 0,
+      "end_sec": 3,
+      "points": "털리는 장면 위에 질문 자막",
+      "visual": "shot_01 털리는 순간"
+    },
+    {
+      "section": "문제",
+      "start_sec": 3,
+      "end_sec": 12,
+      "points": "털린 이유 2가지: 문이 하나뿐, 비싼 걸 입구에 둠",
+      "visual": "shot_02 기존 기지 구조, X표"
+    },
+    {
+      "section": "본문",
+      "start_sec": 12,
+      "end_sec": 40,
+      "points": "고친 배치 3단계를 하나씩 보여 주고, 실제로 막아 내는 장면",
+      "visual": "shot_03 배치 변경, shot_04 방어 장면"
+    },
+    {
+      "section": "CTA",
+      "start_sec": 40,
+      "end_sec": 46,
+      "points": "다음엔 어떤 배치를 시험해 볼지 댓글로",
+      "visual": "shot_05 완성 기지 전경"
+    },
+    {
+      "section": "엔딩",
+      "start_sec": 46,
+      "end_sec": 50,
+      "points": "첫 장면과 이어지는 마지막 컷(루프)",
+      "visual": "shot_01 재사용"
+    }
   ],
   "titles": [
     "브레인롯 훔치기, 맨날 털리면 이 배치로 바꾸세요",
@@ -28,14 +67,43 @@
     "내 브레인롯만 털리는 이유 (브레인롯 훔치기)"
   ],
   "description": "브레인롯 훔치기 기지 방어 배치를 실험해 봤어요. 직접 녹화한 플레이입니다.\nBGM: CREDITS.txt 참고",
-  "hashtags": ["#로블록스", "#브레인롯훔치기", "#shorts"],
-  "thumbnail_brief": {"aspect_ratio": "9:16", "text": "맨날 털리면?", "style": "털린 기지(왼쪽, 빨간 X)와 고친 기지(오른쪽) 비교, 큰 흰 글씨"},
+  "hashtags": [
+    "#로블록스",
+    "#브레인롯훔치기",
+    "#shorts"
+  ],
+  "thumbnail_brief": {
+    "aspect_ratio": "9:16",
+    "text": "맨날 털리면?",
+    "style": "털린 기지(왼쪽, 빨간 X)와 고친 기지(오른쪽) 비교, 큰 흰 글씨",
+    "image_prompt": "a blocky Roblox-style base split in two halves: left side broken walls with a red X, right side a rebuilt base with two entrances and a glowing vault at the back"
+  },
   "shot_list": [
-    {"shot": "shot_01", "need": "브레인롯을 털리는 순간 5초", "source": "직접 녹화"},
-    {"shot": "shot_02", "need": "기존 기지 구조를 위에서 본 화면", "source": "직접 녹화"},
-    {"shot": "shot_03", "need": "배치를 바꾸는 과정", "source": "직접 녹화"},
-    {"shot": "shot_04", "need": "도둑을 막아 내는 장면", "source": "직접 녹화"},
-    {"shot": "shot_05", "need": "완성 기지 전경", "source": "직접 녹화"}
+    {
+      "shot": "shot_01",
+      "need": "브레인롯을 털리는 순간 5초",
+      "source": "직접 녹화"
+    },
+    {
+      "shot": "shot_02",
+      "need": "기존 기지 구조를 위에서 본 화면",
+      "source": "직접 녹화"
+    },
+    {
+      "shot": "shot_03",
+      "need": "배치를 바꾸는 과정",
+      "source": "직접 녹화"
+    },
+    {
+      "shot": "shot_04",
+      "need": "도둑을 막아 내는 장면",
+      "source": "직접 녹화"
+    },
+    {
+      "shot": "shot_05",
+      "need": "완성 기지 전경",
+      "source": "직접 녹화"
+    }
   ],
   "copyright_checklist": [
     "게임 화면: 내가 직접 녹화한 플레이만 쓴다 (Roblox 이용약관의 영상 제작 허용 범위 확인)",
@@ -43,12 +111,20 @@
     "타인 소재: 다른 크리에이터의 영상·음성·썸네일을 가져오지 않는다. 참고한 영상은 형식만 참고",
     "다른 플레이어 닉네임이 보이면 흐리게 처리한다"
   ],
-  "score_reference": {"topic_score": 0.838, "note": "정렬 참고용 점수이며 조회수 예측이 아님"},
+  "score_reference": {
+    "topic_score": 0.838,
+    "note": "정렬 참고용 점수이며 조회수 예측이 아님"
+  },
   "evidence_refs": [
     "evidence.topics.steal_a_brainrot.components",
     "evidence.topics.steal_a_brainrot.duration_buckets",
     "video:SAMPLE010"
   ],
-  "data_sources": [{"name": "샘플 데이터(data/sample/youtube_sample.json)", "origin": "sample"}],
+  "data_sources": [
+    {
+      "name": "샘플 데이터(data/sample/youtube_sample.json)",
+      "origin": "sample"
+    }
+  ],
   "rationale": "점수 1위이지만 경쟁도도 최대라 같은 공략 반복은 피한다. 45–60초 구간의 배수 중앙값이 가장 높아 50초로 잡았다. 가장 크게 터진 영상이 방어 공략이라 주제는 유지하고, '실패 원인부터 보여 주는' 구성으로 각도를 바꿨다."
 }

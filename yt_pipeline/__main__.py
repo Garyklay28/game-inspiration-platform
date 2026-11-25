@@ -3,7 +3,7 @@ import argparse
 import json
 import sys
 
-from . import analyze, collect, normalize, performance, qa, report, score, validate, video
+from . import analyze, collect, db, normalize, performance, qa, report, score, thumbnail, validate, video
 from .common import FILES, latest_run_id, new_run_id, run_dir
 
 STAGES = [("raw", "1 수집", "collect"), ("normalized", "2 정규화", "normalize"), ("scores", "3 점수화", "score"),
@@ -69,6 +69,12 @@ def main(argv=None):
     rp = add("report", help="YouTubeReport 생성")
     rp.add_argument("--intent", default="make_video")
 
+    th = add("thumbnail", help="5 썸네일 이미지 (기획안 에이전트 도구)")
+    th.add_argument("--background", help="문구를 얹을 이미지 경로 (없으면 설정의 provider 사용)")
+    th.add_argument("--force", action="store_true", help="검증 전에도 실행(테스트용)")
+    dbp = add("db", help="Supabase 저장")
+    dbp.add_argument("action", choices=["export", "push"])
+
     v = add("video", help="7 영상 생성")
     v.add_argument("action", choices=["timing", "check", "render"])
     v.add_argument("--final", action="store_true", help="최종 화질(기본은 720p 프리뷰)")
@@ -112,6 +118,10 @@ def main(argv=None):
             res = status(_rid(a))
         elif a.cmd == "report":
             res = report.build(_rid(a), a.intent)
+        elif a.cmd == "thumbnail":
+            res = thumbnail.run(_rid(a), a.background, a.force)
+        elif a.cmd == "db":
+            res = db.export(_rid(a)) if a.action == "export" else db.push(_rid(a))
         elif a.cmd == "video":
             rid = _rid(a)
             if a.action == "timing":

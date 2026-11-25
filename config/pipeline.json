@@ -4,7 +4,10 @@
     "region_code": "KR",
     "category_id": "20",
     "max_results": 50,
-    "search_keywords": ["로블록스", "roblox"],
+    "search_keywords": [
+      "로블록스",
+      "roblox"
+    ],
     "search_days": 7,
     "request_interval_sec": 0.5
   },
@@ -13,7 +16,12 @@
     "min_views": 1000
   },
   "score": {
-    "weights": {"demand": 1.0, "outlier": 1.0, "freshness": 1.0, "competition": 1.0},
+    "weights": {
+      "demand": 1.0,
+      "outlier": 1.0,
+      "freshness": 1.0,
+      "competition": 1.0
+    },
     "freshness_half_life_h": 72,
     "outlier_cap": 5.0,
     "disclaimer": "정렬 참고용 점수이며 조회수 예측이 아님"
@@ -25,9 +33,29 @@
     "title_max_chars": 100
   },
   "video": {
-    "final":   {"size": "1080x1920", "fps": 30, "codec": "libx264", "crf": 20, "preset": "veryfast", "audio_bitrate": "192k"},
-    "preview": {"size": "720x1280",  "fps": 30, "codec": "libx264", "crf": 30, "preset": "veryfast", "audio_bitrate": "128k"},
-    "subtitle": {"font": "Noto Sans CJK KR", "font_size": 64, "margin_v": 420, "max_chars_per_line": 16, "max_lines": 2},
+    "final": {
+      "size": "1080x1920",
+      "fps": 30,
+      "codec": "libx264",
+      "crf": 20,
+      "preset": "veryfast",
+      "audio_bitrate": "192k"
+    },
+    "preview": {
+      "size": "720x1280",
+      "fps": 30,
+      "codec": "libx264",
+      "crf": 30,
+      "preset": "veryfast",
+      "audio_bitrate": "128k"
+    },
+    "subtitle": {
+      "font": "Noto Sans CJK KR",
+      "font_size": 64,
+      "margin_v": 420,
+      "max_chars_per_line": 16,
+      "max_lines": 2
+    },
     "bgm_volume": 0.25,
     "bgm_fade_out_sec": 1.0,
     "est_syllables_per_sec": 5.5
@@ -39,7 +67,38 @@
     "black_min_sec": 0.5
   },
   "performance": {
-    "checkpoints_h": [24, 72, 168],
+    "checkpoints_h": [
+      24,
+      72,
+      168
+    ],
     "min_samples_for_calibration": 8
+  },
+  "thumbnail": {
+    "provider": "none",
+    "model": "gpt-image-1",
+    "sizes": {
+      "9:16": "1024x1536",
+      "16:9": "1536x1024"
+    },
+    "count": 2,
+    "font": "Noto Sans CJK KR",
+    "font_size_ratio": 0.085,
+    "avoid": "게임 로고, 실존 인물, 다른 크리에이터의 캐릭터·썸네일, 저작권 있는 캐릭터",
+    "_comment": "provider none = 프롬프트만 만든다. openai = OpenAI Images API 호출(.env 의 OPENAI_API_KEY, 호출마다 과금). 상업 운영 전 이용 약관 확인"
+  },
+  "db": {
+    "tables": [
+      "raw_snapshots",
+      "videos",
+      "channels",
+      "topic_scores",
+      "analyses",
+      "plans",
+      "thumbnails",
+      "uploads",
+      "performance"
+    ],
+    "_comment": "Supabase(PostgreSQL). 스키마는 db/schema.sql. push 는 .env 의 SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY 사용"
   }
 }

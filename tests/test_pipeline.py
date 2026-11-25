@@ -177,3 +177,62 @@ def test_calibrate_proposal(tmp_path, monkeypatch):
     assert prop["proposed_weights"]["demand"] > prop["current_weights"]["demand"]
     assert prop["proposed_weights"]["competition"] > prop["current_weights"]["competition"]
     assert prop["proposed_weights"]["outlier"] == prop["current_weights"]["outlier"]  # 분산 0 → 유지
+
+
+def _validated(rid):
+    _data(rid)
+    d = run_dir(rid)
+    shutil.copy(EX / "04_analysis.example.json", d / "04_analysis.json")
+    shutil.copy(EX / "05_plan.example.json", d / "05_plan.json")
+    validate.run(rid)
+    write_json(d / "rv.json", {"passed": True, "issues": []})
+    validate.merge_review(rid, str(d / "rv.json"))
+    return d
+
+
+def test_thumbnail_prompt_only_and_gate(rid):
+    from yt_pipeline import thumbnail
+    _data(rid)
+    d = run_dir(rid)
+    shutil.copy(EX / "05_plan.example.json", d / "05_plan.json")
+    assert "validated" in thumbnail.run(rid)["summary"]  # 검증 전에는 만들지 않음
+    _validated(rid)
+    r = thumbnail.run(rid)
+    assert r["files"] == []
+    spec = read_json(d / "05_thumbnails" / "prompt.json")
+    assert "No text" in spec["prompt"] and "logos" in spec["prompt"]
+    assert spec["ratio"] == "9:16" and spec["overlay_text"]
+
+
+@pytest.mark.skipif(not HAS_FF, reason="ffmpeg 없음")
+def test_thumbnail_overlay_on_background(rid):
+    from yt_pipeline import ff, thumbnail
+    d = _validated(rid)
+    bg = d / "bg.png"
+    subprocess.run(["ffmpeg", "-loglevel", "error", "-y", "-f", "lavfi", "-i", "testsrc2=s=1280x720",
+                    "-frames:v", "1", str(bg)], check=True)
+    r = thumbnail.run(rid, background=str(bg))
+    assert r["files"] and r["files"][0].endswith("thumb_v1.png")
+    p = ff.probe(str(ROOT / r["files"][0]))
+    assert (p["width"], p["height"]) == (1080, 1920)
+    meta = read_json((ROOT / r["files"][0]).with_suffix(".json"))
+    assert meta["source"] == "user_image"
+
+
+def test_db_export_and_push(rid):
+    from yt_pipeline import db
+    _validated(rid)
+    out = db.export(rid)
+    assert out["counts"]["videos"] > 0 and out["counts"]["topic_scores"] > 0 and out["counts"]["plans"] == 1
+    plan_row = read_json(run_dir(rid) / "db" / "plans.json")[0]
+    assert plan_row["status"] == "validated"
+    sent = []
+    import os
+    os.environ["SUPABASE_URL"], os.environ["SUPABASE_SERVICE_ROLE_KEY"] = "https://x.supabase.co", "k"
+    try:
+        db.push(rid, poster=lambda url, key, t, rows: sent.append((t, len(rows))))
+    finally:
+        del os.environ["SUPABASE_URL"], os.environ["SUPABASE_SERVICE_ROLE_KEY"]
+    tables = [t for t, _ in sent]
+    assert "plans" in tables and "videos" in tables
+    assert tables == sorted(tables, key=db.ORDER.index)  # 외래 키 순서대로 저장
