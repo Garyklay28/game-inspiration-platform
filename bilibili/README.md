@@ -61,6 +61,16 @@ python main.py --intent performance_review                        # 6 성과 기
 python -m pytest -q                                               # 오프라인 테스트 (가짜 LLM)
 ```
 
+### 에이전트별 데모 (1차 결과물)
+
+```bash
+python demo_agents.py --agent collector        # 에이전트 하나: 입력 → 코드가 한 일 → LLM 결과 (실제 실행 기록 재생, 비용 0)
+python demo_agents.py --agent analyst --live   # 그 에이전트만 Claude 로 지금 다시 실행 (앞 단계는 코드·기록으로 준비)
+python demo_agents.py --all --markdown docs/agent_outputs.md
+```
+
+6개 에이전트의 1차 결과물 정리: **[docs/agent_outputs.md](docs/agent_outputs.md)** (6 성과 기록은 아직 업로드가 없어 가상의 예시 데이터)
+
 결과: `outputs/report_*.json`(BiliReport), `*_plan.json`(策划案, 영상 파이프라인 입력), `*_plan.md`(팀 공유 문서), `*_db_rows.json`(팀 DB 행).
 
 ## 원칙

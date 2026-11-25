@@ -96,7 +96,7 @@ def propose_weights(samples: List[Dict]) -> Dict:
     y = [math.log1p(s["view"]) for s in samples]
     corr = {k: _corr([s["components"][k] for s in samples], y) for k in ("demand", "outlier", "freshness", "competition")}
     raw = {"demand": max(corr["demand"], 0), "outlier": max(corr["outlier"], 0),
-           "freshness": max(corr["freshness"], 0), "competition": max(-corr["competition"], 0)}
+           "freshness": max(corr["freshness"], 0), "competition": max(-corr["competition"], 0.0) + 0.0}  # -0.0 방지
     total = sum(raw.values()) or 1
     return {"ready": True, "samples": len(samples), "correlation_with_log_views": {k: round(v, 3) for k, v in corr.items()},
             "proposed_weights": {k: round(4 * v / total, 2) for k, v in raw.items()},

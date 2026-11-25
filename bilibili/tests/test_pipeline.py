@@ -228,3 +228,17 @@ def test_task_validation():
         BiliTask(intent="unknown")
     with pytest.raises(ValueError):
         BiliTask(intent="title_check")
+
+
+def test_demo_agents_all_offline(no_net, tmp_path, monkeypatch):
+    # 에이전트별 데모가 네트워크 없이(가짜 API) 6개 모두 끝까지 도는지
+    import sys as _sys
+    import demo_agents
+    md = tmp_path / "agent_outputs.md"
+    monkeypatch.setattr(_sys, "argv", ["demo_agents.py", "--all", "--markdown", str(md)])
+    assert demo_agents.main() == 0
+    text = md.read_text(encoding="utf-8")
+    for stage in ("1 수집", "2 정규화", "3 점수화", "4 분석", "5 기획안", "6 성과 기록"):
+        assert "## " + stage in text
+    assert "가상의 예시 데이터" in text and "-0.0" not in text
+
