@@ -1,37 +1,47 @@
 # bilibili-supervisor-agent
 
-게임 영상 크리에이터 원스톱 인스피레이션 플랫폼 — **빌리빌리 서브 슈퍼바이저 에이전트** (Proof of Concept)
+게임 영상 크리에이터 원스톱 인스피레이션 플랫폼 — **빌리빌리 서브 슈퍼바이저** (Proof of Concept)
 
-- 기획안(Figma): 「게임 영상 인스피레이션 플랫폼 - 화면 설계」 08 빌리빌리 모드 *"이벤트 중심 + 커뮤니티 반응"*
-- 담당: 빌리빌리 파트 전체 (역할 분담이 기획안의 기능별 → 플랫폼별로 변경됨)
-- 언어: Python 3.9+ / Claude API (Anthropic 공식 Python SDK, 프레임워크 없이 tool use 루프 직접 구현)
+- 기획안(Figma): 08장 빌리빌리 모드 *"이벤트 중심 + 커뮤니티 반응"*, 12장 「에이전트 6개 구조도」, 13장 「데이터베이스 설계」
+- 담당: 곽우화 (빌리빌리 파트 전체) · 팀 저장소: [game-inspiration-platform](https://github.com/Garyklay28/game-inspiration-platform)
+- 언어: Python 3.9+ / Claude API (Anthropic 공식 Python SDK, tool use 루프 직접 구현, 모델 `claude-sonnet-5-5`)
 
-## 한눈에 보기
+## 구조: 수직(계층형 Supervisor) + 에이전트 6개
 
 ```
-총괄 슈퍼바이저 (팀) ──BiliTask──▶ 빌리빌리 서브 슈퍼바이저 ──delegate──▶ collector
-                    ◀─BiliReport──        (Claude)                 ├────▶ trend_radar
-                                                                    ├────▶ engagement_analyst
-                                                                    ├────▶ title_doctor
-                                                                    ├────▶ localizer
-                                                                    ├────▶ plan_writer ─┐ 실패 시
-                                                                    └────▶ validator ◀──┘ 1회 수정
+팀 총괄 슈퍼바이저 ──BiliTask──▶ 빌리빌리 서브 슈퍼바이저 (Claude)
+                  ◀─BiliReport──      │ delegate (에이전트끼리는 직접 대화하지 않음)
+                                       ├─▶ 1 수집        collector    Aside CSV 1순위 · 공개 API 대체
+                                       ├─▶ 2 정규화      normalizer   별칭 통일(제목+화제 태그) · 별칭 후보 제안
+                                       ├─▶ 3 점수화      scorer       Score_bili (코드만, LLM 없음)
+                                       ├─▶ 4 분석        analyst      이벤트·핫키워드·반응률·길이·제목·해외 트렌드 카드
+                                       ├─▶ 5 기획안      planner      작성 → 규칙 검사(코드) → 검토, 실패 시 1회 수정
+                                       └─▶ 6 성과 기록   performance  업로드 성과 해석 · 가중치 보정안(적용은 사람)
+                              공유 작업 공간 ──▶ 팀 공용 DB (13장 테이블, platform='bilibili')
 ```
 
-팀 **流水线设计 A**(采集 → 规范化 → 评分 → 分析 → 策划案生成 → 校验)를 빌리빌리용으로 구현했고, 최종 산출물은 **策划案 JSON**(영상 파이프라인 B의 입력) + 팀 공유용 Markdown 문서입니다.
+수직 구조를 고른 이유(수평 구조와 비교), 에이전트별 코드·프롬프트·도구·DB 대응표, Aside 데이터 흐름, 가드레일은
+**[docs/architecture.md](docs/architecture.md)** 에 있습니다. 시스템 프롬프트: **[bili_agent/prompts/](bili_agent/prompts/)** (8개, 한국어).
 
-| 워커 | 기획안 기능 |
-|---|---|
-| `collector` | 트렌드 수집·정규화 (종합 인기/핫서치/랭킹 스냅샷, 한·중·영 별칭 통일, 새 별칭 후보 제안) |
-| `trend_radar` | 이벤트 레이더 · 핫키워드 선행 신호 · 공식 이벤트 태그 |
-| `engagement_analyst` | 반응률 정렬(Top 풀 중앙값 대비 배수) · 영상 길이 제안 · 유형 분포 · 소재 점수 |
-| `title_doctor` | 제목 진단(글자 수·【】·《》) · 중국어 수정안 |
-| `localizer` | 중국어 제목 → 한국어 '해외 트렌드 소재' 카드 (YouTube·TikTok 모드 연결) |
-| `plan_writer` | 策划案 생성(간체 중국어): 훅 3종 · 구간별 스크립트 · 제목 3개 · 썸네일 brief · 저작권 체크리스트 |
-| `validator` | 策划案 검증: 코드 규칙 검사(구조·시간·저작권·'仅供排序参考'·예측 표현) + LLM 의미 검토 |
+| 단계 | 코드 | 프롬프트 |
+|---|---|---|
+| 슈퍼바이저 | `bili_agent/agents/supervisor.py` | `supervisor.md` |
+| 1 수집 | `bili_agent/agents/workers/w1_collector.py` | `w1_collector.md` |
+| 2 정규화 | `w2_normalizer.py` | `w2_normalizer.md` |
+| 3 점수화 | `w3_scorer.py` | — (코드만) |
+| 4 분석 | `w4_analyst.py` | `w4_analyst.md` |
+| 5 기획안 | `w5_planner.py` | `w5_plan_writer.md`, `w5_plan_reviewer.md` |
+| 6 성과 기록 | `w6_performance.py` | `w6_performance.md` |
 
-자세한 구조, 설계 원칙, 기획안 매핑은 **[docs/architecture.md](docs/architecture.md)**.
-시스템 프롬프트는 **[bili_agent/prompts/](bili_agent/prompts/)** (한국어).
+## 데이터: Aside 브라우저
+
+빌리빌리 랭킹·영상 상세 API 는 일반 요청에 봇 차단(-352/412)이 걸립니다. 그래서 사용자가 **Aside 브라우저**로 빌리빌리를 수집해 CSV 로 내보내고, 수집 에이전트가 그 CSV 를 1순위로 읽습니다.
+
+1. Aside 에서 빌리빌리를 열고 영상(반응률·제목·길이·태그), 핫키워드, 공식 활동, (업로드 후) 성과를 CSV 로 내보낸다.
+2. 파일을 `data/aside/` 에 둔다: `*videos*.csv`, `*hot_keyword*.csv`, `*event*.csv`, `*performance*.csv`
+3. 실행하면 48시간 이내 파일은 그대로 쓰고, 없거나 오래됐으면 공개 API(종합 인기·핫서치)로 대체한다.
+
+열 이름은 영어·한국어·중국어 모두 인식하고, 인코딩(UTF-8/GB18030/CP949)도 자동 판별합니다.
 
 ## 실행
 
@@ -42,68 +52,26 @@ cp .env.example .env        # ANTHROPIC_API_KEY 입력
 ```
 
 ```bash
-# 1) API 키 없이: 데이터 수집·지표 계산 파이프라인만 (LLM 호출 0회)
-python main.py --intent trend_scan --dry-run
-
-# 2) 슈퍼바이저 에이전트 실행 (Claude API 호출)
-python main.py --intent trend_scan
-python main.py --intent game_deep_dive --game 英雄联盟
+python main.py --intent trend_scan --dry-run                      # LLM 없이 1~4단계 데이터 파이프라인 (무료)
+python main.py --intent game_deep_dive --game 英雄联盟 --db-export  # 6단계 에이전트 실행 + 팀 DB 행 저장
 python main.py --intent title_check --title "BLG夺冠了！S16决赛全程回顾"
 python main.py --intent event_watch
-
-# 3) 테스트 (네트워크·API 키 불필요, 가짜 LLM 사용)
-python -m pytest -q
+python main.py register-upload --bvid BV1xx --report outputs/report_x.json   # 올린 영상을 기획안과 연결
+python main.py --intent performance_review                        # 6 성과 기록
+python -m pytest -q                                               # 오프라인 테스트 (가짜 LLM)
 ```
 
-결과는 터미널에 에이전트 실행 기록·요약·사용량·경고가 출력되고, 전체 `BiliReport`는 `outputs/report_*.json`에 저장됩니다.
-`trend_scan` / `game_deep_dive` 는 策划案도 만들어 `outputs/report_*_plan.json`(B 파이프라인 입력)과 `*_plan.md`(팀 공유 문서)를 함께 저장합니다.
+결과: `outputs/report_*.json`(BiliReport), `*_plan.json`(策划案, 영상 파이프라인 입력), `*_plan.md`(팀 공유 문서), `*_db_rows.json`(팀 DB 행).
 
-## 데이터 수집 원칙
+## 원칙
 
-빌리빌리 API는 공식 개방 API가 아니므로 **공개적으로 열려 있는 엔드포인트만**, 로그인·쿠키 위조·서명 우회 없이, 요청 간 1초 간격으로 호출합니다.
-
-| 데이터 | 방식 |
-|---|---|
-| 종합 인기(게임 카테고리) | 실시간 공개 API → 실패 시 `data/snapshots/popular_game_*.json` |
-| 실시간 핫서치 | 실시간 공개 API → 실패 시 `data/snapshots/trending_*.json` |
-| 게임 카테고리 랭킹 | 봇 차단(-352)이라 **자동 호출하지 않음** → 사람이 저장한 스냅샷만 사용 |
-
-### 랭킹 스냅샷 저장 (사람이 직접)
-1. 브라우저로 `https://www.bilibili.com` 을 연다.
-2. `https://api.bilibili.com/x/web-interface/ranking/v2?rid=4&type=all` 을 열고 `⌘+S` / `Ctrl+S`.
-3. `data/snapshots/ranking_game_YYYYMMDD.json` 으로 저장. 가장 최신 파일을 자동으로 읽습니다.
-
-오프라인 대체 스냅샷 갱신: `python -m scripts.save_snapshots`
-
-## 파일 구조
-
-```
-bili_agent/
-  contracts.py          총괄 ↔ 빌리빌리 인터페이스 (BiliTask / BiliReport)
-  config.py             모델·수집 설정 (.env)
-  workspace.py          공유 작업 공간(블랙보드)
-  agents/
-    supervisor.py       빌리빌리 서브 슈퍼바이저 (LLM 모드 / dry-run 모드), 검증 루프, 보고서 조립
-    workers.py          7개 워커: 도구 스키마 + 핸들러 + 제출 스키마, 策划案 조립
-    loop.py             Claude API 호출, 공용 tool-use 루프, 오류·거절·제출 거부 처리
-  prompts/              시스템 프롬프트 8개 (supervisor + 워커 7)
-  tools/
-    bilibili_api.py     공개 API 수집 + 스냅샷 대체
-    metrics.py          반응률·배수·길이/유형 분포·제목 진단·Score_bili (결정적 계산)
-    plan_rules.py       策划案 규격·규칙 검사·예측 표현 차단·Markdown 변환
-    alias_store.py      별칭 사전 (로컬 JSON / Supabase)
-data/                   별칭 사전, 스냅샷
-supabase/schema.sql     game_alias, bili_video_snapshot, bili_agent_report 등
-docs/architecture.md    아키텍처 문서
-tests/                  오프라인 테스트 (가짜 LLM 포함)
-```
-
-## Supabase
-
-`supabase/schema.sql`로 테이블을 만들고 `.env`에 `SUPABASE_URL`, `SUPABASE_KEY`를 넣으면 별칭 사전을 Supabase에서 읽습니다. 값이 없으면 `data/alias_dictionary.json`을 씁니다(같은 인터페이스).
+- **숫자는 코드가, 해석은 LLM 이** — 점수·배수·중앙값은 결정적 코드. 보고서의 점수도 코드 계산값을 붙인다.
+- **점수는 정렬 참고용** — 조회수 예측 표현은 정규식으로 찾아 기획안·최종 요약 모두에서 막는다.
+- **순서는 LLM, 안전장치는 코드** — 1→2→3→4→5 순서, 수집 0개 진행, 검증 없는 제출, 가중치 자동 적용을 코드가 막는다.
+- **출처 표시** — 모든 데이터에 aside / live / snapshot 출처와 파일 나이를 기록한다.
 
 ## 한계
 
-- 영상 유형은 키워드 규칙 분류라 '기타' 비중이 큼. 별칭 사전(15개 게임) 밖의 게임은 집계에서 빠짐 → collector의 `alias_candidates` 제안을 사람이 검토해 사전에 반영.
-- 이벤트 날짜(캘린더)는 수집하지 않음. 공식 활동(`mission_id`)과 핫서치로만 감지.
-- 점수 가중치는 초기 동일 가중치. 성과 데이터 누적 후 보정 예정.
+- Aside CSV 의 실제 열 이름은 수업 예시 화면 기준으로 맞췄다. 새 CSV 를 받으면 별칭표(`bili_agent/tools/aside_import.py`)로 조정한다.
+- 별칭 사전(15개 게임) 밖의 게임은 정규화 에이전트가 후보로만 제안하고, 사람이 검토해 반영한다.
+- 이벤트 날짜(마감일)는 수집하지 않는다.

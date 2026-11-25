@@ -1,0 +1,1341 @@
+{
+ "raw_snapshots": [
+  {
+   "id": "20261125-210938:bilibili:0",
+   "run_id": "20261125-210938",
+   "platform": "bilibili",
+   "source": "aside",
+   "is_sample": false,
+   "collected_at": "2026-11-25T12:12:47.090436+00:00",
+   "payload": {
+    "source": "aside",
+    "origin": "aside",
+    "file": "bilibili_2026-11-25.json",
+    "fetched_at": null,
+    "count": 50
+   }
+  }
+ ],
+ "videos": [
+  {
+   "video_id": "BV1eSyBzbEsc",
+   "platform": "bilibili",
+   "run_id": "20261125-210938",
+   "game_ids": [
+    "phantom_blade_zero"
+   ],
+   "channel_id": "怕上火暴王老菊",
+   "title": "王老菊教你影之刃15：武圣阿魂",
+   "views": 100969,
+   "likes": 9170,
+   "comments": 736,
+   "coins": 7560,
+   "favorites": 2596,
+   "duration_sec": null,
+   "is_short": true,
+   "published_at": "2026-11-25T14:04:00+00:00",
+   "outlier_multiple": null,
+   "views_per_hour": 100969.0
+  },
+  {
+   "video_id": "BV1esyZz7ExF",
+   "platform": "bilibili",
+   "run_id": "20261125-210938",
+   "game_ids": [
+    "zenless_zone_zero"
+   ],
+   "channel_id": "绝区零",
+   "title": "《绝区零》挽昼角色展示 | 日陨之前",
+   "views": 979234,
+   "likes": 106059,
+   "comments": 6691,
+   "coins": 60182,
+   "favorites": 25383,
+   "duration_sec": null,
+   "is_short": true,
+   "published_at": "2026-11-25T13:00:00+00:00",
+   "outlier_multiple": null,
+   "views_per_hour": 979234.0
+  },
+  {
+   "video_id": "BV1EW1wzeEuH",
+   "platform": "bilibili",
+   "run_id": "20261125-210938",
+   "game_ids": [],
+   "channel_id": "与山0v0",
+   "title": "别碰这款儿童互动游戏！它会吞噬掉你！",
+   "views": 226276,
+   "likes": 27798,
+   "comments": 1646,
+   "coins": 6920,
+   "favorites": 7786,
+   "duration_sec": null,
+   "is_short": true,
+   "published_at": "2026-11-25T12:25:00+00:00",
+   "outlier_multiple": null,
+   "views_per_hour": 226276.0
+  },
+  {
+   "video_id": "BV1JpyazXEUD",
+   "platform": "bilibili",
+   "run_id": "20261125-210938",
+   "game_ids": [
+    "gta6"
+   ],
+   "channel_id": "鲤鱼Ace",
+   "title": "侠盗猎车手6 第一集，GTA 6 Part 1",
+   "views": 2603216,
+   "likes": 258979,
+   "comments": 14682,
+   "coins": 107643,
+   "favorites": 102658,
+   "duration_sec": null,
+   "is_short": true,
+   "published_at": "2026-11-21T17:39:00+00:00",
+   "outlier_multiple": null,
+   "views_per_hour": 28744.8
+  },
+  {
+   "video_id": "BV13vyDztEbw",
+   "platform": "bilibili",
+   "run_id": "20261125-210938",
+   "game_ids": [],
+   "channel_id": "Emotional勃",
+   "title": "☠️末日加油站☠️",
+   "views": 221820,
+   "likes": 20301,
+   "comments": 1312,
+   "coins": 10329,
+   "favorites": 9313,
+   "duration_sec": null,
+   "is_short": true,
+   "published_at": "2026-11-24T18:20:00+00:00",
+   "outlier_multiple": null,
+   "views_per_hour": 12406.2
+  },
+  {
+   "video_id": "BV1SryzzXEgy",
+   "platform": "bilibili",
+   "run_id": "20261125-210938",
+   "game_ids": [
+    "league_of_legends"
+   ],
+   "channel_id": "T1电子竞技俱乐部",
+   "title": "Welcome Back Home, Zeus.",
+   "views": 362882,
+   "likes": 21345,
+   "comments": 7276,
+   "coins": 10572,
+   "favorites": 3346,
+   "duration_sec": null,
+   "is_short": true,
+   "published_at": "2026-11-25T19:16:00+00:00",
+   "outlier_multiple": null,
+   "views_per_hour": 362882.0
+  },
+  {
+   "video_id": "BV1YhyzzhEJU",
+   "platform": "bilibili",
+   "run_id": "20261125-210938",
+   "game_ids": [
+    "arknights_endfield"
+   ],
+   "channel_id": "明日方舟终末地",
+   "title": "《明日方舟：终末地》小刻EP - JUST THE START",
+   "views": 409743,
+   "likes": 39590,
+   "comments": 4115,
+   "coins": 7087,
+   "favorites": 8168,
+   "duration_sec": null,
+   "is_short": true,
+   "published_at": "2026-11-25T12:03:00+00:00",
+   "outlier_multiple": null,
+   "views_per_hour": 409743.0
+  },
+  {
+   "video_id": "BV1xoypzBEgd",
+   "platform": "bilibili",
+   "run_id": "20261125-210938",
+   "game_ids": [
+    "minecraft"
+   ],
+   "channel_id": "青枫工作室",
+   "title": "当我以名画为灵感制作了一批神器",
+   "views": 1241407,
+   "likes": 130463,
+   "comments": 1519,
+   "coins": 3066,
+   "favorites": 44259,
+   "duration_sec": null,
+   "is_short": true,
+   "published_at": "2026-11-20T20:18:00+00:00",
+   "outlier_multiple": null,
+   "views_per_hour": 11092.6
+  },
+  {
+   "video_id": "BV1CHyoz8EPj",
+   "platform": "bilibili",
+   "run_id": "20261125-210938",
+   "game_ids": [],
+   "channel_id": "泛式",
+   "title": "不是我害了你......是这个崩坏害了你啊！【泛式】",
+   "views": 183373,
+   "likes": 15822,
+   "comments": 1546,
+   "coins": 2464,
+   "favorites": 2324,
+   "duration_sec": null,
+   "is_short": true,
+   "published_at": "2026-11-25T18:05:00+00:00",
+   "outlier_multiple": null,
+   "views_per_hour": 183373.0
+  },
+  {
+   "video_id": "BV12iyGzGEha",
+   "platform": "bilibili",
+   "run_id": "20261125-210938",
+   "game_ids": [
+    "league_of_legends",
+    "gta6"
+   ],
+   "channel_id": "STN工作室",
+   "title": "【STN快报第8.5季28】不要小看一个老实本分的家政精英，他可能是GTA的超级大盗",
+   "views": 897118,
+   "likes": 52941,
+   "comments": 6051,
+   "coins": 33590,
+   "favorites": 11599,
+   "duration_sec": null,
+   "is_short": true,
+   "published_at": "2026-11-22T19:00:00+00:00",
+   "outlier_multiple": null,
+   "views_per_hour": 13756.7
+  },
+  {
+   "video_id": "BV1zGy5ziEnd",
+   "platform": "bilibili",
+   "run_id": "20261125-210938",
+   "game_ids": [
+    "league_of_legends"
+   ],
+   "channel_id": "BLG电子竞技俱乐部",
+   "title": "【BLG夺冠VLOG】这是属于我们的冠军记忆",
+   "views": 1678558,
+   "likes": 88055,
+   "comments": 18786,
+   "coins": 56432,
+   "favorites": 29429,
+   "duration_sec": null,
+   "is_short": true,
+   "published_at": "2026-11-22T23:06:00+00:00",
+   "outlier_multiple": null,
+   "views_per_hour": 27466.4
+  },
+  {
+   "video_id": "BV1HhyBzrEwN",
+   "platform": "bilibili",
+   "run_id": "20261125-210938",
+   "game_ids": [
+    "arknights_endfield"
+   ],
+   "channel_id": "魔法Zc目录",
+   "title": "【终末地】1.7重建禁地蓝图基建攻略！一键毕业+轻松镀层  |魔法Zc目录",
+   "views": 139286,
+   "likes": 10947,
+   "comments": 437,
+   "coins": 938,
+   "favorites": 4460,
+   "duration_sec": null,
+   "is_short": true,
+   "published_at": "2026-11-25T13:42:00+00:00",
+   "outlier_multiple": null,
+   "views_per_hour": 139286.0
+  },
+  {
+   "video_id": "BV1Mi1FzmEdX",
+   "platform": "bilibili",
+   "run_id": "20261125-210938",
+   "game_ids": [],
+   "channel_id": "一立风里克",
+   "title": "帮玩一个月给1500？亲身试险 揭露骗子套路｜完整全流程｜反诈讲解，套路分析，话术拆解。",
+   "views": 95343,
+   "likes": 6393,
+   "comments": 1266,
+   "coins": 1915,
+   "favorites": 974,
+   "duration_sec": null,
+   "is_short": true,
+   "published_at": "2026-11-25T01:20:00+00:00",
+   "outlier_multiple": null,
+   "views_per_hour": 8763.3
+  },
+  {
+   "video_id": "BV1ifyGz4Edy",
+   "platform": "bilibili",
+   "run_id": "20261125-210938",
+   "game_ids": [
+    "phantom_blade_zero"
+   ],
+   "channel_id": "阿狸才不是受",
+   "title": "⚡️从夯到拉！ 2026年3A游戏优化水平大摸底！谁是优化之王",
+   "views": 978887,
+   "likes": 79308,
+   "comments": 4189,
+   "coins": 14441,
+   "favorites": 11914,
+   "duration_sec": null,
+   "is_short": true,
+   "published_at": "2026-11-22T19:30:00+00:00",
+   "outlier_multiple": null,
+   "views_per_hour": 15126.6
+  },
+  {
+   "video_id": "BV1cvyLz6Ebc",
+   "platform": "bilibili",
+   "run_id": "20261125-210938",
+   "game_ids": [
+    "delta_force"
+   ],
+   "channel_id": "狂野的蜂",
+   "title": "普坝帮出击！",
+   "views": 723307,
+   "likes": 62855,
+   "comments": 1783,
+   "coins": 4653,
+   "favorites": 7063,
+   "duration_sec": null,
+   "is_short": true,
+   "published_at": "2026-11-22T20:10:00+00:00",
+   "outlier_multiple": null,
+   "views_per_hour": 11293.5
+  },
+  {
+   "video_id": "BV1qByfz4EjN",
+   "platform": "bilibili",
+   "run_id": "20261125-210938",
+   "game_ids": [
+    "league_of_legends"
+   ],
+   "channel_id": "管泽元",
+   "title": "决赛练英雄？选皮肤原则大公开！BLG冠军中野亲自讲述夺冠故事【视频播客 | 元来如此 EP.10】",
+   "views": 819175,
+   "likes": 39424,
+   "comments": 2952,
+   "coins": 19965,
+   "favorites": 11276,
+   "duration_sec": null,
+   "is_short": true,
+   "published_at": "2026-11-25T13:00:00+00:00",
+   "outlier_multiple": null,
+   "views_per_hour": 819175.0
+  },
+  {
+   "video_id": "BV1j1yBzwE8z",
+   "platform": "bilibili",
+   "run_id": "20261125-210938",
+   "game_ids": [
+    "arknights_endfield"
+   ],
+   "channel_id": "MR流星飞",
+   "title": "【终末地】1.7最好抄北部禁区流程基建！自配平旧产能拉满进度？！",
+   "views": 178070,
+   "likes": 7029,
+   "comments": 788,
+   "coins": 2960,
+   "favorites": 6106,
+   "duration_sec": null,
+   "is_short": true,
+   "published_at": "2026-11-25T13:51:00+00:00",
+   "outlier_multiple": null,
+   "views_per_hour": 178070.0
+  },
+  {
+   "video_id": "BV1DByDzsEz9",
+   "platform": "bilibili",
+   "run_id": "20261125-210938",
+   "game_ids": [
+    "phantom_blade_zero"
+   ],
+   "channel_id": "雷玥云云Official",
+   "title": "【影之刃零MOD】魂大人和大哥关系好弄把火麒麟怎么了",
+   "views": 329851,
+   "likes": 18456,
+   "comments": 1525,
+   "coins": 864,
+   "favorites": 2427,
+   "duration_sec": null,
+   "is_short": true,
+   "published_at": "2026-11-23T19:44:00+00:00",
+   "outlier_multiple": null,
+   "views_per_hour": 8148.5
+  },
+  {
+   "video_id": "BV1pDyjzEEsJ",
+   "platform": "bilibili",
+   "run_id": "20261125-210938",
+   "game_ids": [
+    "gta6"
+   ],
+   "channel_id": "极客湾Geekerwan",
+   "title": "GTA6性能要求高吗？哪台主机表现好？解锁30帧后能跑多少帧？",
+   "views": 1130420,
+   "likes": 54749,
+   "comments": 15525,
+   "coins": 15703,
+   "favorites": 10709,
+   "duration_sec": null,
+   "is_short": true,
+   "published_at": "2026-11-23T02:08:00+00:00",
+   "outlier_multiple": null,
+   "views_per_hour": 19463.2
+  },
+  {
+   "video_id": "BV1ziyfzZEjg",
+   "platform": "bilibili",
+   "run_id": "20261125-210938",
+   "game_ids": [
+    "delta_force"
+   ],
+   "channel_id": "老飞宇66",
+   "title": "【老鼠人行动】零号大坝（机密）12w→1900w",
+   "views": 372749,
+   "likes": 30329,
+   "comments": 729,
+   "coins": 1784,
+   "favorites": 2008,
+   "duration_sec": null,
+   "is_short": true,
+   "published_at": "2026-11-24T17:59:00+00:00",
+   "outlier_multiple": null,
+   "views_per_hour": 20447.3
+  },
+  {
+   "video_id": "BV1gSyizDEDs",
+   "platform": "bilibili",
+   "run_id": "20261125-210938",
+   "game_ids": [],
+   "channel_id": "women51",
+   "title": "【解说员】月底香喷喷",
+   "views": 98876,
+   "likes": 6433,
+   "comments": 272,
+   "coins": 782,
+   "favorites": 1186,
+   "duration_sec": null,
+   "is_short": true,
+   "published_at": "2026-11-25T12:00:00+00:00",
+   "outlier_multiple": null,
+   "views_per_hour": 98876.0
+  },
+  {
+   "video_id": "BV1SLyfzGE42",
+   "platform": "bilibili",
+   "run_id": "20261125-210938",
+   "game_ids": [
+    "gta6"
+   ],
+   "channel_id": "蘑菇鸭的日常",
+   "title": "忍了70个小时，让这结局给我干破防了【GTA6】通关吐槽",
+   "views": 324705,
+   "likes": 12186,
+   "comments": 5358,
+   "coins": 3846,
+   "favorites": 2630,
+   "duration_sec": null,
+   "is_short": true,
+   "published_at": "2026-11-24T19:16:00+00:00",
+   "outlier_multiple": null,
+   "views_per_hour": 19160.7
+  },
+  {
+   "video_id": "BV1w5yzzGEYN",
+   "platform": "bilibili",
+   "run_id": "20261125-210938",
+   "game_ids": [
+    "arknights_endfield"
+   ],
+   "channel_id": "梦轩dada",
+   "title": "【终末地】小刻首发攻略！法术队回点辅 提弗洛斯售后！技能武器+装备配队+操作思路+基质升级差距+抽取建议！小刻全方位强度养成攻略！明日方舟终末地",
+   "views": 137812,
+   "likes": 7704,
+   "comments": 1016,
+   "coins": 1532,
+   "favorites": 1982,
+   "duration_sec": null,
+   "is_short": true,
+   "published_at": "2026-11-25T12:51:00+00:00",
+   "outlier_multiple": null,
+   "views_per_hour": 137812.0
+  },
+  {
+   "video_id": "BV152yBzhEH8",
+   "platform": "bilibili",
+   "run_id": "20261125-210938",
+   "game_ids": [],
+   "channel_id": "口袋迷ag",
+   "title": "mega席多蓝恩和米立龙特性分析，吃吼霸回归【宝可梦冠军】",
+   "views": 106412,
+   "likes": 4400,
+   "comments": 1329,
+   "coins": 1334,
+   "favorites": 704,
+   "duration_sec": null,
+   "is_short": true,
+   "published_at": "2026-11-25T13:51:00+00:00",
+   "outlier_multiple": null,
+   "views_per_hour": 106412.0
+  },
+  {
+   "video_id": "BV1X1y3zjEcW",
+   "platform": "bilibili",
+   "run_id": "20261125-210938",
+   "game_ids": [
+    "league_of_legends"
+   ],
+   "channel_id": "词元菌",
+   "title": "【LCK女团】《Whiplash》视觉盛宴",
+   "views": 1210155,
+   "likes": 63674,
+   "comments": 3477,
+   "coins": 7658,
+   "favorites": 16807,
+   "duration_sec": null,
+   "is_short": true,
+   "published_at": "2026-11-22T11:42:00+00:00",
+   "outlier_multiple": null,
+   "views_per_hour": 16688.8
+  },
+  {
+   "video_id": "BV1ugy3z3E6W",
+   "platform": "bilibili",
+   "run_id": "20261125-210938",
+   "game_ids": [
+    "honkai_star_rail"
+   ],
+   "channel_id": "我不是赤寒",
+   "title": "什么叫抽个卡给国家电网搬来了？",
+   "views": 1167673,
+   "likes": 70017,
+   "comments": 2082,
+   "coins": 2790,
+   "favorites": 13522,
+   "duration_sec": null,
+   "is_short": true,
+   "published_at": "2026-11-22T14:18:00+00:00",
+   "outlier_multiple": null,
+   "views_per_hour": 16701.8
+  },
+  {
+   "video_id": "BV13GyfzLEFm",
+   "platform": "bilibili",
+   "run_id": "20261125-210938",
+   "game_ids": [
+    "honor_of_kings"
+   ],
+   "channel_id": "磊哥游戏",
+   "title": "打的太菜了对面都懒的管我，团战只打我队友",
+   "views": 332530,
+   "likes": 25427,
+   "comments": 793,
+   "coins": 980,
+   "favorites": 678,
+   "duration_sec": null,
+   "is_short": true,
+   "published_at": "2026-11-25T10:00:00+00:00",
+   "outlier_multiple": null,
+   "views_per_hour": 150256.6
+  },
+  {
+   "video_id": "BV1aoyQzwEx9",
+   "platform": "bilibili",
+   "run_id": "20261125-210938",
+   "game_ids": [
+    "arknights_endfield"
+   ],
+   "channel_id": "明日方舟终末地",
+   "title": "《明日方舟：终末地》干员叙事 [小刻：很新的旅程]",
+   "views": 1121329,
+   "likes": 59760,
+   "comments": 5136,
+   "coins": 11258,
+   "favorites": 9174,
+   "duration_sec": null,
+   "is_short": true,
+   "published_at": "2026-11-24T12:30:00+00:00",
+   "outlier_multiple": null,
+   "views_per_hour": 47287.4
+  },
+  {
+   "video_id": "BV1t1yDzSEKc",
+   "platform": "bilibili",
+   "run_id": "20261125-210938",
+   "game_ids": [
+    "league_of_legends"
+   ],
+   "channel_id": "神探帅硫克",
+   "title": "我打Faker??真的假的",
+   "views": 583242,
+   "likes": 41081,
+   "comments": 958,
+   "coins": 1871,
+   "favorites": 2533,
+   "duration_sec": null,
+   "is_short": true,
+   "published_at": "2026-11-23T18:28:00+00:00",
+   "outlier_multiple": null,
+   "views_per_hour": 13971.1
+  },
+  {
+   "video_id": "BV1XKyfzEEjT",
+   "platform": "bilibili",
+   "run_id": "20261125-210938",
+   "game_ids": [
+    "delta_force"
+   ],
+   "channel_id": "十六van游戏",
+   "title": "冰火钩子组合惩罚外挂超兽！猛攻怪兽！还有野人！",
+   "views": 432331,
+   "likes": 21011,
+   "comments": 687,
+   "coins": 1656,
+   "favorites": 5398,
+   "duration_sec": null,
+   "is_short": true,
+   "published_at": "2026-11-24T19:22:00+00:00",
+   "outlier_multiple": null,
+   "views_per_hour": 25663.1
+  },
+  {
+   "video_id": "BV1oEy5zaE8y",
+   "platform": "bilibili",
+   "run_id": "20261125-210938",
+   "game_ids": [
+    "league_of_legends"
+   ],
+   "channel_id": "滔搏电子竞技俱乐部",
+   "title": "英雄联盟手游携手JackeyLove，诠释「终末锋芒 德莱文」永远向前的进攻美学！",
+   "views": 1296942,
+   "likes": 75706,
+   "comments": 2622,
+   "coins": 1230,
+   "favorites": 4517,
+   "duration_sec": null,
+   "is_short": true,
+   "published_at": "2026-11-23T12:00:00+00:00",
+   "outlier_multiple": null,
+   "views_per_hour": 26900.2
+  },
+  {
+   "video_id": "BV1HG1FzPEC3",
+   "platform": "bilibili",
+   "run_id": "20261125-210938",
+   "game_ids": [
+    "gta6"
+   ],
+   "channel_id": "黑椒墨鱼",
+   "title": "你可知道GTA6是个恐怖游戏？看完后不敢自己出门了【彩蛋艺术馆】",
+   "views": 387454,
+   "likes": 16096,
+   "comments": 743,
+   "coins": 1414,
+   "favorites": 5604,
+   "duration_sec": null,
+   "is_short": true,
+   "published_at": "2026-11-24T17:35:00+00:00",
+   "outlier_multiple": null,
+   "views_per_hour": 20797.6
+  },
+  {
+   "video_id": "BV1dcyfzQE1h",
+   "platform": "bilibili",
+   "run_id": "20261125-210938",
+   "game_ids": [
+    "honor_of_kings"
+   ],
+   "channel_id": "撸sir兰陵君",
+   "title": "这期看完拳头硬了",
+   "views": 299218,
+   "likes": 16383,
+   "comments": 425,
+   "coins": 1228,
+   "favorites": 989,
+   "duration_sec": null,
+   "is_short": true,
+   "published_at": "2026-11-24T21:09:00+00:00",
+   "outlier_multiple": null,
+   "views_per_hour": 19864.3
+  },
+  {
+   "video_id": "BV1NzyHzwEKB",
+   "platform": "bilibili",
+   "run_id": "20261125-210938",
+   "game_ids": [
+    "gta6"
+   ],
+   "channel_id": "就叫Re",
+   "title": "游戏自由度太高也不是什么好事",
+   "views": 4415921,
+   "likes": 231021,
+   "comments": 5591,
+   "coins": 5936,
+   "favorites": 27074,
+   "duration_sec": null,
+   "is_short": true,
+   "published_at": "2026-11-23T14:48:00+00:00",
+   "outlier_multiple": null,
+   "views_per_hour": 97239.0
+  },
+  {
+   "video_id": "BV1JV1FzYE1R",
+   "platform": "bilibili",
+   "run_id": "20261125-210938",
+   "game_ids": [
+    "delta_force"
+   ],
+   "channel_id": "手残の馒头",
+   "title": "被盗号了！那就用一把R93夺回失去的一切！",
+   "views": 215433,
+   "likes": 8652,
+   "comments": 904,
+   "coins": 1788,
+   "favorites": 1886,
+   "duration_sec": null,
+   "is_short": true,
+   "published_at": "2026-11-24T18:00:00+00:00",
+   "outlier_multiple": null,
+   "views_per_hour": 11828.5
+  },
+  {
+   "video_id": "BV1neyBzzExo",
+   "platform": "bilibili",
+   "run_id": "20261125-210938",
+   "game_ids": [
+    "arknights_endfield"
+   ],
+   "channel_id": "绝命笋干",
+   "title": "【终末地一条龙全收集】武陵-旧水坝丨宝箱丨醚质丨塔晶丨装备箱丨档案丨明日方舟终末地",
+   "views": 89323,
+   "likes": 3146,
+   "comments": 225,
+   "coins": 811,
+   "favorites": 1304,
+   "duration_sec": null,
+   "is_short": true,
+   "published_at": "2026-11-25T13:14:00+00:00",
+   "outlier_multiple": null,
+   "views_per_hour": 89323.0
+  },
+  {
+   "video_id": "BV1nqyBzqETC",
+   "platform": "bilibili",
+   "run_id": "20261125-210938",
+   "game_ids": [],
+   "channel_id": "异人之下游戏",
+   "title": "异人之下游戏 × 暗区突围｜双“诚”之战",
+   "views": 368131,
+   "likes": 15747,
+   "comments": 1048,
+   "coins": 1093,
+   "favorites": 2296,
+   "duration_sec": null,
+   "is_short": true,
+   "published_at": "2026-11-25T13:28:00+00:00",
+   "outlier_multiple": null,
+   "views_per_hour": 368131.0
+  },
+  {
+   "video_id": "BV1MoyVzmEps",
+   "platform": "bilibili",
+   "run_id": "20261125-210938",
+   "game_ids": [
+    "minecraft",
+    "eggy_party"
+   ],
+   "channel_id": "江小江wdl",
+   "title": "因为一瓶饮料，你一路修成了大罗金仙",
+   "views": 1276730,
+   "likes": 66566,
+   "comments": 4004,
+   "coins": 578,
+   "favorites": 7282,
+   "duration_sec": null,
+   "is_short": true,
+   "published_at": "2026-11-22T15:33:00+00:00",
+   "outlier_multiple": null,
+   "views_per_hour": 18594.1
+  },
+  {
+   "video_id": "BV1EzyfzoEFT",
+   "platform": "bilibili",
+   "run_id": "20261125-210938",
+   "game_ids": [
+    "league_of_legends"
+   ],
+   "channel_id": "菌儿rikushi",
+   "title": "夺冠了我们就这么笑！！",
+   "views": 388922,
+   "likes": 16223,
+   "comments": 719,
+   "coins": 1831,
+   "favorites": 3032,
+   "duration_sec": null,
+   "is_short": true,
+   "published_at": "2026-11-24T19:00:00+00:00",
+   "outlier_multiple": null,
+   "views_per_hour": 22594.6
+  },
+  {
+   "video_id": "BV1rbyfzeEab",
+   "platform": "bilibili",
+   "run_id": "20261125-210938",
+   "game_ids": [
+    "arknights"
+   ],
+   "channel_id": "若雨希安",
+   "title": "假如干员每次造成伤害获得10%攻击力,哪些干员可以击败1400w血的熊 上篇",
+   "views": 349404,
+   "likes": 12648,
+   "comments": 1186,
+   "coins": 2333,
+   "favorites": 2728,
+   "duration_sec": null,
+   "is_short": true,
+   "published_at": "2026-11-24T18:16:00+00:00",
+   "outlier_multiple": null,
+   "views_per_hour": 19469.3
+  },
+  {
+   "video_id": "BV1Lb1wzcEv2",
+   "platform": "bilibili",
+   "run_id": "20261125-210938",
+   "game_ids": [
+    "arknights_endfield"
+   ],
+   "channel_id": "让你爱上学习",
+   "title": "小刻：飞刻时代，沸腾期待！干员实战攻略，武器装备潜能配队全面测评",
+   "views": 248173,
+   "likes": 6383,
+   "comments": 3295,
+   "coins": 1569,
+   "favorites": 1944,
+   "duration_sec": null,
+   "is_short": true,
+   "published_at": "2026-11-25T11:45:00+00:00",
+   "outlier_multiple": null,
+   "views_per_hour": 248173.0
+  },
+  {
+   "video_id": "BV15HyZzJEbS",
+   "platform": "bilibili",
+   "run_id": "20261125-210938",
+   "game_ids": [
+    "gta6"
+   ],
+   "channel_id": "基轮同学",
+   "title": "GTA6的战斗机被我击落！甚至被吓到不敢进攻我！",
+   "views": 313769,
+   "likes": 13577,
+   "comments": 714,
+   "coins": 1163,
+   "favorites": 1404,
+   "duration_sec": null,
+   "is_short": true,
+   "published_at": "2026-11-24T13:00:00+00:00",
+   "outlier_multiple": null,
+   "views_per_hour": 13516.9
+  },
+  {
+   "video_id": "BV1j3yHznECD",
+   "platform": "bilibili",
+   "run_id": "20261125-210938",
+   "game_ids": [],
+   "channel_id": "蓝色星原旅谣",
+   "title": "《蓝色星原：旅谣》涂山小玉PV | 一笺桃花",
+   "views": 4216597,
+   "likes": 143387,
+   "comments": 5806,
+   "coins": 37672,
+   "favorites": 44990,
+   "duration_sec": null,
+   "is_short": true,
+   "published_at": "2026-11-24T12:00:00+00:00",
+   "outlier_multiple": null,
+   "views_per_hour": 174145.4
+  },
+  {
+   "video_id": "BV1U4yJzaEBo",
+   "platform": "bilibili",
+   "run_id": "20261125-210938",
+   "game_ids": [
+    "honor_of_kings"
+   ],
+   "channel_id": "好耶复制流打野",
+   "title": "孩子们...我是贵族九啊。风格原创@一条牢超哦233",
+   "views": 1333973,
+   "likes": 54599,
+   "comments": 1211,
+   "coins": 2502,
+   "favorites": 8855,
+   "duration_sec": null,
+   "is_short": true,
+   "published_at": "2026-11-23T13:00:00+00:00",
+   "outlier_multiple": null,
+   "views_per_hour": 28254.3
+  },
+  {
+   "video_id": "BV1epy5zfE1k",
+   "platform": "bilibili",
+   "run_id": "20261125-210938",
+   "game_ids": [
+    "valorant"
+   ],
+   "channel_id": "欧寂o",
+   "title": "bro开麦一直指挥自己...",
+   "views": 1130973,
+   "likes": 47453,
+   "comments": 967,
+   "coins": 856,
+   "favorites": 4626,
+   "duration_sec": null,
+   "is_short": true,
+   "published_at": "2026-11-23T17:00:00+00:00",
+   "outlier_multiple": null,
+   "views_per_hour": 26172.0
+  },
+  {
+   "video_id": "BV1wYsq6kEeg",
+   "platform": "bilibili",
+   "run_id": "20261125-210938",
+   "game_ids": [],
+   "channel_id": "异环",
+   "title": "《异环》Exe角色PV丨追杀计数",
+   "views": 928998,
+   "likes": 27093,
+   "comments": 2191,
+   "coins": 2607,
+   "favorites": 4727,
+   "duration_sec": null,
+   "is_short": true,
+   "published_at": "2026-11-25T12:00:00+00:00",
+   "outlier_multiple": null,
+   "views_per_hour": 928998.0
+  },
+  {
+   "video_id": "BV1NbyQznE34",
+   "platform": "bilibili",
+   "run_id": "20261125-210938",
+   "game_ids": [
+    "honor_of_kings"
+   ],
+   "channel_id": "肖洋哥",
+   "title": "《王者新模式》《全员一滴血》",
+   "views": 1081904,
+   "likes": 30656,
+   "comments": 1002,
+   "coins": 1120,
+   "favorites": 8030,
+   "duration_sec": null,
+   "is_short": true,
+   "published_at": "2026-11-24T02:50:00+00:00",
+   "outlier_multiple": null,
+   "views_per_hour": 32412.0
+  },
+  {
+   "video_id": "BV1zXyvzfEB7",
+   "platform": "bilibili",
+   "run_id": "20261125-210938",
+   "game_ids": [],
+   "channel_id": "沉默寡言白河愁",
+   "title": "全国前10黄金矿工都匹配在一起了！",
+   "views": 2159136,
+   "likes": 47815,
+   "comments": 2928,
+   "coins": 2711,
+   "favorites": 7662,
+   "duration_sec": null,
+   "is_short": true,
+   "published_at": "2026-11-22T11:35:00+00:00",
+   "outlier_multiple": null,
+   "views_per_hour": 29728.0
+  },
+  {
+   "video_id": "BV15gyJzVEzy",
+   "platform": "bilibili",
+   "run_id": "20261125-210938",
+   "game_ids": [
+    "identity_v"
+   ],
+   "channel_id": "网易第五人格手游",
+   "title": "全新【求生者】出版编辑故事视频爆料：——“那是我第一次看到，自己本可以成为的样子……”",
+   "views": 1816395,
+   "likes": 26744,
+   "comments": 5025,
+   "coins": 2402,
+   "favorites": 5068,
+   "duration_sec": null,
+   "is_short": true,
+   "published_at": "2026-11-23T13:00:00+00:00",
+   "outlier_multiple": null,
+   "views_per_hour": 38472.3
+  },
+  {
+   "video_id": "BV1931AzhE1q",
+   "platform": "bilibili",
+   "run_id": "20261125-210938",
+   "game_ids": [],
+   "channel_id": "狩SHOU",
+   "title": "《狩》首曝PV&实机演示丨动作要秀，有狩就行！",
+   "views": 3963811,
+   "likes": 46007,
+   "comments": 2485,
+   "coins": 1495,
+   "favorites": 6935,
+   "duration_sec": null,
+   "is_short": true,
+   "published_at": "2026-11-25T11:00:00+00:00",
+   "outlier_multiple": null,
+   "views_per_hour": 3267557.6
+  }
+ ],
+ "topic_scores": [
+  {
+   "run_id": "20261125-210938",
+   "platform": "bilibili",
+   "game_id": "zenless_zone_zero",
+   "demand": 0.0486,
+   "outlier": 0.8876,
+   "freshness": 1.0,
+   "competition": 0.125,
+   "score": 1.811,
+   "videos_in_pool": 1
+  },
+  {
+   "run_id": "20261125-210938",
+   "platform": "bilibili",
+   "game_id": "league_of_legends",
+   "demand": 0.8592,
+   "outlier": 0.3715,
+   "freshness": 1.0,
+   "competition": 1.0,
+   "score": 1.231,
+   "videos_in_pool": 8
+  },
+  {
+   "run_id": "20261125-210938",
+   "platform": "bilibili",
+   "game_id": "phantom_blade_zero",
+   "demand": 0.07,
+   "outlier": 0.4646,
+   "freshness": 1.0,
+   "competition": 0.375,
+   "score": 1.159,
+   "videos_in_pool": 3
+  },
+  {
+   "run_id": "20261125-210938",
+   "platform": "bilibili",
+   "game_id": "arknights",
+   "demand": 0.0173,
+   "outlier": 0.2293,
+   "freshness": 1.0,
+   "competition": 0.125,
+   "score": 1.122,
+   "videos_in_pool": 1
+  },
+  {
+   "run_id": "20261125-210938",
+   "platform": "bilibili",
+   "game_id": "eggy_party",
+   "demand": 0.0634,
+   "outlier": 0.2502,
+   "freshness": 0.9166,
+   "competition": 0.125,
+   "score": 1.105,
+   "videos_in_pool": 1
+  },
+  {
+   "run_id": "20261125-210938",
+   "platform": "bilibili",
+   "game_id": "valorant",
+   "demand": 0.0561,
+   "outlier": 0.2105,
+   "freshness": 0.86,
+   "competition": 0.125,
+   "score": 1.002,
+   "videos_in_pool": 1
+  },
+  {
+   "run_id": "20261125-210938",
+   "platform": "bilibili",
+   "game_id": "honkai_star_rail",
+   "demand": 0.058,
+   "outlier": 0.3213,
+   "freshness": 0.7104,
+   "competition": 0.125,
+   "score": 0.965,
+   "videos_in_pool": 1
+  },
+  {
+   "run_id": "20261125-210938",
+   "platform": "bilibili",
+   "game_id": "minecraft",
+   "demand": 0.125,
+   "outlier": 0.4351,
+   "freshness": 0.6286,
+   "competition": 0.25,
+   "score": 0.939,
+   "videos_in_pool": 2
+  },
+  {
+   "run_id": "20261125-210938",
+   "platform": "bilibili",
+   "game_id": "delta_force",
+   "demand": 0.0866,
+   "outlier": 0.3399,
+   "freshness": 1.0,
+   "competition": 0.5,
+   "score": 0.927,
+   "videos_in_pool": 4
+  },
+  {
+   "run_id": "20261125-210938",
+   "platform": "bilibili",
+   "game_id": "identity_v",
+   "demand": 0.0902,
+   "outlier": 0.096,
+   "freshness": 0.835,
+   "competition": 0.125,
+   "score": 0.896,
+   "videos_in_pool": 1
+  },
+  {
+   "run_id": "20261125-210938",
+   "platform": "bilibili",
+   "game_id": "honor_of_kings",
+   "demand": 0.1513,
+   "outlier": 0.2408,
+   "freshness": 1.0,
+   "competition": 0.5,
+   "score": 0.892,
+   "videos_in_pool": 4
+  },
+  {
+   "run_id": "20261125-210938",
+   "platform": "bilibili",
+   "game_id": "gta6",
+   "demand": 0.527,
+   "outlier": 0.2763,
+   "freshness": 0.8461,
+   "competition": 0.875,
+   "score": 0.774,
+   "videos_in_pool": 7
+  },
+  {
+   "run_id": "20261125-210938",
+   "platform": "bilibili",
+   "game_id": "arknights_endfield",
+   "demand": 0.2302,
+   "outlier": 0.3507,
+   "freshness": 1.0,
+   "competition": 0.875,
+   "score": 0.706,
+   "videos_in_pool": 7
+  }
+ ],
+ "analyses": [
+  {
+   "analysis_id": "20261125-210938:bilibili",
+   "run_id": "20261125-210938",
+   "platform": "bilibili",
+   "game_id": null,
+   "summary": "점수 1위는 绝区零(젠레스 존 제로, 1.811)이지만 풀 안에 영상이 1개뿐이라 단독 근거로 쓰기엔 표본이 너무 작습니다. 표본과 이벤트·핫키워드를 함께 보면 영상 8개, 핫키워드 3개, 공식 활동 2건을 가진 英雄联盟(리그 오브 레전드)이 가장 안정적인 기획 대상입니다. 영상 7개와 핫키워드 2개를 가진 明日方舟：终末地(명일방주: 엔드필드)는 점수 상위 5개에는 없지만 보조 후보로 볼 만합니다. 핫키워드 30개 중 게임 관련은 6개이고 선행 신호(풀 안 영상 1개 이하)는 없어서, 이번 스캔에서 블루오션으로 확정할 게임은 없습니다. 영상 50개가 전부 \"1분 미만\"으로 집계되어 길이 데이터가 이상하므로 길이 추천은 보류합니다.",
+   "claims": [
+    {
+     "claim_ko": "점수 1위 绝区零(1.811)은 풀 내 영상이 1개뿐이라 표본이 작아 단독 기획 근거로 부족합니다. 안정적인 기획 대상은 英雄联盟(리그 오브 레전드)입니다.",
+     "evidence": [
+      "get_game_scores: zenless_zone_zero score 1.811, videos_in_pool 1, demand 0.0486, trending_weight 0.0",
+      "get_game_scores: league_of_legends score 1.231, videos_in_pool 8, demand 0.8592, trending_weight 2.47",
+      "get_engagement_ranking: BV1esyZz7ExF 배수 2.66"
+     ]
+    },
+    {
+     "claim_ko": "리그 오브 레전드는 핫키워드 3개와 공식 활동 2건이 겹치지만, 반응률은 풀 중앙값을 크게 넘지 않습니다. 수요 근거가 강하고 이상치 근거는 약합니다.",
+     "evidence": [
+      "get_hot_keyword_signals: BLG赛前宣传片是怎么拍的 3위, 将加盟LPL的韩援新面孔有哪些 4위, 管泽元对话BLG深扒夺冠幕后 12위",
+      "get_event_signals: mission 4074201 영상 2개 조회수 2,497,733; mission 4071515 영상 2개 조회수 1,793,397",
+      "get_game_scores: league_of_legends engagement_multiple 1.11",
+      "get_engagement_ranking(league_of_legends): BV1SryzzXEgy 배수 1.687"
+     ]
+    },
+    {
+     "claim_ko": "이벤트형 콘텐츠 비중이 큽니다. 공식 활동 영상은 풀의 44%입니다. 명일방주: 엔드필드는 점수 상위 5개에는 없지만 공식 활동 3개 영상, 핫키워드 2개, 영상 7개를 갖춘 보조 후보입니다.",
+     "evidence": [
+      "get_event_signals: mission_video_share 0.44",
+      "get_event_signals: 明日方舟终末地创作者应援计划 videos 3, total_view 475,308",
+      "get_hot_keyword_signals: 终末地新干员小刻EP 15위, 终末地小刻新角色攻略 30위",
+      "get_game_scores: arknights_endfield score 0.706, videos_in_pool 7, engagement_multiple 1.05"
+     ]
+    },
+    {
+     "claim_ko": "이번 스캔에서 확인된 선행 신호(블루오션 키워드)는 없습니다. 핫키워드 30개 중 게임 관련 6개는 모두 풀 내 영상이 7~8개입니다.",
+     "evidence": [
+      "get_hot_keyword_signals: game_related 6, 모든 signals leading_signal=false, videos_in_pool 7~8",
+      "normalizer 요약: 핫키워드 40개의 게임/비게임 분류 미완료, 풀 영상 11개(22%) 게임 미매칭"
+     ]
+    },
+    {
+     "claim_ko": "반응률 상위 영상은 PV보다 시리즈 해설·캐릭터 영상·선수 서사형 콘텐츠에 몰려 있습니다. 상위 영상의 조회수는 낮은 편부터 높은 편까지 폭이 넓어서, 반응률이 조회수와 같은 순서로 움직이지 않습니다.",
+     "evidence": [
+      "get_engagement_ranking: BV1eSyBzbEsc 배수 2.47(조회수 100,969), BV1esyZz7ExF 배수 2.66(조회수 979,234), BV1JpyazXEUD 배수 2.37(조회수 2,603,216)",
+      "get_engagement_ranking: 풀 중앙값 반응률 0.0782",
+      "get_top_titles: BV1SryzzXEgy 공유율 0.0499(get_engagement_ranking)"
+     ]
+    },
+    {
+     "claim_ko": "길이 분석은 신뢰하기 어렵습니다. 영상 50개가 전부 '1분 미만'으로 집계되어 구간 비교가 불가능하며, 길이 필드 수집·변환 오류 가능성을 확인해야 합니다.",
+     "evidence": [
+      "get_duration_type_distribution: 1분 미만 count 50, 나머지 구간 count 0",
+      "get_duration_type_distribution(league_of_legends): 1분 미만 count 8, 나머지 0"
+     ]
+    }
+   ]
+  }
+ ],
+ "plans": [
+  {
+   "plan_id": "bili-20261125-210938-league_of_legends-v2",
+   "run_id": "20261125-210938",
+   "platform": "bilibili",
+   "game_id": "league_of_legends",
+   "plan": {
+    "content_type": "分析",
+    "target_duration_sec": 55,
+    "hooks": [
+     {
+      "type": "先看结果",
+      "line_zh": "先看这期的整理：热搜里有三个和BLG、韩援相关的词，我们逐个对照视频来看。"
+     },
+     {
+      "type": "提问",
+      "line_zh": "将加盟LPL的韩援新面孔有哪些？BLG的赛前宣传片又是怎么拍出来的？"
+     },
+     {
+      "type": "挑战/反转",
+      "line_zh": "夺冠只看决赛就够了吗？热搜里还有人在问宣传片怎么拍、夺冠幕后怎么聊。"
+     }
+    ],
+    "selected_hook": "提问",
+    "script_sections": [
+     {
+      "section": "开场",
+      "start_sec": 0,
+      "end_sec": 6,
+      "points_zh": "抛出问题：将加盟LPL的韩援新面孔有哪些？BLG赛前宣传片是怎么拍的？说明本期把相关热搜词和视频放在一起整理。"
+     },
+     {
+      "section": "问题",
+      "start_sec": 6,
+      "end_sec": 14,
+      "points_zh": "说明为什么整理这三个话题：它们是近期B站热搜词（BLG赛前宣传片、将加盟LPL的韩援新面孔、管泽元对话BLG深扒夺冠幕后），且英雄联盟赛事活动4074201下有BLG夺冠相关视频。"
+     },
+     {
+      "section": "正文",
+      "start_sec": 14,
+      "end_sec": 43,
+      "points_zh": "观察点①（约10秒）：韩援加盟LPL，只列官方公布的名单和来源，名单以制作时官方信息为准。观察点②（约10秒）：BLG赛前宣传片的看点，只引用已公开的视频内容并标注出处。观察点③（约9秒）：BLG夺冠幕后，对照活动视频《【BLG夺冠VLOG】这是属于我们的冠军记忆》和视频播客《元来如此 EP.10》的公开内容。若加入韩国网友评论角度，须制作前人工收集并在画面标注“据评论区”及来源，否则不写。"
+     },
+     {
+      "section": "CTA",
+      "start_sec": 43,
+      "end_sec": 51,
+      "points_zh": "请一键三连（点赞、投币、收藏）并关注；弹幕告诉我们你最想了解哪位韩援或哪个幕后故事；投稿时带上活动话题标签“英雄联盟赛事”。"
+     },
+     {
+      "section": "结尾",
+      "start_sec": 51,
+      "end_sec": 55,
+      "points_zh": "一句话回顾三个观察点，预告下期继续整理LPL与LCK的赛事动向。"
+     }
+    ],
+    "titles": [
+     "【LPL热搜整理】韩援新面孔与BLG夺冠幕后，一次看清",
+     "将加盟LPL的韩援新面孔有哪些？顺便聊聊BLG赛前宣传片",
+     "【英雄联盟】BLG夺冠之后：赛前宣传片、幕后故事与韩援动向"
+    ],
+    "thumbnail_brief": {
+     "aspect_ratio": "16:9",
+     "text_zh": "韩援加盟LPL？BLG夺冠幕后",
+     "style_zh": "左右分屏构图：左侧放官方授权的BLG夺冠画面或自制图标，右侧放问号和“LPL”字样。深蓝底配金色大字，数字和关键词用黄色高亮。人物表情自信、略带好奇，不使用夸张表情。文字不超过10个字，不出现播放量或排名承诺。"
+    },
+    "copyright_checklist": [
+     "游戏画面：英雄联盟画面和赛事素材须遵守官方二次创作与视频发布规范，只做解说和评论用途，不用于商业推广。",
+     "BGM：使用B站音乐库或已获授权的无版权音乐，不直接使用赛事转播或他人视频里的原声。",
+     "他人素材：引用BLG夺冠VLOG、视频播客《元来如此 EP.10》等他人视频时，只截取短片段，画面标注作者和来源，并取得授权或确认符合合理引用；不转载完整视频。",
+     "赛事转播画面：LPL/LCK比赛转播画面的权利属于赛事方和转播方，使用前须确认授权，否则改用自制图示或文字说明。",
+     "韩援名单和选手信息：只引用官方公布的内容并标注发布日期，不写未经证实的转会传闻；涉及韩国网友评论时，须记录来源和收集时间，并避免暴露用户ID。",
+     "活动参与：投稿时带上活动话题标签“英雄联盟赛事”（对应活动4074201），并检查该活动当期的投稿规则。"
+    ],
+    "rationale_zh": "选择英雄联盟的原因：Score_bili为1.231，视频池内有8个视频，是样本最大的一个（来源：get_plan_context.score）。热搜词有3个：BLG赛前宣传片是怎么拍的第3位，将加盟LPL的韩援新面孔有哪些第4位，管泽元对话BLG深扒夺冠幕后第12位（来源：get_plan_context.analysis.claims）。官方活动4074201有2个视频，总播放2497733（来源：get_plan_context.official_activities）。互动率相对池中位数为1.11倍，异常值信号较弱（来源：get_plan_context.score），所以本案以“整理热搜问题”为切入点，不依赖爆款判断。修改说明：上一版把“韩国观众的关注点”当作既定结论，但已查证的数据（视频池、热搜、活动）全部来自国内B站，没有任何韩国观众评论或热度数据。因此本版删去所有结论式表述，不再断言韩国观众更关心什么，钩子只用提问或整理的口吻。标题与正文三个观察点一一对应（韩援名单、赛前宣传片、夺冠幕后）。若要加入韩国网友评论角度，须制作前人工收集评论并标注来源，脚本中写“据评论区”；没有收集到就不写。选择“提问”钩子：它直接使用已验证的热搜词，不需要未经证实的论断。内容类型选“分析”：对应e스포츠的映射（来源：get_plan_context.content_type_map）。时长：视频池长度分布里只有“1分钟以内”一个有样本的区间，共8个（来源：get_plan_context.duration_distribution），但分析师指出50个视频全部落在该区间，疑似长度字段采集或转换有误（来源：get_plan_context.analysis.duration_advice）。因此55秒只是满足规则的暂定值，不是有效的长度推荐，制作前须先核实长度数据。活动标签：tags_zh已加入“英雄联盟赛事”，对应aside_official_topics中event_id 4074201（来源：get_plan_context.aside_official_topics），与CTA一致。本案不预测播放或互动表现。",
+    "platform_extras": {
+     "activity_mission_id": 4074201,
+     "tags_zh": [
+      "英雄联盟赛事",
+      "英雄联盟",
+      "BLG",
+      "LPL",
+      "韩援"
+     ]
+    },
+    "schema": "plan-v1",
+    "plan_id": "bili-20261125-210938-league_of_legends-v2",
+    "platform": "bilibili",
+    "language": "zh",
+    "game": "英雄联盟",
+    "game_id": "league_of_legends",
+    "score_reference": {
+     "score": 1.231,
+     "components": {
+      "demand": 0.8592,
+      "outlier": 0.3715,
+      "freshness": 1.0,
+      "competition": 1.0
+     },
+     "note": "仅供排序参考，非播放量预测"
+    },
+    "data_sources": [
+     {
+      "name": "Aside 영상",
+      "origin": "aside",
+      "endpoint": "aside:bilibili_2026-11-25.json",
+      "file": "bilibili_2026-11-25.json",
+      "age_h": 0.0,
+      "encoding": "utf-8"
+     },
+     {
+      "name": "Aside 핫키워드",
+      "origin": "aside",
+      "file": "bilibili_2026-11-25.json",
+      "age_h": 0.0
+     },
+     {
+      "name": "Aside 공식 활동·화제",
+      "origin": "aside",
+      "file": "bilibili_2026-11-25.json",
+      "age_h": 0.0
+     },
+     {
+      "name": "공개 API · 실시간 핫서치",
+      "origin": "live",
+      "endpoint": "x/web-interface/wbi/search/square",
+      "fetched_at": "2026-11-25T12:09:44+00:00"
+     }
+    ],
+    "status": "validated"
+   },
+   "status": "validated"
+  }
+ ],
+ "uploads": [],
+ "performance": []
+}

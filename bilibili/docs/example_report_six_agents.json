@@ -1,0 +1,1093 @@
+{
+  "task_id": "local-demo",
+  "intent": "trend_scan",
+  "summary_ko": "이번 7일 스캔에서 Score_bili 1위는 젠레스 존 제로(1.811)지만 풀 내 영상이 1개뿐이라 관찰 후보로만 두는 게 좋습니다. 영상 8개, 핫키워드 3개, 공식 활동 2건이 겹치는 리그 오브 레전드를 기획 대상으로 골라 기획안(bili-20261125-210938-league_of_legends-v2)이 검증을 통과했습니다. 이번 주에는 한국 선수의 LPL 합류, BLG 우승 비하인드, Zeus 복귀 서사를 한국 시청자 시점으로 정리하는 영상을 우선 준비하세요. 영상 소스 저작권도 미리 확인하세요. 보조로는 샤오커 공략 수요가 보이는 명일방주: 엔드필드의 공략형 콘텐츠를 살펴볼 만합니다. 이번 스캔에서 확인된 선행 신호(블루오션 키워드)는 없습니다.",
+  "opportunities": [
+    {
+      "game_zh": "英雄联盟",
+      "game_ko": "리그 오브 레전드",
+      "reason_ko": "Score_bili 1.231로 2위입니다. 풀 내 영상은 8개로 표본이 가장 큽니다. demand 0.859, trending_weight 2.47이고 핫키워드 3개(BLG 선전 영상 3위, LPL 한국 선수 4위, BLG 우승 비하인드 12위)와 연결됩니다. 공식 활동(BLG 우승 4074201, LCK 4071515)도 있습니다. 다만 반응률은 풀 중앙값 대비 1.11배 수준이라 강한 이상치는 아닙니다. Zeus 복귀 영상(BV1SryzzXEgy)만 1.69배(게임 내 기준)입니다. 가장 안정적인 기획 대상입니다.",
+      "score": 1.231,
+      "components": {
+        "demand": 0.8592,
+        "outlier": 0.3715,
+        "freshness": 1.0,
+        "competition": 1.0
+      }
+    },
+    {
+      "game_zh": "绝区零",
+      "game_ko": "젠레스 존 제로",
+      "reason_ko": "Score_bili 1.811로 1위입니다. 挽昼 캐릭터 영상(BV1esyZz7ExF)의 반응률은 풀 중앙값 대비 2.66배이고 코인율 배수는 9.38입니다. 하지만 풀 내 영상이 1개뿐이고 demand 0.049, trending_weight 0입니다. 점수가 높은 건 이상치 한 편 때문일 수 있습니다. 단독 기획 근거로 쓰지 말고 관찰 후보로 두세요.",
+      "score": 1.811,
+      "components": {
+        "demand": 0.0486,
+        "outlier": 0.8876,
+        "freshness": 1.0,
+        "competition": 0.125
+      }
+    },
+    {
+      "game_zh": "影之刃零",
+      "game_ko": "팬텀 블레이드 제로",
+      "reason_ko": "Score_bili 1.159입니다. 영상 3개, 이벤트 보너스(影之刃零创作者激励 4071593)가 있습니다. 시리즈형 해설 영상 BV1eSyBzbEsc의 반응률이 2.47배, 코인율이 11.4배로 높습니다. 다만 demand 0.07, 핫키워드는 0개이고 표본이 3개라 보조 후보입니다. 3A 최적화 비교 영상 BV1ifyGz4Edy도 이 게임으로 분류됐는데, 게임 매칭이 정확한지 확인이 필요합니다.",
+      "score": 1.159,
+      "components": {
+        "demand": 0.07,
+        "outlier": 0.4646,
+        "freshness": 1.0,
+        "competition": 0.375
+      }
+    },
+    {
+      "game_zh": "明日方舟",
+      "game_ko": "명일방주",
+      "reason_ko": "Score_bili 1.122이지만 풀 내 영상이 1개이고 반응률은 0.69배로 중앙값 아래입니다. demand 0.017로 신호가 약합니다. 점수 순위에 비해 근거가 부족해 지금은 우선순위가 낮습니다.",
+      "score": 1.122,
+      "components": {
+        "demand": 0.0173,
+        "outlier": 0.2293,
+        "freshness": 1.0,
+        "competition": 0.125
+      }
+    },
+    {
+      "game_zh": "蛋仔派对",
+      "game_ko": "에그파티",
+      "reason_ko": "Score_bili 1.105이고 蛋仔奇思妙想计划(4071523) 이벤트 보너스가 있습니다. 풀 내 영상은 1개, 반응률은 0.75배입니다. 그 영상(조회수 1,276,730)은 我的世界와 같은 활동에 중복 매칭되어 있어 게임 귀속이 불확실합니다. 표본이 작으니 참고용으로만 보세요.",
+      "score": 1.105,
+      "components": {
+        "demand": 0.0634,
+        "outlier": 0.2502,
+        "freshness": 0.9166,
+        "competition": 0.125
+      }
+    }
+  ],
+  "events": [
+    {
+      "kind": "official_activity",
+      "game_zh": "英雄联盟",
+      "evidence": "get_event_signals: 英雄联盟赛事(4074201) 영상 2개, 조회수 합 2,497,733. LCK 관련 4071515 영상 2개, 합 1,793,397. 공식 활동 영상이 풀의 44%(mission_video_share 0.44)",
+      "recommendation_ko": "BLG 우승 VLOG·선수 팟캐스트와 LCK 영상이 활동으로 묶여 있습니다. 한국 크리에이터는 LCK/LPL 선수 이적과 BLG 우승 비하인드를 한국 시청자 관점으로 해설하는 기획을 검토하세요."
+    },
+    {
+      "kind": "official_activity",
+      "game_zh": "王者荣耀",
+      "evidence": "get_event_signals: 王者荣耀UP主激励计划(4071656) 영상 3개, 조회수 합 1,713,652",
+      "recommendation_ko": "신규 모드를 다룬 영상이 활동에 참여 중입니다. 한국 시청자 접점은 낮을 수 있으니 모드 소개 쇼츠 정도로 가볍게 참고하세요."
+    },
+    {
+      "kind": "official_activity",
+      "game_zh": "明日方舟：终末地",
+      "evidence": "get_event_signals(aside_official_topics): 明日方舟终末地创作者应援计划 영상 3개, 조회수 합 475,308. lookup_evidence: 7개 영상 중 4074760 미션 참여 2개",
+      "recommendation_ko": "신규 오퍼레이터 小刻 공략·EP와 1.7 기지 건설 공략이 활발합니다. 공략형 롱폼과 캐릭터 소개 쇼츠를 병행해 볼 만합니다."
+    },
+    {
+      "kind": "official_activity",
+      "game_zh": "影之刃零",
+      "evidence": "get_event_signals(aside_official_topics): 影之刃零创作者激励(4071593) 영상 1개, 조회수 329,851",
+      "recommendation_ko": "MOD·시리즈 해설 영상이 활동에 참여 중입니다. 참여 영상이 1개뿐이라 활동 규모를 단정하기는 어렵습니다."
+    },
+    {
+      "kind": "hot_keyword",
+      "game_zh": "英雄联盟",
+      "evidence": "get_hot_keyword_signals: 'BLG赛前宣传片是怎么拍的' 3위, '将加盟LPL的韩援新面孔有哪些' 4위, '管泽元对话BLG深扒夺冠幕后' 12위. 풀 내 영상 8개라 leading_signal=false",
+      "recommendation_ko": "수요는 확인됐지만 이미 영상이 8개 있어 선점형 기회는 아닙니다. 한국 선수 LPL 합류(4위)를 한국어 시점으로 정리하면 차별화할 수 있습니다."
+    },
+    {
+      "kind": "hot_keyword",
+      "game_zh": "明日方舟：终末地",
+      "evidence": "get_hot_keyword_signals: '终末地新干员小刻EP' 15위, '终末地小刻新角色攻略' 30위. 풀 내 영상 7개, leading_signal=false",
+      "recommendation_ko": "小刻 공략 수요가 핫키워드에 잡혔습니다. 풀에 영상이 7개 있어 선행 신호는 아니고, 공략 차별화 포인트(팀 구성·육성)가 필요합니다."
+    },
+    {
+      "kind": "hot_keyword",
+      "game_zh": "侠盗猎车手6",
+      "evidence": "get_hot_keyword_signals: 'GTA6的游戏自由度有多高' 27위. 풀 내 영상 7개, leading_signal=false",
+      "recommendation_ko": "GTA6 자유도 주제가 핫서치 하위권에 있습니다. 소재 참고용으로만 보세요."
+    },
+    {
+      "kind": "leading_signal",
+      "game_zh": "",
+      "evidence": "get_hot_keyword_signals: 게임 관련 핫키워드 6개 모두 leading_signal=false(풀 내 영상 7~8개). normalizer 요약: 핫키워드 40개의 게임/비게임 분류 미완료, 미등록 게임 宝可梦·火影忍者·异环·暗区突围",
+      "recommendation_ko": "이번 스캔에서 확인된 선행 신호(블루오션)는 없습니다. 미등록 게임 4종은 게임 사전에 추가한 뒤 핫키워드를 다시 분류해 재확인하세요."
+    }
+  ],
+  "title_diagnosis": null,
+  "duration_advice": {
+    "recommended_bucket": "판단 보류(길이 데이터 확인 필요)",
+    "reason_ko": "get_duration_type_distribution에서 영상 50개가 전부 '1분 미만'(중앙값 조회수 421,037)이고 1분 이상 구간은 0개입니다. 공략·PV·e스포츠 영상이 모두 1분 미만일 가능성은 낮아 보여서, 길이 필드의 수집·변환 오류를 의심합니다. 구간 비교가 불가능해 특정 길이를 근거 있게 추천할 수 없습니다. 유형별로는 PV·공식 4개의 조회수 중앙값이 2,446,404로 가장 높지만 반응률 근거는 아닙니다.",
+    "distribution": {
+      "duration_buckets": [
+        {
+          "bucket": "1분 미만",
+          "count": 50,
+          "median_view": 421037
+        },
+        {
+          "bucket": "1–3분",
+          "count": 0,
+          "median_view": 0
+        },
+        {
+          "bucket": "3–10분",
+          "count": 0,
+          "median_view": 0
+        },
+        {
+          "bucket": "10–30분",
+          "count": 0,
+          "median_view": 0
+        },
+        {
+          "bucket": "30–60분",
+          "count": 0,
+          "median_view": 0
+        },
+        {
+          "bucket": "60분 이상",
+          "count": 0,
+          "median_view": 0
+        }
+      ],
+      "type_distribution": [
+        {
+          "type": "기타",
+          "count": 36,
+          "median_view": 409892
+        },
+        {
+          "type": "PV·공식",
+          "count": 4,
+          "median_view": 2446404
+        },
+        {
+          "type": "e스포츠",
+          "count": 4,
+          "median_view": 1014665
+        },
+        {
+          "type": "공략",
+          "count": 3,
+          "median_view": 139286
+        },
+        {
+          "type": "실황",
+          "count": 2,
+          "median_view": 210024
+        },
+        {
+          "type": "리뷰·평가",
+          "count": 1,
+          "median_view": 978887
+        }
+      ],
+      "most_common_bucket": "1분 미만",
+      "best_median_bucket(count>=2)": "1분 미만"
+    }
+  },
+  "overseas_trend_cards": [
+    {
+      "source_bvid": "BV1esyZz7ExF",
+      "title_zh": "《绝区零》挽昼角色展示 | 日陨之前",
+      "title_ko": "《젠레스 존 제로》 신규 에이전트 '완주' 캐릭터 영상 | 일식이 오기 전",
+      "why_ko": "get_engagement_ranking: 반응률 중앙값 대비 2.66배, 코인율 배수 9.38, 조회수 979,234. 풀 내 영상이 1개뿐이라 표본은 작습니다.",
+      "adapt_tip_ko": "롱폼: 캐릭터 연출·세계관 포인트를 한국어로 해설하세요. Shorts: 대표 장면 15~30초에 핵심 대사 자막을 붙이세요. 한국 공식 캐릭터명은 확인 후 쓰세요.",
+      "slang_note_ko": ""
+    },
+    {
+      "source_bvid": "BV1eSyBzbEsc",
+      "title_zh": "王老菊教你影之刃15：武圣阿魂",
+      "title_ko": "왕라오쥐의 《팬텀 블레이드 제로》 강좌 15: 무성 아훈",
+      "why_ko": "get_top_titles: 반응률 2.47배(lookup_evidence 게임 내 기준 1.77배), 코인율 배수 11.4. 조회수는 100,969로 작지만 시리즈형 해설의 충성도가 높다는 신호입니다.",
+      "adapt_tip_ko": "롱폼: '강좌 N' 형식의 시리즈로 보스·빌드를 하나씩 다루세요. Shorts: 한 가지 조작 팁을 한 편으로 만드세요. 한국 공식 캐릭터명은 확인이 필요합니다.",
+      "slang_note_ko": "'王老菊教你'는 크리에이터 시리즈명이며 밈은 아닙니다."
+    },
+    {
+      "source_bvid": "BV1SryzzXEgy",
+      "title_zh": "Welcome Back Home, Zeus.",
+      "title_ko": "어서 돌아와, 제우스. LCK 복귀 헌정 영상",
+      "why_ko": "get_engagement_ranking(game=league_of_legends): 반응률 게임 내 1.69배(풀 기준 1.88배), 공유율 0.0499로 풀에서 가장 높은 편. 조회수 362,882.",
+      "adapt_tip_ko": "한국 선수 서사라 현지화 효율이 높습니다. 롱폼: 선수 커리어 타임라인 해설. Shorts: 명장면 컷에 한 줄 자막. 영상 소스 저작권 확인이 필요합니다.",
+      "slang_note_ko": ""
+    },
+    {
+      "source_bvid": "BV1YhyzzhEJU",
+      "title_zh": "《明日方舟：终末地》小刻EP - JUST THE START",
+      "title_ko": "《명일방주: 엔드필드》 신규 오퍼레이터 '샤오커' EP - JUST THE START",
+      "why_ko": "get_top_titles: 반응률 1.78배, 조회수 409,743. 핫키워드 15위·30위(小刻)와 맞물립니다. lookup_evidence 기준 풀 내 7개 영상이 있어 경쟁은 있습니다.",
+      "adapt_tip_ko": "롱폼: EP 소개 후 육성·팀 구성 공략으로 확장하세요. Shorts: 스킬 연출 하이라이트를 쓰세요. 한국 공식 캐릭터명은 확인이 필요합니다.",
+      "slang_note_ko": ""
+    },
+    {
+      "source_bvid": "BV1xoypzBEgd",
+      "title_zh": "当我以名画为灵感制作了一批神器",
+      "title_ko": "명화에서 영감을 받아 마인크래프트 신기(神器)를 만들어 봤다",
+      "why_ko": "get_top_titles: 반응률 1.86배, 조회수 1,241,407. 단 코인율 배수는 0.38로 낮아, 즐겨찾기·좋아요 중심의 반응입니다.",
+      "adapt_tip_ko": "롱폼: 명화 모티프 건축·아이템 제작 과정을 보여 주세요. Shorts: 완성 아이템 연출 컷으로 짧게 만드세요. 중국판 콘텐츠이므로 한국판 적용 가능 여부를 확인하세요.",
+      "slang_note_ko": "'神器'는 '엄청난 아이템'을 뜻하는 일반 표현입니다."
+    }
+  ],
+  "alias_candidates": [
+    {
+      "zh": "蓝色星原：旅谣",
+      "aliases": [
+        "蓝色星原旅谣",
+        "蓝色星原"
+      ],
+      "evidence_title": "《蓝色星原：旅谣》涂山小玉PV | 一笺桃花"
+    },
+    {
+      "zh": "狩",
+      "aliases": [],
+      "evidence_title": "《狩》首曝PV&实机演示丨动作要秀，有狩就行！"
+    },
+    {
+      "zh": "异环",
+      "aliases": [
+        "异环Exe"
+      ],
+      "en": "Neverness to Everness",
+      "evidence_title": "《异环》Exe角色PV丨追杀计数"
+    },
+    {
+      "zh": "异人之下游戏",
+      "aliases": [
+        "异人之下"
+      ],
+      "evidence_title": "异人之下游戏 × 暗区突围｜双“诚”之战"
+    },
+    {
+      "zh": "暗区突围",
+      "aliases": [],
+      "evidence_title": "异人之下游戏 × 暗区突围｜双“诚”之战"
+    },
+    {
+      "zh": "宝可梦",
+      "aliases": [
+        "精灵宝可梦",
+        "POKEMON",
+        "宝可梦朱紫",
+        "宝可梦冠军"
+      ],
+      "en": "Pokémon",
+      "ko": "포켓몬스터",
+      "evidence_title": "mega席多蓝恩和米立龙特性分析，吃吼霸回归【宝可梦冠军】"
+    },
+    {
+      "zh": "火影忍者",
+      "aliases": [
+        "火影手游"
+      ],
+      "en": "Naruto",
+      "ko": "나루토",
+      "evidence_title": "帮玩一个月给1500？亲身试险 揭露骗子套路｜完整全流程｜反诈讲解，套路分析，话术拆解。"
+    }
+  ],
+  "plan": {
+    "content_type": "分析",
+    "target_duration_sec": 55,
+    "hooks": [
+      {
+        "type": "先看结果",
+        "line_zh": "先看这期的整理：热搜里有三个和BLG、韩援相关的词，我们逐个对照视频来看。"
+      },
+      {
+        "type": "提问",
+        "line_zh": "将加盟LPL的韩援新面孔有哪些？BLG的赛前宣传片又是怎么拍出来的？"
+      },
+      {
+        "type": "挑战/反转",
+        "line_zh": "夺冠只看决赛就够了吗？热搜里还有人在问宣传片怎么拍、夺冠幕后怎么聊。"
+      }
+    ],
+    "selected_hook": "提问",
+    "script_sections": [
+      {
+        "section": "开场",
+        "start_sec": 0,
+        "end_sec": 6,
+        "points_zh": "抛出问题：将加盟LPL的韩援新面孔有哪些？BLG赛前宣传片是怎么拍的？说明本期把相关热搜词和视频放在一起整理。"
+      },
+      {
+        "section": "问题",
+        "start_sec": 6,
+        "end_sec": 14,
+        "points_zh": "说明为什么整理这三个话题：它们是近期B站热搜词（BLG赛前宣传片、将加盟LPL的韩援新面孔、管泽元对话BLG深扒夺冠幕后），且英雄联盟赛事活动4074201下有BLG夺冠相关视频。"
+      },
+      {
+        "section": "正文",
+        "start_sec": 14,
+        "end_sec": 43,
+        "points_zh": "观察点①（约10秒）：韩援加盟LPL，只列官方公布的名单和来源，名单以制作时官方信息为准。观察点②（约10秒）：BLG赛前宣传片的看点，只引用已公开的视频内容并标注出处。观察点③（约9秒）：BLG夺冠幕后，对照活动视频《【BLG夺冠VLOG】这是属于我们的冠军记忆》和视频播客《元来如此 EP.10》的公开内容。若加入韩国网友评论角度，须制作前人工收集并在画面标注“据评论区”及来源，否则不写。"
+      },
+      {
+        "section": "CTA",
+        "start_sec": 43,
+        "end_sec": 51,
+        "points_zh": "请一键三连（点赞、投币、收藏）并关注；弹幕告诉我们你最想了解哪位韩援或哪个幕后故事；投稿时带上活动话题标签“英雄联盟赛事”。"
+      },
+      {
+        "section": "结尾",
+        "start_sec": 51,
+        "end_sec": 55,
+        "points_zh": "一句话回顾三个观察点，预告下期继续整理LPL与LCK的赛事动向。"
+      }
+    ],
+    "titles": [
+      "【LPL热搜整理】韩援新面孔与BLG夺冠幕后，一次看清",
+      "将加盟LPL的韩援新面孔有哪些？顺便聊聊BLG赛前宣传片",
+      "【英雄联盟】BLG夺冠之后：赛前宣传片、幕后故事与韩援动向"
+    ],
+    "thumbnail_brief": {
+      "aspect_ratio": "16:9",
+      "text_zh": "韩援加盟LPL？BLG夺冠幕后",
+      "style_zh": "左右分屏构图：左侧放官方授权的BLG夺冠画面或自制图标，右侧放问号和“LPL”字样。深蓝底配金色大字，数字和关键词用黄色高亮。人物表情自信、略带好奇，不使用夸张表情。文字不超过10个字，不出现播放量或排名承诺。"
+    },
+    "copyright_checklist": [
+      "游戏画面：英雄联盟画面和赛事素材须遵守官方二次创作与视频发布规范，只做解说和评论用途，不用于商业推广。",
+      "BGM：使用B站音乐库或已获授权的无版权音乐，不直接使用赛事转播或他人视频里的原声。",
+      "他人素材：引用BLG夺冠VLOG、视频播客《元来如此 EP.10》等他人视频时，只截取短片段，画面标注作者和来源，并取得授权或确认符合合理引用；不转载完整视频。",
+      "赛事转播画面：LPL/LCK比赛转播画面的权利属于赛事方和转播方，使用前须确认授权，否则改用自制图示或文字说明。",
+      "韩援名单和选手信息：只引用官方公布的内容并标注发布日期，不写未经证实的转会传闻；涉及韩国网友评论时，须记录来源和收集时间，并避免暴露用户ID。",
+      "活动参与：投稿时带上活动话题标签“英雄联盟赛事”（对应活动4074201），并检查该活动当期的投稿规则。"
+    ],
+    "rationale_zh": "选择英雄联盟的原因：Score_bili为1.231，视频池内有8个视频，是样本最大的一个（来源：get_plan_context.score）。热搜词有3个：BLG赛前宣传片是怎么拍的第3位，将加盟LPL的韩援新面孔有哪些第4位，管泽元对话BLG深扒夺冠幕后第12位（来源：get_plan_context.analysis.claims）。官方活动4074201有2个视频，总播放2497733（来源：get_plan_context.official_activities）。互动率相对池中位数为1.11倍，异常值信号较弱（来源：get_plan_context.score），所以本案以“整理热搜问题”为切入点，不依赖爆款判断。修改说明：上一版把“韩国观众的关注点”当作既定结论，但已查证的数据（视频池、热搜、活动）全部来自国内B站，没有任何韩国观众评论或热度数据。因此本版删去所有结论式表述，不再断言韩国观众更关心什么，钩子只用提问或整理的口吻。标题与正文三个观察点一一对应（韩援名单、赛前宣传片、夺冠幕后）。若要加入韩国网友评论角度，须制作前人工收集评论并标注来源，脚本中写“据评论区”；没有收集到就不写。选择“提问”钩子：它直接使用已验证的热搜词，不需要未经证实的论断。内容类型选“分析”：对应e스포츠的映射（来源：get_plan_context.content_type_map）。时长：视频池长度分布里只有“1分钟以内”一个有样本的区间，共8个（来源：get_plan_context.duration_distribution），但分析师指出50个视频全部落在该区间，疑似长度字段采集或转换有误（来源：get_plan_context.analysis.duration_advice）。因此55秒只是满足规则的暂定值，不是有效的长度推荐，制作前须先核实长度数据。活动标签：tags_zh已加入“英雄联盟赛事”，对应aside_official_topics中event_id 4074201（来源：get_plan_context.aside_official_topics），与CTA一致。本案不预测播放或互动表现。",
+    "platform_extras": {
+      "activity_mission_id": 4074201,
+      "tags_zh": [
+        "英雄联盟赛事",
+        "英雄联盟",
+        "BLG",
+        "LPL",
+        "韩援"
+      ]
+    },
+    "schema": "plan-v1",
+    "plan_id": "bili-20261125-210938-league_of_legends-v2",
+    "platform": "bilibili",
+    "language": "zh",
+    "game": "英雄联盟",
+    "game_id": "league_of_legends",
+    "score_reference": {
+      "score": 1.231,
+      "components": {
+        "demand": 0.8592,
+        "outlier": 0.3715,
+        "freshness": 1.0,
+        "competition": 1.0
+      },
+      "note": "仅供排序参考，非播放量预测"
+    },
+    "data_sources": [
+      {
+        "name": "Aside 영상",
+        "origin": "aside",
+        "endpoint": "aside:bilibili_2026-11-25.json",
+        "file": "bilibili_2026-11-25.json",
+        "age_h": 0.0,
+        "encoding": "utf-8"
+      },
+      {
+        "name": "Aside 핫키워드",
+        "origin": "aside",
+        "file": "bilibili_2026-11-25.json",
+        "age_h": 0.0
+      },
+      {
+        "name": "Aside 공식 활동·화제",
+        "origin": "aside",
+        "file": "bilibili_2026-11-25.json",
+        "age_h": 0.0
+      },
+      {
+        "name": "공개 API · 실시간 핫서치",
+        "origin": "live",
+        "endpoint": "x/web-interface/wbi/search/square",
+        "fetched_at": "2026-11-25T12:09:44+00:00"
+      }
+    ],
+    "status": "validated"
+  },
+  "plan_validation": {
+    "plan_id": "bili-20261125-210938-league_of_legends-v2",
+    "passed": true,
+    "rule_check": {
+      "passed": true,
+      "errors": [],
+      "warnings": []
+    },
+    "reviewer": {
+      "passed": true,
+      "issues": []
+    },
+    "attempt": 2
+  },
+  "performance": null,
+  "agent_stages": {
+    "collector": "Aside 파일(bilibili_2026-11-25.json, 0시간 경과)을 1순위로 사용해 게임 영상 50개(综合热门 30개, 全站排行榜 20개)와 공식 활동 8개를 수집했습니다. 핫키워드는 Aside 10개에 공개 API 실시간 핫서치 30개를 보충했습니다. 랭킹 스냅샷 파일은 없어서 추가하지 못했습니다.",
+    "normalizer": "영상 50개 중 11개(22%)가 게임 이름을 찾지 못했고, 제목·태그에 게임 이름이 분명한 7개를 별칭 후보로 제안했습니다. 사전에 없는 것을 확인한 건 宝可梦·火影忍者·异环·暗区突围이며, 영문·한국어 이름이 확실하지 않은 항목은 비워 두었습니다. 이번 요청에서 핫키워드 40개를 게임과 게임 외 주제로 나누는 작업은 하지 못했습니다.",
+    "scorer": "게임 13개 점수 계산 (상위: 젠레스 존 제로 1.81, 리그 오브 레전드 1.23, 팬텀 블레이드 제로 1.16)",
+    "analyst": "점수 1위는 绝区零(젠레스 존 제로, 1.811)이지만 풀 안에 영상이 1개뿐이라 단독 근거로 쓰기엔 표본이 너무 작습니다. 표본과 이벤트·핫키워드를 함께 보면 영상 8개, 핫키워드 3개, 공식 활동 2건을 가진 英雄联盟(리그 오브 레전드)이 가장 안정적인 기획 대상입니다. 영상 7개와 핫키워드 2개를 가진 明日方舟：终末地(명일방주: 엔드필드)는 점수 상위 5개에는 없지만 보조 후보로 볼 만합니다. 핫키워드 30개 중 게임 관련은 6개이고 선행 신호(풀 안 영상 1개 이하)는 없어서, 이번 스캔에서 블루오션으로 확정할 게임은 없습니다. 영상 50개가 전부 \"1분 미만\"으로 집계되어 길이 데이터가 이상하므로 길이 추천은 보류합니다.",
+    "planner": "리그 오브 레전드 기획안 수정본입니다. 지난 검토에서 문제가 된 \"한국 시청자 관심사\" 단정 표현을 모두 뺐습니다. 근거가 확인된 국내 핫서치어(BLG 선전 영상, LPL 합류 한국 선수, BLG 우승 비하인드)와 공식 활동 4074201을 정리하는 내용으로 바꿨습니다. 제목은 본문 구성과 맞췄고, 활동 태그 \"英雄联盟赛事\"를 tags_zh에 넣었습니다. 길이 데이터가 이상해서 55초는 임시 값입니다. 제작 전에 길이 필드를 다시 확인해야 합니다."
+  },
+  "run_id": "20261125-210938",
+  "data_sources": [
+    {
+      "name": "Aside 영상",
+      "origin": "aside",
+      "endpoint": "aside:bilibili_2026-11-25.json",
+      "file": "bilibili_2026-11-25.json",
+      "age_h": 0.0,
+      "encoding": "utf-8"
+    },
+    {
+      "name": "Aside 핫키워드",
+      "origin": "aside",
+      "file": "bilibili_2026-11-25.json",
+      "age_h": 0.0
+    },
+    {
+      "name": "Aside 공식 활동·화제",
+      "origin": "aside",
+      "file": "bilibili_2026-11-25.json",
+      "age_h": 0.0
+    },
+    {
+      "name": "공개 API · 실시간 핫서치",
+      "origin": "live",
+      "endpoint": "x/web-interface/wbi/search/square",
+      "fetched_at": "2026-11-25T12:09:44+00:00"
+    }
+  ],
+  "agent_trace": [
+    {
+      "t": 0.0,
+      "agent": "supervisor",
+      "event": "task",
+      "detail": "[BiliTask] | task_id: local-demo | intent: trend_scan | period_days: 7",
+      "ok": true
+    },
+    {
+      "t": 2.0,
+      "agent": "supervisor",
+      "event": "llm_turn",
+      "detail": "step=1 stop=tool_use 2.0s in=2016 out=234",
+      "ok": true
+    },
+    {
+      "t": 2.0,
+      "agent": "supervisor",
+      "event": "delegate→collector",
+      "detail": "BiliTask: task_id=local-demo, intent=trend_scan, period_days=7, game=미지정(전체 트렌드 스캔), user_title=없음. 최근 7일간 빌리빌리 게임 영상, 핫키워드, 공식 활동(이벤트)을 수집하세요. Aside 브라우저 CSV를 ",
+      "ok": true
+    },
+    {
+      "t": 3.5,
+      "agent": "collector",
+      "event": "llm_turn",
+      "detail": "step=1 stop=tool_use 1.5s in=2055 out=27",
+      "ok": true
+    },
+    {
+      "t": 3.5,
+      "agent": "collector",
+      "event": "tool:load_aside",
+      "detail": "{}",
+      "ok": true
+    },
+    {
+      "t": 5.4,
+      "agent": "collector",
+      "event": "llm_turn",
+      "detail": "step=2 stop=tool_use 1.9s in=2515 out=111",
+      "ok": true
+    },
+    {
+      "t": 5.6,
+      "agent": "collector",
+      "event": "tool:collect_trending",
+      "detail": "{}",
+      "ok": true
+    },
+    {
+      "t": 5.6,
+      "agent": "collector",
+      "event": "tool:load_ranking_snapshot",
+      "detail": "{}",
+      "ok": true
+    },
+    {
+      "t": 9.2,
+      "agent": "collector",
+      "event": "llm_turn",
+      "detail": "step=3 stop=tool_use 3.6s in=2893 out=439",
+      "ok": true
+    },
+    {
+      "t": 9.2,
+      "agent": "collector",
+      "event": "submit",
+      "detail": "submit_findings",
+      "ok": true
+    },
+    {
+      "t": 9.2,
+      "agent": "supervisor",
+      "event": "tool:delegate",
+      "detail": "{\"worker\": \"collector\", \"instruction\": \"BiliTask: task_id=local-demo, intent=trend_scan, period_days=7, game=미지정(전체 트렌드 스캔), user_title=없음. 최근 7일간 빌리빌리 게임 영상, 핫",
+      "ok": true
+    },
+    {
+      "t": 11.1,
+      "agent": "supervisor",
+      "event": "llm_turn",
+      "detail": "step=2 stop=tool_use 2.0s in=2667 out=269",
+      "ok": true
+    },
+    {
+      "t": 11.1,
+      "agent": "supervisor",
+      "event": "delegate→normalizer",
+      "detail": "BiliTask: task_id=local-demo, intent=trend_scan, period_days=7, game=미지정, user_title=없음. 수집 결과: 영상 50개(综合热门 30, 全站排行榜 20), 공식 활동 8개, 핫키워드 40개(Aside 10 + API 핫서치",
+      "ok": true
+    },
+    {
+      "t": 11.9,
+      "agent": "normalizer",
+      "event": "llm_turn",
+      "detail": "step=1 stop=tool_use 0.8s in=1937 out=53",
+      "ok": true
+    },
+    {
+      "t": 11.9,
+      "agent": "normalizer",
+      "event": "tool:list_unmatched_titles",
+      "detail": "{\"n\": 20}",
+      "ok": true
+    },
+    {
+      "t": 17.3,
+      "agent": "normalizer",
+      "event": "llm_turn",
+      "detail": "step=2 stop=tool_use 5.4s in=3025 out=624",
+      "ok": true
+    },
+    {
+      "t": 17.3,
+      "agent": "normalizer",
+      "event": "tool:resolve_game",
+      "detail": "{\"name\": \"宝可梦\"}",
+      "ok": true
+    },
+    {
+      "t": 17.3,
+      "agent": "normalizer",
+      "event": "tool:resolve_game",
+      "detail": "{\"name\": \"火影忍者\"}",
+      "ok": true
+    },
+    {
+      "t": 17.3,
+      "agent": "normalizer",
+      "event": "tool:resolve_game",
+      "detail": "{\"name\": \"异环\"}",
+      "ok": true
+    },
+    {
+      "t": 17.3,
+      "agent": "normalizer",
+      "event": "tool:resolve_game",
+      "detail": "{\"name\": \"暗区突围\"}",
+      "ok": true
+    },
+    {
+      "t": 22.3,
+      "agent": "normalizer",
+      "event": "llm_turn",
+      "detail": "step=3 stop=tool_use 5.0s in=3828 out=841",
+      "ok": true
+    },
+    {
+      "t": 22.3,
+      "agent": "normalizer",
+      "event": "submit",
+      "detail": "submit_findings",
+      "ok": true
+    },
+    {
+      "t": 22.3,
+      "agent": "supervisor",
+      "event": "tool:delegate",
+      "detail": "{\"worker\": \"normalizer\", \"instruction\": \"BiliTask: task_id=local-demo, intent=trend_scan, period_days=7, game=미지정, user_title=없음. 수집 결과: 영상 50개(综合热门 30, 全站排行榜 2",
+      "ok": true
+    },
+    {
+      "t": 23.8,
+      "agent": "supervisor",
+      "event": "llm_turn",
+      "detail": "step=3 stop=tool_use 1.5s in=3768 out=181",
+      "ok": true
+    },
+    {
+      "t": 23.8,
+      "agent": "supervisor",
+      "event": "delegate→scorer",
+      "detail": "BiliTask: task_id=local-demo, intent=trend_scan, period_days=7, game=미지정, user_title=없음. 정규화된 영상 50개(게임 이름 미매칭 11개 포함), 공식 활동 8개, 핫키워드 기준으로 Score_bili를 계산해 주세요.",
+      "ok": true
+    },
+    {
+      "t": 23.8,
+      "agent": "supervisor",
+      "event": "tool:delegate",
+      "detail": "{\"worker\": \"scorer\", \"instruction\": \"BiliTask: task_id=local-demo, intent=trend_scan, period_days=7, game=미지정, user_title=없음. 정규화된 영상 50개(게임 이름 미매칭 11개 포함), 공식 ",
+      "ok": true
+    },
+    {
+      "t": 28.0,
+      "agent": "supervisor",
+      "event": "llm_turn",
+      "detail": "step=4 stop=tool_use 4.2s in=4764 out=431",
+      "ok": true
+    },
+    {
+      "t": 28.0,
+      "agent": "supervisor",
+      "event": "delegate→analyst",
+      "detail": "BiliTask: task_id=local-demo, intent=trend_scan, period_days=7, game=미지정, user_title=없음. Score_bili 상위: 绝区零(zenless_zone_zero, 1.811, 풀 내 영상 1개), 英雄联盟(league_of",
+      "ok": true
+    },
+    {
+      "t": 30.5,
+      "agent": "analyst",
+      "event": "llm_turn",
+      "detail": "step=1 stop=tool_use 2.5s in=4288 out=234",
+      "ok": true
+    },
+    {
+      "t": 30.5,
+      "agent": "analyst",
+      "event": "tool:get_game_scores",
+      "detail": "{\"top\": 13}",
+      "ok": true
+    },
+    {
+      "t": 30.5,
+      "agent": "analyst",
+      "event": "tool:get_event_signals",
+      "detail": "{}",
+      "ok": true
+    },
+    {
+      "t": 30.5,
+      "agent": "analyst",
+      "event": "tool:get_hot_keyword_signals",
+      "detail": "{}",
+      "ok": true
+    },
+    {
+      "t": 30.5,
+      "agent": "analyst",
+      "event": "tool:get_engagement_ranking",
+      "detail": "{\"top\": 10}",
+      "ok": true
+    },
+    {
+      "t": 30.5,
+      "agent": "analyst",
+      "event": "tool:get_duration_type_distribution",
+      "detail": "{}",
+      "ok": true
+    },
+    {
+      "t": 30.5,
+      "agent": "analyst",
+      "event": "tool:get_top_titles",
+      "detail": "{\"n\": 8}",
+      "ok": true
+    },
+    {
+      "t": 34.0,
+      "agent": "analyst",
+      "event": "llm_turn",
+      "detail": "step=2 stop=tool_use 3.5s in=11671 out=407",
+      "ok": true
+    },
+    {
+      "t": 34.0,
+      "agent": "analyst",
+      "event": "tool:get_engagement_ranking",
+      "detail": "{\"game_id\": \"league_of_legends\", \"top\": 5}",
+      "ok": true
+    },
+    {
+      "t": 34.0,
+      "agent": "analyst",
+      "event": "tool:get_duration_type_distribution",
+      "detail": "{\"game_id\": \"league_of_legends\"}",
+      "ok": true
+    },
+    {
+      "t": 34.0,
+      "agent": "analyst",
+      "event": "tool:lookup_evidence",
+      "detail": "{\"keyword\": \"影之刃\"}",
+      "ok": true
+    },
+    {
+      "t": 34.0,
+      "agent": "analyst",
+      "event": "tool:lookup_evidence",
+      "detail": "{\"keyword\": \"终末地\"}",
+      "ok": true
+    },
+    {
+      "t": 84.3,
+      "agent": "analyst",
+      "event": "llm_turn",
+      "detail": "step=3 stop=tool_use 50.3s in=15141 out=7545",
+      "ok": true
+    },
+    {
+      "t": 84.3,
+      "agent": "analyst",
+      "event": "submit",
+      "detail": "submit_findings",
+      "ok": true
+    },
+    {
+      "t": 84.3,
+      "agent": "supervisor",
+      "event": "tool:delegate",
+      "detail": "{\"worker\": \"analyst\", \"instruction\": \"BiliTask: task_id=local-demo, intent=trend_scan, period_days=7, game=미지정, user_title=없음. Score_bili 상위: 绝区零(zenless_zone_z",
+      "ok": true
+    },
+    {
+      "t": 87.9,
+      "agent": "supervisor",
+      "event": "llm_turn",
+      "detail": "step=5 stop=tool_use 3.7s in=11677 out=529",
+      "ok": true
+    },
+    {
+      "t": 87.9,
+      "agent": "supervisor",
+      "event": "delegate→planner",
+      "detail": "BiliTask: task_id=local-demo, intent=trend_scan, period_days=7, user_title=없음. 기획 대상 game_id=league_of_legends (英雄联盟, 리그 오브 레전드). 이유: Score_bili 1.231로 2위, 풀 내 ",
+      "ok": true
+    },
+    {
+      "t": 89.5,
+      "agent": "plan_writer",
+      "event": "llm_turn",
+      "detail": "step=1 stop=tool_use 1.5s in=4480 out=57",
+      "ok": true
+    },
+    {
+      "t": 89.5,
+      "agent": "plan_writer",
+      "event": "tool:get_plan_context",
+      "detail": "{\"game_id\": \"league_of_legends\"}",
+      "ok": true
+    },
+    {
+      "t": 93.8,
+      "agent": "plan_writer",
+      "event": "llm_turn",
+      "detail": "step=2 stop=tool_use 4.3s in=8950 out=431",
+      "ok": true
+    },
+    {
+      "t": 93.8,
+      "agent": "plan_writer",
+      "event": "tool:lookup_evidence",
+      "detail": "{\"keyword\": \"韩援\"}",
+      "ok": true
+    },
+    {
+      "t": 93.8,
+      "agent": "plan_writer",
+      "event": "tool:lookup_evidence",
+      "detail": "{\"mission_id\": 4074201}",
+      "ok": true
+    },
+    {
+      "t": 119.3,
+      "agent": "plan_writer",
+      "event": "llm_turn",
+      "detail": "step=3 stop=tool_use 25.5s in=9781 out=3091",
+      "ok": true
+    },
+    {
+      "t": 119.3,
+      "agent": "plan_writer",
+      "event": "submit",
+      "detail": "submit_findings",
+      "ok": true
+    },
+    {
+      "t": 120.8,
+      "agent": "plan_reviewer",
+      "event": "llm_turn",
+      "detail": "step=1 stop=tool_use 1.5s in=2788 out=54",
+      "ok": true
+    },
+    {
+      "t": 120.8,
+      "agent": "plan_reviewer",
+      "event": "tool:run_rule_checks",
+      "detail": "{}",
+      "ok": true
+    },
+    {
+      "t": 120.8,
+      "agent": "plan_reviewer",
+      "event": "tool:get_plan",
+      "detail": "{}",
+      "ok": true
+    },
+    {
+      "t": 122.9,
+      "agent": "plan_reviewer",
+      "event": "llm_turn",
+      "detail": "step=2 stop=tool_use 2.1s in=5642 out=273",
+      "ok": true
+    },
+    {
+      "t": 122.9,
+      "agent": "plan_reviewer",
+      "event": "tool:lookup_evidence",
+      "detail": "{\"mission_id\": 4074201}",
+      "ok": true
+    },
+    {
+      "t": 122.9,
+      "agent": "plan_reviewer",
+      "event": "tool:lookup_evidence",
+      "detail": "{\"keyword\": \"韩援\"}",
+      "ok": true
+    },
+    {
+      "t": 122.9,
+      "agent": "plan_reviewer",
+      "event": "tool:lookup_evidence",
+      "detail": "{\"keyword\": \"BLG\"}",
+      "ok": true
+    },
+    {
+      "t": 122.9,
+      "agent": "plan_reviewer",
+      "event": "tool:lookup_evidence",
+      "detail": "{\"keyword\": \"Zeus\"}",
+      "ok": true
+    },
+    {
+      "t": 125.0,
+      "agent": "plan_reviewer",
+      "event": "llm_turn",
+      "detail": "step=3 stop=tool_use 2.1s in=7246 out=224",
+      "ok": true
+    },
+    {
+      "t": 125.0,
+      "agent": "plan_reviewer",
+      "event": "tool:lookup_evidence",
+      "detail": "{\"keyword\": \"管泽元\"}",
+      "ok": true
+    },
+    {
+      "t": 125.0,
+      "agent": "plan_reviewer",
+      "event": "tool:lookup_evidence",
+      "detail": "{\"keyword\": \"LPL\"}",
+      "ok": true
+    },
+    {
+      "t": 125.0,
+      "agent": "plan_reviewer",
+      "event": "tool:lookup_evidence",
+      "detail": "{\"keyword\": \"LCK\"}",
+      "ok": true
+    },
+    {
+      "t": 140.9,
+      "agent": "plan_reviewer",
+      "event": "llm_turn",
+      "detail": "step=4 stop=tool_use 15.9s in=8687 out=1989",
+      "ok": true
+    },
+    {
+      "t": 140.9,
+      "agent": "plan_reviewer",
+      "event": "submit",
+      "detail": "submit_findings",
+      "ok": true
+    },
+    {
+      "t": 140.9,
+      "agent": "planner",
+      "event": "validation",
+      "detail": "attempt=1 passed=False",
+      "ok": false
+    },
+    {
+      "t": 142.5,
+      "agent": "plan_writer",
+      "event": "llm_turn",
+      "detail": "step=1 stop=tool_use 1.6s in=4541 out=57",
+      "ok": true
+    },
+    {
+      "t": 142.5,
+      "agent": "plan_writer",
+      "event": "tool:get_plan_context",
+      "detail": "{\"game_id\": \"league_of_legends\"}",
+      "ok": true
+    },
+    {
+      "t": 144.0,
+      "agent": "plan_writer",
+      "event": "llm_turn",
+      "detail": "step=2 stop=tool_use 1.4s in=10185 out=77",
+      "ok": true
+    },
+    {
+      "t": 144.0,
+      "agent": "plan_writer",
+      "event": "tool:lookup_evidence",
+      "detail": "{\"mission_id\": 4074201}",
+      "ok": true
+    },
+    {
+      "t": 176.3,
+      "agent": "plan_writer",
+      "event": "llm_turn",
+      "detail": "step=3 stop=tool_use 32.4s in=10509 out=4170",
+      "ok": true
+    },
+    {
+      "t": 176.3,
+      "agent": "plan_writer",
+      "event": "submit",
+      "detail": "submit_findings",
+      "ok": true
+    },
+    {
+      "t": 177.1,
+      "agent": "plan_reviewer",
+      "event": "llm_turn",
+      "detail": "step=1 stop=tool_use 0.8s in=2788 out=54",
+      "ok": true
+    },
+    {
+      "t": 177.1,
+      "agent": "plan_reviewer",
+      "event": "tool:run_rule_checks",
+      "detail": "{}",
+      "ok": true
+    },
+    {
+      "t": 177.1,
+      "agent": "plan_reviewer",
+      "event": "tool:get_plan",
+      "detail": "{}",
+      "ok": true
+    },
+    {
+      "t": 178.8,
+      "agent": "plan_reviewer",
+      "event": "llm_turn",
+      "detail": "step=2 stop=tool_use 1.6s in=5780 out=224",
+      "ok": true
+    },
+    {
+      "t": 178.8,
+      "agent": "plan_reviewer",
+      "event": "tool:lookup_evidence",
+      "detail": "{\"mission_id\": 4074201}",
+      "ok": true
+    },
+    {
+      "t": 178.8,
+      "agent": "plan_reviewer",
+      "event": "tool:lookup_evidence",
+      "detail": "{\"keyword\": \"BLG\"}",
+      "ok": true
+    },
+    {
+      "t": 178.8,
+      "agent": "plan_reviewer",
+      "event": "tool:lookup_evidence",
+      "detail": "{\"keyword\": \"元来如此\"}",
+      "ok": true
+    },
+    {
+      "t": 178.8,
+      "agent": "plan_reviewer",
+      "event": "tool:lookup_evidence",
+      "detail": "{\"keyword\": \"韩援\"}",
+      "ok": true
+    },
+    {
+      "t": 183.2,
+      "agent": "plan_reviewer",
+      "event": "llm_turn",
+      "detail": "step=3 stop=tool_use 4.5s in=7381 out=550",
+      "ok": true
+    },
+    {
+      "t": 183.2,
+      "agent": "plan_reviewer",
+      "event": "submit",
+      "detail": "submit_findings",
+      "ok": true
+    },
+    {
+      "t": 183.2,
+      "agent": "planner",
+      "event": "validation",
+      "detail": "attempt=2 passed=True",
+      "ok": true
+    },
+    {
+      "t": 183.2,
+      "agent": "supervisor",
+      "event": "tool:delegate",
+      "detail": "{\"worker\": \"planner\", \"instruction\": \"BiliTask: task_id=local-demo, intent=trend_scan, period_days=7, user_title=없음. 기획 대상 game_id=league_of_legends (英雄联盟, 리그 오",
+      "ok": true
+    },
+    {
+      "t": 188.3,
+      "agent": "supervisor",
+      "event": "llm_turn",
+      "detail": "step=6 stop=tool_use 5.1s in=12289 out=778",
+      "ok": true
+    },
+    {
+      "t": 188.3,
+      "agent": "supervisor",
+      "event": "submit",
+      "detail": "submit_report",
+      "ok": true
+    }
+  ],
+  "usage": {
+    "llm_calls": 28,
+    "input_tokens": 173292,
+    "output_tokens": 23954,
+    "model": "claude-sonnet-5-5",
+    "estimated_cost_usd": 0.5861
+  },
+  "warnings": [
+    "영상 50개가 전부 '1분 미만'으로 집계되어 길이 데이터에 오류가 의심됩니다. 이번 결과로는 영상 길이를 추천하지 않았습니다.",
+    "핫키워드 40개의 게임/비게임 분류가 끝나지 않았습니다. 宝可梦·火影忍者·异环·暗区突围 등 미등록 게임을 사전에 추가한 뒤 다시 분류해야 합니다.",
+    "리그 오브 레전드의 반응률은 풀 중앙값 대비 1.11배로 이상치 근거가 약합니다. 이 기획은 이상치보다 수요와 이벤트 근거에 기대고 있습니다.",
+    "에그파티 영상 1개가 마인크래프트와 같은 활동에 중복 매칭되어 게임 귀속이 불확실합니다. 팬텀 블레이드 제로의 3A 최적화 비교 영상도 게임 매칭 확인이 필요합니다.",
+    "collector: Aside 핫키워드가 10개뿐이라 공개 API 핫서치 30개로 보충했는데, 이 핫서치에는 우주·NBA·AI 같은 게임 외 주제가 많이 섞여 있습니다.",
+    "collector: 영상 50개는 모두 최근 게시물(综合热门 2026-11-23~11-25, 全站排行榜 2026-11-20~11-25)이라 오래된 영상은 없습니다.",
+    "collector: 게임 카테고리 랭킹 스냅샷(ranking_game_*.json)이 없어 추가하지 못했습니다.",
+    "normalizer: 미매칭 비율 22% (11/50)"
+  ],
+  "platform": "bilibili"
+}

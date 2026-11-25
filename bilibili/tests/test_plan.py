@@ -9,7 +9,7 @@ from bili_agent.contracts import BiliTask
 from bili_agent.tools import bilibili_api, plan_rules
 from bili_agent.tools.alias_store import AliasStore
 
-from .test_pipeline import KEYWORDS, VIDEOS
+from .test_pipeline import KEYWORDS, VIDEOS, no_net  # noqa: F401 (fixture)
 
 GOOD_PLAN = {
     "plan_id": "t", "platform": "bilibili", "game": "原神", "content_type": "攻略", "target_duration_sec": 420,
@@ -75,11 +75,11 @@ def test_markdown_render():
 
 
 def test_lookup_evidence_finds_source_data():
-    # 3차 실제 실행에서 validator 가 데이터에 있는 곡을 '근거 없음'으로 오판 → 원본 조회 도구로 해결
-    from bili_agent.agents.workers import h_lookup_evidence
+    # 3차 실제 실행에서 검토 에이전트가 데이터에 있는 곡을 '근거 없음'으로 오판 → 원본 조회 도구로 해결
+    from bili_agent.agents.workers.w4_analyst import h_lookup_evidence
     from bili_agent.workspace import Workspace
     ws = Workspace(BiliTask(intent="trend_scan"), AliasStore.load())
-    ws.add_videos(VIDEOS)
+    ws.add_raw([dict(v) for v in VIDEOS])
     r = h_lookup_evidence(ws, keyword="明日方舟")
     assert r["found"] == 1 and r["videos"][0]["bvid"] == "BV2" and r["videos"][0]["multiple_vs_pool"] > 1
     act = h_lookup_evidence(ws, mission_id=11)["activity"]
@@ -88,28 +88,28 @@ def test_lookup_evidence_finds_source_data():
         h_lookup_evidence(ws)
 
 
-# ── 슈퍼바이저 + 가짜 LLM: 생성 → 검증 → 제출 흐름 ──────────
+# ── 슈퍼바이저 + 가짜 LLM: 수직 구조의 순서 가드레일과 기획안 단계 루프 ──────
 
 def _tu(name, inp, i):
     return SimpleNamespace(type="tool_use", name=name, input=inp, id="tu_%d" % i)
 
 
 class ScriptedLLM:
-    """슈퍼바이저는 정해진 순서로, 워커는 '첫 턴: 첫 도구 → 둘째 턴: 제출' 로 움직인다."""
+    """슈퍼바이저는 정해진 순서로, 에이전트는 '첫 턴: 첫 도구 → 둘째 턴: 제출'. 검토 에이전트는 첫 검토만 불합격."""
 
     SUPERVISOR_SCRIPT = [
-        ("delegate", {"worker": "validator", "instruction": "검증"}),        # 기획안 없음 → 거부
+        ("delegate", {"worker": "analyst", "instruction": "분석"}),           # 3 점수화 전 → 거부
         ("delegate", {"worker": "collector", "instruction": "수집"}),
-        ("delegate", {"worker": "plan_writer", "instruction": "기획 game_id=genshin_impact"}),
-        ("submit_report", {"summary_ko": "요약"}),                           # 검증 전 제출 → 거부
-        ("delegate", {"worker": "validator", "instruction": "검증"}),
-        ("submit_report", {"summary_ko": "조회수 100만을 달성할 것입니다"}),  # 예측 표현 → 거부
+        ("delegate", {"worker": "normalizer", "instruction": "정규화"}),
+        ("delegate", {"worker": "scorer", "instruction": "점수"}),            # LLM 없이 코드 실행
+        ("delegate", {"worker": "analyst", "instruction": "분석"}),
+        ("delegate", {"worker": "planner", "instruction": "기획 game_id=genshin_impact"}),
+        ("submit_report", {"summary_ko": "조회수 100만을 달성할 것입니다"}),    # 예측 표현 → 거부
         ("submit_report", {"summary_ko": "원신 공략 기획안을 만들었습니다."}),
     ]
 
     def __init__(self):
-        self.sup_step = 0
-        self.n = 0
+        self.sup_step, self.n, self.reviews, self.agent_calls = 0, 0, 0, []
 
     def create(self, system, messages, tools):
         self.n += 1
@@ -119,28 +119,38 @@ class ScriptedLLM:
             self.sup_step += 1
             return SimpleNamespace(stop_reason="tool_use", content=[_tu(name, inp, self.n)])
         if len(messages) == 1:
-            return SimpleNamespace(stop_reason="tool_use", content=[_tu(names[0], {}, self.n)])
+            self.agent_calls.append(names[0])
+            calls = [_tu(names[0], {}, self.n)]
+            if names[0] == "load_aside":  # Aside CSV 가 없으니 공개 API 로 보충 (병렬 호출)
+                calls.append(_tu("collect_popular_games", {}, self.n + 1000))
+            return SimpleNamespace(stop_reason="tool_use", content=calls)
         if "get_plan_context" in names:
             sub = dict(copy.deepcopy(GOOD_PLAN), game_id="genshin_impact", rationale_zh="依据", summary_ko="기획")
         elif "run_rule_checks" in names:
-            sub = {"summary_ko": "검증", "passed": True, "issues": []}
+            self.reviews += 1
+            sub = {"summary_ko": "검토", "passed": self.reviews > 1,
+                   "issues": [] if self.reviews > 1 else [{"field": "hooks", "problem": "钩子断言过强"}]}
+        elif "get_game_scores" in names:
+            sub = {"summary_ko": "분석", "opportunities": [{"game_zh": "原神", "reason_ko": "근거"}], "events": [],
+                   "claims": [{"claim_ko": "원신 반응률이 높다", "evidence": ["get_engagement_ranking: BV1"]}]}
+        elif "list_unmatched_titles" in names:
+            sub = {"summary_ko": "정규화", "alias_candidates": []}
         else:
             sub = {"summary_ko": "수집", "data_quality_notes": []}
         return SimpleNamespace(stop_reason="tool_use", content=[_tu("submit_findings", sub, self.n)])
 
 
-def test_plan_flow_with_guards(monkeypatch):
-    monkeypatch.setattr(bilibili_api, "fetch_popular_game_videos", lambda pages=None: {"videos": VIDEOS, "origin": "live"})
-    monkeypatch.setattr(bilibili_api, "fetch_trending_keywords", lambda: {"keywords": KEYWORDS, "origin": "live"})
-    monkeypatch.setattr(bilibili_api, "load_ranking_snapshot", lambda: None)
+def test_vertical_flow_guards_and_plan_revision(no_net):
     llm = ScriptedLLM()
     d = BiliSupervisor(llm=llm, alias_store=AliasStore.load()).run(
         BiliTask(intent="game_deep_dive", game="原神")).to_dict()
     events = [(r["agent"], r["event"], r["ok"]) for r in d["agent_trace"]]
-    assert ("supervisor", "tool:delegate", False) in events            # validator 선호출 거부
-    assert sum(1 for e in events if e[1] == "submit_rejected") == 2      # 미검증 제출 + 예측 표현 제출 거부
+    assert ("supervisor", "tool:delegate", False) in events                 # 순서 건너뛰기 거부
+    assert sum(1 for e in events if e[1] == "submit_rejected") == 1           # 예측 표현 제출 거부
+    assert "get_game_scores" in llm.agent_calls and "load_aside" in llm.agent_calls
+    assert not any(c == "scorer" for c in llm.agent_calls)                    # 점수화는 LLM 을 부르지 않음
+    plan, v = d["plan"], d["plan_validation"]
+    assert v["attempt"] == 2 and plan["plan_id"].endswith("-v2")             # 검토 불합격 → 1회 수정 후 통과
+    assert plan["status"] == "validated" and plan["score_reference"]["note"] == plan_rules.SCORE_DISCLAIMER
+    assert list(d["agent_stages"]) == ["collector", "normalizer", "scorer", "analyst", "planner"]
     assert d["summary_ko"] == "원신 공략 기획안을 만들었습니다."
-    plan = d["plan"]
-    assert plan["platform"] == "bilibili" and plan["game"] == "原神" and plan["status"] == "validated"
-    assert plan["score_reference"]["note"] == plan_rules.SCORE_DISCLAIMER  # 코드가 채움
-    assert d["plan_validation"]["rule_check"]["passed"]

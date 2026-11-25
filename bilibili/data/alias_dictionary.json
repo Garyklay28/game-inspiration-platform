@@ -1,5 +1,5 @@
 {
-  "_comment": "게임 별칭 사전(로컬 대체본). Supabase 의 game_alias 테이블과 같은 구조. 실제 서비스에서는 A(데이터·백엔드) 담당이 관리. LoL 의 S16/LPL/LCK/BLG 는 게임명이 아닌 대회·리그·팀명이지만, 빌리빌리 e스포츠 영상 제목에 게임명이 생략되는 경우가 많아 추가.",
+  "_comment": "게임 별칭 사전(로컬 대체본). Supabase 의 game_alias 테이블과 같은 구조. 실제 서비스에서는 A(데이터·백엔드) 담당이 관리. LoL 의 S16/LPL/LCK/BLG 는 게임명이 아닌 대회·리그·팀명이지만, 빌리빌리 e스포츠 영상 제목에 게임명이 생략되는 경우가 많아 추가. 2026-11-25: Aside 재수집 데이터에서 '明日方舟：终末地'가 명일방주로 잘못 세지는 문제를 막기 위해 엔드필드를 별도 게임으로 추가하고, 빈도 높은 GTA6·影之刃零 추가.",
   "games": [
     {
       "game_id": "genshin_impact",
@@ -187,6 +187,42 @@
         "和平精英",
         "吃鸡",
         "Game for Peace"
+      ]
+    },
+    {
+      "game_id": "arknights_endfield",
+      "zh": "明日方舟：终末地",
+      "ko": "명일방주: 엔드필드",
+      "en": "Arknights: Endfield",
+      "aliases": [
+        "明日方舟终末地",
+        "明日方舟：终末地",
+        "明日方舟:终末地",
+        "终末地",
+        "Endfield",
+        "엔드필드"
+      ]
+    },
+    {
+      "game_id": "gta6",
+      "zh": "侠盗猎车手6",
+      "ko": "GTA 6",
+      "en": "Grand Theft Auto VI",
+      "aliases": [
+        "GTA6",
+        "GTA 6",
+        "侠盗猎车手6",
+        "Grand Theft Auto VI"
+      ]
+    },
+    {
+      "game_id": "phantom_blade_zero",
+      "zh": "影之刃零",
+      "ko": "팬텀 블레이드 제로",
+      "en": "Phantom Blade Zero",
+      "aliases": [
+        "影之刃零",
+        "Phantom Blade Zero"
       ]
     }
   ]

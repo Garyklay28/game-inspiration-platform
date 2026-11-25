@@ -69,9 +69,12 @@ def classify_type(title: str) -> str:
 
 
 def duration_and_type_distribution(videos: List[Dict]) -> Dict:
+    # 길이를 모르는 영상(예: Aside JSON 에는 길이가 없음)은 0초로 세지 않고 길이 분포에서 뺀다.
+    # (2026-11-25 실제 실행에서 50개 전부 '1분 미만'으로 잡힌 오류 수정)
+    known = [v for v in videos if v.get("duration_sec")]
     buckets = []
     for lo, hi, label in DURATION_BUCKETS:
-        in_b = [v for v in videos if lo <= (v.get("duration_sec") or 0) < hi]
+        in_b = [v for v in known if lo <= v["duration_sec"] < hi]
         buckets.append({"bucket": label, "count": len(in_b),
                         "median_view": int(_median([v["view"] for v in in_b]))})
     types = {}
@@ -80,10 +83,11 @@ def duration_and_type_distribution(videos: List[Dict]) -> Dict:
         types.setdefault(t, []).append(v["view"])
     type_rows = sorted(({"type": t, "count": len(vs), "median_view": int(_median(vs))}
                         for t, vs in types.items()), key=lambda r: -r["count"])
-    most_common = max(buckets, key=lambda b: b["count"]) if videos else None
+    most_common = max(buckets, key=lambda b: b["count"]) if known else None
     best_median = max((b for b in buckets if b["count"] >= 2), key=lambda b: b["median_view"],
                       default=None)
     return {"duration_buckets": buckets, "type_distribution": type_rows,
+            "videos_with_duration": len(known), "videos_without_duration": len(videos) - len(known),
             "most_common_bucket": most_common and most_common["bucket"],
             "best_median_bucket(count>=2)": best_median and best_median["bucket"]}
 
@@ -127,10 +131,17 @@ EVENT_BONUS = 0.2
 WEIGHTS = {"demand": 1.0, "outlier": 1.0, "freshness": 1.0, "competition": 1.0}  # 기획안: 초기 동일 가중치
 
 
+def games_of(v: Dict, alias_store) -> List[Dict]:
+    """정규화 단계가 붙인 game_ids 를 우선 쓰고, 없으면 제목·태그에서 별칭으로 찾는다."""
+    if v.get("game_ids") is not None:
+        return [g for g in (alias_store.resolve_id(i) for i in v["game_ids"]) if g]
+    return alias_store.find_in_text(v["title"] + " " + " ".join(v.get("tags") or []))
+
+
 def aggregate_by_game(videos: List[Dict], alias_store) -> Dict[str, Dict]:
     games = {}
     for v in videos:
-        for g in alias_store.find_in_text(v["title"]):
+        for g in games_of(v, alias_store):
             row = games.setdefault(g["game_id"], {"game": g, "videos": []})
             row["videos"].append(v)
     return games
@@ -155,7 +166,7 @@ def event_signals(videos: List[Dict], alias_store) -> List[Dict]:
     for v in videos:
         if not v.get("mission_id"):
             continue
-        games = alias_store.find_in_text(v["title"]) or [{"game_id": "unmatched", "zh": "(미매칭)"}]
+        games = games_of(v, alias_store) or [{"game_id": "unmatched", "zh": "(미매칭)"}]
         for g in games:
             r = rows.setdefault((g["game_id"], v["mission_id"]),
                                 {"game_id": g["game_id"], "game_zh": g["zh"], "mission_id": v["mission_id"],

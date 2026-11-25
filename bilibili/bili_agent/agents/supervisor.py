@@ -1,17 +1,15 @@
-"""빌리빌리 서브 슈퍼바이저.
+"""빌리빌리 서브 슈퍼바이저 — 수직(계층형) 구조.
 
-총괄 슈퍼바이저(팀원 담당) ──BiliTask──▶ BiliSupervisor ──delegate──▶ 7개 워커
-                           ◀──BiliReport──                ◀─findings──
-                              (+ 策划案 JSON)
+총괄 슈퍼바이저 ──BiliTask──▶ BiliSupervisor(Claude) ──delegate──▶ 에이전트 6개 (기획안 12장)
+                ◀─BiliReport─                       ◀── 작업 공간(Workspace)으로 결과 공유 ──
 
-流水线设计 A: 1 采集·2 规范化(collector) → 3 评分(code) → 4 分析(trend_radar, engagement_analyst,
-title_doctor) → 5 策划案生成(plan_writer) → 6 校验(validator) → 策划案 JSON + Markdown
+  1 collector → 2 normalizer → 3 scorer(코드) → 4 analyst → 5 planner(작성+검토) │ 6 performance(별도)
 
-- run()     : Claude 가 슈퍼바이저 역할로 워커 호출 순서를 스스로 결정 (실제 PoC)
-- run_dry() : LLM 없이 intent별 기본 계획을 코드로 실행 (API 키 없이 데이터 파이프라인 확인·테스트용)
+- 에이전트끼리는 직접 대화하지 않는다. 모든 지시는 슈퍼바이저가, 모든 데이터는 작업 공간이 전달한다.
+- 순서는 슈퍼바이저(LLM)가 정하지만, 앞 단계 없이 뒤 단계를 부르는 일은 코드가 막는다(requires 체인).
+- run_dry(): LLM 없이 intent별 기본 계획을 코드로 실행 (API 키 없이 데이터 파이프라인 확인·테스트용).
 """
-import json
-from typing import Dict, List, Optional
+from typing import Dict, Optional
 
 from .. import config
 from ..contracts import BiliReport, BiliTask
@@ -19,24 +17,25 @@ from ..tools import metrics, plan_rules
 from ..tools.alias_store import AliasStore
 from ..workspace import Workspace
 from .loop import LLM, run_tool_loop
-from .workers import WORKERS, assemble_plan, h_get_game_scores, h_get_top_titles
+from .workers import WORKERS
+from .workers.w4_analyst import h_get_duration_type_distribution, h_get_top_titles
+from .workers.w5_planner import assemble_plan
 
-MAX_PLAN_REVISIONS = 1  # 검증 실패 시 plan_writer 에게 되돌려 보내는 최대 횟수
-
+PIPELINE = ["collector", "normalizer", "scorer", "analyst", "planner"]
 DEFAULT_PLANS = {
-    "trend_scan": ["collector", "trend_radar", "engagement_analyst", "localizer", "plan_writer", "validator"],
-    "game_deep_dive": ["collector", "trend_radar", "engagement_analyst", "title_doctor", "localizer",
-                       "plan_writer", "validator"],
-    "title_check": ["collector", "title_doctor"],
-    "event_watch": ["collector", "trend_radar"],
+    "trend_scan": PIPELINE,
+    "game_deep_dive": PIPELINE,
+    "title_check": ["collector", "normalizer", "scorer", "analyst"],
+    "event_watch": ["collector", "normalizer", "scorer", "analyst"],
+    "performance_review": ["performance"],
 }
 
 SUPERVISOR_TOOLS = [
     {"name": "delegate",
-     "description": "워커 하나에게 일을 맡기고 그 결과(summary_ko + 구조화된 findings)를 받는다.",
+     "description": "에이전트 하나에게 일을 맡기고 결과를 받는다. 앞 단계가 끝나지 않았으면 코드가 거부한다.",
      "input_schema": {"type": "object", "properties": {
          "worker": {"type": "string", "enum": list(WORKERS)},
-         "instruction": {"type": "string", "description": "워커에게 줄 구체적인 지시(한국어). 워커는 이 대화를 볼 수 없다."}},
+         "instruction": {"type": "string", "description": "에이전트에게 줄 구체적인 지시(한국어). 에이전트는 이 대화를 볼 수 없다."}},
          "required": ["worker", "instruction"]}},
     {"name": "submit_report",
      "description": "최종 보고서를 총괄 슈퍼바이저에게 제출하고 종료한다. 반드시 마지막에 한 번 호출.",
@@ -51,18 +50,19 @@ class BiliSupervisor:
     def __init__(self, llm: Optional[LLM] = None, alias_store: Optional[AliasStore] = None):
         self.llm = llm
         self.alias = alias_store or AliasStore.load()
+        self.last_ws: Optional[Workspace] = None  # 마지막 실행의 작업 공간 (DB 행 만들기용)
 
     # ── LLM 슈퍼바이저 ─────────────────────────────────────
     def run(self, task: BiliTask) -> BiliReport:
         self.llm = self.llm or LLM()
-        ws = Workspace(task, self.alias)
+        ws = self.last_ws = Workspace(task, self.alias)
         ws.log("supervisor", "task", task.to_prompt().replace("\n", " | "))
         system = (config.PROMPT_DIR / "supervisor.md").read_text(encoding="utf-8")
         first = task.to_prompt() + "\n\n위 BiliTask를 처리하세요."
         result, warns = run_tool_loop(self.llm, ws, "supervisor", system, SUPERVISOR_TOOLS,
                                       {"delegate": self._delegate}, first, "submit_report",
                                       config.SUPERVISOR_MAX_STEPS,
-                                      terminal_check=lambda inp: _check_report_submission(ws, inp))
+                                      terminal_check=lambda inp: check_report_submission(ws, inp))
         ws.warnings += warns
         if result is None:
             return build_report(ws, "슈퍼바이저가 보고서를 완성하지 못했습니다. warnings 를 확인하세요.")
@@ -73,130 +73,108 @@ class BiliSupervisor:
         spec = WORKERS.get(worker)
         if spec is None:
             raise ValueError("unknown worker %r" % worker)
-        if spec.needs_data and not ws.collected:
-            # 코드 수준 가드레일: 순서는 LLM 이 정하지만, 데이터 없이 분석하는 일은 막는다.
-            raise RuntimeError("아직 수집된 데이터가 없습니다. 먼저 collector 를 호출하세요.")
         if spec.requires and spec.requires not in ws.findings:
-            raise RuntimeError("%s 는 %s 의 결과가 있어야 호출할 수 있습니다." % (worker, spec.requires))
-        if worker == "plan_writer" and "plan_writer" in ws.findings:
-            revisions = ws.cache.get("plan_version", 1)
-            if revisions > MAX_PLAN_REVISIONS:
-                raise RuntimeError("기획안 수정은 최대 %d회입니다. 현재 결과로 submit_report 하고 warnings 에 남기세요."
-                                   % MAX_PLAN_REVISIONS)
-            ws.cache["plan_version"] = revisions + 1
+            # 수직 구조의 순서 가드레일: 순서는 LLM 이 정하지만 앞 단계를 건너뛰는 일은 막는다.
+            raise RuntimeError("%s(%s) 는 %s 가 먼저 끝나야 합니다." % (worker, spec.stage, spec.requires))
+        if spec.requires and not ws.collected:
+            raise RuntimeError("수집된 영상이 0개라 %s 를 진행할 수 없습니다. collector 에게 다른 출처(공개 API 등)를 쓰도록 다시 지시하세요." % worker)
+        if worker in ws.findings and worker != "performance":
+            raise RuntimeError("%s 는 이미 실행했습니다. 결과는 작업 공간에 있습니다." % worker)
         ws.log("supervisor", "delegate→" + worker, instruction)
-        context = _worker_context(ws)
-        findings, warns = run_tool_loop(self.llm, ws, worker, spec.system_prompt, spec.all_tools,
-                                        spec.handlers, context + "\n\n[지시]\n" + instruction,
-                                        "submit_findings", config.WORKER_MAX_STEPS)
+        context = worker_context(ws)
+        if spec.run_code:  # 코드가 단계를 진행 (3 점수화: LLM 없음 / 5 기획안: 작성·검토 루프)
+            return {"worker": worker, "stage": spec.stage, **spec.run_code(ws, self.llm, instruction, context)} \
+                if worker == "planner" else {"worker": worker, "stage": spec.stage, **spec.run_code(ws, self.llm, instruction)}
+        pre = spec.pre_run(ws) if spec.pre_run else None
+        msg = context + ("\n\n[코드가 먼저 처리한 결과]\n%s" % pre if pre else "") + "\n\n[지시]\n" + instruction
+        findings, warns = run_tool_loop(self.llm, ws, worker, spec.system_prompt, spec.all_tools, spec.handlers,
+                                        msg, "submit_findings", config.WORKER_MAX_STEPS)
         ws.warnings += warns
         if findings is None:
             return {"worker": worker, "ok": False, "warnings": warns}
+        if worker == "collector" and not ws.collected:
+            return {"worker": worker, "ok": False, "findings": findings,
+                    "error": "수집된 영상이 0개입니다. 다른 출처를 쓰도록 collector 를 다시 부르세요."}
         ws.findings[worker] = findings
-        if worker == "plan_writer":
-            ws.cache.pop("plan_validation", None)  # 새 기획안은 다시 검증받아야 한다
-            ws.cache.pop("plan_rule_check", None)
-            return {"worker": worker, "ok": True, "plan_id": assemble_plan(ws)["plan_id"],
-                    "summary_ko": findings.get("summary_ko"), "next": "validator 로 검증하세요"}
-        if worker == "validator":
-            return {"worker": worker, "ok": True, **_record_validation(ws, findings)}
-        return {"worker": worker, "ok": True, "findings": findings}
+        return {"worker": worker, "stage": spec.stage, "ok": True, "findings": findings}
 
     # ── LLM 없는 실행 (dry-run) ────────────────────────────
     def run_dry(self, task: BiliTask) -> BiliReport:
-        """intent별 기본 계획을 코드로 실행. 문장은 템플릿이고, 숫자는 실제 계산 결과다."""
-        ws = Workspace(task, self.alias)
+        """intent별 기본 계획을 코드로 실행. 문장은 템플릿이고, 숫자는 실제 계산 결과다. 기획안 단계는 건너뛴다."""
+        ws = self.last_ws = Workspace(task, self.alias)
         ws.log("supervisor(dry)", "task", task.to_prompt().replace("\n", " | "))
         gid = ws.requested_game["game_id"] if ws.requested_game else None
         for worker in DEFAULT_PLANS[task.intent]:
-            if worker not in ("plan_writer", "validator"):
-                ws.log("supervisor(dry)", "delegate→" + worker, "default plan")
             spec = WORKERS[worker]
+            ws.log("supervisor(dry)", "delegate→" + worker, spec.stage)
             if worker == "collector":
-                c = spec.handlers["collect_popular_games"](ws)
-                spec.handlers["collect_trending"](ws)
-                spec.handlers["load_ranking_snapshot"](ws)
-                ws.findings[worker] = {"summary_ko": "게임 영상 %d개, 핫서치 %d개 수집(%s)." % (
-                    len(ws.videos), len(ws.keywords), c["origin"]), "data_quality_notes": []}
-            elif worker == "trend_radar":
-                sig = spec.handlers["get_hot_keyword_signals"](ws)["signals"]
-                ev = spec.handlers["get_event_signals"](ws)["events"]
-                events = [{"game_zh": e["game_zh"], "kind": "official_activity",
-                           "evidence": "활동 %s 참여 영상 %d개, 합계 조회수 %d" % (e["mission_id"], e["videos"], e["total_view"]),
-                           "recommendation_ko": "(dry-run) 해당 공식 활동 태그로 참여 검토"} for e in ev[:3]]
-                events += [{"game_zh": s["game_zh"], "kind": "leading_signal" if s["leading_signal"] else "hot_keyword",
-                            "evidence": "핫서치 %d위 '%s', 풀 내 영상 %d개" % (s["rank"], s["keyword"], s["videos_in_pool"]),
-                            "recommendation_ko": "(dry-run) 키워드 관련 소재 검토"} for s in sig[:3]]
-                ws.findings[worker] = {"summary_ko": "(dry-run) 이벤트·핫키워드 신호 %d건." % len(events), "events": events}
-            elif worker == "engagement_analyst":
-                scores = h_get_game_scores(ws)["games"]
-                dist = spec.handlers["get_duration_type_distribution"](ws, game_id=gid)
+                h = spec.handlers
+                a = h["load_aside"](ws)
+                if not a["videos"].get("used") or a["videos"]["freshness"]["need_supplement"]:
+                    h["collect_popular_games"](ws)  # Aside 가 없거나, 최근 게시 영상이 부족하면 보충
+                h["collect_trending"](ws)
+                h["load_ranking_snapshot"](ws)
+                ws.findings[worker] = {"summary_ko": "(dry-run) 게임 영상 %d개, 핫키워드 %d개 수집" % (
+                    len(ws.raw_videos), len(ws.keywords)), "data_quality_notes": []}
+            elif worker == "normalizer":
+                n = spec.pre_run(ws)
+                ws.findings[worker] = {"summary_ko": "(dry-run) 정규화 %d개 (게임 매칭 %d)" % (n["videos"], n["matched_to_game"]),
+                                       "alias_candidates": []}
+            elif worker == "scorer":
+                spec.run_code(ws)
+            elif worker == "analyst":
+                scores = ws.cache.get("game_scores") or []
+                dist = h_get_duration_type_distribution(ws, game_id=gid)
+                if task.user_title:
+                    spec.handlers["get_title_benchmark"](ws, game_id=gid)
+                    spec.handlers["diagnose_title"](ws, title=task.user_title)
+                ev = metrics.event_signals(ws.videos, ws.alias)
                 ws.findings[worker] = {
-                    "summary_ko": "(dry-run) 점수 상위 게임 %d개." % len(scores[:5]),
+                    "summary_ko": "(dry-run) 점수 상위 게임 %d개" % len(scores[:5]),
                     "opportunities": [{"game_zh": s["game_zh"], "game_ko": s["game_ko"],
                                        "reason_ko": "반응률 배수 %.2f, 풀 내 영상 %d개" % (s["engagement_multiple"], s["videos_in_pool"])}
                                       for s in scores[:5]],
+                    "events": [{"game_zh": e["game_zh"], "kind": "official_activity",
+                                "evidence": "활동 %s 참여 영상 %d개" % (e["mission_id"], e["videos"]),
+                                "recommendation_ko": "(dry-run)"} for e in ev[:3]],
                     "duration_advice": {"recommended_bucket": dist["best_median_bucket(count>=2)"] or "-",
-                                        "reason_ko": "(dry-run) 2개 이상 구간 중 조회수 중앙값 최고"}}
-            elif worker == "title_doctor":
-                spec.handlers["get_title_benchmark"](ws, game_id=gid)
-                if task.user_title:
-                    spec.handlers["diagnose_title"](ws, title=task.user_title)
-                ws.findings[worker] = {"summary_ko": "(dry-run) 제목 벤치마크 계산 완료.",
-                                       "issues_ko": [], "rewrite_suggestions_zh": []}
-            elif worker == "localizer":
-                tops = h_get_top_titles(ws, n=5, game_id=gid)["titles"]
-                ws.findings[worker] = {"summary_ko": "(dry-run) 번역은 LLM 실행 시 생성.", "cards": [
-                    {"source_bvid": t["bvid"], "title_zh": t["title"], "title_ko": "(LLM 실행 시 번역)",
-                     "why_ko": "반응률 배수 %.2f" % t["engagement_multiple"]} for t in tops]}
-            elif worker in ("plan_writer", "validator"):
-                ws.log("supervisor(dry)", "skip", "%s 는 LLM 실행 시에만 생성" % worker)
+                                        "reason_ko": "(dry-run) 2개 이상 구간 중 조회수 중앙값 최고"},
+                    "overseas_trend_cards": [{"source_bvid": t["bvid"], "title_zh": t["title"], "title_ko": "(LLM 실행 시 번역)",
+                                              "why_ko": "반응률 배수 %.2f" % t["engagement_multiple"]}
+                                             for t in h_get_top_titles(ws, n=5, game_id=gid)["titles"]],
+                    "claims": []}
+            elif worker == "planner":
+                ws.log("supervisor(dry)", "skip", "기획안(작성+검토)은 LLM 실행 시에만 생성")
+            elif worker == "performance":
+                up = spec.handlers["list_uploads"](ws)
+                w = spec.handlers["propose_weights"](ws)
+                ws.findings[worker] = {"summary_ko": "(dry-run) 업로드 %d개, 성과 있는 영상 %d개, 보정안 %s" % (
+                    len(up["uploads"]), up["with_data"], "있음" if w["ready"] else "표본 부족"),
+                    "per_video": [], "next_actions_ko": []}
         return build_report(ws, "(dry-run) LLM 없이 기본 계획으로 실행한 결과입니다. 숫자는 실제 계산값입니다.")
 
 
-def _worker_context(ws: Workspace) -> str:
-    """워커에게 넘길 최소 맥락(작업·요청 게임·이전 워커 요약)."""
-    lines = [ws.task.to_prompt()]
+def worker_context(ws: Workspace) -> str:
+    lines = [ws.task.to_prompt(), "run_id: %s" % ws.run_id]
     if ws.requested_game:
         g = ws.requested_game
         lines.append("requested_game: game_id=%s zh=%s ko=%s" % (g["game_id"], g["zh"], g["ko"]))
     elif ws.task.game:
         lines.append("requested_game: '%s' 은(는) 별칭 사전에 없음" % ws.task.game)
     if ws.collected:
-        lines.append("data: 게임 영상 %d개, 핫서치 키워드 %d개 수집됨" % (len(ws.videos), len(ws.keywords)))
+        lines.append("data: 수집 %d개 / 정규화 %d개, 핫키워드 %d개, Aside 공식 활동 %d개" % (
+            len(ws.raw_videos), len(ws.videos), len(ws.keywords), len(ws.aside_events)))
     for name, f in ws.findings.items():
         lines.append("[%s 요약] %s" % (name, f.get("summary_ko", "")))
     return "\n".join(lines)
 
 
-def _record_validation(ws: Workspace, reviewer: Dict) -> Dict:
-    """규칙 검사(코드) + 검증 워커(LLM) 판정을 합친다. 규칙 검사 실패는 LLM 이 통과시켜도 실패."""
-    plan = assemble_plan(ws)
-    rule = ws.cache.get("plan_rule_check")
-    if rule is None:  # 검증 워커가 규칙 검사를 빠뜨렸어도 코드가 반드시 실행한다
-        has_activity = any(e["game_id"] == plan["game_id"] for e in metrics.event_signals(ws.videos, ws.alias))
-        rule = plan_rules.check_plan(plan, require_activity_tag=has_activity)
-    result = {"plan_id": plan["plan_id"], "passed": bool(rule["passed"] and reviewer.get("passed")),
-              "rule_check": rule, "reviewer": {"passed": reviewer.get("passed"), "issues": reviewer.get("issues", [])}}
-    ws.cache["plan_validation"] = result
-    revisions_left = MAX_PLAN_REVISIONS - (ws.cache.get("plan_version", 1) - 1)
-    result["next"] = ("submit_report 가능" if result["passed"] else
-                      "plan_writer 에게 issues 를 전달해 수정 (남은 수정 %d회)" % revisions_left if revisions_left > 0 else
-                      "수정 횟수 소진: submit_report 하고 warnings 에 미통과 사실을 남기세요")
-    return result
-
-
-def _check_report_submission(ws: Workspace, inp: Dict) -> Optional[str]:
-    """submit_report 직전 코드 검사: 예측 표현 차단, 기획안 미검증 차단."""
+def check_report_submission(ws: Workspace, inp: Dict) -> Optional[str]:
     text = " ".join([inp.get("summary_ko", "")] + list(inp.get("warnings", [])))
     hits = plan_rules.find_prediction_phrases(text)
     if hits:
-        return ("summary_ko/warnings 에 조회수·반응 예측 표현이 있습니다: %s. 점수는 정렬 참고용이므로, "
-                "과거 데이터 사실로만 다시 쓰세요." % " / ".join("「%s」" % h for h in hits))
-    if "plan_writer" in ws.findings:
-        v = ws.cache.get("plan_validation")
-        if v is None:
-            return "기획안이 아직 검증되지 않았습니다. validator 를 먼저 호출하세요."
+        return ("summary_ko/warnings 에 조회수·반응 예측 표현이 있습니다: %s. 점수는 정렬 참고용이므로 과거 데이터 사실로만 다시 쓰세요."
+                % " / ".join("「%s」" % h for h in hits))
     return None
 
 
@@ -210,48 +188,43 @@ def _usage_with_cost(ws: Workspace) -> Dict:
 
 
 def build_report(ws: Workspace, summary_ko: str) -> BiliReport:
-    """워커 결과 + 결정적 계산값을 BiliReport 로 조립.
-
-    점수 같은 숫자는 LLM 이 다시 옮겨 적지 않고 코드가 계산값을 붙인다(전사 오류 방지).
-    """
+    """에이전트 결과 + 결정적 계산값을 BiliReport 로 조립. 점수는 코드 계산값을 붙인다(전사 오류 방지)."""
     f = ws.findings
-    scores = {s["game_zh"]: s for s in (ws.cache.get("game_scores") or
-                                        (metrics.score_games(ws.videos, ws.keywords, ws.alias) if ws.videos else []))}
-    opportunities = []
-    for o in f.get("engagement_analyst", {}).get("opportunities", []):
-        s = scores.get(o.get("game_zh"))
-        opportunities.append(dict(o, score=s and s["score"], components=s and s["components"]))
-
+    a = f.get("analyst", {})
+    scores = {s["game_zh"]: s for s in ws.cache.get("game_scores") or []}
+    opportunities = [dict(o, score=(scores.get(o.get("game_zh")) or {}).get("score"),
+                          components=(scores.get(o.get("game_zh")) or {}).get("components"))
+                     for o in a.get("opportunities", [])]
     title_diag = None
-    if "title_doctor" in f:
+    if ws.cache.get("title_diagnosis") or a.get("title_review"):
         title_diag = dict(ws.cache.get("title_diagnosis") or {"benchmark": ws.cache.get("title_benchmark")},
-                          issues_ko=f["title_doctor"].get("issues_ko", []),
-                          rewrite_suggestions_zh=f["title_doctor"].get("rewrite_suggestions_zh", []))
-
+                          **(a.get("title_review") or {}))
     duration = None
-    if "engagement_analyst" in f:
+    if a.get("duration_advice"):
         gid = ws.requested_game["game_id"] if ws.requested_game else "all"
-        dist = ws.cache.get("distribution:%s" % gid) or ws.cache.get("distribution:all")
-        duration = dict(f["engagement_analyst"].get("duration_advice", {}), distribution=dist)
+        duration = dict(a["duration_advice"], distribution=ws.cache.get("distribution:%s" % gid) or ws.cache.get("distribution:all"))
+    for name in ("collector", "normalizer"):
+        for note in f.get(name, {}).get("data_quality_notes", []) or []:
+            ws.warnings.append("%s: %s" % (name, note))
 
-    for note in f.get("collector", {}).get("data_quality_notes", []):
-        ws.warnings.append("collector: " + note)
-
-    plan = assemble_plan(ws)
-    validation = ws.cache.get("plan_validation")
+    plan, validation = assemble_plan(ws), ws.cache.get("plan_validation")
     if plan is not None:
         plan["status"] = "validated" if validation and validation["passed"] else "needs_review"
         if plan["status"] == "needs_review":
             ws.warnings.append("策划案 %s 未通过校验，需要人工审核" % plan["plan_id"])
+    perf = None
+    if "performance" in f:
+        perf = {"agent": f["performance"], "uploads": ws.cache.get("performance_uploads"),
+                "weight_proposal": ws.cache.get("weight_proposal")}
 
     return BiliReport(
-        plan=plan, plan_validation=validation,
-        task_id=ws.task.task_id, intent=ws.task.intent, summary_ko=summary_ko,
-        opportunities=opportunities,
-        events=f.get("trend_radar", {}).get("events", []),
+        task_id=ws.task.task_id, intent=ws.task.intent, summary_ko=summary_ko, run_id=ws.run_id,
+        opportunities=opportunities, events=a.get("events", []),
         title_diagnosis=title_diag, duration_advice=duration,
-        overseas_trend_cards=f.get("localizer", {}).get("cards", []),
-        alias_candidates=f.get("collector", {}).get("alias_candidates", []),
+        overseas_trend_cards=a.get("overseas_trend_cards", []),
+        alias_candidates=f.get("normalizer", {}).get("alias_candidates", []),
+        plan=plan, plan_validation=validation, performance=perf,
+        agent_stages={k: v.get("summary_ko") for k, v in f.items()},
         data_sources=ws.data_sources, agent_trace=ws.trace, usage=_usage_with_cost(ws),
         warnings=list(dict.fromkeys(ws.warnings)),
     )

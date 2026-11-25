@@ -1,0 +1,1877 @@
+{
+ "crawled_at": "2026-11-25 21:06:48",
+ "source": "https://www.bilibili.com",
+ "scope": "游戏区 + 游戏相关",
+ "criteria": [
+  "이벤트 레이더",
+  "핫키워드 선행 신호",
+  "반응률 정렬",
+  "공식 이벤트 태그",
+  "제목 진단"
+ ],
+ "hot_keywords": [
+  {
+   "rank": 1,
+   "keyword": "神舟二十四号发射成功",
+   "heat_score": 3153368,
+   "is_game": false
+  },
+  {
+   "rank": 2,
+   "keyword": "中国空间站 从住标间到三室一厅",
+   "heat_score": 2889287,
+   "is_game": false
+  },
+  {
+   "rank": 3,
+   "keyword": "BLG赛前宣传片是怎么拍的",
+   "heat_score": 2006270,
+   "is_game": false
+  },
+  {
+   "rank": 4,
+   "keyword": "将加盟LPL的韩援新面孔有哪些",
+   "heat_score": 1251535,
+   "is_game": true
+  },
+  {
+   "rank": 5,
+   "keyword": "哥德巴赫猜想会不会被AI证明",
+   "heat_score": 1090443,
+   "is_game": false
+  },
+  {
+   "rank": 6,
+   "keyword": "NBA哪些球员的合同有爆雷风险",
+   "heat_score": 814682,
+   "is_game": false
+  },
+  {
+   "rank": 7,
+   "keyword": "8K超清实拍神舟二十四号发射",
+   "heat_score": 732146,
+   "is_game": false
+  },
+  {
+   "rank": 8,
+   "keyword": "Chovy回应世界赛失利",
+   "heat_score": 680045,
+   "is_game": false
+  },
+  {
+   "rank": 9,
+   "keyword": "ChatGPT合并Chat和Work",
+   "heat_score": 298555,
+   "is_game": false
+  },
+  {
+   "rank": 10,
+   "keyword": "航天员中载荷专家是干啥的",
+   "heat_score": 268528,
+   "is_game": false
+  }
+ ],
+ "videos": [
+  {
+   "title": "王老菊教你影之刃15：武圣阿魂",
+   "bvid": "BV1eSyBzbEsc",
+   "url": "https://www.bilibili.com/video/BV1eSyBzbEsc",
+   "owner": "怕上火暴王老菊",
+   "category": "其他游戏",
+   "source": "综合热门",
+   "pubdate": "2026-11-25 14:04",
+   "event_radar": {
+    "view": 100969,
+    "like": 9170,
+    "coin": 7560,
+    "favorite": 2596,
+    "share": 193,
+    "reply": 736,
+    "danmaku": 3806,
+    "rcmd_reason": ""
+   },
+   "hot_keyword_signal": [],
+   "engagement_rate": 23.83,
+   "official_event": {
+    "mission_id": null,
+    "event_tags": []
+   },
+   "tags": [
+    "游戏实况",
+    "游戏解说",
+    "娱乐",
+    "动作游戏",
+    "影之刃零"
+   ],
+   "title_diagnosis": "길이 적정, 괄호 없음, 숫자 有",
+   "engagement_rank": 1
+  },
+  {
+   "title": "《绝区零》挽昼角色展示 | 日陨之前",
+   "bvid": "BV1esyZz7ExF",
+   "url": "https://www.bilibili.com/video/BV1esyZz7ExF",
+   "owner": "绝区零",
+   "category": "单人RPG游戏",
+   "source": "全站排行榜",
+   "pubdate": "2026-11-25 13:00",
+   "event_radar": {
+    "view": 979234,
+    "like": 106059,
+    "coin": 60182,
+    "favorite": 25383,
+    "share": 12287,
+    "reply": 6691,
+    "danmaku": 5720,
+    "rcmd_reason": ""
+   },
+   "hot_keyword_signal": [],
+   "engagement_rate": 22.09,
+   "official_event": {
+    "mission_id": null,
+    "event_tags": []
+   },
+   "tags": [
+    "ARPG",
+    "PC",
+    "手机游戏",
+    "挽昼",
+    "长日终尽",
+    "米哈游",
+    "绝区零"
+   ],
+   "title_diagnosis": "길이 적정, 괄호 태그 有",
+   "engagement_rank": 2
+  },
+  {
+   "title": "别碰这款儿童互动游戏！它会吞噬掉你！",
+   "bvid": "BV1EW1wzeEuH",
+   "url": "https://www.bilibili.com/video/BV1EW1wzeEuH",
+   "owner": "与山0v0",
+   "category": "其他游戏",
+   "source": "综合热门",
+   "pubdate": "2026-11-25 12:25",
+   "event_radar": {
+    "view": 226276,
+    "like": 27798,
+    "coin": 6920,
+    "favorite": 7786,
+    "share": 179,
+    "reply": 1646,
+    "danmaku": 3285,
+    "rcmd_reason": "人气飙升"
+   },
+   "hot_keyword_signal": [],
+   "engagement_rate": 21.04,
+   "official_event": {
+    "mission_id": null,
+    "event_tags": []
+   },
+   "tags": [
+    "游戏实况",
+    "游戏视频",
+    "推荐宝藏游戏"
+   ],
+   "title_diagnosis": "길이 적정, 괄호 없음, 감탄/의문 有",
+   "engagement_rank": 3
+  },
+  {
+   "title": "侠盗猎车手6 第一集，GTA 6 Part 1",
+   "bvid": "BV1JpyazXEUD",
+   "url": "https://www.bilibili.com/video/BV1JpyazXEUD",
+   "owner": "鲤鱼Ace",
+   "category": "其他游戏",
+   "source": "全站排行榜",
+   "pubdate": "2026-11-21 17:39",
+   "event_radar": {
+    "view": 2603216,
+    "like": 258979,
+    "coin": 107643,
+    "favorite": 102658,
+    "share": 12934,
+    "reply": 14682,
+    "danmaku": 34490,
+    "rcmd_reason": ""
+   },
+   "hot_keyword_signal": [],
+   "engagement_rate": 20.41,
+   "official_event": {
+    "mission_id": null,
+    "event_tags": []
+   },
+   "tags": [
+    "搞笑",
+    "GTA",
+    "GTA6",
+    "鲤鱼",
+    "Grand Theft Auto",
+    "鲤鱼Ace"
+   ],
+   "title_diagnosis": "길이 적정, 괄호 없음, 숫자 有",
+   "engagement_rank": 4
+  },
+  {
+   "title": "☠️末日加油站☠️",
+   "bvid": "BV13vyDztEbw",
+   "url": "https://www.bilibili.com/video/BV13vyDztEbw",
+   "owner": "Emotional勃",
+   "category": "其他游戏",
+   "source": "综合热门",
+   "pubdate": "2026-11-24 18:20",
+   "event_radar": {
+    "view": 221820,
+    "like": 20301,
+    "coin": 10329,
+    "favorite": 9313,
+    "share": 1139,
+    "reply": 1312,
+    "danmaku": 1966,
+    "rcmd_reason": ""
+   },
+   "hot_keyword_signal": [],
+   "engagement_rate": 20.0,
+   "official_event": {
+    "mission_id": null,
+    "event_tags": []
+   },
+   "tags": [
+    "恐怖",
+    "搞笑",
+    "娱乐",
+    "模拟经营",
+    "直播切片",
+    "memes",
+    "meme",
+    "游戏皆可榨菜"
+   ],
+   "title_diagnosis": "제목 짧음, 괄호 없음",
+   "engagement_rank": 5
+  },
+  {
+   "title": "Welcome Back Home, Zeus.",
+   "bvid": "BV1SryzzXEgy",
+   "url": "https://www.bilibili.com/video/BV1SryzzXEgy",
+   "owner": "T1电子竞技俱乐部",
+   "category": "MOBA游戏",
+   "source": "综合热门",
+   "pubdate": "2026-11-25 19:16",
+   "event_radar": {
+    "view": 362882,
+    "like": 21345,
+    "coin": 10572,
+    "favorite": 3346,
+    "share": 18100,
+    "reply": 7276,
+    "danmaku": 1215,
+    "rcmd_reason": "1万分享"
+   },
+   "hot_keyword_signal": [],
+   "engagement_rate": 17.05,
+   "official_event": {
+    "mission_id": null,
+    "event_tags": [
+     "电竞赛事"
+    ]
+   },
+   "tags": [
+    "英雄联盟",
+    "电竞赛事",
+    "LCK",
+    "LOL",
+    "电子竞技",
+    "崔祐齐",
+    "T1",
+    "MOBA",
+    "Zeus"
+   ],
+   "title_diagnosis": "길이 적정, 괄호 없음",
+   "engagement_rank": 6
+  },
+  {
+   "title": "《明日方舟：终末地》小刻EP - JUST THE START",
+   "bvid": "BV1YhyzzhEJU",
+   "url": "https://www.bilibili.com/video/BV1YhyzzhEJU",
+   "owner": "明日方舟终末地",
+   "category": "MV",
+   "source": "综合热门",
+   "pubdate": "2026-11-25 12:03",
+   "event_radar": {
+    "view": 409743,
+    "like": 39590,
+    "coin": 7087,
+    "favorite": 8168,
+    "share": 2133,
+    "reply": 4115,
+    "danmaku": 1014,
+    "rcmd_reason": ""
+   },
+   "hot_keyword_signal": [],
+   "engagement_rate": 15.16,
+   "official_event": {
+    "mission_id": null,
+    "event_tags": []
+   },
+   "tags": [
+    "明日方舟终末地",
+    "明日方舟：终末地",
+    "穿越甚大蘑境与你相逢",
+    "小刻"
+   ],
+   "title_diagnosis": "길이 적정, 괄호 태그 有",
+   "engagement_rank": 7
+  },
+  {
+   "title": "当我以名画为灵感制作了一批神器",
+   "bvid": "BV1xoypzBEgd",
+   "url": "https://www.bilibili.com/video/BV1xoypzBEgd",
+   "owner": "青枫工作室",
+   "category": "沙盒类",
+   "source": "全站排行榜",
+   "pubdate": "2026-11-20 20:18",
+   "event_radar": {
+    "view": 1241407,
+    "like": 130463,
+    "coin": 3066,
+    "favorite": 44259,
+    "share": 2821,
+    "reply": 1519,
+    "danmaku": 345,
+    "rcmd_reason": ""
+   },
+   "hot_keyword_signal": [],
+   "engagement_rate": 14.7,
+   "official_event": {
+    "mission_id": null,
+    "event_tags": []
+   },
+   "tags": [
+    "我的世界",
+    "青枫工作室",
+    "青枫神器",
+    "我的世界中国版"
+   ],
+   "title_diagnosis": "길이 적정, 괄호 없음",
+   "engagement_rank": 8
+  },
+  {
+   "title": "不是我害了你......是这个崩坏害了你啊！【泛式】",
+   "bvid": "BV1CHyoz8EPj",
+   "url": "https://www.bilibili.com/video/BV1CHyoz8EPj",
+   "owner": "泛式",
+   "category": "单人RPG游戏",
+   "source": "综合热门",
+   "pubdate": "2026-11-25 18:05",
+   "event_radar": {
+    "view": 183373,
+    "like": 15822,
+    "coin": 2464,
+    "favorite": 2324,
+    "share": 1214,
+    "reply": 1546,
+    "danmaku": 768,
+    "rcmd_reason": ""
+   },
+   "hot_keyword_signal": [],
+   "engagement_rate": 13.16,
+   "official_event": {
+    "mission_id": 4073184,
+    "event_tags": []
+   },
+   "tags": [
+    "新番",
+    "手游",
+    "搞笑",
+    "泛式",
+    "因缘精灵",
+    "崩坏因缘精灵",
+    "崩坏：因缘精灵",
+    "因缘精灵测评",
+    "米哈游",
+    "捉宠"
+   ],
+   "title_diagnosis": "길이 적정, 괄호 태그 有, 감탄/의문 有",
+   "engagement_rank": 9
+  },
+  {
+   "title": "【STN快报第8.5季28】不要小看一个老实本分的家政精英，他可能是GTA的超级大盗",
+   "bvid": "BV12iyGzGEha",
+   "url": "https://www.bilibili.com/video/BV12iyGzGEha",
+   "owner": "STN工作室",
+   "category": "单机主机类游戏",
+   "source": "全站排行榜",
+   "pubdate": "2026-11-22 19:00",
+   "event_radar": {
+    "view": 897118,
+    "like": 52941,
+    "coin": 33590,
+    "favorite": 11599,
+    "share": 1196,
+    "reply": 6051,
+    "danmaku": 10839,
+    "rcmd_reason": ""
+   },
+   "hot_keyword_signal": [],
+   "engagement_rate": 12.95,
+   "official_event": {
+    "mission_id": null,
+    "event_tags": []
+   },
+   "tags": [
+    "游戏",
+    "我带过最差的一届",
+    "英雄联盟：曙光",
+    "影之刃",
+    "BLG",
+    "时之笛",
+    "GTA6",
+    "进击的巨人3"
+   ],
+   "title_diagnosis": "제목 김, 괄호 태그 有, 숫자 有",
+   "engagement_rank": 10
+  },
+  {
+   "title": "【BLG夺冠VLOG】这是属于我们的冠军记忆",
+   "bvid": "BV1zGy5ziEnd",
+   "url": "https://www.bilibili.com/video/BV1zGy5ziEnd",
+   "owner": "BLG电子竞技俱乐部",
+   "category": "MOBA游戏",
+   "source": "全站排行榜",
+   "pubdate": "2026-11-22 23:06",
+   "event_radar": {
+    "view": 1678558,
+    "like": 88055,
+    "coin": 56432,
+    "favorite": 29429,
+    "share": 6574,
+    "reply": 18786,
+    "danmaku": 14053,
+    "rcmd_reason": ""
+   },
+   "hot_keyword_signal": [],
+   "engagement_rate": 12.71,
+   "official_event": {
+    "mission_id": 4074201,
+    "event_tags": []
+   },
+   "tags": [
+    "电子竞技",
+    "英雄联盟",
+    "MOBA",
+    "冠军",
+    "BLG",
+    "恭喜BLG获得S16总冠军"
+   ],
+   "title_diagnosis": "길이 적정, 괄호 태그 有",
+   "engagement_rank": 11
+  },
+  {
+   "title": "【终末地】1.7重建禁地蓝图基建攻略！一键毕业+轻松镀层  |魔法Zc目录",
+   "bvid": "BV1HhyBzrEwN",
+   "url": "https://www.bilibili.com/video/BV1HhyBzrEwN",
+   "owner": "魔法Zc目录",
+   "category": "单人RPG游戏",
+   "source": "综合热门",
+   "pubdate": "2026-11-25 13:42",
+   "event_radar": {
+    "view": 139286,
+    "like": 10947,
+    "coin": 938,
+    "favorite": 4460,
+    "share": 350,
+    "reply": 437,
+    "danmaku": 40,
+    "rcmd_reason": ""
+   },
+   "hot_keyword_signal": [],
+   "engagement_rate": 12.33,
+   "official_event": {
+    "mission_id": null,
+    "event_tags": []
+   },
+   "tags": [
+    "终末地",
+    "泡泡出击",
+    "蓝图",
+    "魔法Zc目录"
+   ],
+   "title_diagnosis": "길이 적정, 괄호 태그 有, 숫자 有, 감탄/의문 有",
+   "engagement_rank": 12
+  },
+  {
+   "title": "帮玩一个月给1500？亲身试险 揭露骗子套路｜完整全流程｜反诈讲解，套路分析，话术拆解。",
+   "bvid": "BV1Mi1FzmEdX",
+   "url": "https://www.bilibili.com/video/BV1Mi1FzmEdX",
+   "owner": "一立风里克",
+   "category": "动作竞技游戏",
+   "source": "综合热门",
+   "pubdate": "2026-11-25 01:20",
+   "event_radar": {
+    "view": 95343,
+    "like": 6393,
+    "coin": 1915,
+    "favorite": 974,
+    "share": 669,
+    "reply": 1266,
+    "danmaku": 261,
+    "rcmd_reason": ""
+   },
+   "hot_keyword_signal": [],
+   "engagement_rate": 12.04,
+   "official_event": {
+    "mission_id": 4073583,
+    "event_tags": []
+   },
+   "tags": [
+    "骗子",
+    "火影手游高能团",
+    "游戏骗子",
+    "防骗",
+    "诈骗",
+    "反诈",
+    "火影手游这期神了"
+   ],
+   "title_diagnosis": "제목 김, 괄호 없음, 숫자 有, 감탄/의문 有",
+   "engagement_rank": 13
+  },
+  {
+   "title": "⚡️从夯到拉！ 2026年3A游戏优化水平大摸底！谁是优化之王",
+   "bvid": "BV1ifyGz4Edy",
+   "url": "https://www.bilibili.com/video/BV1ifyGz4Edy",
+   "owner": "阿狸才不是受",
+   "category": "射击游戏",
+   "source": "全站排行榜",
+   "pubdate": "2026-11-22 19:30",
+   "event_radar": {
+    "view": 978887,
+    "like": 79308,
+    "coin": 14441,
+    "favorite": 11914,
+    "share": 1048,
+    "reply": 4189,
+    "danmaku": 1356,
+    "rcmd_reason": ""
+   },
+   "hot_keyword_signal": [],
+   "engagement_rate": 11.47,
+   "official_event": {
+    "mission_id": null,
+    "event_tags": []
+   },
+   "tags": [
+    "使命召唤",
+    "生化危机",
+    "地平线6",
+    "TGA",
+    "3A",
+    "年度最佳",
+    "游戏优化",
+    "影之刃零"
+   ],
+   "title_diagnosis": "길이 적정, 괄호 없음, 숫자 有, 감탄/의문 有",
+   "engagement_rank": 14
+  },
+  {
+   "title": "普坝帮出击！",
+   "bvid": "BV1cvyLz6Ebc",
+   "url": "https://www.bilibili.com/video/BV1cvyLz6Ebc",
+   "owner": "狂野的蜂",
+   "category": "射击游戏",
+   "source": "全站排行榜",
+   "pubdate": "2026-11-22 20:10",
+   "event_radar": {
+    "view": 723307,
+    "like": 62855,
+    "coin": 4653,
+    "favorite": 7063,
+    "share": 2630,
+    "reply": 1783,
+    "danmaku": 692,
+    "rcmd_reason": ""
+   },
+   "hot_keyword_signal": [],
+   "engagement_rate": 11.02,
+   "official_event": {
+    "mission_id": null,
+    "event_tags": []
+   },
+   "tags": [
+    "三角洲行动",
+    "三角洲搞笑"
+   ],
+   "title_diagnosis": "제목 짧음, 괄호 없음, 감탄/의문 有",
+   "engagement_rank": 15
+  },
+  {
+   "title": "决赛练英雄？选皮肤原则大公开！BLG冠军中野亲自讲述夺冠故事【视频播客 | 元来如此 EP.10】",
+   "bvid": "BV1qByfz4EjN",
+   "url": "https://www.bilibili.com/video/BV1qByfz4EjN",
+   "owner": "管泽元",
+   "category": "MOBA游戏",
+   "source": "全站排行榜",
+   "pubdate": "2026-11-25 13:00",
+   "event_radar": {
+    "view": 819175,
+    "like": 39424,
+    "coin": 19965,
+    "favorite": 11276,
+    "share": 3724,
+    "reply": 2952,
+    "danmaku": 9337,
+    "rcmd_reason": ""
+   },
+   "hot_keyword_signal": [
+    "将加盟LPL的韩援新面孔有哪些"
+   ],
+   "engagement_rate": 10.58,
+   "official_event": {
+    "mission_id": 4074201,
+    "event_tags": [
+     "英雄联盟赛事"
+    ]
+   },
+   "tags": [
+    "LPL",
+    "英雄联盟",
+    "电子竞技",
+    "视频播客",
+    "BLG",
+    "管泽元",
+    "英雄联盟赛事",
+    "Knight",
+    "Xun"
+   ],
+   "title_diagnosis": "제목 김, 괄호 태그 有, 숫자 有, 감탄/의문 有",
+   "engagement_rank": 16
+  },
+  {
+   "title": "【终末地】1.7最好抄北部禁区流程基建！自配平旧产能拉满进度？！",
+   "bvid": "BV1j1yBzwE8z",
+   "url": "https://www.bilibili.com/video/BV1j1yBzwE8z",
+   "owner": "MR流星飞",
+   "category": "单人RPG游戏",
+   "source": "综合热门",
+   "pubdate": "2026-11-25 13:51",
+   "event_radar": {
+    "view": 178070,
+    "like": 7029,
+    "coin": 2960,
+    "favorite": 6106,
+    "share": 878,
+    "reply": 788,
+    "danmaku": 54,
+    "rcmd_reason": ""
+   },
+   "hot_keyword_signal": [],
+   "engagement_rate": 10.0,
+   "official_event": {
+    "mission_id": 4074760,
+    "event_tags": []
+   },
+   "tags": [
+    "终末地",
+    "塔卫二开拓协会",
+    "终末地1.7",
+    "教程攻略",
+    "蓝图",
+    "基建",
+    "明日方舟终末地攻略"
+   ],
+   "title_diagnosis": "길이 적정, 괄호 태그 有, 숫자 有, 감탄/의문 有",
+   "engagement_rank": 17
+  },
+  {
+   "title": "【影之刃零MOD】魂大人和大哥关系好弄把火麒麟怎么了",
+   "bvid": "BV1DByDzsEz9",
+   "url": "https://www.bilibili.com/video/BV1DByDzsEz9",
+   "owner": "雷玥云云Official",
+   "category": "射击游戏",
+   "source": "综合热门",
+   "pubdate": "2026-11-23 19:44",
+   "event_radar": {
+    "view": 329851,
+    "like": 18456,
+    "coin": 864,
+    "favorite": 2427,
+    "share": 8747,
+    "reply": 1525,
+    "danmaku": 683,
+    "rcmd_reason": "很多人分享"
+   },
+   "hot_keyword_signal": [],
+   "engagement_rate": 9.91,
+   "official_event": {
+    "mission_id": 4071593,
+    "event_tags": [
+     "影之刃零创作者激励"
+    ]
+   },
+   "tags": [
+    "射击游戏",
+    "MOD",
+    "穿越火线",
+    "影之刃零MOD",
+    "火麒麟",
+    "cf",
+    "终极猎手",
+    "影之刃零",
+    "影之刃零创作者激励"
+   ],
+   "title_diagnosis": "길이 적정, 괄호 태그 有",
+   "engagement_rank": 18
+  },
+  {
+   "title": "GTA6性能要求高吗？哪台主机表现好？解锁30帧后能跑多少帧？",
+   "bvid": "BV1pDyjzEEsJ",
+   "url": "https://www.bilibili.com/video/BV1pDyjzEEsJ",
+   "owner": "极客湾Geekerwan",
+   "category": "其他游戏",
+   "source": "全站排行榜",
+   "pubdate": "2026-11-23 02:08",
+   "event_radar": {
+    "view": 1130420,
+    "like": 54749,
+    "coin": 15703,
+    "favorite": 10709,
+    "share": 8319,
+    "reply": 15525,
+    "danmaku": 4543,
+    "rcmd_reason": ""
+   },
+   "hot_keyword_signal": [],
+   "engagement_rate": 9.69,
+   "official_event": {
+    "mission_id": null,
+    "event_tags": []
+   },
+   "tags": [
+    "Xbox",
+    "Xbox Series X",
+    "性能",
+    "XSS",
+    "GTA6",
+    "PS5",
+    "主机",
+    "PS5 Pro",
+    "XSX"
+   ],
+   "title_diagnosis": "길이 적정, 괄호 없음, 숫자 有, 감탄/의문 有",
+   "engagement_rank": 19
+  },
+  {
+   "title": "【老鼠人行动】零号大坝（机密）12w→1900w",
+   "bvid": "BV1ziyfzZEjg",
+   "url": "https://www.bilibili.com/video/BV1ziyfzZEjg",
+   "owner": "老飞宇66",
+   "category": "射击游戏",
+   "source": "综合热门",
+   "pubdate": "2026-11-24 17:59",
+   "event_radar": {
+    "view": 372749,
+    "like": 30329,
+    "coin": 1784,
+    "favorite": 2008,
+    "share": 344,
+    "reply": 729,
+    "danmaku": 318,
+    "rcmd_reason": ""
+   },
+   "hot_keyword_signal": [],
+   "engagement_rate": 9.53,
+   "official_event": {
+    "mission_id": 4074069,
+    "event_tags": []
+   },
+   "tags": [
+    "电子竞技",
+    "第一视角",
+    "FPS",
+    "老飞宇66",
+    "三角洲行动",
+    "三角洲欢乐剧场"
+   ],
+   "title_diagnosis": "길이 적정, 괄호 태그 有, 숫자 有",
+   "engagement_rank": 20
+  },
+  {
+   "title": "【解说员】月底香喷喷",
+   "bvid": "BV1gSyizDEDs",
+   "url": "https://www.bilibili.com/video/BV1gSyizDEDs",
+   "owner": "women51",
+   "category": "动作竞技游戏",
+   "source": "综合热门",
+   "pubdate": "2026-11-25 12:00",
+   "event_radar": {
+    "view": 98876,
+    "like": 6433,
+    "coin": 782,
+    "favorite": 1186,
+    "share": 189,
+    "reply": 272,
+    "danmaku": 529,
+    "rcmd_reason": ""
+   },
+   "hot_keyword_signal": [],
+   "engagement_rate": 9.5,
+   "official_event": {
+    "mission_id": 4073583,
+    "event_tags": []
+   },
+   "tags": [
+    "游戏解说",
+    "火影忍者",
+    "决斗场",
+    "段位",
+    "格斗游戏",
+    "高手",
+    "解说员",
+    "火影忍者手游",
+    "火影手游这期神了"
+   ],
+   "title_diagnosis": "제목 짧음, 괄호 태그 有",
+   "engagement_rank": 21
+  },
+  {
+   "title": "忍了70个小时，让这结局给我干破防了【GTA6】通关吐槽",
+   "bvid": "BV1SLyfzGE42",
+   "url": "https://www.bilibili.com/video/BV1SLyfzGE42",
+   "owner": "蘑菇鸭的日常",
+   "category": "其他游戏",
+   "source": "综合热门",
+   "pubdate": "2026-11-24 19:16",
+   "event_radar": {
+    "view": 324705,
+    "like": 12186,
+    "coin": 3846,
+    "favorite": 2630,
+    "share": 2385,
+    "reply": 5358,
+    "danmaku": 4058,
+    "rcmd_reason": ""
+   },
+   "hot_keyword_signal": [],
+   "engagement_rate": 9.38,
+   "official_event": {
+    "mission_id": null,
+    "event_tags": []
+   },
+   "tags": [
+    "结局",
+    "游戏评测",
+    "GTA",
+    "开放世界游戏",
+    "通关吐槽",
+    "GTA6好玩吗",
+    "游戏吐槽",
+    "GTA6",
+    "侠盗猎车手6",
+    "锐评"
+   ],
+   "title_diagnosis": "길이 적정, 괄호 태그 有, 숫자 有",
+   "engagement_rank": 22
+  },
+  {
+   "title": "【终末地】小刻首发攻略！法术队回点辅 提弗洛斯售后！技能武器+装备配队+操作思路+基质升级差距+抽取建议！小刻全方位强度养成攻略！明日方舟终末地",
+   "bvid": "BV1w5yzzGEYN",
+   "url": "https://www.bilibili.com/video/BV1w5yzzGEYN",
+   "owner": "梦轩dada",
+   "category": "单人RPG游戏",
+   "source": "综合热门",
+   "pubdate": "2026-11-25 12:51",
+   "event_radar": {
+    "view": 137812,
+    "like": 7704,
+    "coin": 1532,
+    "favorite": 1982,
+    "share": 121,
+    "reply": 1016,
+    "danmaku": 407,
+    "rcmd_reason": ""
+   },
+   "hot_keyword_signal": [],
+   "engagement_rate": 9.26,
+   "official_event": {
+    "mission_id": null,
+    "event_tags": [
+     "明日方舟终末地创作者应援计划"
+    ]
+   },
+   "tags": [
+    "养成",
+    "攻略",
+    "明日方舟终末地",
+    "明日方舟终末地创作者应援计划",
+    "教程攻略",
+    "技能",
+    "小刻",
+    "基建",
+    "配队",
+    "角色、"
+   ],
+   "title_diagnosis": "제목 김, 괄호 태그 有, 감탄/의문 有",
+   "engagement_rank": 23
+  },
+  {
+   "title": "mega席多蓝恩和米立龙特性分析，吃吼霸回归【宝可梦冠军】",
+   "bvid": "BV152yBzhEH8",
+   "url": "https://www.bilibili.com/video/BV152yBzhEH8",
+   "owner": "口袋迷ag",
+   "category": "单机主机类游戏",
+   "source": "综合热门",
+   "pubdate": "2026-11-25 13:51",
+   "event_radar": {
+    "view": 106412,
+    "like": 4400,
+    "coin": 1334,
+    "favorite": 704,
+    "share": 784,
+    "reply": 1329,
+    "danmaku": 833,
+    "rcmd_reason": ""
+   },
+   "hot_keyword_signal": [],
+   "engagement_rate": 8.82,
+   "official_event": {
+    "mission_id": null,
+    "event_tags": []
+   },
+   "tags": [
+    "宝可梦",
+    "POKEMON",
+    "任天堂",
+    "精灵宝可梦",
+    "宝可梦朱紫",
+    "pokemon champions",
+    "SWITCH",
+    "宝可梦冠军"
+   ],
+   "title_diagnosis": "길이 적정, 괄호 태그 有",
+   "engagement_rank": 24
+  },
+  {
+   "title": "【LCK女团】《Whiplash》视觉盛宴",
+   "bvid": "BV1X1y3zjEcW",
+   "url": "https://www.bilibili.com/video/BV1X1y3zjEcW",
+   "owner": "词元菌",
+   "category": "AI音乐",
+   "source": "全站排行榜",
+   "pubdate": "2026-11-22 11:42",
+   "event_radar": {
+    "view": 1210155,
+    "like": 63674,
+    "coin": 7658,
+    "favorite": 16807,
+    "share": 12947,
+    "reply": 3477,
+    "danmaku": 819,
+    "rcmd_reason": ""
+   },
+   "hot_keyword_signal": [],
+   "engagement_rate": 8.71,
+   "official_event": {
+    "mission_id": 4071515,
+    "event_tags": []
+   },
+   "tags": [
+    "韩国女团",
+    "音乐",
+    "AIMV",
+    "智薰",
+    "updream",
+    "LCK女团",
+    "Whiplash",
+    "AI音乐"
+   ],
+   "title_diagnosis": "길이 적정, 괄호 태그 有",
+   "engagement_rank": 25
+  },
+  {
+   "title": "什么叫抽个卡给国家电网搬来了？",
+   "bvid": "BV1ugy3z3E6W",
+   "url": "https://www.bilibili.com/video/BV1ugy3z3E6W",
+   "owner": "我不是赤寒",
+   "category": "单人RPG游戏",
+   "source": "全站排行榜",
+   "pubdate": "2026-11-22 14:18",
+   "event_radar": {
+    "view": 1167673,
+    "like": 70017,
+    "coin": 2790,
+    "favorite": 13522,
+    "share": 1691,
+    "reply": 2082,
+    "danmaku": 10221,
+    "rcmd_reason": ""
+   },
+   "hot_keyword_signal": [],
+   "engagement_rate": 8.59,
+   "official_event": {
+    "mission_id": 4073184,
+    "event_tags": [
+     "崩坏：因缘精灵创作者激励计划"
+    ]
+   },
+   "tags": [
+    "搞笑",
+    "抽卡",
+    "崩坏：星穹铁道",
+    "阿哈",
+    "姬子人柱力",
+    "崩坏：因缘精灵创作者激励计划",
+    "欧皇",
+    "抽象",
+    "非酋"
+   ],
+   "title_diagnosis": "길이 적정, 괄호 없음, 감탄/의문 有",
+   "engagement_rank": 26
+  },
+  {
+   "title": "打的太菜了对面都懒的管我，团战只打我队友",
+   "bvid": "BV13GyfzLEFm",
+   "url": "https://www.bilibili.com/video/BV13GyfzLEFm",
+   "owner": "磊哥游戏",
+   "category": "MOBA游戏",
+   "source": "综合热门",
+   "pubdate": "2026-11-25 10:00",
+   "event_radar": {
+    "view": 332530,
+    "like": 25427,
+    "coin": 980,
+    "favorite": 678,
+    "share": 223,
+    "reply": 793,
+    "danmaku": 264,
+    "rcmd_reason": ""
+   },
+   "hot_keyword_signal": [],
+   "engagement_rate": 8.53,
+   "official_event": {
+    "mission_id": 4071656,
+    "event_tags": [
+     "王者荣耀UP主激励计划"
+    ]
+   },
+   "tags": [
+    "王者荣耀UP主激励计划",
+    "王者荣耀"
+   ],
+   "title_diagnosis": "길이 적정, 괄호 없음",
+   "engagement_rank": 27
+  },
+  {
+   "title": "《明日方舟：终末地》干员叙事 [小刻：很新的旅程]",
+   "bvid": "BV1aoyQzwEx9",
+   "url": "https://www.bilibili.com/video/BV1aoyQzwEx9",
+   "owner": "明日方舟终末地",
+   "category": "单人RPG游戏",
+   "source": "全站排行榜",
+   "pubdate": "2026-11-24 12:30",
+   "event_radar": {
+    "view": 1121329,
+    "like": 59760,
+    "coin": 11258,
+    "favorite": 9174,
+    "share": 6436,
+    "reply": 5136,
+    "danmaku": 2793,
+    "rcmd_reason": ""
+   },
+   "hot_keyword_signal": [],
+   "engagement_rate": 8.43,
+   "official_event": {
+    "mission_id": null,
+    "event_tags": []
+   },
+   "tags": [
+    "明日方舟终末地",
+    "明日方舟：终末地",
+    "穿越甚大蘑境与你相逢"
+   ],
+   "title_diagnosis": "길이 적정, 괄호 태그 有",
+   "engagement_rank": 28
+  },
+  {
+   "title": "我打Faker??真的假的",
+   "bvid": "BV1t1yDzSEKc",
+   "url": "https://www.bilibili.com/video/BV1t1yDzSEKc",
+   "owner": "神探帅硫克",
+   "category": "MOBA游戏",
+   "source": "综合热门",
+   "pubdate": "2026-11-23 18:28",
+   "event_radar": {
+    "view": 583242,
+    "like": 41081,
+    "coin": 1871,
+    "favorite": 2533,
+    "share": 917,
+    "reply": 958,
+    "danmaku": 680,
+    "rcmd_reason": ""
+   },
+   "hot_keyword_signal": [],
+   "engagement_rate": 8.24,
+   "official_event": {
+    "mission_id": 4071515,
+    "event_tags": []
+   },
+   "tags": [
+    "电子竞技",
+    "英雄联盟",
+    "英雄联盟S16",
+    "扎克",
+    "Faker"
+   ],
+   "title_diagnosis": "길이 적정, 괄호 없음, 감탄/의문 有",
+   "engagement_rank": 29
+  },
+  {
+   "title": "冰火钩子组合惩罚外挂超兽！猛攻怪兽！还有野人！",
+   "bvid": "BV1XKyfzEEjT",
+   "url": "https://www.bilibili.com/video/BV1XKyfzEEjT",
+   "owner": "十六van游戏",
+   "category": "射击游戏",
+   "source": "综合热门",
+   "pubdate": "2026-11-24 19:22",
+   "event_radar": {
+    "view": 432331,
+    "like": 21011,
+    "coin": 1656,
+    "favorite": 5398,
+    "share": 923,
+    "reply": 687,
+    "danmaku": 454,
+    "rcmd_reason": ""
+   },
+   "hot_keyword_signal": [],
+   "engagement_rate": 6.97,
+   "official_event": {
+    "mission_id": 4074069,
+    "event_tags": []
+   },
+   "tags": [
+    "诛仙",
+    "剪辑",
+    "外挂",
+    "FPS",
+    "奥特曼",
+    "三角洲行动",
+    "三角洲欢乐剧场",
+    "三角洲二创整活"
+   ],
+   "title_diagnosis": "길이 적정, 괄호 없음, 감탄/의문 有",
+   "engagement_rank": 30
+  },
+  {
+   "title": "英雄联盟手游携手JackeyLove，诠释「终末锋芒 德莱文」永远向前的进攻美学！",
+   "bvid": "BV1oEy5zaE8y",
+   "url": "https://www.bilibili.com/video/BV1oEy5zaE8y",
+   "owner": "滔搏电子竞技俱乐部",
+   "category": "MOBA游戏",
+   "source": "全站排行榜",
+   "pubdate": "2026-11-23 12:00",
+   "event_radar": {
+    "view": 1296942,
+    "like": 75706,
+    "coin": 1230,
+    "favorite": 4517,
+    "share": 4776,
+    "reply": 2622,
+    "danmaku": 776,
+    "rcmd_reason": ""
+   },
+   "hot_keyword_signal": [
+    "将加盟LPL的韩援新面孔有哪些"
+   ],
+   "engagement_rate": 6.91,
+   "official_event": {
+    "mission_id": null,
+    "event_tags": []
+   },
+   "tags": [
+    "LPL",
+    "电子竞技",
+    "JackeyLove",
+    "英雄联盟手游"
+   ],
+   "title_diagnosis": "제목 김, 괄호 태그 有, 감탄/의문 有",
+   "engagement_rank": 31
+  },
+  {
+   "title": "你可知道GTA6是个恐怖游戏？看完后不敢自己出门了【彩蛋艺术馆】",
+   "bvid": "BV1HG1FzPEC3",
+   "url": "https://www.bilibili.com/video/BV1HG1FzPEC3",
+   "owner": "黑椒墨鱼",
+   "category": "其他游戏",
+   "source": "综合热门",
+   "pubdate": "2026-11-24 17:35",
+   "event_radar": {
+    "view": 387454,
+    "like": 16096,
+    "coin": 1414,
+    "favorite": 5604,
+    "share": 1511,
+    "reply": 743,
+    "danmaku": 828,
+    "rcmd_reason": ""
+   },
+   "hot_keyword_signal": [],
+   "engagement_rate": 6.76,
+   "official_event": {
+    "mission_id": 4074603,
+    "event_tags": []
+   },
+   "tags": [
+    "R星",
+    "彩蛋",
+    "恐怖游戏",
+    "单机游戏",
+    "GTA6",
+    "rockstar",
+    "寻找B站6学家"
+   ],
+   "title_diagnosis": "길이 적정, 괄호 태그 有, 숫자 有, 감탄/의문 有",
+   "engagement_rank": 32
+  },
+  {
+   "title": "这期看完拳头硬了",
+   "bvid": "BV1dcyfzQE1h",
+   "url": "https://www.bilibili.com/video/BV1dcyfzQE1h",
+   "owner": "撸sir兰陵君",
+   "category": "MOBA游戏",
+   "source": "综合热门",
+   "pubdate": "2026-11-24 21:09",
+   "event_radar": {
+    "view": 299218,
+    "like": 16383,
+    "coin": 1228,
+    "favorite": 989,
+    "share": 231,
+    "reply": 425,
+    "danmaku": 588,
+    "rcmd_reason": ""
+   },
+   "hot_keyword_signal": [],
+   "engagement_rate": 6.63,
+   "official_event": {
+    "mission_id": 4071656,
+    "event_tags": [
+     "王者荣耀UP主激励计划"
+    ]
+   },
+   "tags": [
+    "王者荣耀UP主激励计划",
+    "电子竞技",
+    "视频",
+    "精彩集锦",
+    "娱乐",
+    "101俱乐部",
+    "钟馗",
+    "MOBA",
+    "小乔",
+    "关羽"
+   ],
+   "title_diagnosis": "제목 짧음, 괄호 없음",
+   "engagement_rank": 33
+  },
+  {
+   "title": "游戏自由度太高也不是什么好事",
+   "bvid": "BV1NzyHzwEKB",
+   "url": "https://www.bilibili.com/video/BV1NzyHzwEKB",
+   "owner": "就叫Re",
+   "category": "单机主机类游戏",
+   "source": "全站排行榜",
+   "pubdate": "2026-11-23 14:48",
+   "event_radar": {
+    "view": 4415921,
+    "like": 231021,
+    "coin": 5936,
+    "favorite": 27074,
+    "share": 18348,
+    "reply": 5591,
+    "danmaku": 849,
+    "rcmd_reason": ""
+   },
+   "hot_keyword_signal": [],
+   "engagement_rate": 6.54,
+   "official_event": {
+    "mission_id": null,
+    "event_tags": []
+   },
+   "tags": [
+    "GTA",
+    "GTA6"
+   ],
+   "title_diagnosis": "길이 적정, 괄호 없음",
+   "engagement_rank": 34
+  },
+  {
+   "title": "被盗号了！那就用一把R93夺回失去的一切！",
+   "bvid": "BV1JV1FzYE1R",
+   "url": "https://www.bilibili.com/video/BV1JV1FzYE1R",
+   "owner": "手残の馒头",
+   "category": "射击游戏",
+   "source": "综合热门",
+   "pubdate": "2026-11-24 18:00",
+   "event_radar": {
+    "view": 215433,
+    "like": 8652,
+    "coin": 1788,
+    "favorite": 1886,
+    "share": 305,
+    "reply": 904,
+    "danmaku": 508,
+    "rcmd_reason": ""
+   },
+   "hot_keyword_signal": [],
+   "engagement_rate": 6.52,
+   "official_event": {
+    "mission_id": null,
+    "event_tags": []
+   },
+   "tags": [
+    "双十一",
+    "三角洲行动",
+    "零号大坝",
+    "爱回收严选",
+    "爱回收严选D100",
+    "教程攻略"
+   ],
+   "title_diagnosis": "길이 적정, 괄호 없음, 숫자 有, 감탄/의문 有",
+   "engagement_rank": 35
+  },
+  {
+   "title": "【终末地一条龙全收集】武陵-旧水坝丨宝箱丨醚质丨塔晶丨装备箱丨档案丨明日方舟终末地",
+   "bvid": "BV1neyBzzExo",
+   "url": "https://www.bilibili.com/video/BV1neyBzzExo",
+   "owner": "绝命笋干",
+   "category": "单人RPG游戏",
+   "source": "综合热门",
+   "pubdate": "2026-11-25 13:14",
+   "event_radar": {
+    "view": 89323,
+    "like": 3146,
+    "coin": 811,
+    "favorite": 1304,
+    "share": 158,
+    "reply": 225,
+    "danmaku": 131,
+    "rcmd_reason": ""
+   },
+   "hot_keyword_signal": [],
+   "engagement_rate": 6.47,
+   "official_event": {
+    "mission_id": 4074760,
+    "event_tags": [
+     "明日方舟终末地创作者应援计划"
+    ]
+   },
+   "tags": [
+    "全收集",
+    "终末地",
+    "明日方舟终末地",
+    "明日方舟终末地创作者应援计划",
+    "塔卫二开拓协会",
+    "旧水坝",
+    "武陵",
+    "收集攻略",
+    "一条龙",
+    "小刻"
+   ],
+   "title_diagnosis": "제목 김, 괄호 태그 有",
+   "engagement_rank": 36
+  },
+  {
+   "title": "异人之下游戏 × 暗区突围｜双“诚”之战",
+   "bvid": "BV1nqyBzqETC",
+   "url": "https://www.bilibili.com/video/BV1nqyBzqETC",
+   "owner": "异人之下游戏",
+   "category": "其他游戏",
+   "source": "综合热门",
+   "pubdate": "2026-11-25 13:28",
+   "event_radar": {
+    "view": 368131,
+    "like": 15747,
+    "coin": 1093,
+    "favorite": 2296,
+    "share": 2729,
+    "reply": 1048,
+    "danmaku": 634,
+    "rcmd_reason": ""
+   },
+   "hot_keyword_signal": [],
+   "engagement_rate": 6.4,
+   "official_event": {
+    "mission_id": null,
+    "event_tags": []
+   },
+   "tags": [
+    "策划117",
+    "异人之下游戏定档1217",
+    "暗区突围",
+    "异人之下游戏"
+   ],
+   "title_diagnosis": "길이 적정, 괄호 없음",
+   "engagement_rank": 37
+  },
+  {
+   "title": "因为一瓶饮料，你一路修成了大罗金仙",
+   "bvid": "BV1MoyVzmEps",
+   "url": "https://www.bilibili.com/video/BV1MoyVzmEps",
+   "owner": "江小江wdl",
+   "category": "沙盒类",
+   "source": "全站排行榜",
+   "pubdate": "2026-11-22 15:33",
+   "event_radar": {
+    "view": 1276730,
+    "like": 66566,
+    "coin": 578,
+    "favorite": 7282,
+    "share": 514,
+    "reply": 4004,
+    "danmaku": 1440,
+    "rcmd_reason": ""
+   },
+   "hot_keyword_signal": [],
+   "engagement_rate": 6.3,
+   "official_event": {
+    "mission_id": 4071523,
+    "event_tags": [
+     "蛋仔奇思妙想计划"
+    ]
+   },
+   "tags": [
+    "外挂",
+    "游戏杂谈",
+    "原创",
+    "我的世界",
+    "饮料",
+    "沙盒游戏",
+    "蛋仔奇思妙想计划",
+    "大罗",
+    "像素风"
+   ],
+   "title_diagnosis": "길이 적정, 괄호 없음",
+   "engagement_rank": 38
+  },
+  {
+   "title": "夺冠了我们就这么笑！！",
+   "bvid": "BV1EzyfzoEFT",
+   "url": "https://www.bilibili.com/video/BV1EzyfzoEFT",
+   "owner": "菌儿rikushi",
+   "category": "MOBA游戏",
+   "source": "综合热门",
+   "pubdate": "2026-11-24 19:00",
+   "event_radar": {
+    "view": 388922,
+    "like": 16223,
+    "coin": 1831,
+    "favorite": 3032,
+    "share": 1912,
+    "reply": 719,
+    "danmaku": 427,
+    "rcmd_reason": ""
+   },
+   "hot_keyword_signal": [
+    "将加盟LPL的韩援新面孔有哪些"
+   ],
+   "engagement_rate": 6.21,
+   "official_event": {
+    "mission_id": null,
+    "event_tags": []
+   },
+   "tags": [
+    "LPL",
+    "英雄联盟",
+    "S16",
+    "BLG"
+   ],
+   "title_diagnosis": "제목 짧음, 괄호 없음, 감탄/의문 有",
+   "engagement_rank": 39
+  },
+  {
+   "title": "假如干员每次造成伤害获得10%攻击力,哪些干员可以击败1400w血的熊 上篇",
+   "bvid": "BV1rbyfzeEab",
+   "url": "https://www.bilibili.com/video/BV1rbyfzeEab",
+   "owner": "若雨希安",
+   "category": "单人RPG游戏",
+   "source": "综合热门",
+   "pubdate": "2026-11-24 18:16",
+   "event_radar": {
+    "view": 349404,
+    "like": 12648,
+    "coin": 2333,
+    "favorite": 2728,
+    "share": 1092,
+    "reply": 1186,
+    "danmaku": 1565,
+    "rcmd_reason": ""
+   },
+   "hot_keyword_signal": [],
+   "engagement_rate": 6.17,
+   "official_event": {
+    "mission_id": 4072804,
+    "event_tags": [
+     "明日方舟创作者应援计划"
+    ]
+   },
+   "tags": [
+    "二次元",
+    "娱乐",
+    "明日方舟",
+    "斗蛐蛐",
+    "塔防",
+    "明日方舟创作者应援计划"
+   ],
+   "title_diagnosis": "길이 적정, 괄호 없음, 숫자 有",
+   "engagement_rank": 40
+  },
+  {
+   "title": "小刻：飞刻时代，沸腾期待！干员实战攻略，武器装备潜能配队全面测评",
+   "bvid": "BV1Lb1wzcEv2",
+   "url": "https://www.bilibili.com/video/BV1Lb1wzcEv2",
+   "owner": "让你爱上学习",
+   "category": "单人RPG游戏",
+   "source": "综合热门",
+   "pubdate": "2026-11-25 11:45",
+   "event_radar": {
+    "view": 248173,
+    "like": 6383,
+    "coin": 1569,
+    "favorite": 1944,
+    "share": 676,
+    "reply": 3295,
+    "danmaku": 1162,
+    "rcmd_reason": ""
+   },
+   "hot_keyword_signal": [],
+   "engagement_rate": 6.06,
+   "official_event": {
+    "mission_id": null,
+    "event_tags": [
+     "明日方舟终末地创作者应援计划"
+    ]
+   },
+   "tags": [
+    "明日方舟终末地",
+    "伊冯",
+    "再旅者",
+    "明日方舟终末地创作者应援计划",
+    "塔卫二开拓协会",
+    "干员全面指南",
+    "提弗洛斯",
+    "教程攻略",
+    "武器装备",
+    "小刻"
+   ],
+   "title_diagnosis": "길이 적정, 괄호 없음, 감탄/의문 有",
+   "engagement_rank": 41
+  },
+  {
+   "title": "GTA6的战斗机被我击落！甚至被吓到不敢进攻我！",
+   "bvid": "BV15HyZzJEbS",
+   "url": "https://www.bilibili.com/video/BV15HyZzJEbS",
+   "owner": "基轮同学",
+   "category": "其他游戏",
+   "source": "综合热门",
+   "pubdate": "2026-11-24 13:00",
+   "event_radar": {
+    "view": 313769,
+    "like": 13577,
+    "coin": 1163,
+    "favorite": 1404,
+    "share": 957,
+    "reply": 714,
+    "danmaku": 674,
+    "rcmd_reason": ""
+   },
+   "hot_keyword_signal": [],
+   "engagement_rate": 5.89,
+   "official_event": {
+    "mission_id": null,
+    "event_tags": []
+   },
+   "tags": [
+    "基轮",
+    "GTA6"
+   ],
+   "title_diagnosis": "길이 적정, 괄호 없음, 숫자 有, 감탄/의문 有",
+   "engagement_rank": 42
+  },
+  {
+   "title": "《蓝色星原：旅谣》涂山小玉PV | 一笺桃花",
+   "bvid": "BV1j3yHznECD",
+   "url": "https://www.bilibili.com/video/BV1j3yHznECD",
+   "owner": "蓝色星原旅谣",
+   "category": "单人RPG游戏",
+   "source": "全站排行榜",
+   "pubdate": "2026-11-24 12:00",
+   "event_radar": {
+    "view": 4216597,
+    "like": 143387,
+    "coin": 37672,
+    "favorite": 44990,
+    "share": 7765,
+    "reply": 5806,
+    "danmaku": 1726,
+    "rcmd_reason": ""
+   },
+   "hot_keyword_signal": [],
+   "engagement_rate": 5.72,
+   "official_event": {
+    "mission_id": null,
+    "event_tags": []
+   },
+   "tags": [
+    "PV",
+    "蓝色星原旅谣",
+    "涂山小玉",
+    "美少女·抓宠·大世界",
+    "蓝色星原大派送",
+    "蓝色星原1126正式公测"
+   ],
+   "title_diagnosis": "길이 적정, 괄호 태그 有",
+   "engagement_rank": 43
+  },
+  {
+   "title": "孩子们...我是贵族九啊。风格原创@一条牢超哦233",
+   "bvid": "BV1U4yJzaEBo",
+   "url": "https://www.bilibili.com/video/BV1U4yJzaEBo",
+   "owner": "好耶复制流打野",
+   "category": "MOBA游戏",
+   "source": "全站排行榜",
+   "pubdate": "2026-11-23 13:00",
+   "event_radar": {
+    "view": 1333973,
+    "like": 54599,
+    "coin": 2502,
+    "favorite": 8855,
+    "share": 799,
+    "reply": 1211,
+    "danmaku": 429,
+    "rcmd_reason": ""
+   },
+   "hot_keyword_signal": [],
+   "engagement_rate": 5.13,
+   "official_event": {
+    "mission_id": null,
+    "event_tags": []
+   },
+   "tags": [
+    "搞笑",
+    "王者荣耀",
+    "抽象"
+   ],
+   "title_diagnosis": "길이 적정, 괄호 없음, 숫자 有",
+   "engagement_rank": 44
+  },
+  {
+   "title": "bro开麦一直指挥自己...",
+   "bvid": "BV1epy5zfE1k",
+   "url": "https://www.bilibili.com/video/BV1epy5zfE1k",
+   "owner": "欧寂o",
+   "category": "射击游戏",
+   "source": "综合热门",
+   "pubdate": "2026-11-23 17:00",
+   "event_radar": {
+    "view": 1130973,
+    "like": 47453,
+    "coin": 856,
+    "favorite": 4626,
+    "share": 2921,
+    "reply": 967,
+    "danmaku": 266,
+    "rcmd_reason": ""
+   },
+   "hot_keyword_signal": [],
+   "engagement_rate": 5.05,
+   "official_event": {
+    "mission_id": 4072354,
+    "event_tags": []
+   },
+   "tags": [
+    "FPS",
+    "搞笑",
+    "猎奇",
+    "搞笑集锦",
+    "游戏",
+    "无畏契约",
+    "瓦",
+    "绷",
+    "valorant",
+    "哔哩哔哩瓦次元"
+   ],
+   "title_diagnosis": "길이 적정, 괄호 없음",
+   "engagement_rank": 45
+  },
+  {
+   "title": "《异环》Exe角色PV丨追杀计数",
+   "bvid": "BV1wYsq6kEeg",
+   "url": "https://www.bilibili.com/video/BV1wYsq6kEeg",
+   "owner": "异环",
+   "category": "其他游戏",
+   "source": "综合热门",
+   "pubdate": "2026-11-25 12:00",
+   "event_radar": {
+    "view": 928998,
+    "like": 27093,
+    "coin": 2607,
+    "favorite": 4727,
+    "share": 1332,
+    "reply": 2191,
+    "danmaku": 735,
+    "rcmd_reason": ""
+   },
+   "hot_keyword_signal": [],
+   "engagement_rate": 4.16,
+   "official_event": {
+    "mission_id": null,
+    "event_tags": []
+   },
+   "tags": [
+    "异环",
+    "异环Exe",
+    "致电空想迷数"
+   ],
+   "title_diagnosis": "길이 적정, 괄호 태그 有",
+   "engagement_rank": 46
+  },
+  {
+   "title": "《王者新模式》《全员一滴血》",
+   "bvid": "BV1NbyQznE34",
+   "url": "https://www.bilibili.com/video/BV1NbyQznE34",
+   "owner": "肖洋哥",
+   "category": "MOBA游戏",
+   "source": "综合热门",
+   "pubdate": "2026-11-24 02:50",
+   "event_radar": {
+    "view": 1081904,
+    "like": 30656,
+    "coin": 1120,
+    "favorite": 8030,
+    "share": 517,
+    "reply": 1002,
+    "danmaku": 324,
+    "rcmd_reason": ""
+   },
+   "hot_keyword_signal": [],
+   "engagement_rate": 3.85,
+   "official_event": {
+    "mission_id": 4071656,
+    "event_tags": [
+     "王者荣耀UP主激励计划"
+    ]
+   },
+   "tags": [
+    "王者荣耀UP主激励计划",
+    "电子竞技",
+    "娱乐",
+    "游戏",
+    "王者荣耀",
+    "王者",
+    "MOBA"
+   ],
+   "title_diagnosis": "길이 적정, 괄호 태그 有",
+   "engagement_rank": 47
+  },
+  {
+   "title": "全国前10黄金矿工都匹配在一起了！",
+   "bvid": "BV1zXyvzfEB7",
+   "url": "https://www.bilibili.com/video/BV1zXyvzfEB7",
+   "owner": "沉默寡言白河愁",
+   "category": "其他游戏",
+   "source": "全站排行榜",
+   "pubdate": "2026-11-22 11:35",
+   "event_radar": {
+    "view": 2159136,
+    "like": 47815,
+    "coin": 2711,
+    "favorite": 7662,
+    "share": 14406,
+    "reply": 2928,
+    "danmaku": 1384,
+    "rcmd_reason": ""
+   },
+   "hot_keyword_signal": [],
+   "engagement_rate": 3.56,
+   "official_event": {
+    "mission_id": null,
+    "event_tags": []
+   },
+   "tags": [
+    "黄金矿工",
+    "娱乐",
+    "童年",
+    "怀旧",
+    "游戏"
+   ],
+   "title_diagnosis": "길이 적정, 괄호 없음, 숫자 有, 감탄/의문 有",
+   "engagement_rank": 48
+  },
+  {
+   "title": "全新【求生者】出版编辑故事视频爆料：——“那是我第一次看到，自己本可以成为的样子……”",
+   "bvid": "BV15gyJzVEzy",
+   "url": "https://www.bilibili.com/video/BV15gyJzVEzy",
+   "owner": "网易第五人格手游",
+   "category": "动作竞技游戏",
+   "source": "全站排行榜",
+   "pubdate": "2026-11-23 13:00",
+   "event_radar": {
+    "view": 1816395,
+    "like": 26744,
+    "coin": 2402,
+    "favorite": 5068,
+    "share": 6677,
+    "reply": 5025,
+    "danmaku": 2707,
+    "rcmd_reason": ""
+   },
+   "hot_keyword_signal": [],
+   "engagement_rate": 2.68,
+   "official_event": {
+    "mission_id": 4074070,
+    "event_tags": []
+   },
+   "tags": [
+    "第五人格",
+    "第五人格分歧点",
+    "第五人格出版编辑"
+   ],
+   "title_diagnosis": "제목 김, 괄호 태그 有",
+   "engagement_rank": 49
+  },
+  {
+   "title": "《狩》首曝PV&实机演示丨动作要秀，有狩就行！",
+   "bvid": "BV1931AzhE1q",
+   "url": "https://www.bilibili.com/video/BV1931AzhE1q",
+   "owner": "狩SHOU",
+   "category": "其他游戏",
+   "source": "全站排行榜",
+   "pubdate": "2026-11-25 11:00",
+   "event_radar": {
+    "view": 3963811,
+    "like": 46007,
+    "coin": 1495,
+    "favorite": 6935,
+    "share": 5857,
+    "reply": 2485,
+    "danmaku": 1185,
+    "rcmd_reason": ""
+   },
+   "hot_keyword_signal": [],
+   "engagement_rate": 1.61,
+   "official_event": {
+    "mission_id": null,
+    "event_tags": []
+   },
+   "tags": [
+    "格斗",
+    "动作",
+    "魔方动作新游狩实机首曝",
+    "动作要秀有狩就行",
+    "格斗游戏",
+    "动作游戏",
+    "狩"
+   ],
+   "title_diagnosis": "길이 적정, 괄호 태그 有, 감탄/의문 有",
+   "engagement_rank": 50
+  }
+ ]
+}

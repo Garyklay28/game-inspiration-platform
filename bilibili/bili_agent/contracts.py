@@ -7,7 +7,7 @@ YouTube / TikTok 서브 슈퍼바이저도 같은 형태(XxxTask → XxxReport)�
 from dataclasses import asdict, dataclass, field
 from typing import Any, Dict, List, Optional
 
-INTENTS = ("trend_scan", "game_deep_dive", "title_check", "event_watch")
+INTENTS = ("trend_scan", "game_deep_dive", "title_check", "event_watch", "performance_review")
 
 
 @dataclass
@@ -53,7 +53,10 @@ class BiliReport:
     overseas_trend_cards: List[Dict[str, Any]] = field(default_factory=list)
     alias_candidates: List[Dict[str, Any]] = field(default_factory=list)  # 별칭 사전 추가 제안(사람 검토용)
     plan: Optional[Dict[str, Any]] = None  # 流水线设计 A 의 출력 = B 의 입력 (策划案 JSON)
-    plan_validation: Optional[Dict[str, Any]] = None  # 규칙 검사 + 검증 워커 판정
+    plan_validation: Optional[Dict[str, Any]] = None  # 규칙 검사 + 검토 에이전트 판정
+    performance: Optional[Dict[str, Any]] = None  # 6 성과 기록 (업로드·성과·가중치 보정안)
+    agent_stages: Dict[str, Any] = field(default_factory=dict)  # 에이전트별 한 줄 요약 (기획안 12장 단계)
+    run_id: str = ""
     data_sources: List[Dict[str, Any]] = field(default_factory=list)
     agent_trace: List[Dict[str, Any]] = field(default_factory=list)
     usage: Dict[str, Any] = field(default_factory=dict)  # LLM 호출 수·토큰·추정 비용
