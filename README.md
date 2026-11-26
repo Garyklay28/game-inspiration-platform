@@ -9,6 +9,7 @@
 | 요구 사항 | 위치 |
 |---|---|
 | 에이전트 아키텍처 (Figma 기획서 추가분) | [docs/figma/](docs/figma/) — 기획서 12·13쪽 (16 팀 에이전트 아키텍처, 17 빌리빌리 서브 슈퍼바이저), [docs/architecture.md](docs/architecture.md) |
+| **상세 구조도 (분기·에이전트별)** | **[docs/structure.md](docs/structure.md)** — 전체 지도 → 팀 총괄 → 빌리빌리 에이전트 1~6 → YouTube 단계 1~8 → TikTok(예정) → 팀 DB, 그림 25개 |
 | 구조 선택: Supervisor vs 수평형 | 아래 「구조 선택」 |
 | 코드 (Python, Proof of Concept) | [`team_supervisor/`](team_supervisor/) · [`bilibili/bili_agent/`](bilibili/bili_agent/) · [`youtube/yt_pipeline/`](youtube/yt_pipeline/) |
 | 시스템 프롬프트 | 빌리빌리 7개 [`bilibili/bili_agent/prompts/`](bilibili/bili_agent/prompts/) · YouTube 6개 [`youtube/.claude/agents/`](youtube/.claude/agents/) |
@@ -65,7 +66,7 @@
                         / 기회 목록 / 빌리빌리 → YouTube 해외 트렌드 소재
 ```
 
-자세한 설계: [docs/architecture.md](docs/architecture.md)
+자세한 설계: [docs/architecture.md](docs/architecture.md) · 분기·에이전트별 상세 구조도: [docs/structure.md](docs/structure.md)
 
 ## 실행
 
