@@ -15,7 +15,8 @@
       "Bash(python -m yt_pipeline qa*)",
       "Bash(python -m yt_pipeline perf summary*)",
       "Bash(python -m pytest*)",
-      "Bash(ffprobe *)"
+      "Bash(ffprobe *)",
+      "Bash(python -m yt_pipeline db export*)"
     ],
     "ask": [
       "Bash(python -m yt_pipeline data --source api*)",
@@ -24,7 +25,9 @@
       "Bash(python -m yt_pipeline perf fetch*)",
       "Bash(python -m yt_pipeline perf calibrate*)",
       "Bash(python -m yt_pipeline perf apply*)",
-      "Bash(python -m yt_pipeline perf register*)"
+      "Bash(python -m yt_pipeline perf register*)",
+      "Bash(python -m yt_pipeline thumbnail*)",
+      "Bash(python -m yt_pipeline db push*)"
     ],
     "deny": [
       "Read(./.env)",

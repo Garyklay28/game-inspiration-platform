@@ -25,6 +25,10 @@ def build(run_id: str, intent: str = "make_video", task_id: str = "local-demo") 
         qas = [read_json(p) for p in sorted(out.glob("*.qa.json"))]
         video = {"renders": [{"file": q["file"], "kind": q["kind"], "verdict": q["verdict"],
                               "visual_review": (q.get("visual_review") or {}).get("passed")} for q in qas]}
+    td = d / "05_thumbnails"
+    thumbs = [read_json(p) for p in sorted(td.glob("thumb_v*.json"))] if td.exists() else []
+    if thumbs:
+        video = dict(video or {}, thumbnails=[{"file": t["file"], "source": t["source"]} for t in thumbs])
     perf = read_json(PERF_DIR / "summary.json") if (PERF_DIR / "summary.json").exists() else None
     if perf:
         perf = {"rows": [r for r in perf["rows"] if r.get("plan_id") == (plan or {}).get("plan_id")]}

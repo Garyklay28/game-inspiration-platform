@@ -1,6 +1,6 @@
 ---
 name: youtube-pipeline
-description: 유튜브 게임 쇼츠를 트렌드 수집 → 정규화 → 점수화 → 분석 → 기획안 → 영상 생성 → 성과 기록 8단계로 만든다. "트렌드 보고 쇼츠 기획해줘", "로블록스 쇼츠 하나 만들어줘", "파이프라인 돌려줘", "업로드한 영상 성과 기록해줘" 요청에 사용.
+description: 유튜브 게임 쇼츠를 수집, 정규화, 점수화, 분석, 기획안(썸네일 포함), 검증, 영상 생성, 성과 기록 8단계로 만든다. "트렌드 보고 쇼츠 기획해줘", "로블록스 쇼츠 하나 만들어줘", "파이프라인 돌려줘", "업로드한 영상 성과 기록해줘" 요청에 사용.
 allowed-tools: Read, Write, Edit, Bash(python -m yt_pipeline *), Bash(python -m pytest *), Bash(ffprobe *), Bash(ffmpeg *), Task
 ---
 
@@ -19,6 +19,8 @@ allowed-tools: Read, Write, Edit, Bash(python -m yt_pipeline *), Bash(python -m 
 | 4 | 분석 | 코드 + trend-analyst | (data 에 포함) → 에이전트 | 04_evidence, 04_analysis | 주제 선택 확인 |
 | 5 | 기획안 | plan-writer | 에이전트 | 05_plan.json/.md | |
 | 6 | 검증 | 코드 + plan-validator | `validate` → 에이전트 → `review` | 06_validation | **기획안 승인** |
+| 6b | 썸네일 | 코드 + 이미지 생성 API | `thumbnail` | 05_thumbnails/ | API 호출 비용 승인, 썸네일 선택 |
+| - | DB 저장 | 코드 | `db export`, `db push` | runs/<id>/db/, Supabase | push 전 |
 | 7 | 영상 생성 | script-writer + 코드 + qa-reviewer | `video timing/render`, `qa` | 07_video/ | edit.json 승인, 프리뷰 승인, **공개 여부** |
 | 8 | 성과 기록 | 코드 + performance-analyst | `perf register/fetch/summary/calibrate` | performance/ | 가중치 적용 |
 
@@ -44,6 +46,17 @@ python -m yt_pipeline data --source sample                 # 연습용 가짜 �
    - `통과` → `05_plan.md` 를 사용자에게 보여 주고 **승인받는다**.
    - `plan-writer 가 오류를 고쳐…` → 2로 (issues 를 그대로 전달). 첫 제출 포함 3회까지.
    - `수정 횟수 초과` → 멈추고 사람에게 판단을 넘긴다.
+
+## 6b. 썸네일 (기획안 에이전트의 이미지 생성 도구)
+
+1. 기획안이 validated 상태인지 `status`로 확인한다.
+2. `python -m yt_pipeline thumbnail` 을 실행한다. `config/pipeline.json` 의 `thumbnail.provider` 가 `none` 이면 프롬프트만 저장된다.
+3. 이미지를 생성하려면 사용자에게 비용을 묻고 승인받은 뒤 provider 를 `openai` 로 바꿔 실행한다. 직접 찍은 게임 화면이 있으면 `--background 경로` 로 문구만 얹는다.
+4. 만들어진 `05_thumbnails/thumb_vN.png` 를 열어 보고, 문구가 잘리거나 로고·실존 인물이 들어가 있으면 다시 만든다. 어떤 썸네일을 쓸지는 사용자가 고른다.
+
+## DB 저장
+
+`python -m yt_pipeline db export` 로 테이블별 JSON 을 만든다. 사용자가 Supabase 에 `db/schema.sql` 을 적용했고 `.env` 에 URL 과 서비스 롤 키를 넣었다고 하면 `db push` 를 실행한다.
 
 ## 7. 영상 생성
 
