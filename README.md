@@ -14,6 +14,8 @@
 | 시스템 프롬프트 | 빌리빌리 7개 [`bilibili/bili_agent/prompts/`](bilibili/bili_agent/prompts/) · YouTube 6개 [`youtube/.claude/agents/`](youtube/.claude/agents/) |
 | 실제 실행 결과 | [`bilibili/docs/example_*`](bilibili/docs/) (Claude API 실제 호출 보고서·기획안) |
 | 에이전트별 PoC 데모 · 1차 결과물 | 빌리빌리 [`bilibili/docs/agent_outputs.md`](bilibili/docs/agent_outputs.md) (`cd bilibili && python demo_agents.py --agent <이름>`) |
+| 팀 공용 DB 스키마 (기획안 13장) | [`youtube/db/schema.sql`](youtube/db/schema.sql) — 두 파트가 같은 테이블에 저장 (YouTube [`yt_pipeline/db.py`](youtube/yt_pipeline/db.py), 빌리빌리 [`team_db.py`](bilibili/bili_agent/tools/team_db.py), `platform` 열로 구분) |
+| 점수 기준 | 빌리빌리 [`bilibili/docs/architecture.md`](bilibili/docs/architecture.md) · YouTube [`youtube/docs/scoring.md`](youtube/docs/scoring.md) |
 
 ### 구조 선택: 계층형 Supervisor
 
@@ -39,7 +41,7 @@
 | 폴더 | 담당 | 원본 저장소 | 실행 방식 |
 |---|---|---|---|
 | [`bilibili/`](bilibili/) | 곽우화 | [Garyklay28/bilibili-supervisor-agent](https://github.com/Garyklay28/bilibili-supervisor-agent) | Python + Anthropic SDK (슈퍼바이저 1 + 에이전트 6, 데이터는 Aside 브라우저 1순위) |
-| [`youtube/`](youtube/) | 장유림 | [JangYurim0607/youtube-agent-pipeline](https://github.com/JangYurim0607/youtube-agent-pipeline) | Claude Code 스킬·서브에이전트 + Python 코드 단계 |
+| [`youtube/`](youtube/) | 장유림 | [JangYurim0607/youtube-agent-pipeline](https://github.com/JangYurim0607/youtube-agent-pipeline) | Claude Code 스킬·서브에이전트 + Python 코드 단계 (썸네일 이미지 생성, Supabase 저장 포함) |
 | [`team_supervisor/`](team_supervisor/) | 팀 공통 | (이 저장소) | 코드 라우터 + 보고서 병합 + 기획안 어댑터 |
 
 두 파트는 원본 저장소의 커밋 히스토리(작성자 포함)를 그대로 가진 채 하위 폴더로 합쳐졌습니다(`git log -- bilibili/`, `git log -- youtube/`).
@@ -53,7 +55,7 @@
                           ▼                         ▼
          빌리빌리 서브 슈퍼바이저            YouTube 파이프라인
          (Python, Claude API)               (Claude Code /youtube-pipeline)
-         수집→정규화→점수→분석→              수집→정규화→점수→분석→기획안→
+         수집→정규화→점수→분석→              수집→정규화→점수→분석→기획안·썸네일→
          策划案→검증                         검증→영상 생성·검수→성과 기록
                           │                         │
                      BiliReport               YouTubeReport (runs/<id>/report.json)
@@ -86,9 +88,9 @@ python -m team_supervisor --intent deep_dive --platforms youtube --youtube-run <
 테스트 (각 파트는 자기 폴더에서):
 
 ```bash
-python -m pytest -q tests_team                 # 총괄: 라우팅·어댑터 (9)
-(cd bilibili && python -m pytest -q)           # 빌리빌리 (22)
-(cd youtube && python -m pytest -q)            # YouTube (14, 렌더 테스트는 libass 포함 ffmpeg 필요)
+python -m pytest -q tests_team                 # 총괄: 라우팅·어댑터 (11)
+(cd bilibili && python -m pytest -q)           # 빌리빌리 (31)
+(cd youtube && python -m pytest -q)            # YouTube (17, 렌더·썸네일 테스트 2개는 libass·drawtext 포함 ffmpeg 필요)
 ```
 
 ## 팀 intent

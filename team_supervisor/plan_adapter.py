@@ -95,7 +95,9 @@ def normalize_plan(plan: Dict, validation: Optional[Dict] = None) -> Tuple[Dict[
         "titles": list(plan.get("titles") or []),
         "thumbnail": {"aspect_ratio": (plan.get("thumbnail_brief") or {}).get("aspect_ratio"),
                       "text": _text(plan.get("thumbnail_brief") or {}, "text"),
-                      "style": _text(plan.get("thumbnail_brief") or {}, "style")},
+                      "style": _text(plan.get("thumbnail_brief") or {}, "style"),
+                      # 이미지 생성용 프롬프트 (YouTube 썸네일 단계가 씀, 없으면 None)
+                      "image_prompt": (plan.get("thumbnail_brief") or {}).get("image_prompt")},
         "copyright_checklist": list(plan.get("copyright_checklist") or []),
         "score": {"value": score, "note": sr.get("note")},
         "rationale": plan.get("rationale_zh") or plan.get("rationale") or "",

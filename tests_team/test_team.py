@@ -50,6 +50,7 @@ def test_normalize_youtube_plan():
     assert [s["id"] for s in v["sections"]] == SECTION_IDS
     assert v["score"]["value"] == YT_PLAN["score_reference"]["topic_score"]
     assert v["thumbnail"]["aspect_ratio"] == "9:16"
+    assert v["thumbnail"]["image_prompt"] == YT_PLAN["thumbnail_brief"]["image_prompt"]  # 썸네일 생성 프롬프트 보존
     assert {"shot_list", "hashtags", "evidence_refs"} <= set(v["extras"])
 
 

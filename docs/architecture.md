@@ -34,6 +34,8 @@ flowchart TD
 | 훅 | 先看结果·提问·挑战/反转 | 결과 먼저·질문·도전/반전 | result_first · question · challenge_twist |
 | 구간 | 开场·问题·正文·CTA·结尾 | 훅·문제·본문·CTA·엔딩 | hook · problem · body · cta · ending |
 | 점수 | `score_reference.score` | `score_reference.topic_score` | `score.value` (플랫폼 간 비교 안 함) |
+| 썸네일 | 문구·스타일 (`thumbnail_brief`) | 문구·스타일 + 이미지 생성 프롬프트 → 이미지 생성(설정 시 OpenAI, 과금)·문구 합성 | `thumbnail` (`image_prompt` 포함, 없으면 null) |
+| 팀 DB 저장 | `bili_agent/tools/team_db.py` (`platform='bilibili'`) | `yt_pipeline/db.py` (`platform='youtube'`) | 같은 13장 테이블, 스키마 원본 `youtube/db/schema.sql` |
 | 플랫폼 고유 | 공식 활동 ID, 태그 | 쇼츠 포맷, 해시태그, 샷 리스트, 근거 경로 | `extras` 에 그대로 보존 |
 
 어댑터(`team_supervisor/plan_adapter.py`)는 모르는 유형 이름을 버리지 않고 `unknown:<이름>` 으로 남기고 경고를 낸다.
