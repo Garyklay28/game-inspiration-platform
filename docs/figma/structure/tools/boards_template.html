@@ -1,0 +1,173 @@
+<!doctype html><html><head><meta charset="utf-8"><title>figma boards</title>
+<style>body{font-family:sans-serif;background:#fff;color:#111;margin:16px} #work{position:absolute;left:-100000px;top:0}</style></head>
+<body><h3 id="status">building…</h3><pre id="log"></pre><div id="work"></div>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11.4.1/dist/mermaid.min.js"></script>
+<script>
+const BOARDS = __BOARDS__;
+const NS = 'http://www.w3.org/2000/svg';
+const FONT = "'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif";
+const PROPS = ['fill','fill-opacity','stroke','stroke-width','stroke-opacity','stroke-dasharray','stroke-linecap','stroke-linejoin','opacity','visibility'];
+const TEXTP = ['font-family','font-size','font-weight','font-style','text-anchor','dominant-baseline'];
+const log = (...a) => { document.getElementById('log').textContent += a.join(' ') + '\n'; };
+mermaid.initialize({startOnLoad:false, securityLevel:'strict', htmlLabels:false, fontFamily:FONT,
+  themeVariables:{fontFamily:FONT}, flowchart:{htmlLabels:false, wrappingWidth:300}, class:{htmlLabels:false}});
+
+function inlineStyles(svg){
+  // 1단계: 모든 요소의 계산된 스타일을 먼저 읽는다 (부모의 class 를 지우면 자식 스타일이 바뀌므로)
+  const els = [...svg.querySelectorAll('*')].filter(el => !['style','defs','title','desc','marker'].includes(el.tagName));
+  const snap = els.map(el => {
+    const cs = getComputedStyle(el), o = {};
+    for (const p of PROPS) o[p] = cs.getPropertyValue(p);
+    if (el.tagName === 'text' || el.tagName === 'tspan') for (const p of TEXTP) o[p] = cs.getPropertyValue(p);
+    o.__me = (cs.getPropertyValue('marker-end') || 'none') + '|' + (cs.getPropertyValue('marker-start') || 'none');
+    return o;
+  });
+  // 2단계: 속성으로 쓰고 class·style 제거
+  els.forEach((el, i) => {
+    const o = snap[i];
+    for (const [p, v] of Object.entries(o)) {
+      if (p === '__me') { el.setAttribute('data-me', v); continue; }
+      if (v && !(p === 'stroke-dasharray' && v === 'none')) el.setAttribute(p, v);
+    }
+    el.removeAttribute('style'); el.removeAttribute('class');
+  });
+}
+function inlineMarkers(svg){
+  let n = 0;
+  for (const el of [...svg.querySelectorAll('[data-me]')]) {
+    const [me, ms] = el.getAttribute('data-me').split('|'); el.removeAttribute('data-me');
+    for (const [which, ref] of [['end', me], ['start', ms]]) {
+      if (!ref || ref === 'none' || typeof el.getTotalLength !== 'function') continue;
+      const id = (ref.match(/#([^)"']+)/) || [])[1]; if (!id) continue;
+      const mk = svg.querySelector('#' + CSS.escape(id)); if (!mk) continue;
+      const L = el.getTotalLength(); if (!L) continue;
+      const p = el.getPointAtLength(which === 'end' ? L : 0), q = el.getPointAtLength(which === 'end' ? Math.max(L - 0.5, 0) : Math.min(0.5, L));
+      let ang = which === 'end' ? Math.atan2(p.y - q.y, p.x - q.x) : Math.atan2(q.y - p.y, q.x - p.x);
+      ang = ang * 180 / Math.PI;
+      const orient = mk.getAttribute('orient') || '0';
+      if (orient === 'auto-start-reverse' && which === 'start') ang += 180; else if (!orient.startsWith('auto')) ang = parseFloat(orient) || 0;
+      const mw = parseFloat(mk.getAttribute('markerWidth') || 3), mh = parseFloat(mk.getAttribute('markerHeight') || 3);
+      const vb = (mk.getAttribute('viewBox') || '').trim().split(/[\s,]+/).map(Number);
+      let k = 1; if (vb.length === 4 && vb[2] && vb[3]) k = Math.min(mw / vb[2], mh / vb[3]);
+      const sw = (mk.getAttribute('markerUnits') || 'strokeWidth') === 'strokeWidth' ? (parseFloat(el.getAttribute('stroke-width')) || 1) : 1;
+      const rx = parseFloat(mk.getAttribute('refX') || 0), ry = parseFloat(mk.getAttribute('refY') || 0);
+      const g = document.createElementNS(NS, 'g');
+      g.setAttribute('transform', (el.getAttribute('transform') || '') + ` translate(${p.x},${p.y}) rotate(${ang}) scale(${k * sw}) translate(${-rx},${-ry})`);
+      for (const c of mk.children) g.appendChild(c.cloneNode(true));
+      el.parentNode.insertBefore(g, el.nextSibling); n++;
+    }
+    el.removeAttribute('marker-end'); el.removeAttribute('marker-start'); el.removeAttribute('marker-mid');
+  }
+  svg.querySelectorAll('marker').forEach(m => m.remove());
+  return n;
+}
+function normalizeText(svg){
+  // Figma 의 SVG 가져오기는 tspan 의 x/dy(줄바꿈 위치)와 dominant-baseline·text-anchor 를 무시한다.
+  // 그래서 여러 줄 글자를 "한 줄 = <text> 하나" 로 쪼개고, 브라우저가 실제로 그린 첫 글자 위치를 x,y 로 적는다.
+  let made = 0;
+  for (const t of [...svg.querySelectorAll('text')]) {
+    const b1 = t.getBBox();
+    for (const e of [t, ...t.querySelectorAll('tspan')]) { e.setAttribute('dominant-baseline', 'auto'); e.removeAttribute('alignment-baseline'); }
+    const b2 = t.getBBox(), dy = b1.y - b2.y;
+    const tf = ((t.getAttribute('transform') || '') + (Math.abs(dy) > 0.05 ? ` translate(0,${dy.toFixed(2)})` : '')).trim();
+    let lines = [...t.children].filter(c => c.tagName === 'tspan' && c.hasAttribute('x'));
+    if (!lines.length) lines = [t];
+    const out = [];
+    for (const L of lines) {
+      // SVG 글자 모드의 Mermaid 는 < > & 를 &lt; 같은 문자 그대로 넣으므로 되돌린다 (글자 위치 계산은 그려진 글자 기준이라 영향 없음)
+      let str = L.textContent.replace(/\s+/g, ' ');
+      const ent = (x) => x.replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&quot;/g, '"').replace(/&#39;/g, "'").replace(/&amp;/g, '&');
+      const n = L.getNumberOfChars();
+      if (!n || !str.trim()) continue;
+      if (str.length > n && str.startsWith(' ')) str = str.slice(1);
+      if (str.length > n && str.endsWith(' ')) str = str.slice(0, -1);
+      let i0 = 0; while (i0 < str.length - 1 && str[i0] === ' ') i0++;
+      let pt, w = 0; try { pt = L.getStartPositionOfChar(i0); } catch (e) { continue; }
+      let i1 = str.length - 1; while (i1 > i0 && str[i1] === ' ') i1--;
+      try { w = L.getEndPositionOfChar(Math.min(i1, n - 1)).x - pt.x; } catch (e) { w = 0; }
+      const anc = (L.getAttribute('text-anchor') || t.getAttribute('text-anchor') || 'start');
+      const nt = document.createElementNS(NS, 'text');
+      nt.setAttribute('x', pt.x.toFixed(2)); nt.setAttribute('y', pt.y.toFixed(2));
+      const inner = L.querySelector('tspan') || L;
+      for (const at of ['font-family', 'font-size', 'font-weight', 'font-style', 'fill', 'fill-opacity', 'opacity']) {
+        const v = inner.getAttribute(at) || L.getAttribute(at) || t.getAttribute(at); if (v) nt.setAttribute(at, v);
+      }
+      nt.setAttribute('text-anchor', 'start');
+      // 레이어 이름(id)에 원래 정렬과 폭을 남겨, Figma 에서 글꼴이 바뀐 뒤 다시 가운데로 맞출 수 있게 한다
+      nt.setAttribute('id', (anc === 'middle' ? 'c' : anc === 'end' ? 'e' : 's') + w.toFixed(1) + '_' + (window.__tid = (window.__tid || 0) + 1));
+      if (tf) nt.setAttribute('transform', tf);
+      nt.textContent = ent(str.slice(i0).trimEnd());
+      out.push(nt);
+    }
+    for (const nt of out) t.parentNode.insertBefore(nt, t);
+    t.remove(); made += out.length;
+  }
+  return made;
+}
+function txt(x, y, s, size, weight, color){
+  const t = document.createElementNS(NS, 'text');
+  t.setAttribute('x', x); t.setAttribute('y', y); t.setAttribute('font-family', FONT); t.setAttribute('font-size', size);
+  t.setAttribute('font-weight', weight); t.setAttribute('fill', color); t.textContent = s; return t;
+}
+async function post(name, body, type){ const r = await fetch('/save?name=' + name, {method:'POST', headers:{'Content-Type':type}, body}); if (!r.ok) throw new Error('save failed ' + name); }
+
+(async () => {
+  const work = document.getElementById('work'), summary = [];
+  let idx = 0;
+  for (const B of BOARDS) {
+    const parts = [];
+    for (const it of B.items) {
+      const {svg} = await mermaid.render('b' + (idx++), it.code);
+      work.innerHTML = svg; const el = work.querySelector('svg');
+      inlineStyles(el); const arrows = inlineMarkers(el); const lines = normalizeText(el);
+      el.querySelectorAll('style').forEach(s => s.remove());
+      const fo = el.querySelectorAll('foreignObject').length;
+      const vb = el.viewBox.baseVal;
+      const g = document.createElementNS(NS, 'g');
+      for (const c of [...el.childNodes]) g.appendChild(c);
+      parts.push({sub: it.sub, g, x0: vb.x, y0: vb.y, w: vb.width, h: vb.height, fo, arrows, lines, tspans: el.querySelectorAll('tspan').length});
+      work.innerHTML = '';
+    }
+    // 선반(shelf) 배치
+    const PAD = 100, GAP = 120, SUB = 64, TITLE = 150 + B.notes.length * 52;
+    const maxRow = Math.max(3200, ...parts.map(p => p.w));
+    let x = PAD, y = PAD + TITLE, rowH = 0, W = 0;
+    for (const p of parts) {
+      if (x > PAD && x + p.w > PAD + maxRow) { x = PAD; y += rowH + GAP; rowH = 0; }
+      p.X = x; p.Y = y; x += p.w + GAP; rowH = Math.max(rowH, p.h + SUB); W = Math.max(W, p.X + p.w);
+    }
+    const H = y + rowH + PAD + 40; W += PAD;  // W 는 아래에서 실제 글자 폭으로 다시 넓힐 수 있음
+    const board = document.createElementNS(NS, 'svg');
+    board.setAttribute('xmlns', NS); board.setAttribute('width', W); board.setAttribute('height', H); board.setAttribute('viewBox', `0 0 ${W} ${H}`);
+    const bg = document.createElementNS(NS, 'rect'); bg.setAttribute('width', W); bg.setAttribute('height', H); bg.setAttribute('fill', '#ffffff'); board.appendChild(bg);
+    board.appendChild(txt(PAD, PAD + 70, '상세 구조도 · ' + B.title, 72, 700, '#111111'));
+    B.notes.forEach((n, i) => board.appendChild(txt(PAD, PAD + 140 + i * 52, n, 34, 400, '#444444')));
+    for (const p of parts) {
+      if (p.sub) board.appendChild(txt(p.X, p.Y + 40, p.sub, 40, 700, '#222222'));
+      p.g.setAttribute('transform', `translate(${p.X - p.x0},${p.Y + SUB - p.y0})`);
+      board.appendChild(p.g);
+    }
+    board.appendChild(txt(PAD, H - 40, 'game-inspiration-platform · docs/structure.md 기준 (Mermaid 원본에서 자동 생성)', 26, 400, '#888888'));
+    work.appendChild(board);
+    // 소제목 등 글자가 계산한 폭보다 길면 보드를 넓힌다 (잘림 방지)
+    const bb = board.getBBox();
+    if (bb.x + bb.width + PAD > W) { W = Math.ceil(bb.x + bb.width + PAD); board.setAttribute('width', W); board.setAttribute('viewBox', `0 0 ${W} ${H}`); bg.setAttribute('width', W); }
+    const svgText = '<?xml version="1.0" encoding="UTF-8"?>\n' + new XMLSerializer().serializeToString(board);
+    work.innerHTML = '';
+    await post(B.file + '.svg', svgText, 'image/svg+xml');
+    // PNG (긴 변 4096px 이하: Figma 는 그보다 큰 이미지를 줄여서 넣음)
+    const scale = Math.min(2, 4096 / Math.max(W, H));
+    const img = new Image(); const url = URL.createObjectURL(new Blob([svgText], {type:'image/svg+xml'}));
+    await new Promise((res, rej) => { img.onload = res; img.onerror = rej; img.src = url; });
+    const cv = document.createElement('canvas'); cv.width = Math.round(W * scale); cv.height = Math.round(H * scale);
+    const ctx = cv.getContext('2d'); ctx.fillStyle = '#fff'; ctx.fillRect(0, 0, cv.width, cv.height); ctx.drawImage(img, 0, 0, cv.width, cv.height);
+    const png = await new Promise(r => cv.toBlob(r, 'image/png'));
+    await post(B.file + '.png', png, 'image/png');
+    summary.push({file: B.file, diagrams: parts.length, size: `${Math.round(W)}x${Math.round(H)}`, png: `${cv.width}x${cv.height}`,
+                  foreignObject: parts.reduce((a, p) => a + p.fo, 0), arrowsInlined: parts.reduce((a, p) => a + p.arrows, 0), textLines: parts.reduce((a, p) => a + p.lines, 0), tspansLeft: parts.reduce((a, p) => a + p.tspans, 0)});
+    log(JSON.stringify(summary[summary.length - 1]));
+  }
+  window.__summary = summary;
+  document.getElementById('status').textContent = 'done ' + summary.length + ' boards';
+})().catch(e => { window.__error = String(e && e.stack || e); document.getElementById('status').textContent = 'ERROR'; log(window.__error); });
+</script></body></html>
